@@ -33,63 +33,63 @@ exports.isCurrentUrlDifferentFromBaseUrl = function() {
     });
 }
 
-exports.waitForElementPresence = function(htmlElement, message, timeout = DEFAULT_TIMEOUT_MS) {
+exports.waitForElementPresence = function(htmlElement, message, timeout = DEFAULT_TIMEOUT_IN_MS) {
     browser.wait(EC.presenceOf(htmlElement), timeout, message);
 }
 
-exports.waitForElementNotToBePresent = function(htmlElement, message, timeout = DEFAULT_TIMEOUT_MS) {
+exports.waitForElementNotToBePresent = function(htmlElement, message, timeout = DEFAULT_TIMEOUT_IN_MS) {
     browser.wait(EC.stalenessOf(htmlElement), timeout, message);
 }
 
-exports.waitForElementVisibility = function(htmlElement, message, timeout = DEFAULT_TIMEOUT_MS) {
+exports.waitForElementVisibility = function(htmlElement, message, timeout = DEFAULT_TIMEOUT_IN_MS) {
     browser.wait(EC.visibilityOf(htmlElement), timeout, message);
 }
 
-exports.waitForElementNotToBeVisible = function(htmlElement, message, timeout = DEFAULT_TIMEOUT_MS) {
+exports.waitForElementNotToBeVisible = function(htmlElement, message, timeout = DEFAULT_TIMEOUT_IN_MS) {
     browser.wait(EC.invisibilityOf(htmlElement), timeout, message);
 }
 
-exports.clickWhenClickable = function(htmlElement, message, timeout = DEFAULT_TIMEOUT_MS) {
+exports.clickWhenClickable = function(htmlElement, message, timeout = DEFAULT_TIMEOUT_IN_MS) {
     browser.wait(EC.elementToBeClickable(htmlElement), timeout, message);
     htmlElement.click();
 }
 
-exports.sendKeysWhenVisible = function(htmlElement, value, message, timeout = DEFAULT_TIMEOUT_MS) {
+exports.sendKeysWhenVisible = function(htmlElement, value, message, timeout = DEFAULT_TIMEOUT_IN_MS) {
     this.waitForElementVisibility(htmlElement, message, timeout);
     htmlElement.sendKeys(value);
 }
 
-exports.sendKeysForFileInputField = function(htmlElement, value, message, timeout = DEFAULT_TIMEOUT_MS) {
+exports.sendKeysForFileInputField = function(htmlElement, value, message, timeout = DEFAULT_TIMEOUT_IN_MS) {
     this.waitForElementPresence(htmlElement, message, timeout);
     htmlElement.sendKeys(value);
 }
 
-exports.clearFieldWhenVisible = function(htmlElement, message, timeout = DEFAULT_TIMEOUT_MS) {
+exports.clearFieldWhenVisible = function(htmlElement, message, timeout = DEFAULT_TIMEOUT_IN_MS) {
     this.waitForElementVisibility(htmlElement, message, timeout);
     htmlElement.clear();
 }
 
-exports.tapWhenTapable = function(htmlElement, message, timeout = DEFAULT_TIMEOUT_MS) {
+exports.tapWhenTapable = function(htmlElement, message, timeout = DEFAULT_TIMEOUT_IN_MS) {
     browser.wait(EC.elementToBeClickable(htmlElement), timeout, message);
     browser.touchActions().tap(htmlElement).perform();
 }
 
-exports.waitForTextToBePresentInElement = function(htmlElement, text, message, timeout = DEFAULT_TIMEOUT_MS) {
+exports.waitForTextToBePresentInElement = function(htmlElement, text, message, timeout = DEFAULT_TIMEOUT_IN_MS) {
     browser.wait(EC.textToBePresentInElement(htmlElement, text), timeout, message);
 }
 
-exports.waitForTextNotToBePresentInElement = function(htmlElement, text, message, timeout = DEFAULT_TIMEOUT_MS) {
+exports.waitForTextNotToBePresentInElement = function(htmlElement, text, message, timeout = DEFAULT_TIMEOUT_IN_MS) {
     browser.wait(EC.not(EC.textToBePresentInElement(htmlElement, text)), timeout, message);
 }
 
-exports.waitForUrlToBeEqualToExpectedUrl = function(expectedUrl, message, timeout = DEFAULT_TIMEOUT_MS) {
+exports.waitForUrlToBeEqualToExpectedUrl = function(expectedUrl, message, timeout = DEFAULT_TIMEOUT_IN_MS) {
     browser.wait(EC.urlIs(expectedUrl), timeout, message);
 }
 
-exports.waitForElementAttributeToHaveValue = function(htmlElement, attribute, value, message, timeout = DEFAULT_TIMEOUT_MS) {
+exports.waitForElementAttributeToHaveValue = function(htmlElement, attribute, value, message, timeout = DEFAULT_TIMEOUT_IN_MS) {
     browser.wait(elementWithAttributeHasValue(htmlElement, attribute, value), timeout, message);
 }
 
-exports.waitForElementAttributeNotToHaveValue = function(htmlElement, attribute, value, message, timeout = DEFAULT_TIMEOUT_MS) {
+exports.waitForElementAttributeNotToHaveValue = function(htmlElement, attribute, value, message, timeout = DEFAULT_TIMEOUT_IN_MS) {
     browser.wait(elementWithAttributeHasNotValue(htmlElement, attribute, value), timeout, message);
 }
