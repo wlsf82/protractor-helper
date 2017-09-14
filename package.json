@@ -1,6 +1,6 @@
 {
   "name": "protractor-helper",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Protractor helper's library",
   "main": "index.js",
   "keywords": [

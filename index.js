@@ -1,5 +1,5 @@
 const EC = protractor.ExpectedConditions;
-const DEFAULT_TIMEOUT_IN_MS = 3000;
+const DEFAULT_TIMEOUT_IN_MS = 5000;
 
 function elementWithAttributeHasValue(htmlElement, attribute, value) {
     return htmlElement.getAttribute(attribute).then((elementAttribute) => {
