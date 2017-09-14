@@ -96,4 +96,4 @@ class Helper {
     }
 }
 
-module.exports = Helper;
+exports = Helper;
