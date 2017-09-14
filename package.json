@@ -1,0 +1,13 @@
+{
+  "name": "protractor-helper",
+  "version": "1.0.0",
+  "description": "Protractor helper's library",
+  "keywords": [
+    "protractor"
+  ],
+  "author": "Walmyr Filho <wlsf82@gmail.com>",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "protractor": "^5.1.2"
+  }
+}
