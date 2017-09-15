@@ -11,7 +11,7 @@ Run `npm install protractor-helper --save-dev` to install the library as a dev d
 
 ## Available helpers
 
-Below is the list of all available helpers available in this library:
+Below is the list of all available helpers in this library:
 
 - `getBodyElementFromCurrentBrowserOrBrowserInstance`
 
