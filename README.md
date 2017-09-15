@@ -19,7 +19,7 @@ The above method returns the body element of the current browser if nothing is p
 
 - `openNewBrowserInTheSamePage`
 
-The above method just opens a new browser instance in the sabe page of the main browser. You need to pass `browser` as an argument.
+The above method just opens a new browser instance in the same page of the main browser. You need to pass `browser` as an argument.
 
 - `isCurrentUrlDifferentFromBaseUrl`
 
