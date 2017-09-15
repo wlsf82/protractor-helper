@@ -73,7 +73,7 @@ exports.clearFieldWhenVisible = function(htmlElement, message, timeout = DEFAULT
     htmlElement.clear();
 }
 
-exports.tapWhenTapable = function(htmlElement, message, timeout = DEFAULT_TIMEOUT_IN_MS) {
+exports.tapWhenTappable = function(htmlElement, message, timeout = DEFAULT_TIMEOUT_IN_MS) {
     browser.wait(EC.elementToBeClickable(htmlElement), timeout, message);
     browser.touchActions().tap(htmlElement).perform();
 }
