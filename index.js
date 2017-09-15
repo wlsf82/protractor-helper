@@ -1,12 +1,16 @@
 const EC = protractor.ExpectedConditions;
 const DEFAULT_TIMEOUT_IN_MS = 5000;
 
+// @TODO: make this function publicly available and in a way
+// that it can be used by other functions in this same file.
 function elementWithAttributeHasValue(htmlElement, attribute, value) {
     return htmlElement.getAttribute(attribute).then((elementAttribute) => {
         return elementAttribute.includes(value);
     });
 }
 
+// @TODO: make this function publicly available and in a way
+// that it can be used by other functions in this same file.
 function elementWithAttributeHasNotValue(htmlElement, attribute, value) {
     return htmlElement.getAttribute(attribute).then((elementAttribute) => {
         return !elementAttribute.includes(value);
