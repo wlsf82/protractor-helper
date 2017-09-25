@@ -1,6 +1,6 @@
 {
   "name": "protractor-helper",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "Protractor helper's library",
   "main": "index.js",
   "keywords": [
@@ -12,7 +12,7 @@
   },
   "author": "Walmyr Filho <wlsf82@gmail.com>",
   "license": "MIT",
-  "dependencies": {
-    "protractor": "^5.1.2"
+  "peerDependencies": {
+    "protractor": ">= 5.0.0"
   }
 }
