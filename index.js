@@ -17,6 +17,18 @@ function elementWithAttributeHasNotValue(htmlElement, attribute, value) {
     });
 }
 
+function getDefaultIsNotPresentMessage(htmlElement) {
+    return DEFAULT_STARTING_MESSAGE +
+        htmlElement.parentElementArrayFinder.locator_.value +
+        IS_NOT_PRESENT_MESSAGE;
+}
+
+function getDefaultIsNotVisibleMessage(htmlElement) {
+    return DEFAULT_IS_NOT_VISIBLE_MESSAGE = DEFAULT_STARTING_MESSAGE +
+        htmlElement.parentElementArrayFinder.locator_.value +
+        IS_NOT_VISIBLE_MESSAGE;
+}
+
 const DEFAULT_STARTING_MESSAGE = "element with css selector '";
 const IS_NOT_CLICKABLE_MESSAGE = "' is not clickable";
 const IS_NOT_PRESENT_MESSAGE = "' is not present";
@@ -48,9 +60,7 @@ exports.isCurrentUrlDifferentFromBaseUrl = function() {
 exports.waitForElementPresence =
     function(
         htmlElement,
-        message = DEFAULT_STARTING_MESSAGE +
-            htmlElement.parentElementArrayFinder.locator_.value +
-            IS_NOT_PRESENT_MESSAGE,
+        message = getDefaultIsNotPresentMessage(htmlElement),
         timeout = DEFAULT_TIMEOUT_IN_MS
     )
 
@@ -74,9 +84,7 @@ exports.waitForElementNotToBePresent =
 exports.waitForElementVisibility =
     function(
         htmlElement,
-        message = DEFAULT_STARTING_MESSAGE +
-            htmlElement.parentElementArrayFinder.locator_.value +
-            IS_NOT_VISIBLE_MESSAGE,
+        message = getDefaultIsNotVisibleMessage(htmlElement),
         timeout = DEFAULT_TIMEOUT_IN_MS
     )
 
@@ -115,9 +123,7 @@ exports.sendKeysWhenVisible =
     function(
         htmlElement,
         value,
-        message = DEFAULT_STARTING_MESSAGE +
-            htmlElement.parentElementArrayFinder.locator_.value +
-            IS_NOT_VISIBLE_MESSAGE,
+        message = getDefaultIsNotVisibleMessage(htmlElement),
         timeout = DEFAULT_TIMEOUT_IN_MS
     )
 
@@ -130,9 +136,7 @@ exports.sendKeysForFileInputField =
     function(
         htmlElement,
         value,
-        message = DEFAULT_STARTING_MESSAGE +
-            htmlElement.parentElementArrayFinder.locator_.value +
-            IS_NOT_PRESENT_MESSAGE,
+        message = getDefaultIsNotPresentMessage(htmlElement),
         timeout = DEFAULT_TIMEOUT_IN_MS
     )
 
@@ -144,9 +148,7 @@ exports.sendKeysForFileInputField =
 exports.clearFieldWhenVisible =
     function(
         htmlElement,
-        message = DEFAULT_STARTING_MESSAGE +
-            htmlElement.parentElementArrayFinder.locator_.value +
-            IS_NOT_VISIBLE_MESSAGE,
+        message = getDefaultIsNotVisibleMessage(htmlElement),
         timeout = DEFAULT_TIMEOUT_IN_MS
     )
 
