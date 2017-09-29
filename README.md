@@ -27,61 +27,61 @@ The above method returns a boolean depending if the current url is different fro
 
 - `waitForElementPresence`
 
-The above method waits for an element to be present in the DOM. This method can receives three arguments: 1st - the HTML element (this is mandatory); 2nd - an error message (this is optional); 3rd - a timeout (optional and default is 5000 milliseconds).
+The above method waits for an element to be present in the DOM. This method can receives three arguments: 1st - the HTML element (this is mandatory); 2nd - an error message (this is optional and if not provided a default message implemented for this specific method will be displayed instead); 3rd - a timeout (optional and default is 5000 milliseconds. Message turns mandatory if you need to change the default timeout, due to arguments order).
 
 Note: An element may be present but not displayed. If you want to wait for the element to be displayed use the methods `waitForElementVisibility`.
 
 - `waitForElementNotToBePresent`
 
-The above method is the opposite of the previous one, so, it waits for an element not to be present in the DOM. This method can receives three arguments: 1st - the HTML element (this is mandatory); 2nd - an error message (this is optional); 3rd - a timeout (optional and default is 5000 milliseconds).
+The above method is the opposite of the previous one, so, it waits for an element not to be present in the DOM. This method can receives three arguments: 1st - the HTML element (this is mandatory); 2nd - an error message (this is optional and if not provided a default message implemented for this specific method will be displayed instead); 3rd - a timeout (optional and default is 5000 milliseconds. Message turns mandatory if you need to change the default timeout, due to arguments order).
 
 - `waitForElementVisibility`
 
-The above method waits for an element to be visible in the page. Being displayed means not only that the element is present in the DOM, but also that is has a height and width that is greater than 0. This method can receives three arguments: 1st - the HTML element (this is mandatory); 2nd - an error message (this is optional); 3rd - a timeout (optional and default is 5000 milliseconds).
+The above method waits for an element to be visible in the page. Being displayed means not only that the element is present in the DOM, but also that is has a height and width that is greater than 0. This method can receives three arguments: 1st - the HTML element (this is mandatory); 2nd - an error message (this is optional and if not provided a default message implemented for this specific method will be displayed instead); 3rd - a timeout (optional and default is 5000 milliseconds. Message turns mandatory if you need to change the default timeout, due to arguments order).
 
 - `waitForElementNotToBeVisible`
 
-The above method is the opposite of the previous one, so, it waits for an element not to be visible in the page. By saying not being displayed means that the element may be in the DOM, but not visible. This method can receives three arguments: 1st - the HTML element (this is mandatory); 2nd - an error message (this is optional); 3rd - a timeout (optional and default is 5000 milliseconds).
+The above method is the opposite of the previous one, so, it waits for an element not to be visible in the page. By saying not being displayed means that the element may be in the DOM, but not visible. This method can receives three arguments: 1st - the HTML element (this is mandatory); 2nd - an error message (this is optional and if not provided a default message implemented for this specific method will be displayed instead); 3rd - a timeout (optional and default is 5000 milliseconds. Message turns mandatory if you need to change the default timeout, due to arguments order).
 
 - `clickWhenClickable`
 
-The above method is used to click in an element only as soon as it is in a clickable state. This means that the element is visible and enabled for clicking. This method can receives three arguments: 1st - a clickable HTML element (this is mandatory); 2nd - an error message (this is optional); 3rd - a timeout (optional and default is 5000 milliseconds).
+The above method is used to click in an element only as soon as it is in a clickable state. This means that the element is visible and enabled for clicking. This method can receives three arguments: 1st - a clickable HTML element (this is mandatory); 2nd - an error message (this is optional and if not provided a default message implemented for this specific method will be displayed instead); 3rd - a timeout (optional and default is 5000 milliseconds. Message turns mandatory if you need to change the default timeout, due to arguments order).
 
 - `sendKeysWhenVisible`
 
-The above method fills an input field with a text as soon as such field is visible. This method can receives four arguments: 1st - the text input HTML element (this is mandatory); 2nd - a string (the text you want to fill the input field with - this is mandatory); 3rd - an error message (this is optional); 4th - a timeout (optional and default is 5000 milliseconds).
+The above method fills an input field with a text as soon as such field is visible. This method can receives four arguments: 1st - the text input HTML element (this is mandatory); 2nd - a string (the text you want to fill the input field with - this is mandatory); 3rd - an error message (this is optional and if not provided a default message implemented for this specific method will be displayed instead); 4th - a timeout (optional and default is 5000 milliseconds. Message turns mandatory if you need to change the default timeout, due to arguments order).
 
 - `sendKeysForFileInputField`
 
-The above method fills a file input field with a specified file as soon as the file input field is present in the DOM. This method can receives four arguments: 1st - the HTML file input element (this is mandatory); 2nd - the absolute path of the file you want to fill in the file input field (this is mandatory); 3rd - an error message (this is optional); 4th - a timeout (optional and default is 5000 milliseconds).
+The above method fills a file input field with a specified file as soon as the file input field is present in the DOM. This method can receives four arguments: 1st - the HTML file input element (this is mandatory); 2nd - the absolute path of the file you want to fill in the file input field (this is mandatory); 3rd - an error message (this is optional and if not provided a default message implemented for this specific method will be displayed instead); 4th - a timeout (optional and default is 5000 milliseconds. Message turns mandatory if you need to change the default timeout, due to arguments order).
 
 - `clearFieldWhenVisible`
 
-The above method clear a text input field as soon as such field is visible. This method can receives three arguments: 1st - the text input HTML element (this is mandatory); 2nd - an error message (this is optional); 3rd - a timeout (optional and default is 5000 milliseconds).
+The above method clear a text input field as soon as such field is visible. This method can receives three arguments: 1st - the text input HTML element (this is mandatory); 2nd - an error message (this is optional and if not provided a default message implemented for this specific method will be displayed instead); 3rd - a timeout (optional and default is 5000 milliseconds. Message turns mandatory if you need to change the default timeout, due to arguments order).
 
 - `tapWhenTappable`
 
-The above method performs a tap action on a clickable/tappable HTML element as soon is it is clickable/tappable. This method is used when performing web mobile testing in mobile emulators, for example. This method can receives three arguments: 1st - a clickable/tappable HTML element (this is mandatory); 2nd - an error message (this is optional); 3rd - a timeout (optional and default is 5000 milliseconds).
+The above method performs a tap action on a clickable/tappable HTML element as soon is it is clickable/tappable. This method is used when performing web mobile testing in mobile emulators, for example. This method can receives three arguments: 1st - a clickable/tappable HTML element (this is mandatory); 2nd - an error message (this is optional and if not provided a default message implemented for this specific method will be displayed instead); 3rd - a timeout (optional and default is 5000 milliseconds. Message turns mandatory if you need to change the default timeout, due to arguments order).
 
 - `waitForTextToBePresentInElement`
 
-The above method waits for a specific text to be present in a specific HTML element. This method can receives four arguments: 1st - the HTML element (this is mandatory); 2nd - a string (the text you want to wait for being present in the element - this is mandatory); 3rd - an error message (this is optional); 4th - a timeout (optional and default is 5000 milliseconds).
+The above method waits for a specific text to be present in a specific HTML element. This method can receives four arguments: 1st - the HTML element (this is mandatory); 2nd - a string (the text you want to wait for being present in the element - this is mandatory); 3rd - an error message (this is optional and if not provided a default message implemented for this specific method will be displayed instead); 4th - a timeout (optional and default is 5000 milliseconds. Message turns mandatory if you need to change the default timeout, due to arguments order).
 
 - `waitForTextNotToBePresentInElement`
 
-The above method is the opposite of the previous one, so, it waits for a specific text not to be present in a specific HTML element. This method can receives four arguments: 1st - the HTML element (this is mandatory); 2nd - a string (the text you want to wait for not being present in the element - this is mandatory); 3rd - an error message (this is optional); 4th - a timeout (optional and default is 5000 milliseconds).
+The above method is the opposite of the previous one, so, it waits for a specific text not to be present in a specific HTML element. This method can receives four arguments: 1st - the HTML element (this is mandatory); 2nd - a string (the text you want to wait for not being present in the element - this is mandatory); 3rd - an error message (this is optional and if not provided a default message implemented for this specific method will be displayed instead); 4th - a timeout (optional and default is 5000 milliseconds. Message turns mandatory if you need to change the default timeout, due to arguments order).
 
 - `waitForUrlToBeEqualToExpectedUrl`
 
-The above method waits for the URL to be equal to an expected URL. Such method is useful when you want to continue performing actions on elements only when in the correct URL. This method can receives three arguments: 1st - the expected URL (this is mandatory); 2nd - an error message (this is optional); 3rd - a timeout (optional and default is 5000 milliseconds).
+The above method waits for the URL to be equal to an expected URL. Such method is useful when you want to continue performing actions on elements only when in the correct URL. This method can receives three arguments: 1st - the expected URL (this is mandatory); 2nd - an error message (this is optional and if not provided a default message implemented for this specific method will be displayed instead); 3rd - a timeout (optional and default is 5000 milliseconds. Message turns mandatory if you need to change the default timeout, due to arguments order).
 
 - `waitForElementAttributeToHaveValue`
 
-The above method waits for a specified element's attribute to contain a specified value. Such method can be useful when after performing some action on a specific HTML element an attribute's value changes, for example, something like changing the state of the element. This method can receives five arguments: 1st - the HTML element (this is mandatory); 2nd - the attribute (as a string and mandatory); 3rd - the value (as a string and mandatory) 4th - an error message (this is optional); 5th - a timeout (optional and default is 5000 milliseconds).
+The above method waits for a specified element's attribute to contain a specified value. Such method can be useful when after performing some action on a specific HTML element an attribute's value changes, for example, something like changing the state of the element. This method can receives five arguments: 1st - the HTML element (this is mandatory); 2nd - the attribute (as a string and mandatory); 3rd - the value (as a string and mandatory) 4th - an error message (this is optional and if not provided a default message implemented for this specific method will be displayed instead); 5th - a timeout (optional and default is 5000 milliseconds. Message turns mandatory if you need to change the default timeout, due to arguments order).
 
 - `waitForElementAttributeNotToHaveValue`
 
-The above method is the opposite of the previous one, so, it waits for a specified element's attribute not to contain a specified value. This method can receives five arguments: 1st - the HTML element (this is mandatory); 2nd - the attribute (as a string and mandatory); 3rd - the value (as a string and mandatory) 4th - an error message (this is optional); 5th - a timeout (optional and default is 5000 milliseconds).
+The above method is the opposite of the previous one, so, it waits for a specified element's attribute not to contain a specified value. This method can receives five arguments: 1st - the HTML element (this is mandatory); 2nd - the attribute (as a string and mandatory); 3rd - the value (as a string and mandatory) 4th - an error message (this is optional and if not provided a default message implemented for this specific method will be displayed instead); 5th - a timeout (optional and default is 5000 milliseconds. Message turns mandatory if you need to change the default timeout, due to arguments order).
 
 ## How to use (examples)
 
