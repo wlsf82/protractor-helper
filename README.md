@@ -75,14 +75,6 @@ The above method is the opposite of the previous one, so, it waits for a specifi
 
 The above method waits for the URL to be equal to an expected URL. Such method is useful when you want to continue performing actions on elements only when in the correct URL. This method can receives three arguments: 1st - the expected URL (this is mandatory); 2nd - an error message (this is optional and if not provided a default message implemented for this specific method will be displayed instead); 3rd - a timeout (optional and default is 5000 milliseconds. Message turns mandatory if you need to change the default timeout, due to arguments order).
 
-- `waitForElementAttributeToHaveValue`
-
-The above method waits for a specified element's attribute to contain a specified value. Such method can be useful when after performing some action on a specific HTML element an attribute's value changes, for example, something like changing the state of the element. This method can receives five arguments: 1st - the HTML element (this is mandatory); 2nd - the attribute (as a string and mandatory); 3rd - the value (as a string and mandatory) 4th - an error message (this is optional and if not provided a default message implemented for this specific method will be displayed instead); 5th - a timeout (optional and default is 5000 milliseconds. Message turns mandatory if you need to change the default timeout, due to arguments order).
-
-- `waitForElementAttributeNotToHaveValue`
-
-The above method is the opposite of the previous one, so, it waits for a specified element's attribute not to contain a specified value. This method can receives five arguments: 1st - the HTML element (this is mandatory); 2nd - the attribute (as a string and mandatory); 3rd - the value (as a string and mandatory) 4th - an error message (this is optional and if not provided a default message implemented for this specific method will be displayed instead); 5th - a timeout (optional and default is 5000 milliseconds. Message turns mandatory if you need to change the default timeout, due to arguments order).
-
 ## How to use (examples)
 
 After installing the library you will need to require it in you test file (see below).
@@ -372,42 +364,6 @@ describe("foo", () => {
         goToContactPageButton.click();
 
         protractorHelper.waitForUrlToBeEqualToExpectedUrl("https://example.com/contact", "URL is different from expected", 3000);
-
-        // ...
-    });
-});
-```
-
-### Example of usage of `waitForElementAttributeToHaveValue`
-
-```
-const protractorHelper = require("protractor-helper");
-
-describe("foo", () => {
-    it("bar", () => {
-        browser.get("https://example.com");
-
-        const myButton = element(by.id("my-button"));
-
-        protractorHelper.waitForElementAttributeToHaveValue(myButton, "class", "visible", "class attribute of myButton doesn't have 'visible' value", 3000);
-
-        // ...
-    });
-});
-```
-
-### Example of usage of `waitForElementAttributeNotToHaveValue`
-
-```
-const protractorHelper = require("protractor-helper");
-
-describe("foo", () => {
-    it("bar", () => {
-        browser.get("https://example.com");
-
-        const myButton = element(by.id("my-button"));
-
-        protractorHelper.waitForElementAttributeNotToHaveValue(myButton, "class", "invisible", "class attribute of myButton still has 'invisible' value", 3000);
 
         // ...
     });

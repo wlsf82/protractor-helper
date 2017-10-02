@@ -1,22 +1,6 @@
 const EC = protractor.ExpectedConditions;
 const DEFAULT_TIMEOUT_IN_MS = 5000;
 
-// @TODO: make this function publicly available and in a way
-// that it can be used by other functions in this same file.
-function elementWithAttributeHasValue(htmlElement, attribute, value) {
-    return htmlElement.getAttribute(attribute).then((elementAttribute) => {
-        return elementAttribute.includes(value);
-    });
-}
-
-// @TODO: make this function publicly available and in a way
-// that it can be used by other functions in this same file.
-function elementWithAttributeHasNotValue(htmlElement, attribute, value) {
-    return htmlElement.getAttribute(attribute).then((elementAttribute) => {
-        return !elementAttribute.includes(value);
-    });
-}
-
 function getDefaultIsNotPresentMessage(htmlElement) {
     return DEFAULT_STARTING_MESSAGE +
         htmlElement.parentElementArrayFinder.locator_.value +
@@ -208,34 +192,4 @@ exports.waitForUrlToBeEqualToExpectedUrl =
 
     {
         browser.wait(EC.urlIs(expectedUrl), timeout, message);
-    }
-
-exports.waitForElementAttributeToHaveValue =
-    function(
-        htmlElement,
-        attribute,
-        value,
-        message = DEFAULT_STARTING_MESSAGE +
-            htmlElement.parentElementArrayFinder.locator_.value +
-            "' has no value '" + value + "'" + " on attribute '" + attribute + "'",
-        timeout = DEFAULT_TIMEOUT_IN_MS
-    )
-
-    {
-        browser.wait(elementWithAttributeHasValue(htmlElement, attribute, value), timeout, message);
-    }
-
-exports.waitForElementAttributeNotToHaveValue =
-    function(
-        htmlElement,
-        attribute,
-        value,
-        message = DEFAULT_STARTING_MESSAGE +
-            htmlElement.parentElementArrayFinder.locator_.value +
-            "still has value '" + value + "'" + "on attribute '" + attribute + "'",
-        timeout = DEFAULT_TIMEOUT_IN_MS
-    )
-
-    {
-        browser.wait(elementWithAttributeHasNotValue(htmlElement, attribute, value), timeout, message);
     }
