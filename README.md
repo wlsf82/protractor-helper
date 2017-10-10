@@ -9,7 +9,7 @@ Many of the helper methods on this library uses `protractor.ExpectedConditions` 
 
 Let's say you want to create a test for the sign up happy path of an example application.
 
-### Example without using protractor-helper module
+### Example without using the protractor-helper module
 
 Without this library the test could be written as something like this:
 
@@ -41,9 +41,9 @@ describe("Sign up page", () => {
 });
 ```
 
-### Example using protractor-helper module
+### Example using the protractor-helper module
 
-And the same test would be written as below, using the protractor-helper library.
+The same test could be written as below, using the protractor-helper library.
 
 ```
 const protractorHelper = require("protractor-helper");
@@ -70,6 +70,8 @@ describe("Sign up page", () => {
 ```
 
 As you can see, by using the protractor-helper library the code is shorter and it is also easier to read.
+
+Note: There are complete examples of each helper methods in the "How to use (examples)" section.
 
 ## Installation
 
