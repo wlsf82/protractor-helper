@@ -1,11 +1,79 @@
 Protractor helper's library
 ===============================
 
-This library contains a helper file (`index.js`) with different methods that can be used together with Protractor for creating robust end-to-end tests.
+This library contains a file (`index.js`) with different helper methods that can be used together with Protractor for creating robust end-to-end tests.
 
-Many of the helper methods on this library uses `protractor.ExpectedConditions` to ensure that the elements we want to interact with are in the correct state before interacting with them or running expectations on them. This helps on avoiding trying to interact with elements when they are still not ready for it.
+Many of the helper methods on this library uses `protractor.ExpectedConditions` to ensure that the elements we want to interact with are in the correct state before interacting with them or running expectations on them. This helps on avoiding trying to interact with elements when they are still not ready for it, which helps avoiding test flakiness.
+
+## Basic example
+
+Let's say you want to create a test for the sign up happy path of an example application.
+
+### Example without using protractor-helper module
+
+Without this library the test could be written as something like this:
+
+```
+const EC = protractor.ExpectedConditions;
+const DEFAULT_TIMEOUT_IN_MS = 5000;
+
+describe("Sign up page", () => {
+    it("successful sign up", () => {
+        browser.get("https://example.com/sign-up");
+
+        const emailField = element(by.id("email"));
+        const passwordField = element(by.id("password"));
+        const signupButton = element(by.id("signup"));
+
+        browser.wait(EC.visibilityOf(emailField), DEFAULT_TIMEOUT_IN_MS);
+        browser.wait(EC.visibilityOf(passwordField), DEFAULT_TIMEOUT_IN_MS);
+        browser.wait(EC.elementToBeClickable(signupButton), DEFAULT_TIMEOUT_IN_MS);
+        emailField.sendKeys("valid@email.com");
+        passwordField.sendKeys("validpassword");
+        signupButton.click();
+
+        const avatar = element(by.id("avatar"));
+
+        browser.wait(EC.visibilityOf(avatar), DEFAULT_TIMEOUT_IN_MS);
+
+        expect(avatar.isDisplayed()).toBe(true);
+    });
+});
+```
+
+### Example using protractor-helper module
+
+And the same test would be written as below, using the protractor-helper library.
+
+```
+const protractorHelper = require("protractor-helper");
+
+describe("Sign up page", () => {
+    it("successful sign up", () => {
+        browser.get("https://example.com/sign-up");
+
+        const emailField = element(by.id("email"));
+        const passwordField = element(by.id("password"));
+        const signupButton = element(by.id("signup"));
+
+        protractorHelper.sendKeysWhenVisible(emailField, "valid@email.com");
+        protractorHelper.sendKeysWhenVisible(passwordField, "validpassword");
+        protractorHelper.clickWhenClickable(signupButton);
+
+        const avatar = element(by.id("avatar"));
+
+        protractorHelper.waitForElementVisibility(avatar);
+
+        expect(avatar.isDisplayed()).toBe(true);
+    });
+});
+```
+
+As you can see, by using the protractor-helper library the code is shorter and it is also easier to read.
 
 ## Installation
+
+Below it is described the process of Installation of such module.
 
 Run `npm install protractor-helper --save-dev` to install the library as a dev dependencies of your project.
 
