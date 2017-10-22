@@ -20,8 +20,9 @@ const IS_NOT_TAPPABLE_MESSAGE = "' is not tappable";
 const IS_NOT_VISIBLE_MESSAGE = "' is not visible";
 const IS_STILL_PRESENT_MESSAGE = "' is still present";
 const IS_STILL_VISIBLE_MESSAGE = "' is still visible";
+const POSSIBLE_IT_IS_NOT_PRESENT_OR_VISIBLE_MESSAGE = ". Possibly it's not present or visible.";
 
-exports.getBodyElementFromCurrentBrowserOrBrowserInstance = function(browserInstance) {
+const getBodyElementFromCurrentBrowserOrBrowserInstance = function(browserInstance) {
     const cssSelector = "body";
 
     if (browserInstance) {
@@ -31,17 +32,17 @@ exports.getBodyElementFromCurrentBrowserOrBrowserInstance = function(browserInst
     }
 }
 
-exports.openNewBrowserInTheSamePage = function(browser) {
+const openNewBrowserInTheSamePage = function(browser) {
     return browser.forkNewDriverInstance(true);
 }
 
-exports.isCurrentUrlDifferentFromBaseUrl = function() {
+const isCurrentUrlDifferentFromBaseUrl = function() {
     return browser.getCurrentUrl().then((url) => {
         return url !== browser.baseUrl;
     });
 }
 
-exports.waitForElementPresence =
+const waitForElementPresence =
     function(
         htmlElement,
         message = getDefaultIsNotPresentMessage(htmlElement),
@@ -52,7 +53,7 @@ exports.waitForElementPresence =
         browser.wait(EC.presenceOf(htmlElement), timeout, message);
     }
 
-exports.waitForElementNotToBePresent =
+const waitForElementNotToBePresent =
     function(
         htmlElement,
         message = DEFAULT_STARTING_MESSAGE +
@@ -65,7 +66,7 @@ exports.waitForElementNotToBePresent =
         browser.wait(EC.stalenessOf(htmlElement), timeout, message);
     }
 
-exports.waitForElementVisibility =
+const waitForElementVisibility =
     function(
         htmlElement,
         message = getDefaultIsNotVisibleMessage(htmlElement),
@@ -76,7 +77,7 @@ exports.waitForElementVisibility =
         browser.wait(EC.visibilityOf(htmlElement), timeout, message);
     }
 
-exports.waitForElementNotToBeVisible =
+const waitForElementNotToBeVisible =
     function(
         htmlElement,
         message = DEFAULT_STARTING_MESSAGE +
@@ -89,12 +90,12 @@ exports.waitForElementNotToBeVisible =
         browser.wait(EC.invisibilityOf(htmlElement), timeout, message);
     }
 
-exports.clickWhenClickable =
+const clickWhenClickable =
     function(
         htmlElement,
         message = DEFAULT_STARTING_MESSAGE +
             htmlElement.parentElementArrayFinder.locator_.value +
-            IS_NOT_CLICKABLE_MESSAGE,
+            IS_NOT_CLICKABLE_MESSAGE + POSSIBLE_IT_IS_NOT_PRESENT_OR_VISIBLE_MESSAGE,
         timeout = DEFAULT_TIMEOUT_IN_MS
     )
 
@@ -103,7 +104,7 @@ exports.clickWhenClickable =
         htmlElement.click();
     }
 
-exports.sendKeysWhenVisible =
+const sendKeysWhenVisible =
     function(
         htmlElement,
         value,
@@ -116,7 +117,7 @@ exports.sendKeysWhenVisible =
         htmlElement.sendKeys(value);
     }
 
-exports.sendKeysForFileInputField =
+const sendKeysForFileInputField =
     function(
         htmlElement,
         value,
@@ -129,7 +130,7 @@ exports.sendKeysForFileInputField =
         htmlElement.sendKeys(value);
     }
 
-exports.clearFieldWhenVisible =
+const clearFieldWhenVisible =
     function(
         htmlElement,
         message = getDefaultIsNotVisibleMessage(htmlElement),
@@ -141,12 +142,12 @@ exports.clearFieldWhenVisible =
         htmlElement.clear();
     }
 
-exports.tapWhenTappable =
+const tapWhenTappable =
     function(
         htmlElement,
         message = DEFAULT_STARTING_MESSAGE +
             htmlElement.parentElementArrayFinder.locator_.value +
-            IS_NOT_TAPPABLE_MESSAGE,
+            IS_NOT_TAPPABLE_MESSAGE + POSSIBLE_IT_IS_NOT_PRESENT_OR_VISIBLE_MESSAGE,
         timeout = DEFAULT_TIMEOUT_IN_MS
     )
 
@@ -155,7 +156,7 @@ exports.tapWhenTappable =
         browser.touchActions().tap(htmlElement).perform();
     }
 
-exports.waitForTextToBePresentInElement =
+const waitForTextToBePresentInElement =
     function(
         htmlElement,
         text,
@@ -169,7 +170,7 @@ exports.waitForTextToBePresentInElement =
         browser.wait(EC.textToBePresentInElement(htmlElement, text), timeout, message);
     }
 
-exports.waitForTextNotToBePresentInElement =
+const waitForTextNotToBePresentInElement =
     function(
         htmlElement,
         text,
@@ -183,7 +184,7 @@ exports.waitForTextNotToBePresentInElement =
         browser.wait(EC.not(EC.textToBePresentInElement(htmlElement, text)), timeout, message);
     }
 
-exports.waitForUrlToBeEqualToExpectedUrl =
+const waitForUrlToBeEqualToExpectedUrl =
     function(
         expectedUrl,
         message = "current URL is different from '" + expectedUrl + "'",
@@ -193,3 +194,21 @@ exports.waitForUrlToBeEqualToExpectedUrl =
     {
         browser.wait(EC.urlIs(expectedUrl), timeout, message);
     }
+
+module.exports = {
+    getBodyElementFromCurrentBrowserOrBrowserInstance,
+    openNewBrowserInTheSamePage,
+    isCurrentUrlDifferentFromBaseUrl,
+    waitForElementPresence,
+    waitForElementNotToBePresent,
+    waitForElementVisibility,
+    waitForElementNotToBeVisible,
+    clickWhenClickable,
+    sendKeysWhenVisible,
+    sendKeysForFileInputField,
+    clearFieldWhenVisible,
+    tapWhenTappable,
+    waitForTextToBePresentInElement,
+    waitForTextNotToBePresentInElement,
+    waitForUrlToBeEqualToExpectedUrl
+};
