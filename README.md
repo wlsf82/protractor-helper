@@ -147,7 +147,7 @@ The above method waits for the URL to be equal to an expected URL. Such method i
 
 ## How to use (examples)
 
-After installing the library you will need to require it in you test file (see below).
+After installing the library you will need to require it in your test file (see below).
 
 ```
 // foobar.spec.js
