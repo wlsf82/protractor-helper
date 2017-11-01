@@ -104,7 +104,7 @@ const clickWhenClickable =
         htmlElement.click();
     }
 
-const sendKeysWhenVisible =
+const fillFieldWithTextWhenVisible =
     function(
         htmlElement,
         value,
@@ -117,7 +117,7 @@ const sendKeysWhenVisible =
         htmlElement.sendKeys(value);
     }
 
-const sendKeysForFileInputField =
+const fillInputFieldWithFileWhenPresent =
     function(
         htmlElement,
         value,
@@ -204,8 +204,8 @@ module.exports = {
     waitForElementVisibility,
     waitForElementNotToBeVisible,
     clickWhenClickable,
-    sendKeysWhenVisible,
-    sendKeysForFileInputField,
+    fillFieldWithTextWhenVisible,
+    fillInputFieldWithFileWhenPresent,
     clearFieldWhenVisible,
     tapWhenTappable,
     waitForTextToBePresentInElement,

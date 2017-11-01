@@ -56,8 +56,8 @@ describe("Sign up page", () => {
         const passwordField = element(by.id("password"));
         const signupButton = element(by.id("signup"));
 
-        protractorHelper.sendKeysWhenVisible(emailField, "valid@email.com");
-        protractorHelper.sendKeysWhenVisible(passwordField, "validpassword");
+        protractorHelper.fillFieldWithTextWhenVisible(emailField, "valid@email.com");
+        protractorHelper.fillFieldWithTextWhenVisible(passwordField, "validpassword");
         protractorHelper.clickWhenClickable(signupButton);
 
         const avatar = element(by.id("avatar"));
@@ -117,11 +117,11 @@ The above method is the opposite of the previous one, so, it waits for an elemen
 
 The above method is used to click in an element only as soon as it is in a clickable state. This means that the element is visible and enabled for clicking. This method can receives three arguments: 1st - a clickable HTML element (this is mandatory); 2nd - an error message (this is optional and if not provided a default message implemented for this specific method will be displayed instead); 3rd - a timeout (optional and default is 5000 milliseconds. Message turns mandatory if you need to change the default timeout, due to arguments order).
 
-- `sendKeysWhenVisible`
+- `fillFieldWithTextWhenVisible`
 
 The above method fills an input field with a text as soon as such field is visible. This method can receives four arguments: 1st - the text input HTML element (this is mandatory); 2nd - a string (the text you want to fill the input field with - this is mandatory); 3rd - an error message (this is optional and if not provided a default message implemented for this specific method will be displayed instead); 4th - a timeout (optional and default is 5000 milliseconds. Message turns mandatory if you need to change the default timeout, due to arguments order).
 
-- `sendKeysForFileInputField`
+- `fillInputFieldWithFileWhenPresent`
 
 The above method fills a file input field with a specified file as soon as the file input field is present in the DOM. This method can receives four arguments: 1st - the HTML file input element (this is mandatory); 2nd - the absolute path of the file you want to fill in the file input field (this is mandatory); 3rd - an error message (this is optional and if not provided a default message implemented for this specific method will be displayed instead); 4th - a timeout (optional and default is 5000 milliseconds. Message turns mandatory if you need to change the default timeout, due to arguments order).
 
@@ -305,7 +305,7 @@ describe("foo", () => {
 });
 ```
 
-### Example of usage of `sendKeysWhenVisible`
+### Example of usage of `fillFieldWithTextWhenVisible`
 
 ```
 const protractorHelper = require("protractor-helper");
@@ -316,14 +316,14 @@ describe("foo", () => {
 
         const textField = element(by.css("input .some-text-field"));
 
-        protractorHelper.sendKeysWhenVisible(textField, "some text", "textField is not visible", 3000);
+        protractorHelper.fillFieldWithTextWhenVisible(textField, "some text", "textField is not visible", 3000);
 
         // ...
     });
 });
 ```
 
-### Example of usage of `sendKeysForFileInputField`
+### Example of usage of `fillInputFieldWithFileWhenPresent`
 
 ```
 const path = require("path");
@@ -338,7 +338,7 @@ describe("foo", () => {
 
         const fileInputField = element(by.css("input .file-input"));
 
-        protractorHelper.sendKeysForFileInputField(fileInputField, absolutePathOfFileToUpload, "fileInputField is not present", 3000);
+        protractorHelper.fillInputFieldWithFileWhenPresent(fileInputField, absolutePathOfFileToUpload, "fileInputField is not present", 3000);
 
         // ...
     });
