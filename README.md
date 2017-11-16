@@ -149,6 +149,14 @@ The above method waits for the URL to be equal to an expected URL. Such method i
 
 The above method waits for the URL not to be equal to an expected URL. Such method is useful when you want to continue performing actions on elements only when not in a specific URL. This method can receives three arguments: 1st - the not expected URL (this is mandatory); 2nd - an error message (this is optional and if not provided a default message implemented for this specific method will be displayed instead); 3rd - a timeout (optional and default is 5000 milliseconds. Message turns mandatory if you need to change the default timeout, due to arguments order).
 
+- `waitForUrlToContainString`
+
+The above method waits for the URL to contain an expected string. Such method is useful when you want to perform verifications based on the current URL. This method can receives three arguments: 1st - the expected string (this is mandatory); 2nd - an error message (this is optional and if not provided a default message implemented for this specific method will be displayed instead); 3rd - a timeout (optional and default is 5000 milliseconds. Message turns mandatory if you need to change the default timeout, due to arguments order).
+
+- `waitForUrlNotToContainString`
+
+The above method waits for the URL not to contain an expected string. Such method is useful when you want to perform verifications based on the current URL. This method can receives three arguments: 1st - the expected string (this is mandatory); 2nd - an error message (this is optional and if not provided a default message implemented for this specific method will be displayed instead); 3rd - a timeout (optional and default is 5000 milliseconds. Message turns mandatory if you need to change the default timeout, due to arguments order).
+
 ## How to use (examples)
 
 After installing the library you will need to require it in your test file (see below).
@@ -460,6 +468,42 @@ describe("foo", () => {
         goToContactPageButton.click();
 
         protractorHelper.waitForUrlNotToBeEqualToExpectedUrl(homePageUrl, "URL is equal to " + homePageUrl, 3000);
+
+        // ...
+    });
+});
+```
+
+### Example of usage of `waitForUrlToContainString`
+
+```
+const protractorHelper = require("protractor-helper");
+
+describe("foo", () => {
+    it("bar", () => {
+        browser.get("https://example.com");
+
+        const goToContactPageButton = element(by.className("contact-button"));
+
+        goToContactPageButton.click();
+
+        protractorHelper.waitForUrlToContainString("contact", "URL does not contains the string 'contact'", 3000);
+
+        // ...
+    });
+});
+```
+
+### Example of usage of `waitForUrlNotToContainString`
+
+```
+const protractorHelper = require("protractor-helper");
+
+describe("foo", () => {
+    it("bar", () => {
+        browser.get("https://example.com");
+
+        protractorHelper.waitForUrlNotToContainString("foobarbaz", "URL contains the string 'foobarbaz'", 3000);
 
         // ...
     });

@@ -179,16 +179,38 @@ const waitForUrlToBeEqualToExpectedUrl =
         browser.wait(EC.urlIs(expectedUrl), timeout, message);
     }
 
-    const waitForUrlNotToBeEqualToExpectedUrl =
-        function(
-            expectedUrl,
-            message = `current URL is equal to '${expectedUrl}'`,
-            timeout = DEFAULT_TIMEOUT_IN_MS
-        )
+const waitForUrlNotToBeEqualToExpectedUrl =
+    function(
+        expectedUrl,
+        message = `current URL is equal to '${expectedUrl}'`,
+        timeout = DEFAULT_TIMEOUT_IN_MS
+    )
 
-        {
-            browser.wait(EC.not(EC.urlIs(expectedUrl)), timeout, message);
-        }
+    {
+        browser.wait(EC.not(EC.urlIs(expectedUrl)), timeout, message);
+    }
+
+const waitForUrlToContainString =
+    function(
+        string,
+        message = `current URL does not contains the string '${string}'`,
+        timeout = DEFAULT_TIMEOUT_IN_MS
+    )
+
+    {
+        browser.wait(EC.urlContains(string), timeout, message);
+    }
+
+const waitForUrlNotToContainString =
+    function(
+        string,
+        message = `current URL contains the string '${string}'`,
+        timeout = DEFAULT_TIMEOUT_IN_MS
+    )
+
+    {
+        browser.wait(EC.not(EC.urlContains(string)), timeout, message);
+    }
 
 module.exports = {
     getBodyElementFromCurrentBrowserOrBrowserInstance,
@@ -206,5 +228,7 @@ module.exports = {
     waitForTextToBePresentInElement,
     waitForTextNotToBePresentInElement,
     waitForUrlToBeEqualToExpectedUrl,
-    waitForUrlNotToBeEqualToExpectedUrl
+    waitForUrlNotToBeEqualToExpectedUrl,
+    waitForUrlToContainString,
+    waitForUrlNotToContainString
 };
