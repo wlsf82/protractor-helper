@@ -1,14 +1,6 @@
 const EC = protractor.ExpectedConditions;
 const DEFAULT_TIMEOUT_IN_MS = 5000;
 
-function getDefaultIsNotPresentMessage(htmlElement) {
-    return `${DEFAULT_STARTING_MESSAGE} '${htmlElement.parentElementArrayFinder.locator_.value}' ${IS_NOT_PRESENT_MESSAGE}`;
-}
-
-function getDefaultIsNotVisibleMessage(htmlElement) {
-    return `${DEFAULT_STARTING_MESSAGE} '${htmlElement.parentElementArrayFinder.locator_.value}' ${IS_NOT_VISIBLE_MESSAGE}`;
-}
-
 const DEFAULT_STARTING_MESSAGE = "element with css selector";
 const IS_NOT_CLICKABLE_MESSAGE = "is not clickable";
 const IS_NOT_PRESENT_MESSAGE = "is not present";
@@ -17,6 +9,14 @@ const IS_NOT_VISIBLE_MESSAGE = "is not visible";
 const IS_STILL_PRESENT_MESSAGE = "is still present";
 const IS_STILL_VISIBLE_MESSAGE = "is still visible";
 const POSSIBLE_IT_IS_NOT_PRESENT_OR_VISIBLE_MESSAGE = "Possibly it's not present or visible.";
+
+function getDefaultIsNotPresentMessage(htmlElement) {
+    return `${DEFAULT_STARTING_MESSAGE} '${htmlElement.parentElementArrayFinder.locator_.value}' ${IS_NOT_PRESENT_MESSAGE}`;
+}
+
+function getDefaultIsNotVisibleMessage(htmlElement) {
+    return `${DEFAULT_STARTING_MESSAGE} '${htmlElement.parentElementArrayFinder.locator_.value}' ${IS_NOT_VISIBLE_MESSAGE}`;
+}
 
 const getBodyElementFromCurrentBrowserOrBrowserInstance = function(browserInstance) {
     const cssSelector = "body";
