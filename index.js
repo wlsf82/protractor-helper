@@ -195,6 +195,17 @@ const waitForUrlToBeEqualToExpectedUrl =
         browser.wait(EC.urlIs(expectedUrl), timeout, message);
     }
 
+    const waitForUrlNotToBeEqualToExpectedUrl =
+        function(
+            expectedUrl,
+            message = "current URL is equal to '" + expectedUrl + "'",
+            timeout = DEFAULT_TIMEOUT_IN_MS
+        )
+
+        {
+            browser.wait(EC.not(EC.urlIs(expectedUrl)), timeout, message);
+        }
+
 module.exports = {
     getBodyElementFromCurrentBrowserOrBrowserInstance,
     openNewBrowserInTheSamePage,
@@ -210,5 +221,6 @@ module.exports = {
     tapWhenTappable,
     waitForTextToBePresentInElement,
     waitForTextNotToBePresentInElement,
-    waitForUrlToBeEqualToExpectedUrl
+    waitForUrlToBeEqualToExpectedUrl,
+    waitForUrlNotToBeEqualToExpectedUrl
 };
