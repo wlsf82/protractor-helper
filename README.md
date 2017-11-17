@@ -238,7 +238,7 @@ describe("foo", () => {
 
         const myElement = element(by.className("foo"));
 
-        protractorHelper.waitForElementPresence(someElement, "my element is not present", 3000);
+        protractorHelper.waitForElementPresence(myElement, "my element is not present", 3000);
 
         // ...
     });
@@ -256,7 +256,7 @@ describe("foo", () => {
 
         const myElement = element(by.className("foo"));
 
-        protractorHelper.waitForElementNotToBePresent(someElement, "my element is still present", 3000);
+        protractorHelper.waitForElementNotToBePresent(myElement, "my element is still present", 3000);
 
         // ...
     });
@@ -274,7 +274,7 @@ describe("foo", () => {
 
         const myElement = element(by.className("foo"));
 
-        protractorHelper.waitForElementVisibility(someElement, "my element not visible", 3000);
+        protractorHelper.waitForElementVisibility(myElement, "my element not visible", 3000);
 
         // ...
     });
@@ -292,7 +292,7 @@ describe("foo", () => {
 
         const myElement = element(by.className("foo"));
 
-        protractorHelper.waitForElementNotToBeVisible(someElement, "my element is still visible", 3000);
+        protractorHelper.waitForElementNotToBeVisible(myElement, "my element is still visible", 3000);
 
         // ...
     });
