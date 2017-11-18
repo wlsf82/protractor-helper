@@ -1,4 +1,5 @@
 const EC = protractor.ExpectedConditions;
+
 const DEFAULT_TIMEOUT_IN_MS = 5000;
 
 const ELEMENT_WITH_CSS_SELECTOR_MESSAGE = "element with css selector";
