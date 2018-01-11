@@ -1,6 +1,9 @@
 {
   "name": "protractor-helper",
-  "version": "3.2.2",
+  "version": "3.2.3",
+  "scripts": {
+    "test": "webdriver-manager update && protractor test/protractor.conf.js"
+  },
   "description": "Protractor helper's library",
   "main": "index.js",
   "keywords": [
@@ -14,5 +17,8 @@
   "license": "MIT",
   "peerDependencies": {
     "protractor": ">= 5.0.0"
+  },
+  "devDependencies": {
+    "protractor": "^5.2.2"
   }
 }
