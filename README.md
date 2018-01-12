@@ -511,3 +511,29 @@ describe("foo", () => {
 ```
 
 Note: All the examples are using ES6 syntax.
+
+## Library tests
+
+A sample application using HTML and CSS is included in this repo in order to allow testing each of the lib's methods.
+
+Protractor is added as a dev dependency to allow running the tests.
+
+In order to run the tests install the dev dependencies by running: `npm install`
+
+Then run the tests with `npm test`
+
+If all tests have passed you should see a result like this:
+
+```
+Started
+..................
+
+
+
+18 specs, 0 failures
+Finished in 1.934 seconds
+
+[11:07:07] I/local - Shutting down selenium standalone server.
+[11:07:07] I/launcher - 0 instance(s) of WebDriver still running
+[11:07:07] I/launcher - chrome #01 passed
+```
