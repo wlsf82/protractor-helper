@@ -13,7 +13,7 @@ Let's say you want to create a test for the sign up happy path of an example app
 
 Without this library the test could be written as something like this:
 
-```
+```js
 const EC = protractor.ExpectedConditions;
 const DEFAULT_TIMEOUT_IN_MS = 5000;
 
@@ -45,7 +45,7 @@ describe("Sign up page", () => {
 
 The same test could be written as below, using the protractor-helper library.
 
-```
+```js
 const protractorHelper = require("protractor-helper");
 
 describe("Sign up page", () => {
@@ -161,7 +161,7 @@ The above method waits for the URL not to contain an expected string. Such metho
 
 After installing the library you will need to require it in your test file (see below).
 
-```
+```js
 // foobar.spec.js
 
 const protractorHelper = require("protractor-helper");
@@ -171,7 +171,7 @@ As soon as you have the library required in your test file you can start using i
 
 ### Example of usage of `getBodyElementFromCurrentBrowserOrBrowserInstance`
 
-```
+```js
 const protractorHelper = require("protractor-helper");
 
 describe("foo", () => {
@@ -187,7 +187,7 @@ describe("foo", () => {
 
 ### Example of usage of `openNewBrowserInTheSamePage`
 
-```
+```js
 const protractorHelper = require("protractor-helper");
 
 describe("foo", () => {
@@ -207,7 +207,7 @@ describe("foo", () => {
 
 ### Example of usage of `isCurrentUrlDifferentFromBaseUrl`
 
-```
+```js
 // Imagine that in the `protractor.conf.js` file a baseUrl is defined.
 
 const protractorHelper = require("protractor-helper");
@@ -229,7 +229,7 @@ describe("foo", () => {
 
 ### Example of usage of `waitForElementPresence`
 
-```
+```js
 const protractorHelper = require("protractor-helper");
 
 describe("foo", () => {
@@ -247,7 +247,7 @@ describe("foo", () => {
 
 ### Example of usage of `waitForElementNotToBePresent`
 
-```
+```js
 const protractorHelper = require("protractor-helper");
 
 describe("foo", () => {
@@ -265,7 +265,7 @@ describe("foo", () => {
 
 ### Example of usage of `waitForElementVisibility`
 
-```
+```js
 const protractorHelper = require("protractor-helper");
 
 describe("foo", () => {
@@ -283,7 +283,7 @@ describe("foo", () => {
 
 ### Example of usage of `waitForElementNotToBeVisible`
 
-```
+```js
 const protractorHelper = require("protractor-helper");
 
 describe("foo", () => {
@@ -301,7 +301,7 @@ describe("foo", () => {
 
 ### Example of usage of `clickWhenClickable`
 
-```
+```js
 const protractorHelper = require("protractor-helper");
 
 describe("foo", () => {
@@ -319,7 +319,7 @@ describe("foo", () => {
 
 ### Example of usage of `fillFieldWithTextWhenVisible`
 
-```
+```js
 const protractorHelper = require("protractor-helper");
 
 describe("foo", () => {
@@ -337,7 +337,7 @@ describe("foo", () => {
 
 ### Example of usage of `fillInputFieldWithFileWhenPresent`
 
-```
+```js
 const path = require("path");
 const protractorHelper = require("protractor-helper");
 
@@ -359,7 +359,7 @@ describe("foo", () => {
 
 ### Example of usage of `clearFieldWhenVisible`
 
-```
+```js
 const protractorHelper = require("protractor-helper");
 
 describe("foo", () => {
@@ -378,7 +378,7 @@ describe("foo", () => {
 
 ### Example of usage of `tapWhenTappable`
 
-```
+```js
 // Imagine that in the `protractor.conf.js` file a mobile emulator is being defined.
 
 const protractorHelper = require("protractor-helper");
@@ -398,7 +398,7 @@ describe("foo", () => {
 
 ### Example of usage of `waitForTextToBePresentInElement`
 
-```
+```js
 const protractorHelper = require("protractor-helper");
 
 describe("foo", () => {
@@ -416,7 +416,7 @@ describe("foo", () => {
 
 ### Example of usage of `waitForTextNotToBePresentInElement`
 
-```
+```js
 const protractorHelper = require("protractor-helper");
 
 describe("foo", () => {
@@ -434,7 +434,7 @@ describe("foo", () => {
 
 ### Example of usage of `waitForUrlToBeEqualToExpectedUrl`
 
-```
+```js
 const protractorHelper = require("protractor-helper");
 
 describe("foo", () => {
@@ -454,7 +454,7 @@ describe("foo", () => {
 
 ### Example of usage of `waitForUrlNotToBeEqualToExpectedUrl`
 
-```
+```js
 const protractorHelper = require("protractor-helper");
 
 describe("foo", () => {
@@ -476,7 +476,7 @@ describe("foo", () => {
 
 ### Example of usage of `waitForUrlToContainString`
 
-```
+```js
 const protractorHelper = require("protractor-helper");
 
 describe("foo", () => {
@@ -496,7 +496,7 @@ describe("foo", () => {
 
 ### Example of usage of `waitForUrlNotToContainString`
 
-```
+```js
 const protractorHelper = require("protractor-helper");
 
 describe("foo", () => {
