@@ -77,7 +77,7 @@ Note: There are complete examples of each helper methods in the "How to use (exa
 
 Below it is described the process of Installation of such module.
 
-Run `npm install protractor-helper --save-dev` to install the library as a dev dependencies of your project.
+Run `npm install protractor-helper --save-dev` to install the library as a dev dependency of your project.
 
 ## Available helpers
 
