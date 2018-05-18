@@ -19,6 +19,6 @@
     "protractor": ">= 5.0.0"
   },
   "devDependencies": {
-    "protractor": "^5.2.2"
+    "protractor": "^5.3.2"
   }
 }
