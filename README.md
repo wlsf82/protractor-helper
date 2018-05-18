@@ -510,6 +510,51 @@ describe("foo", () => {
 
 Note: All the examples are using ES6 syntax.
 
+## Using methods that start with 'wait' as test expectations (or test assertions)
+
+Some of the available methods can in this library can be used as test expectations, meaning that when using them you don't necessarily need to add an explicit expectation, such as something like this: `expect(avatar.isDisplayed()).toBe(true);`.
+
+By using the `protractor-helper` library this could be implicit, like this: `protractorHelper.waitForElementVisibility(avatar);`. Here, implicit means that if the function `waitForElementVisibility(avatar)` has passed, it means that the element is visible, in other words, the element is displayed.
+
+Below you can find the list of methods that can be used as expectations:
+
+- `waitForElementPresence(element)`
+- `waitForElementNotToBePresent(element)`
+- `waitForElementVisibility(element)`
+- `waitForElementNotToBeVisible(element)`
+- `waitForTextToBePresentInElement(element, text)`
+- `waitForTextNotToBePresentInElement(element, text)`
+- `waitForUrlToBeEqualToExpectedUrl(expectedUrl)`
+- `waitForUrlNotToBeEqualToExpectedUrl(expectedUrl)`
+- `waitForUrlToContainString(string)`
+- `waitForUrlNotToContainString(string)`
+
+> Note: if you use such methods as expectations they will not count as expectations, in a test report, for example, but if they fail a clear message will be shown to ease understanding why the test has failed. In the end, test reports are usually useful in cases where tests have failed and we need to understand why. If all tests are green there is nothing to worry about, at least not if they were well implemented.
+
+### Example of a test failure when using such methods as expectations
+
+Let's look how a failure would looks like when using some of this methods as expectations.
+
+- Failure when using `waitForElementPresence` as expectation:
+
+```
+Failed: element with css selector '*[id="foo"]' is not present
+```
+
+- Failure when using `waitForElementVisibility` as expectation:
+
+```
+Failed: element with css selector '*[id="foo"]' is not visible
+```
+
+- Failure when using `waitForTextToBePresentInElement` as expectation:
+
+```
+Failed: text 'foo' not present on element with css selector 'h1'
+```
+
+> As you can see, the messages are clear and tell you exactly why the test has failed, such as in the previous example, where a specific text ('foo') is not present in a heading element (an element with css selector 'h1').
+
 ## Library tests
 
 A sample application using HTML and CSS is included in this repo in order to allow testing each of the lib's methods.
