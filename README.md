@@ -63,8 +63,6 @@ describe("Sign up page", () => {
         const avatar = element(by.id("avatar"));
 
         protractorHelper.waitForElementVisibility(avatar);
-
-        expect(avatar.isDisplayed()).toBe(true);
     });
 });
 ```
