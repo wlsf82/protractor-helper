@@ -512,7 +512,7 @@ Note: All the examples are using ES6 syntax.
 
 ## Using methods that start with 'wait' as test expectations (or test assertions)
 
-Some of the available methods can in this library can be used as test expectations, meaning that when using them you don't necessarily need to add an explicit expectation, such as something like this: `expect(avatar.isDisplayed()).toBe(true);`.
+Some of the available methods in this library can be used as test expectations, meaning that when using them you don't necessarily need to add an explicit expectation, such as something like this: `expect(avatar.isDisplayed()).toBe(true);`.
 
 By using the `protractor-helper` library this could be implicit, like this: `protractorHelper.waitForElementVisibility(avatar);`. Here, implicit means that if the function `waitForElementVisibility(avatar)` has passed, it means that the element is visible, in other words, the element is displayed.
 
