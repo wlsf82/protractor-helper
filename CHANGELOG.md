@@ -1,3 +1,14 @@
+# 3.2.9
+
+## Package.json
+
+- update lib's patch version
+
+## Documentation
+
+- add contribution section on README file
+- update change log with info about the latest patch version
+
 # 3.2.8
 
 ## Package.json
