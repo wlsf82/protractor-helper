@@ -580,3 +580,10 @@ Finished in 1.934 seconds
 [11:07:07] I/launcher - 0 instance(s) of WebDriver still running
 [11:07:07] I/launcher - chrome #01 passed
 ```
+
+## Contribute
+
+1. [Fork](https://help.github.com/articles/fork-a-repo/) this repository to your own GitHub account and then [clone](https://help.github.com/articles/cloning-a-repository/) it to your computer
+2. Install dev dependencies using NPM: `npm install`
+3. Make the necessary changes and ensure that the tests are passing using `npm test` (implement new tests if needed)
+4. Send a pull request 🙌
