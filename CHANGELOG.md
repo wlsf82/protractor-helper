@@ -1,3 +1,16 @@
+# 3.2.10
+
+## Package.json
+
+- update lib's patch version
+
+## Documentation
+
+- update readme file on example of test failures section
+- update default message of some helper functions
+- minor update on contribution section of readme file
+- update change log with info about the latest patch version
+
 # 3.2.9
 
 ## Package.json
