@@ -4,10 +4,13 @@
 
 - update lib's patch version
 
+## index.js
+
+- update default message of some helper functions
+
 ## Documentation
 
 - update readme file on example of test failures section
-- update default message of some helper functions
 - minor update on contribution section of readme file
 - update change log with info about the latest patch version
 
