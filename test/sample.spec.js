@@ -84,4 +84,8 @@ describe("Protractor helper", () => {
     it("isCurrentUrlDifferentFromBaseUrl", () => {
         expect(false).toEqual(protractorHelper.isCurrentUrlDifferentFromBaseUrl());
     });
+
+    it("fillFieldWithTextWhenVisibleAndPressEnter", () => {
+        protractorHelper.fillFieldWithTextWhenVisibleAndPressEnter(inputField, constants.SAMPLE_URL);
+    });
 });
