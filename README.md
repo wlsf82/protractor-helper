@@ -584,6 +584,7 @@ Finished in 1.934 seconds
 ## Contribute
 
 1. [Fork](https://help.github.com/articles/fork-a-repo/) this repository to your own GitHub account and then [clone](https://help.github.com/articles/cloning-a-repository/) it to your computer
-2. Install dev dependencies using NPM: `npm install`
+2. Install the dev dependencies using NPM: `npm install`
 3. Make the necessary changes and ensure that the tests are passing using `npm test` (implement new tests if needed)
-4. Send a pull request 🙌
+4. Send a [pull request](https://help.github.com/articles/about-pull-requests/) and I'll be happy to review it 🙌
+5. Wait for feedback or approval (this should not take too long)
