@@ -1,6 +1,6 @@
 # 3.2.10
 
-## Package.json
+## package.json
 
 - update lib's patch version
 
@@ -13,7 +13,7 @@
 
 # 3.2.9
 
-## Package.json
+## package.json
 
 - update lib's patch version
 
@@ -24,7 +24,7 @@
 
 # 3.2.8
 
-## Package.json
+## package.json
 
 - update lib's patch version
 
@@ -37,7 +37,7 @@
 
 From version 3.2.7 this change log will be maintained as a way of making users aware of changes in all future versions of this library.
 
-## Package.json
+## package.json
 
 - update protractor version on dev dependencies
 - update lib patch version
