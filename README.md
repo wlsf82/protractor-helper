@@ -538,19 +538,19 @@ Let's look how a failure would looks like when using some of this methods as exp
 - Failure when using `waitForElementPresence` as expectation:
 
 ```
-Failed: element with css selector '*[id="foo"]' is not present
+Failed: element with locator '*[id="foo"]' is not present
 ```
 
 - Failure when using `waitForElementVisibility` as expectation:
 
 ```
-Failed: element with css selector '*[id="foo"]' is not visible
+Failed: element with locator '*[id="foo"]' is not visible
 ```
 
 - Failure when using `waitForTextToBePresentInElement` as expectation:
 
 ```
-Failed: text 'foo' not present on element with css selector 'h1'
+Failed: text 'foo' not present on element with locator 'h1'
 ```
 
 > As you can see, the messages are clear and tell you exactly why the test has failed, such as in the previous example, where a specific text ('foo') is not present in a heading element (an element with css selector 'h1').
