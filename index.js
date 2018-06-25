@@ -213,6 +213,19 @@ const waitForUrlNotToContainString =
         browser.wait(EC.not(EC.urlContains(string)), timeout, message);
     }
 
+const fillFieldWithTextWhenVisibleAndPressEnter =
+    function(
+        htmlElement,
+        value,
+        message = getDefaultIsNotVisibleMessage(htmlElement),
+        timeout = DEFAULT_TIMEOUT_IN_MS
+    )
+
+    {
+        this.fillFieldWithTextWhenVisible(htmlElement, value, message, timeout);
+        this.fillFieldWithTextWhenVisible(htmlElement, protractor.Key.ENTER, message, timeout);
+    }
+
 module.exports = {
     getBodyElementFromCurrentBrowserOrBrowserInstance,
     openNewBrowserInTheSamePage,
@@ -231,5 +244,6 @@ module.exports = {
     waitForUrlToBeEqualToExpectedUrl,
     waitForUrlNotToBeEqualToExpectedUrl,
     waitForUrlToContainString,
-    waitForUrlNotToContainString
+    waitForUrlNotToContainString,
+    fillFieldWithTextWhenVisibleAndPressEnter
 };
