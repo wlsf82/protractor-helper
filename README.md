@@ -306,7 +306,7 @@ describe("foo", () => {
     it("bar", () => {
         browser.get("https://example.com");
 
-        const myLink = element(by.css("a .my-link"));
+        const myLink = element(by.css("a.my-link"));
 
         protractorHelper.clickWhenClickable(myLink, "my link is not clickable", 3000);
 
@@ -324,7 +324,7 @@ describe("foo", () => {
     it("bar", () => {
         browser.get("https://example.com");
 
-        const textField = element(by.css("input .some-text-field"));
+        const textField = element(by.css("input.some-text-field"));
 
         protractorHelper.fillFieldWithTextWhenVisible(textField, "some text", "textField is not visible", 3000);
 
@@ -346,7 +346,7 @@ describe("foo", () => {
 
         browser.get("https://example.com");
 
-        const fileInputField = element(by.css("input .file-input"));
+        const fileInputField = element(by.css("input.file-input"));
 
         protractorHelper.fillInputFieldWithFileWhenPresent(fileInputField, absolutePathOfFileToUpload, "fileInputField is not present", 3000);
 
@@ -364,7 +364,7 @@ describe("foo", () => {
     it("bar", () => {
         browser.get("https://example.com");
 
-        const textField = element(by.css("input ..some-text-field"));
+        const textField = element(by.css("input.some-text-field"));
 
         textField.sendKeys("foobar");
         protractorHelper.clearFieldWhenVisible(textField, "textField is not visible", 3000);
