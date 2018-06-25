@@ -1,3 +1,25 @@
+# 3.3.0
+
+## package.json
+
+- update lib's minor version
+
+## index.js
+
+- update main file with new method
+
+## test/sample.spec.js
+
+- add new test for new method
+
+## Documentation
+
+- update readme file with new method
+- minor updates on locators on how to use section
+- update change log with info about the latest minor version
+- update change log to put information in the right place
+- minor updates on change log file
+
 # 3.2.10
 
 ## package.json
