@@ -155,6 +155,10 @@ The above method waits for the URL to contain an expected string. Such method is
 
 The above method waits for the URL not to contain an expected string. Such method is useful when you want to perform verifications based on the current URL. This method can receives three arguments: 1st - the expected string (this is mandatory); 2nd - an error message (this is optional and if not provided a default message implemented for this specific method will be displayed instead); 3rd - a timeout (optional and default is 5000 milliseconds. Message turns mandatory if you need to change the default timeout, due to arguments order).
 
+- `fillFieldWithTextWhenVisibleAndPressEnter`
+
+The above method fills an input field with a text as soon as such field is visible and then it simulates and pressing the ENTER key from the keyboard. This method can receives four arguments: 1st - the text input HTML element (this is mandatory); 2nd - a string (the text you want to fill the input field with - this is mandatory); 3rd - an error message (this is optional and if not provided a default message implemented for this specific method will be displayed instead); 4th - a timeout (optional and default is 5000 milliseconds. Message turns mandatory if you need to change the default timeout, due to arguments order). This method is useful in cases such as when doing a search and pressing the ENTER key, instead of having to fill the input field and clicking the search button, for example.
+
 ## How to use (examples)
 
 After installing the library you will need to require it in your test file (see below).
@@ -508,6 +512,24 @@ describe("foo", () => {
 });
 ```
 
+### Example of usage of `fillFieldWithTextWhenVisibleAndPressEnter`
+
+```js
+const protractorHelper = require("protractor-helper");
+
+describe("foo", () => {
+    it("bar", () => {
+        browser.get("https://example.com");
+
+        const textField = element(by.css("input.some-text-field"));
+
+        protractorHelper.fillFieldWithTextWhenVisibleAndPressEnter(textField, "some text", "textField is not visible", 3000);
+
+        // ...
+    });
+});
+```
+
 Note: All the examples are using ES6 syntax.
 
 ## Using methods that start with 'wait' as test expectations (or test assertions)
@@ -573,8 +595,8 @@ Started
 
 
 
-18 specs, 0 failures
-Finished in 1.934 seconds
+19 specs, 0 failures
+Finished in 3.17 seconds
 
 [11:07:07] I/local - Shutting down selenium standalone server.
 [11:07:07] I/launcher - 0 instance(s) of WebDriver still running
