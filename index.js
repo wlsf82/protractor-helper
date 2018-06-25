@@ -2,7 +2,7 @@ const EC = protractor.ExpectedConditions;
 
 const DEFAULT_TIMEOUT_IN_MS = 5000;
 
-const ELEMENT_WITH_CSS_SELECTOR_MESSAGE = "element with css selector";
+const ELEMENT_WITH_LOCATOR_MESSAGE = "element with locator";
 const IS_NOT_CLICKABLE_MESSAGE = "is not clickable";
 const IS_NOT_PRESENT_MESSAGE = "is not present";
 const IS_NOT_TAPPABLE_MESSAGE = "is not tappable";
@@ -12,11 +12,11 @@ const IS_STILL_VISIBLE_MESSAGE = "is still visible";
 const POSSIBLE_IT_IS_NOT_PRESENT_OR_VISIBLE_MESSAGE = "Possibly it's not present or visible.";
 
 function getDefaultIsNotPresentMessage(htmlElement) {
-    return `${ELEMENT_WITH_CSS_SELECTOR_MESSAGE} '${htmlElement.parentElementArrayFinder.locator_.value}' ${IS_NOT_PRESENT_MESSAGE}`;
+    return `${ELEMENT_WITH_LOCATOR_MESSAGE} '${htmlElement.parentElementArrayFinder.locator_.value}' ${IS_NOT_PRESENT_MESSAGE}`;
 }
 
 function getDefaultIsNotVisibleMessage(htmlElement) {
-    return `${ELEMENT_WITH_CSS_SELECTOR_MESSAGE} '${htmlElement.parentElementArrayFinder.locator_.value}' ${IS_NOT_VISIBLE_MESSAGE}`;
+    return `${ELEMENT_WITH_LOCATOR_MESSAGE} '${htmlElement.parentElementArrayFinder.locator_.value}' ${IS_NOT_VISIBLE_MESSAGE}`;
 }
 
 const getBodyElementFromCurrentBrowserOrBrowserInstance = function(browserInstance) {
@@ -53,7 +53,7 @@ const waitForElementPresence =
 const waitForElementNotToBePresent =
     function(
         htmlElement,
-        message = `${ELEMENT_WITH_CSS_SELECTOR_MESSAGE} '${htmlElement.parentElementArrayFinder.locator_.value}' ${IS_STILL_PRESENT_MESSAGE}`,
+        message = `${ELEMENT_WITH_LOCATOR_MESSAGE} '${htmlElement.parentElementArrayFinder.locator_.value}' ${IS_STILL_PRESENT_MESSAGE}`,
         timeout = DEFAULT_TIMEOUT_IN_MS
     )
 
@@ -75,7 +75,7 @@ const waitForElementVisibility =
 const waitForElementNotToBeVisible =
     function(
         htmlElement,
-        message = `${ELEMENT_WITH_CSS_SELECTOR_MESSAGE} '${htmlElement.parentElementArrayFinder.locator_.value}' ${IS_STILL_VISIBLE_MESSAGE}`,
+        message = `${ELEMENT_WITH_LOCATOR_MESSAGE} '${htmlElement.parentElementArrayFinder.locator_.value}' ${IS_STILL_VISIBLE_MESSAGE}`,
         timeout = DEFAULT_TIMEOUT_IN_MS
     )
 
@@ -86,7 +86,7 @@ const waitForElementNotToBeVisible =
 const clickWhenClickable =
     function(
         htmlElement,
-        message = `${ELEMENT_WITH_CSS_SELECTOR_MESSAGE} '${htmlElement.parentElementArrayFinder.locator_.value}' ${IS_NOT_CLICKABLE_MESSAGE}. ${POSSIBLE_IT_IS_NOT_PRESENT_OR_VISIBLE_MESSAGE}`,
+        message = `${ELEMENT_WITH_LOCATOR_MESSAGE} '${htmlElement.parentElementArrayFinder.locator_.value}' ${IS_NOT_CLICKABLE_MESSAGE}. ${POSSIBLE_IT_IS_NOT_PRESENT_OR_VISIBLE_MESSAGE}`,
         timeout = DEFAULT_TIMEOUT_IN_MS
     )
 
@@ -136,7 +136,7 @@ const clearFieldWhenVisible =
 const tapWhenTappable =
     function(
         htmlElement,
-        message = `${ELEMENT_WITH_CSS_SELECTOR_MESSAGE} '${htmlElement.parentElementArrayFinder.locator_.value}' ${IS_NOT_TAPPABLE_MESSAGE}. ${POSSIBLE_IT_IS_NOT_PRESENT_OR_VISIBLE_MESSAGE}`,
+        message = `${ELEMENT_WITH_LOCATOR_MESSAGE} '${htmlElement.parentElementArrayFinder.locator_.value}' ${IS_NOT_TAPPABLE_MESSAGE}. ${POSSIBLE_IT_IS_NOT_PRESENT_OR_VISIBLE_MESSAGE}`,
         timeout = DEFAULT_TIMEOUT_IN_MS
     )
 
@@ -149,7 +149,7 @@ const waitForTextToBePresentInElement =
     function(
         htmlElement,
         text,
-        message = `text '${text}' not present on ${ELEMENT_WITH_CSS_SELECTOR_MESSAGE} '${htmlElement.parentElementArrayFinder.locator_.value}'`,
+        message = `text '${text}' not present on ${ELEMENT_WITH_LOCATOR_MESSAGE} '${htmlElement.parentElementArrayFinder.locator_.value}'`,
         timeout = DEFAULT_TIMEOUT_IN_MS
     )
 
@@ -161,7 +161,7 @@ const waitForTextNotToBePresentInElement =
     function(
         htmlElement,
         text,
-        message = `text '${text}' is still present on ${ELEMENT_WITH_CSS_SELECTOR_MESSAGE} '${htmlElement.parentElementArrayFinder.locator_.value}'`,
+        message = `text '${text}' is still present on ${ELEMENT_WITH_LOCATOR_MESSAGE} '${htmlElement.parentElementArrayFinder.locator_.value}'`,
         timeout = DEFAULT_TIMEOUT_IN_MS
     )
 
