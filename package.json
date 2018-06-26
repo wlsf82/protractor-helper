@@ -13,7 +13,7 @@
     "type": "git",
     "url": "https://github.com/wlsf82/protractor-helper"
   },
-  "author": "Walmyr Filho <wlsf82@gmail.com>",
+  "author": "Walmyr Filho <wlsf82@gmail.com> (http://walmyr-filho.com)",
   "license": "MIT",
   "peerDependencies": {
     "protractor": ">= 5.0.0"
