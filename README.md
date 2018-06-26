@@ -157,7 +157,7 @@ The above method waits for the URL not to contain an expected string. Such metho
 
 - `fillFieldWithTextWhenVisibleAndPressEnter`
 
-The above method fills an input field with a text as soon as such field is visible and then it simulates and pressing the ENTER key from the keyboard. This method can receives four arguments: 1st - the text input HTML element (this is mandatory); 2nd - a string (the text you want to fill the input field with - this is mandatory); 3rd - an error message (this is optional and if not provided a default message implemented for this specific method will be displayed instead); 4th - a timeout (optional and default is 5000 milliseconds. Message turns mandatory if you need to change the default timeout, due to arguments order). This method is useful in cases such as when doing a search and pressing the ENTER key, instead of having to fill the input field and clicking the search button, for example.
+The above method fills an input field with a text as soon as such field is visible and then it simulates pressing the ENTER key from the keyboard. This method can receives four arguments: 1st - the text input HTML element (this is mandatory); 2nd - a string (the text you want to fill the input field with - this is mandatory); 3rd - an error message (this is optional and if not provided a default message implemented for this specific method will be displayed instead); 4th - a timeout (optional and default is 5000 milliseconds. Message turns mandatory if you need to change the default timeout, due to arguments order). This method is useful in cases such as when doing a search and pressing the ENTER key, instead of having to fill the input field and clicking the search button, for example.
 
 ## How to use (examples)
 
