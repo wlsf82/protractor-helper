@@ -1,3 +1,15 @@
+# 3.3.1
+
+## package.json
+
+- update lib's patch version
+- update package.json file with author's website
+
+## Documentation
+
+- add missing license file
+- update change log with info about the latest patch version
+
 # 3.3.0
 
 ## package.json
