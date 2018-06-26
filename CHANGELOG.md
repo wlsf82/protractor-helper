@@ -1,3 +1,14 @@
+# 3.3.3
+
+## package.json
+
+- update lib's patch version due to failure on previous one
+
+## Documentation
+
+- minor fix on readme file
+- update change log with info about the latest patch version
+
 # 3.3.2
 
 ## package.json
