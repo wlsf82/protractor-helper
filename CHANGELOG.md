@@ -1,3 +1,21 @@
+# 3.3.4
+
+## package.json
+
+- update lib's patch version
+
+## test/sample.spec.js
+
+- fix bad smells on test code found by sonar cloud
+
+## sampleApp/index.html
+
+- fix bug on sample app html file (missing alt on image tag)
+
+## Documentation
+
+- update change log with info about the latest patch version
+
 # 3.3.3
 
 ## package.json
