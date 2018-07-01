@@ -8,7 +8,7 @@ describe("Protractor helper", () => {
     const shortenButton = element(by.id("shorten"));
     const expandButton = element(by.id("expand"));
 
-    const nonExistingElement = element(by.id("foo"));;
+    const nonExistingElement = element(by.id("foo"));
 
     beforeEach(() => browser.get(""));
 
@@ -79,6 +79,7 @@ describe("Protractor helper", () => {
 
     xit("openNewBrowserInTheSamePage", () => {
         const newBrowser = protractorHelper.openNewBrowserInTheSamePage(browser);
+        console.log(newBrowser, "log of other browser");
     }).pend("figure out why this is timing out");
 
     it("isCurrentUrlDifferentFromBaseUrl", () => {
