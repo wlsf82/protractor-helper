@@ -1,3 +1,14 @@
+# 3.3.5
+
+## package.json
+
+- update lib's patch version
+
+## Documentation
+
+- update read me file with build status on lib tests section
+- update change log with info about the latest patch version
+
 # 3.3.4
 
 ## package.json
