@@ -603,6 +603,12 @@ Finished in 3.17 seconds
 [11:07:07] I/launcher - chrome #01 passed
 ```
 
+### Build status
+
+After changes to master branch all tests are executed and the build status can be seen below.
+
+[![Build Status](https://semaphoreci.com/api/v1/wlsf82/protractor-helper/branches/master/badge.svg)](https://semaphoreci.com/wlsf82/protractor-helper)
+
 ## Contribute
 
 1. [Fork](https://help.github.com/articles/fork-a-repo/) this repository to your own GitHub account and then [clone](https://help.github.com/articles/cloning-a-repository/) it to your computer
