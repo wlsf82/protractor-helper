@@ -1,3 +1,13 @@
+# 3.4.2
+
+## package.json
+
+- update lib's patch version
+
+## Documentation
+
+- update change log with info about the latest patch version
+
 # 3.4.1
 
 ## Documentation
