@@ -1,3 +1,23 @@
+# 3.4.0
+
+## package.json
+
+- update lib's minor version
+
+## index.js
+
+- update main file with new method (clearFieldWhenVisibleAndFillItWithText)
+
+## test/sample.spec.js
+
+- add test for new method
+
+## Documentation
+
+- update readme file with information about new method
+- minor gramar fix on readme file
+- update change log with info about the latest minor version
+
 # 3.3.5
 
 ## package.json
