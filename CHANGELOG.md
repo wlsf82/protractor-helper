@@ -1,3 +1,9 @@
+# 3.4.1
+
+## Documentation
+
+- update change log with info about the latest patch version
+
 # 3.4.0
 
 ## package.json
