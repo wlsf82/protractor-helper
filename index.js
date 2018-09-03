@@ -133,6 +133,20 @@ const clearFieldWhenVisible =
         htmlElement.clear();
     }
 
+const clearFieldWhenVisibleAndFillItWithText =
+    function(
+        htmlElement,
+        text,
+        message = getDefaultIsNotVisibleMessage(htmlElement),
+        timeout = DEFAULT_TIMEOUT_IN_MS
+    )
+
+    {
+        this.waitForElementVisibility(htmlElement, message, timeout);
+        htmlElement.clear();
+        htmlElement.sendKeys(text)
+    }
+
 const tapWhenTappable =
     function(
         htmlElement,
@@ -238,6 +252,7 @@ module.exports = {
     fillFieldWithTextWhenVisible,
     fillInputFieldWithFileWhenPresent,
     clearFieldWhenVisible,
+    clearFieldWhenVisibleAndFillItWithText,
     tapWhenTappable,
     waitForTextToBePresentInElement,
     waitForTextNotToBePresentInElement,
