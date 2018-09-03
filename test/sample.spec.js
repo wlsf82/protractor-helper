@@ -65,6 +65,11 @@ describe("Protractor helper", () => {
         protractorHelper.clearFieldWhenVisible(inputField);
     });
 
+    it("clearFieldWhenVisibleAndFillItWithText", () => {
+        protractorHelper.fillFieldWithTextWhenVisible(inputField, constants.SHORTEN_URL);
+        protractorHelper.clearFieldWhenVisibleAndFillItWithText(inputField, constants.SAMPLE_URL);
+    });
+
     it("tapWhenTappable", () => {
         protractorHelper.tapWhenTappable(expandButton);
     });
