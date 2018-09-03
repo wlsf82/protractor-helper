@@ -617,12 +617,12 @@ Started
 
 
 
-19 specs, 0 failures
-Finished in 3.17 seconds
+20 specs, 0 failures
+Finished in 2.501 seconds
 
-[11:07:07] I/local - Shutting down selenium standalone server.
-[11:07:07] I/launcher - 0 instance(s) of WebDriver still running
-[11:07:07] I/launcher - chrome #01 passed
+[23:28:40] I/local - Shutting down selenium standalone server.
+[23:28:40] I/launcher - 0 instance(s) of WebDriver still running
+[23:28:40] I/launcher - chrome #01 passed
 ```
 
 ### Build status
