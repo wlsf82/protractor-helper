@@ -127,6 +127,10 @@ The above method fills a file input field with a specified file as soon as the f
 
 The above method clears a text input field as soon as such field is visible. This method can receives three arguments: 1st - the text input HTML element (this is mandatory); 2nd - an error message (this is optional and if not provided a default message implemented for this specific method will be displayed instead); 3rd - a timeout (optional and default is 5000 milliseconds. Message turns mandatory if you need to change the default timeout, due to arguments order).
 
+- `clearFieldWhenVisibleAndFillItWithText`
+
+The above method clears a text input field as soon as such field is visible, and then it fills it with a text. This method can receives four arguments: 1st - the text input HTML element (this is mandatory); 2nd - a string (the text you want to fill the input field with - this is mandatory); 3rd - an error message (this is optional and if not provided a default message implemented for this specific method will be displayed instead); 4th - a timeout (optional and default is 5000 milliseconds. Message turns mandatory if you need to change the default timeout, due to arguments order).
+
 - `tapWhenTappable`
 
 The above method performs a tap action on a clickable/tappable HTML element as soon is it is clickable/tappable. This method is used when performing web mobile testing in mobile emulators, for example. This method can receives three arguments: 1st - a clickable/tappable HTML element (this is mandatory); 2nd - an error message (this is optional and if not provided a default message implemented for this specific method will be displayed instead); 3rd - a timeout (optional and default is 5000 milliseconds. Message turns mandatory if you need to change the default timeout, due to arguments order).
@@ -372,6 +376,24 @@ describe("foo", () => {
 
         textField.sendKeys("foobar");
         protractorHelper.clearFieldWhenVisible(textField, "textField is not visible", 3000);
+
+        // ...
+    });
+});
+```
+
+### Example of usage of `clearFieldWhenVisibleAndFillItWithText`
+
+```js
+const protractorHelper = require("protractor-helper");
+
+describe("foo", () => {
+    it("bar", () => {
+        browser.get("https://example.com");
+
+        const textField = element(by.css("input.some-text-field"));
+
+        protractorHelper.clearFieldWhenVisibleAndFillItWithText(textField, "some text", "textField is not visible", 3000);
 
         // ...
     });
