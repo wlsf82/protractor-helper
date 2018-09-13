@@ -1,3 +1,22 @@
+# 3.4.4
+
+## package.json
+
+- update lib's patch version
+- update protractor dev dependency version
+
+## package-lock.json
+
+- track package-lock.json
+
+## Documentation
+
+- update change log with info about the latest patch version
+
+## General
+
+- prettify code
+
 # 3.4.3
 
 ## package.json
