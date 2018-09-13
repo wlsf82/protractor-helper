@@ -1,3 +1,17 @@
+# 3.4.5
+
+## package.json
+
+- update lib's patch version
+
+## package-lock.json
+
+- update lib's version on package-lock file
+
+## Documentation
+
+- update change log with info about the latest patch version
+
 # 3.4.4
 
 ## package.json
