@@ -1,97 +1,97 @@
 header {
-    height: 60px;
-    text-align: center;
+  height: 60px;
+  text-align: center;
 }
 
 main {
-    background-color: #0087de;
-    height: 900px;
-    text-align: center;
+  background-color: #0087de;
+  height: 900px;
+  text-align: center;
 }
 
 h1 {
-    height: 38px;
-    font-family: Roboto;
-    font-size: 32px;
-    font-weight: 300;
-    letter-spacing: 0.6px;
-    text-align: center;
-    color: #1f233e;
-    padding-top: 137px;
+  height: 38px;
+  font-family: Roboto;
+  font-size: 32px;
+  font-weight: 300;
+  letter-spacing: 0.6px;
+  text-align: center;
+  color: #1f233e;
+  padding-top: 137px;
 }
 
 .logo {
-    width: 110px;
-    height: 28px;
-    margin-top: 40px;
-    object-fit: contain;
+  width: 110px;
+  height: 28px;
+  margin-top: 40px;
+  object-fit: contain;
 }
 
 .container {
-    width: 400px;
-    margin: auto;
-    text-align: center;
+  width: 400px;
+  margin: auto;
+  text-align: center;
 }
 
 #input {
-    width: 219px;
-    height: 37px;
-    border-radius: 3.2px;
-    border: solid 0.8px #1f233e;
-    background-color: inherit;
-    display: block;
-    margin: auto;
-    font-family: Source Sans Pro;
-    font-size: 14px;
-    letter-spacing: 0.2px;
-    text-align: center;
-    color: #ffffff;
+  width: 219px;
+  height: 37px;
+  border-radius: 3.2px;
+  border: solid 0.8px #1f233e;
+  background-color: inherit;
+  display: block;
+  margin: auto;
+  font-family: Source Sans Pro;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  text-align: center;
+  color: #ffffff;
 }
 
 #shorten {
-    width: 91px;
-    height: 37px;
-    border-radius: 3.2px;
-    border: solid 0.8px #1f233e;
-    background-color: inherit;
-    margin-top: 48px;
-    font-family: Source Sans Pro;
-    font-size: 14px;
-    letter-spacing: 0.2px;
-    text-align: center;
-    color: #ffffff;
-    margin-right: -3px;
+  width: 91px;
+  height: 37px;
+  border-radius: 3.2px;
+  border: solid 0.8px #1f233e;
+  background-color: inherit;
+  margin-top: 48px;
+  font-family: Source Sans Pro;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  text-align: center;
+  color: #ffffff;
+  margin-right: -3px;
 }
 
 #expand {
-    width: 91px;
-    height: 37px;
-    border-radius: 3.2px;
-    background-color: #1f233e;
-    border: solid 0.8px #4a4a4a;
-    margin-top: 48px;
-    font-family: Source Sans Pro;
-    font-size: 14px;
-    letter-spacing: 0.2px;
-    text-align: center;
-    color: #ffffff;
-    margin-left: -3px;
+  width: 91px;
+  height: 37px;
+  border-radius: 3.2px;
+  background-color: #1f233e;
+  border: solid 0.8px #4a4a4a;
+  margin-top: 48px;
+  font-family: Source Sans Pro;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  text-align: center;
+  color: #ffffff;
+  margin-left: -3px;
 }
 
 #responseField {
-    min-width: 191px;
-    min-height: 120px;
-    border: solid 2px #ffffff;
-    margin: auto;
-    margin-top: 25px;
-    font-family: Source Sans Pro;
-    font-size: 16px;
-    letter-spacing: 0.2px;
-    text-align: center;
-    color: #ffffff;
-    overflow-wrap: break-word;
+  min-width: 191px;
+  min-height: 120px;
+  border: solid 2px #ffffff;
+  margin: auto;
+  margin-top: 25px;
+  font-family: Source Sans Pro;
+  font-size: 16px;
+  letter-spacing: 0.2px;
+  text-align: center;
+  color: #ffffff;
+  overflow-wrap: break-word;
 }
 
 a {
-    color: #ffffff;
+  color: #ffffff;
 }
