@@ -163,6 +163,10 @@ The above method waits for the URL not to contain an expected string. Such metho
 
 The above method fills an input field with a text as soon as such field is visible and then it simulates pressing the ENTER key from the keyboard. This method can receives four arguments: 1st - the text input HTML element (this is mandatory); 2nd - a string (the text you want to fill the input field with - this is mandatory); 3rd - an error message (this is optional and if not provided a default message implemented for this specific method will be displayed instead); 4th - a timeout (optional and default is 5000 milliseconds. Message turns mandatory if you need to change the default timeout, due to arguments order). This method is useful in cases such as when doing a search and pressing the ENTER key, instead of having to fill the input field and clicking the search button, for example.
 
+- `scrollToElementWhenVisible`
+
+The above method is used to scroll up to an element on the page as soon as the element is visible in the DOM. This method can receives three arguments: 1st - the HTML element (this is mandatory); 2nd - an error message (this is optional and if not provided a default message implemented for this specific method will be displayed instead); 3rd - a timeout (optional and default is 5000 milliseconds. Message turns mandatory if you need to change the default timeout, due to arguments order).
+
 ## How to use (examples)
 
 After installing the library you will need to require it in your test file (see below).
@@ -552,6 +556,24 @@ describe("foo", () => {
 });
 ```
 
+### Example of usage of `scrollToElementWhenVisible`
+
+```js
+const protractorHelper = require("protractor-helper");
+
+describe("foo", () => {
+    it("bar", () => {
+        browser.get("https://example.com");
+
+        const myLink = element(by.css("a.my-link"));
+
+        protractorHelper.scrollToElementWhenVisible(myLink, "my link is not visible", 3000);
+
+        // ...
+    });
+});
+```
+
 Note: All the examples are using ES6 syntax.
 
 ## Using methods that start with 'wait' as test expectations (or test assertions)
@@ -617,8 +639,8 @@ Started
 
 
 
-20 specs, 0 failures
-Finished in 2.501 seconds
+21 specs, 0 failures
+Finished in 2.968 seconds
 
 [23:28:40] I/local - Shutting down selenium standalone server.
 [23:28:40] I/launcher - 0 instance(s) of WebDriver still running
