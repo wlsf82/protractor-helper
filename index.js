@@ -24,6 +24,20 @@ function getDefaultIsNotVisibleMessage(htmlElement) {
   }' ${IS_NOT_VISIBLE_MESSAGE}`;
 }
 
+function getDefaultIsNotClickableMessage(htmlElement) {
+  return `${ELEMENT_WITH_LOCATOR_MESSAGE} '${
+    htmlElement.parentElementArrayFinder.locator_.value
+  }' ${IS_NOT_CLICKABLE_MESSAGE}. ${POSSIBLE_IT_IS_NOT_PRESENT_OR_VISIBLE_MESSAGE}`
+}
+
+function waitForElementToBeClickable (
+  htmlElement,
+  message = getDefaultIsNotClickableMessage(htmlElement),
+  timeout = DEFAULT_TIMEOUT_IN_MS
+) {
+  browser.wait(EC.elementToBeClickable(htmlElement), timeout, message);
+}
+
 const getBodyElementFromCurrentBrowserOrBrowserInstance = function(
   browserInstance
 ) {
@@ -84,12 +98,10 @@ const waitForElementNotToBeVisible = function(
 
 const clickWhenClickable = function(
   htmlElement,
-  message = `${ELEMENT_WITH_LOCATOR_MESSAGE} '${
-    htmlElement.parentElementArrayFinder.locator_.value
-  }' ${IS_NOT_CLICKABLE_MESSAGE}. ${POSSIBLE_IT_IS_NOT_PRESENT_OR_VISIBLE_MESSAGE}`,
+  message = getDefaultIsNotClickableMessage(htmlElement),
   timeout = DEFAULT_TIMEOUT_IN_MS
 ) {
-  browser.wait(EC.elementToBeClickable(htmlElement), timeout, message);
+  waitForElementToBeClickable(htmlElement, message, timeout);
   htmlElement.click();
 };
 
@@ -140,7 +152,7 @@ const tapWhenTappable = function(
   }' ${IS_NOT_TAPPABLE_MESSAGE}. ${POSSIBLE_IT_IS_NOT_PRESENT_OR_VISIBLE_MESSAGE}`,
   timeout = DEFAULT_TIMEOUT_IN_MS
 ) {
-  browser.wait(EC.elementToBeClickable(htmlElement), timeout, message);
+  waitForElementToBeClickable(htmlElement, message, timeout);
   browser
     .touchActions()
     .tap(htmlElement)
@@ -224,6 +236,15 @@ const fillFieldWithTextWhenVisibleAndPressEnter = function(
   );
 };
 
+const scrollToElementWhenVisible = function(
+  htmlElement,
+  message = getDefaultIsNotVisibleMessage(htmlElement),
+  timeout = DEFAULT_TIMEOUT_IN_MS
+) {
+  this.waitForElementVisibility(htmlElement, message, timeout);
+  browser.executeScript('arguments[0].scrollIntoView(true);', htmlElement);
+};
+
 module.exports = {
   getBodyElementFromCurrentBrowserOrBrowserInstance,
   openNewBrowserInTheSamePage,
@@ -244,5 +265,6 @@ module.exports = {
   waitForUrlNotToBeEqualToExpectedUrl,
   waitForUrlToContainString,
   waitForUrlNotToContainString,
-  fillFieldWithTextWhenVisibleAndPressEnter
+  fillFieldWithTextWhenVisibleAndPressEnter,
+  scrollToElementWhenVisible
 };

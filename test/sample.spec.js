@@ -118,4 +118,9 @@ describe("Protractor helper", () => {
       constants.SAMPLE_URL
     );
   });
+
+  it("scrollToElementWhenVisible", () => {
+    protractorHelper.scrollToElementWhenVisible(shortenButton);
+  });
+
 });
