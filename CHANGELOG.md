@@ -1,3 +1,21 @@
+# 3.5.0
+
+## package.json
+
+- update lib's minor version
+
+## package-lock.json
+
+- update lib's version on package-lock file
+
+## Documentation
+
+- update change log with info about the latest minor version
+
+## js files
+
+- prettier js files
+
 # 3.4.5
 
 ## package.json
