@@ -122,5 +122,4 @@ describe("Protractor helper", () => {
   it("scrollToElementWhenVisible", () => {
     protractorHelper.scrollToElementWhenVisible(shortenButton);
   });
-
 });

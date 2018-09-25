@@ -27,10 +27,10 @@ function getDefaultIsNotVisibleMessage(htmlElement) {
 function getDefaultIsNotClickableMessage(htmlElement) {
   return `${ELEMENT_WITH_LOCATOR_MESSAGE} '${
     htmlElement.parentElementArrayFinder.locator_.value
-  }' ${IS_NOT_CLICKABLE_MESSAGE}. ${POSSIBLE_IT_IS_NOT_PRESENT_OR_VISIBLE_MESSAGE}`
+  }' ${IS_NOT_CLICKABLE_MESSAGE}. ${POSSIBLE_IT_IS_NOT_PRESENT_OR_VISIBLE_MESSAGE}`;
 }
 
-function waitForElementToBeClickable (
+function waitForElementToBeClickable(
   htmlElement,
   message = getDefaultIsNotClickableMessage(htmlElement),
   timeout = DEFAULT_TIMEOUT_IN_MS
@@ -242,7 +242,7 @@ const scrollToElementWhenVisible = function(
   timeout = DEFAULT_TIMEOUT_IN_MS
 ) {
   this.waitForElementVisibility(htmlElement, message, timeout);
-  browser.executeScript('arguments[0].scrollIntoView(true);', htmlElement);
+  browser.executeScript("arguments[0].scrollIntoView(true);", htmlElement);
 };
 
 module.exports = {
