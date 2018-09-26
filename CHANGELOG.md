@@ -1,3 +1,22 @@
+# 3.5.1
+
+## package.json
+
+- update lib's patch version
+
+## package-lock.json
+
+- update lib's version on package-lock file
+
+## Documentation
+
+- update change log with info about the latest patch version
+- update change log with missing info from last version
+
+## sample.spec.js file
+
+- update pend description of skipped test and its implementation
+
 # 3.5.0
 
 ## package.json
