@@ -105,8 +105,9 @@ describe("Protractor helper", () => {
 
   xit("openNewBrowserInTheSamePage", () => {
     const newBrowser = protractorHelper.openNewBrowserInTheSamePage(browser);
-    console.log(newBrowser, "log of other browser");
-  }).pend("figure out why this is timing out");
+    newBrowser.ignoreSynchronization = true;
+    newBrowser.quit();
+  }).pend("this needs protractor version 5.0.0, not higher");
 
   it("isCurrentUrlDifferentFromBaseUrl", () => {
     expect(false).toEqual(protractorHelper.isCurrentUrlDifferentFromBaseUrl());
