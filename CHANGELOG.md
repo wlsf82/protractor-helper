@@ -15,6 +15,7 @@
 ## js files
 
 - prettier js files
+- included the method `scrollToElementWhenVisible`
 
 # 3.4.5
 
