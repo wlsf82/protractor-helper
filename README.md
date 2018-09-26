@@ -87,7 +87,9 @@ The above method returns the body element of the current browser if nothing is p
 
 - `openNewBrowserInTheSamePage`
 
-The above method just opens a new browser instance in the same page of the main browser. You need to pass `browser` as an argument.
+The above method opens a new browser instance in the same page of the main browser. You need to pass `browser` as an argument.
+
+> Note: `openNewBrowserInTheSamePage` only works with Protractor version 5.0.0, not higher.
 
 - `isCurrentUrlDifferentFromBaseUrl`
 
