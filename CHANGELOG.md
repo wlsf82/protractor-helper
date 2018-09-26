@@ -1,3 +1,18 @@
+# 3.5.2
+
+## package.json
+
+- update lib's patch version
+
+## package-lock.json
+
+- update lib's version on package-lock file
+
+## Documentation
+
+- update change log with info about the latest patch version
+- update readme with important info about openNewBrowserInTheSamePage
+
 # 3.5.1
 
 ## package.json
