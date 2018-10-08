@@ -1,3 +1,24 @@
+# 3.5.3
+
+## package.json
+
+- update lib's patch version
+
+## package-lock.json
+
+- update lib's version on package-lock file
+
+## Documentation
+
+- minor adjustment on documentation of specific function
+- update change log with info about the latest patch version
+
+## index.js
+
+- replace the word 'value' by 'text' in some of the main functions
+- prettify main file to keep the standard
+- update main file with new private function (requiredParam)
+
 # 3.5.2
 
 ## package.json
