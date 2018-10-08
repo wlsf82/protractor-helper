@@ -40,16 +40,15 @@ function waitForElementToBeClickable(
 
 function requiredParam(
   functionWithoutParam,
-  requiredParameter = 'htmlElement'
+  requiredParameter = "htmlElement"
 ) {
   const requiredParamError = new Error(
-    `Parameter '${requiredParameter}' is missing at function '${functionWithoutParam.name}()'. \nFill the required parameter.`
-  )
-  Error.captureStackTrace(
-    requiredParamError,
-    functionWithoutParam
-  )
-  throw requiredParamError
+    `Parameter '${requiredParameter}' is missing at function '${
+      functionWithoutParam.name
+    }()'. \nFill the required parameter.`
+  );
+  Error.captureStackTrace(requiredParamError, functionWithoutParam);
+  throw requiredParamError;
 }
 
 const getBodyElementFromCurrentBrowserOrBrowserInstance = function(
@@ -65,7 +64,7 @@ const getBodyElementFromCurrentBrowserOrBrowserInstance = function(
 };
 
 const openNewBrowserInTheSamePage = function(
-  browser = requiredParam(openNewBrowserInTheSamePage, 'browser')
+  browser = requiredParam(openNewBrowserInTheSamePage, "browser")
 ) {
   return browser.forkNewDriverInstance(true);
 };
@@ -123,7 +122,7 @@ const clickWhenClickable = function(
 
 const fillFieldWithTextWhenVisible = function(
   htmlElement = requiredParam(fillFieldWithTextWhenVisible),
-  value = requiredParam(fillFieldWithTextWhenVisible, 'value'),
+  value = requiredParam(fillFieldWithTextWhenVisible, "value"),
   message = getDefaultIsNotVisibleMessage(htmlElement),
   timeout = DEFAULT_TIMEOUT_IN_MS
 ) {
@@ -133,7 +132,7 @@ const fillFieldWithTextWhenVisible = function(
 
 const fillInputFieldWithFileWhenPresent = function(
   htmlElement = requiredParam(fillInputFieldWithFileWhenPresent),
-  value = requiredParam(fillInputFieldWithFileWhenPresent, 'value'),
+  value = requiredParam(fillInputFieldWithFileWhenPresent, "value"),
   message = getDefaultIsNotPresentMessage(htmlElement),
   timeout = DEFAULT_TIMEOUT_IN_MS
 ) {
@@ -152,7 +151,7 @@ const clearFieldWhenVisible = function(
 
 const clearFieldWhenVisibleAndFillItWithText = function(
   htmlElement = requiredParam(clearFieldWhenVisibleAndFillItWithText),
-  text = requiredParam(clearFieldWhenVisibleAndFillItWithText, 'text'),
+  text = requiredParam(clearFieldWhenVisibleAndFillItWithText, "text"),
   message = getDefaultIsNotVisibleMessage(htmlElement),
   timeout = DEFAULT_TIMEOUT_IN_MS
 ) {
@@ -177,7 +176,7 @@ const tapWhenTappable = function(
 
 const waitForTextToBePresentInElement = function(
   htmlElement = requiredParam(waitForTextToBePresentInElement),
-  text = requiredParam(waitForTextToBePresentInElement, 'text'),
+  text = requiredParam(waitForTextToBePresentInElement, "text"),
   message = `text '${text}' not present on ${ELEMENT_WITH_LOCATOR_MESSAGE} '${
     htmlElement.parentElementArrayFinder.locator_.value
   }'`,
@@ -192,7 +191,7 @@ const waitForTextToBePresentInElement = function(
 
 const waitForTextNotToBePresentInElement = function(
   htmlElement = requiredParam(waitForTextNotToBePresentInElement),
-  text = requiredParam(waitForTextNotToBePresentInElement, 'text'),
+  text = requiredParam(waitForTextNotToBePresentInElement, "text"),
   message = `text '${text}' is still present on ${ELEMENT_WITH_LOCATOR_MESSAGE} '${
     htmlElement.parentElementArrayFinder.locator_.value
   }'`,
@@ -206,7 +205,7 @@ const waitForTextNotToBePresentInElement = function(
 };
 
 const waitForUrlToBeEqualToExpectedUrl = function(
-  expectedUrl = requiredParam(waitForUrlToBeEqualToExpectedUrl, 'expectedUrl'),
+  expectedUrl = requiredParam(waitForUrlToBeEqualToExpectedUrl, "expectedUrl"),
   message = `current URL is different of '${expectedUrl}'`,
   timeout = DEFAULT_TIMEOUT_IN_MS
 ) {
@@ -214,7 +213,10 @@ const waitForUrlToBeEqualToExpectedUrl = function(
 };
 
 const waitForUrlNotToBeEqualToExpectedUrl = function(
-  expectedUrl = requiredParam(waitForUrlNotToBeEqualToExpectedUrl, 'expectedUrl'),
+  expectedUrl = requiredParam(
+    waitForUrlNotToBeEqualToExpectedUrl,
+    "expectedUrl"
+  ),
   message = `current URL is equal to '${expectedUrl}'`,
   timeout = DEFAULT_TIMEOUT_IN_MS
 ) {
@@ -222,7 +224,7 @@ const waitForUrlNotToBeEqualToExpectedUrl = function(
 };
 
 const waitForUrlToContainString = function(
-  string = requiredParam(waitForUrlToContainString, 'string'),
+  string = requiredParam(waitForUrlToContainString, "string"),
   message = `current URL does not contains the string '${string}'`,
   timeout = DEFAULT_TIMEOUT_IN_MS
 ) {
@@ -230,7 +232,7 @@ const waitForUrlToContainString = function(
 };
 
 const waitForUrlNotToContainString = function(
-  string = requiredParam(waitForUrlNotToContainString, 'string'),
+  string = requiredParam(waitForUrlNotToContainString, "string"),
   message = `current URL contains the string '${string}'`,
   timeout = DEFAULT_TIMEOUT_IN_MS
 ) {
@@ -239,7 +241,7 @@ const waitForUrlNotToContainString = function(
 
 const fillFieldWithTextWhenVisibleAndPressEnter = function(
   htmlElement = requiredParam(fillFieldWithTextWhenVisibleAndPressEnter),
-  value = requiredParam(fillFieldWithTextWhenVisibleAndPressEnter, 'value'),
+  value = requiredParam(fillFieldWithTextWhenVisibleAndPressEnter, "value"),
   message = getDefaultIsNotVisibleMessage(htmlElement),
   timeout = DEFAULT_TIMEOUT_IN_MS
 ) {
