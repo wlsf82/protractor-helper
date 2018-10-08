@@ -159,7 +159,7 @@ The above method waits for the URL to contain an expected string. Such method is
 
 - `waitForUrlNotToContainString`
 
-The above method waits for the URL not to contain an expected string. Such method is useful when you want to perform verifications based on the current URL. This method can receives three arguments: 1st - the expected string (this is mandatory); 2nd - an error message (this is optional and if not provided a default message implemented for this specific method will be displayed instead); 3rd - a timeout (optional and default is 5000 milliseconds. Message turns mandatory if you need to change the default timeout, due to arguments order).
+The above method waits for the URL not to contain an expected string. Such method is useful when you want to perform verifications based on the current URL. This method can receives three arguments: 1st - the not expected string (this is mandatory); 2nd - an error message (this is optional and if not provided a default message implemented for this specific method will be displayed instead); 3rd - a timeout (optional and default is 5000 milliseconds. Message turns mandatory if you need to change the default timeout, due to arguments order).
 
 - `fillFieldWithTextWhenVisibleAndPressEnter`
 
