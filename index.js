@@ -122,22 +122,22 @@ const clickWhenClickable = function(
 
 const fillFieldWithTextWhenVisible = function(
   htmlElement = requiredParam(fillFieldWithTextWhenVisible),
-  value = requiredParam(fillFieldWithTextWhenVisible, "value"),
+  text = requiredParam(fillFieldWithTextWhenVisible, "text"),
   message = getDefaultIsNotVisibleMessage(htmlElement),
   timeout = DEFAULT_TIMEOUT_IN_MS
 ) {
   this.waitForElementVisibility(htmlElement, message, timeout);
-  htmlElement.sendKeys(value);
+  htmlElement.sendKeys(text);
 };
 
 const fillInputFieldWithFileWhenPresent = function(
   htmlElement = requiredParam(fillInputFieldWithFileWhenPresent),
-  value = requiredParam(fillInputFieldWithFileWhenPresent, "value"),
+  text = requiredParam(fillInputFieldWithFileWhenPresent, "text"),
   message = getDefaultIsNotPresentMessage(htmlElement),
   timeout = DEFAULT_TIMEOUT_IN_MS
 ) {
   this.waitForElementPresence(htmlElement, message, timeout);
-  htmlElement.sendKeys(value);
+  htmlElement.sendKeys(text);
 };
 
 const clearFieldWhenVisible = function(
@@ -241,11 +241,11 @@ const waitForUrlNotToContainString = function(
 
 const fillFieldWithTextWhenVisibleAndPressEnter = function(
   htmlElement = requiredParam(fillFieldWithTextWhenVisibleAndPressEnter),
-  value = requiredParam(fillFieldWithTextWhenVisibleAndPressEnter, "value"),
+  text = requiredParam(fillFieldWithTextWhenVisibleAndPressEnter, "text"),
   message = getDefaultIsNotVisibleMessage(htmlElement),
   timeout = DEFAULT_TIMEOUT_IN_MS
 ) {
-  this.fillFieldWithTextWhenVisible(htmlElement, value, message, timeout);
+  this.fillFieldWithTextWhenVisible(htmlElement, text, message, timeout);
   this.fillFieldWithTextWhenVisible(
     htmlElement,
     protractor.Key.ENTER,
