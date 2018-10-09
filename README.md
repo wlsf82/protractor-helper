@@ -629,9 +629,9 @@ A sample application using HTML and CSS is included in this repo in order to all
 
 Protractor is added as a dev dependency to allow running the tests.
 
-In order to run the tests install the dev dependencies by running: `npm install`
+In order to run the tests install the dev dependencies by running: `npm install`.
 
-Then run the tests with `npm test`
+Then run the tests with `npm test`.
 
 If all tests have passed you should see a result like this:
 
@@ -657,16 +657,16 @@ After changes to master branch all tests are executed and the build status can b
 
 ## Contribute
 
-1. [Fork](https://help.github.com/articles/fork-a-repo/) this repository to your own GitHub account and then [clone](https://help.github.com/articles/cloning-a-repository/) it to your computer
-2. Install the dev dependencies using NPM: `npm install`
-3. Make the necessary changes and ensure that the tests are passing using `npm test` (implement new tests if needed)
-4. Send a [pull request](https://help.github.com/articles/about-pull-requests/) and I'll be happy to review it 🙌
-5. Wait for feedback or approval (this should not take too long)
+1. [Fork](https://help.github.com/articles/fork-a-repo/) this repository to your own GitHub account and then [clone](https://help.github.com/articles/cloning-a-repository/) it to your computer;
+2. Install the dev dependencies using NPM: `npm install`;
+3. Make the necessary changes and ensure that the tests are passing using `npm test` (implement new tests if needed);
+4. Send a [pull request](https://help.github.com/articles/about-pull-requests/) and I'll be happy to review it 🙌;
+5. Wait for feedback or approval (this should not take too long).
 
 ## Credits
 
-The **protractor-helper** library was created and is maintained by [Walmyr Filho](https://br.linkedin.com/in/walmyr-lima-e-silva-filho-147a9110a)
+The **protractor-helper** library was created and is maintained by [Walmyr Filho](https://br.linkedin.com/in/walmyr-lima-e-silva-filho-147a9110a).
 
-Follow Walmyr on Twitter ([@wlsf82](https://twitter.com/walmyrlimaesilv))
+Follow Walmyr on Twitter ([@wlsf82](https://twitter.com/walmyrlimaesilv)).
 
 Thanks to [Paulo Gonçalves](https://www.linkedin.com/in/paulo-goncalves/) for contributing to the project.
