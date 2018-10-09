@@ -1,3 +1,18 @@
+# 3.5.5
+
+## package.json
+
+- update lib's patch version
+
+## package-lock.json
+
+- update lib's version on package-lock file
+
+## Documentation
+
+- update readme file with missing punctuation
+- update change log with info about the latest patch version
+
 # 3.5.4
 
 ## package.json
