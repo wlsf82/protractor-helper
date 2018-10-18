@@ -206,7 +206,7 @@ const waitForTextNotToBePresentInElement = function(
 
 const waitForUrlToBeEqualToExpectedUrl = function(
   expectedUrl = requiredParam(waitForUrlToBeEqualToExpectedUrl, "expectedUrl"),
-  message = `current URL is different of '${expectedUrl}'`,
+  message = `current URL is different than expected URL: '${expectedUrl}'`,
   timeout = DEFAULT_TIMEOUT_IN_MS
 ) {
   browser.wait(EC.urlIs(expectedUrl), timeout, message);
@@ -217,7 +217,7 @@ const waitForUrlNotToBeEqualToExpectedUrl = function(
     waitForUrlNotToBeEqualToExpectedUrl,
     "expectedUrl"
   ),
-  message = `current URL is equal to '${expectedUrl}'`,
+  message = `current URL is equal to expected URL: '${expectedUrl}'`,
   timeout = DEFAULT_TIMEOUT_IN_MS
 ) {
   browser.wait(EC.not(EC.urlIs(expectedUrl)), timeout, message);
