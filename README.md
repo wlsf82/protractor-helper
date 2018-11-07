@@ -42,7 +42,7 @@ Many of the helper methods on this library uses `protractor.ExpectedConditions` 
 
 </p> </details>
 
-- [Using methods that start with 'wait' as test expectations (or test assertions)](#using-methods-that-start-with-wait-as-test-expectations-(or-test-assertions))
+- [Using methods that start with 'wait' as test expectations (or test assertions)](#using-methods-that-start-with-wait-as-test-expectations-or-test-assertions)
   - [Example of a test failure when using such methods as expectations](#example-of-a-test-failure-when-using-such-methods-as-expectations)
 
 - [Contributing](#contributing)
