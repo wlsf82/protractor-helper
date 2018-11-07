@@ -1,3 +1,37 @@
+# 3.5.7
+
+## package.json
+
+- update lib's patch version
+
+## package-lock.json
+
+- update lib's version on package-lock file
+- update package-lock file
+
+## Documentation
+
+- update change log with info about the latest patch version
+
+# 3.5.6
+
+## package.json
+
+- update lib's patch version
+
+## package-lock.json
+
+- update lib's version on package-lock file
+- update package-lock
+
+## Documentation
+
+- update change log with info about the latest patch version
+
+## index.js
+
+- minor improvements on messages of two functions
+
 # 3.5.5
 
 ## package.json
