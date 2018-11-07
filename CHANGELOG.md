@@ -1,3 +1,24 @@
+# 3.6.0
+
+## package.json
+
+- update lib's minor version
+- add the keyword 'e2e' on package.json
+
+## package-lock.json
+
+- update lib's version on package-lock file
+
+## Documentation
+
+- update change log with info about the latest minor version
+- documentation refactoring (thanks to Paulo Gonçalves)
+
+## index.js
+
+- prettify main file to keep the standard
+- add new method 'setTimeout' and other minor changes
+
 # 3.5.7
 
 ## package.json
