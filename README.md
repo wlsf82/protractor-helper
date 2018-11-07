@@ -303,7 +303,7 @@ Failed: text 'foo' not present on element with locator 'h1'
 
 ## Contributing
 
-[Contribution guidelines](CONTRIBUTING.md)
+[Contribution guidelines](docs/CONTRIBUTING.md)
 
 ## Credits
 

@@ -44,4 +44,4 @@ Finished in 2.968 seconds
 [23:28:40] I/launcher - chrome #01 passed
 ```
 
-[Back to section 'Contributing' on README.md](./README.md#contributing)
+[Back to section 'Contributing' on README.md](../README.md#contributing)
