@@ -139,7 +139,7 @@ Below is the list of all available helpers in this library with your respective 
 
 ### `setTimeout`
 
-That method allows to change the timeout duration of all `protractor-helper` methods called below `setTimeout`.
+This method allows to change the timeout duration of all `protractor-helper` methods called below `setTimeout`.
 
 The `timeoutInMilliseconds` default is 5000 milliseconds
 
@@ -148,12 +148,12 @@ If is called without pass argument the timeout of the tests is changed to the de
 
 ### `getBodyElementFromCurrentBrowserOrBrowserInstance`
 
-That method returns the body element of the current browser if nothing is passed as argument or the body element of a specific browser instance in case the browser instance is passed as an argument. This second option is useful when working with two browsers interacting with each other, for example.
+This method returns the body element of the current browser if nothing is passed as argument or the body element of a specific browser instance in case the browser instance is passed as an argument. This second option is useful when working with two browsers interacting with each other, for example.
  [Example](docs/EXAMPLES.md#getbodyelementfromcurrentbrowserorbrowserinstance)
 
 ### `openNewBrowserInTheSamePage`
 
-That method opens a new browser instance in the same page of the main browser.
+This method opens a new browser instance in the same page of the main browser.
 
 > Note: Only works with Protractor version 5.0.0, not higher.
 
@@ -161,12 +161,12 @@ That method opens a new browser instance in the same page of the main browser.
 
 ### `isCurrentUrlDifferentFromBaseUrl`
 
-That method returns a boolean depending if the current url is different from the base url. No argument needed.
+This method returns a boolean depending if the current url is different from the base url. No argument needed.
 [Example](docs/EXAMPLES.md#iscurrenturldifferentfrombaseurl)
 
 ### `waitForElementPresence`
 
-That method waits for an element to be present in the DOM.
+This method waits for an element to be present in the DOM.
 
 > Note: An element may be present but not displayed. If you want to wait for the element to be displayed use the method `waitForElementVisibility`.
 
@@ -174,82 +174,82 @@ That method waits for an element to be present in the DOM.
 
 ### `waitForElementNotToBePresent`
 
-That method is the opposite of the previous one, so, it waits for an element not to be present in the DOM.
+This method is the opposite of the previous one, so, it waits for an element not to be present in the DOM.
 [Example](docs/EXAMPLES.md#waitforelementnottobepresent)
 
 ### `waitForElementVisibility`
 
-That method waits for an element to be visible in the page. Being displayed means not only that the element is present in the DOM, but also that is has a height and width that is greater than 0.
+This method waits for an element to be visible in the page. Being displayed means not only that the element is present in the DOM, but also that is has a height and width that is greater than 0.
 [Example](docs/EXAMPLES.md#waitforelementvisibility)
 
 ### `waitForElementNotToBeVisible`
 
-That method is the opposite of the previous one, so, it waits for an element not to be visible in the page. By saying not being displayed means that the element may be in the DOM, but not visible.
+This method is the opposite of the previous one, so, it waits for an element not to be visible in the page. By saying not being displayed means that the element may be in the DOM, but not visible.
 [Example](docs/EXAMPLES.md#waitforelementnottobevisible)
 
 ### `clickWhenClickable`
 
-That method is used to click in an element only as soon as it is in a clickable state. This means that the element is visible and enabled for clicking.
+This method is used to click in an element only as soon as it is in a clickable state. This means that the element is visible and enabled for clicking.
 [Example](docs/EXAMPLES.md#clickwhenclickable)
 
 ### `fillFieldWithTextWhenVisible`
 
-That method fills an input field with a text as soon as such field is visible.
+This method fills an input field with a text as soon as such field is visible.
 [Example](docs/EXAMPLES.md#fillfieldwithtextwhenvisible)
 
 ### `fillInputFieldWithFileWhenPresent`
 
-That method fills a file input field with a specified file as soon as the file input field is present in the DOM.
+This method fills a file input field with a specified file as soon as the file input field is present in the DOM.
 [Example](docs/EXAMPLES.md#fillinputfieldwithfilewhenpresent)
 
 ### `clearFieldWhenVisible`
 
-That method clears a text input field as soon as such field is visible.
+This method clears a text input field as soon as such field is visible.
 [Example](docs/EXAMPLES.md#clearFieldWhenVisible)
 
 ### `clearFieldWhenVisibleAndFillItWithText`
 
-That method clears a text input field as soon as such field is visible, and then it fills it with a text.
+This method clears a text input field as soon as such field is visible, and then it fills it with a text.
 [Example](docs/EXAMPLES.md#clearfieldwhenvisibleandfillitwithtext)
 
 ### `tapWhenTappable`
 
-That method performs a tap action on a clickable/tappable HTML element as soon is it is clickable/tappable. This method is used when performing web mobile testing in mobile emulators, for example.
+This method performs a tap action on a clickable/tappable HTML element as soon is it is clickable/tappable. This method is used when performing web mobile testing in mobile emulators, for example.
 [Example](docs/EXAMPLES.md#tapwhentappable)
 
 ### `waitForTextToBePresentInElement`
 
-That method waits for a specific text to be present in a specific HTML element.
+This method waits for a specific text to be present in a specific HTML element.
 [Example](docs/EXAMPLES.md#waitfortexttobepresentinelement)
 
 ### `waitForTextNotToBePresentInElement`
 
-That method is the opposite of the previous one, so, it waits for a specific text not to be present in a specific HTML element.
+This method is the opposite of the previous one, so, it waits for a specific text not to be present in a specific HTML element.
 [Example](docs/EXAMPLES.md#waitfortextnottobepresentinelement)
 
 ### `waitForUrlToBeEqualToExpectedUrl`
 
-That method waits for the URL to be equal to an expected URL. Such method is useful when you want to continue performing actions on elements only when in the correct URL.
+This method waits for the URL to be equal to an expected URL. Such method is useful when you want to continue performing actions on elements only when in the correct URL.
 [Example](docs/EXAMPLES.md#waitforurltobeequaltoexpectedurl)
 
 ### `waitForUrlNotToBeEqualToExpectedUrl`
 
-That method waits for the URL not to be equal to an expected URL. Such method is useful when you want to continue performing actions on elements only when not in a specific URL.
+This method waits for the URL not to be equal to an expected URL. Such method is useful when you want to continue performing actions on elements only when not in a specific URL.
 [Example](docs/EXAMPLES.md#waitforurlnottobeequaltoexpectedurl)
 
 ### `waitForUrlToContainString`
 
-That method waits for the URL to contain an expected string. Such method is useful when you want to perform verifications based on the current URL.
+This method waits for the URL to contain an expected string. Such method is useful when you want to perform verifications based on the current URL.
 [Example](docs/EXAMPLES.md#waitforurltocontainstring)
 
 ### `waitForUrlNotToContainString`
 
-That method waits for the URL not to contain an expected string. Such method is useful when you want to perform verifications based on the current URL.
+This method waits for the URL not to contain an expected string. Such method is useful when you want to perform verifications based on the current URL.
 [Example](docs/EXAMPLES.md#waitforurlnottocontainstring)
 
 ### `fillFieldWithTextWhenVisibleAndPressEnter`
 
-That method fills an input field with a text as soon as such field is visible and then it simulates pressing the ENTER key from the keyboard. This method is useful in cases such as when doing a search and pressing the ENTER key, instead of having to fill the input field and clicking the search button, for example.
+This method fills an input field with a text as soon as such field is visible and then it simulates pressing the ENTER key from the keyboard. This method is useful in cases such as when doing a search and pressing the ENTER key, instead of having to fill the input field and clicking the search button, for example.
 [Example](docs/EXAMPLES.md#fillfieldwithtextwhenvisibleandpressenter)
 
 ### `scrollToElementWhenVisible`
