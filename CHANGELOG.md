@@ -1,3 +1,17 @@
+# 3.6.2
+
+## package.json
+
+- update lib's patch version
+
+## package-lock.json
+
+- fupdate lib's version on package-lock file
+
+## Documentation
+
+- update change log with info about the latest patch version
+
 # 3.6.1
 
 ## package.json
