@@ -1,5 +1,4 @@
-Contributing
-============
+# Contributing
 
 You can contribute in the following ways:
 

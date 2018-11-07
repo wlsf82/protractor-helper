@@ -1,5 +1,4 @@
-Protractor helper's library
-===============================
+# Protractor helper's library
 
 [![npm version](https://badge.fury.io/js/protractor-helper.svg)](https://www.npmjs.com/package/protractor-helper)
 
@@ -15,6 +14,7 @@ Many of the helper methods on this library uses `protractor.ExpectedConditions` 
 - [Installation](#installation)
 - [How to use and examples](#how-to-use-and-examples)
 - [Available helpers](#available-helpers)
+
   <details><p><summary>Open to see all available helpers</summary>
 
   - [`setTimeout`](#settimeout)
@@ -43,6 +43,7 @@ Many of the helper methods on this library uses `protractor.ExpectedConditions` 
 </p> </details>
 
 - [Using methods that start with 'wait' as test expectations (or test assertions)](#using-methods-that-start-with-wait-as-test-expectations-or-test-assertions)
+
   - [Example of a test failure when using such methods as expectations](#example-of-a-test-failure-when-using-such-methods-as-expectations)
 
 - [Contributing](#contributing)
@@ -62,26 +63,26 @@ const EC = protractor.ExpectedConditions;
 const DEFAULT_TIMEOUT_IN_MS = 5000;
 
 describe("Sign up page", () => {
-    it("successful sign up", () => {
-        browser.get("https://example.com/sign-up");
+  it("successful sign up", () => {
+    browser.get("https://example.com/sign-up");
 
-        const emailField = element(by.id("email"));
-        const passwordField = element(by.id("password"));
-        const signupButton = element(by.id("signup"));
+    const emailField = element(by.id("email"));
+    const passwordField = element(by.id("password"));
+    const signupButton = element(by.id("signup"));
 
-        browser.wait(EC.visibilityOf(emailField), DEFAULT_TIMEOUT_IN_MS);
-        browser.wait(EC.visibilityOf(passwordField), DEFAULT_TIMEOUT_IN_MS);
-        browser.wait(EC.elementToBeClickable(signupButton), DEFAULT_TIMEOUT_IN_MS);
-        emailField.sendKeys("valid@email.com");
-        passwordField.sendKeys("validpassword");
-        signupButton.click();
+    browser.wait(EC.visibilityOf(emailField), DEFAULT_TIMEOUT_IN_MS);
+    browser.wait(EC.visibilityOf(passwordField), DEFAULT_TIMEOUT_IN_MS);
+    browser.wait(EC.elementToBeClickable(signupButton), DEFAULT_TIMEOUT_IN_MS);
+    emailField.sendKeys("valid@email.com");
+    passwordField.sendKeys("validpassword");
+    signupButton.click();
 
-        const avatar = element(by.id("avatar"));
+    const avatar = element(by.id("avatar"));
 
-        browser.wait(EC.visibilityOf(avatar), DEFAULT_TIMEOUT_IN_MS);
+    browser.wait(EC.visibilityOf(avatar), DEFAULT_TIMEOUT_IN_MS);
 
-        expect(avatar.isDisplayed()).toBe(true);
-    });
+    expect(avatar.isDisplayed()).toBe(true);
+  });
 });
 ```
 
@@ -93,25 +94,31 @@ The same test could be written as below, using the protractor-helper library.
 const protractorHelper = require("protractor-helper");
 
 describe("Sign up page", () => {
-    it("successful sign up", () => {
-        browser.get("https://example.com/sign-up");
+  it("successful sign up", () => {
+    browser.get("https://example.com/sign-up");
 
-        const emailField = element(by.id("email"));
-        const passwordField = element(by.id("password"));
-        const signupButton = element(by.id("signup"));
+    const emailField = element(by.id("email"));
+    const passwordField = element(by.id("password"));
+    const signupButton = element(by.id("signup"));
 
-        protractorHelper.fillFieldWithTextWhenVisible(emailField, "valid@email.com");
-        protractorHelper.fillFieldWithTextWhenVisible(passwordField, "validpassword");
-        protractorHelper.clickWhenClickable(signupButton);
+    protractorHelper.fillFieldWithTextWhenVisible(
+      emailField,
+      "valid@email.com"
+    );
+    protractorHelper.fillFieldWithTextWhenVisible(
+      passwordField,
+      "validpassword"
+    );
+    protractorHelper.clickWhenClickable(signupButton);
 
-        const avatar = element(by.id("avatar"));
+    const avatar = element(by.id("avatar"));
 
-        protractorHelper.waitForElementVisibility(avatar);
-    });
+    protractorHelper.waitForElementVisibility(avatar);
+  });
 });
 ```
 
-As you can see, by using the protractor-helper library the code is shorter and it is also easier to read.
+As you can see, by using the protractor-helper library the code is easier to read. Also, there is not need of unnecessary complexity.
 
 ## Installation
 
@@ -119,7 +126,7 @@ Below it is described the process of Installation of such module.
 
 Run `npm install protractor-helper --save-dev` to install the library as a dev dependency of your project.
 
- ## How to use and examples
+## How to use and examples
 
 After installing the library you will need to require it in your test file (see below).
 
@@ -128,6 +135,7 @@ After installing the library you will need to require it in your test file (see 
 
 const protractorHelper = require("protractor-helper");
 ```
+
 As soon as you have the library required in your test file you can start using its helper methods.
 
 [Here you'll find examples of usage of each of the available helper methods.](docs/EXAMPLES.md#examples)
@@ -152,7 +160,7 @@ If called without passing an argument the timeout will be set to the default one
 ### `getBodyElementFromCurrentBrowserOrBrowserInstance`
 
 This method returns the body element of the current browser if nothing is passed as argument or the body element of a specific browser instance in case the browser instance is passed as an argument. This second option is useful when working with two browsers interacting with each other, for example.
- [Example](docs/EXAMPLES.md#getbodyelementfromcurrentbrowserorbrowserinstance)
+[Example](docs/EXAMPLES.md#getbodyelementfromcurrentbrowserorbrowserinstance)
 
 ### `openNewBrowserInTheSamePage`
 
@@ -318,4 +326,5 @@ Follow Walmyr on Twitter ([@wlsf82](https://twitter.com/walmyrlimaesilv)).
 Thanks to [Paulo Gonçalves](https://www.linkedin.com/in/paulo-goncalves/) for contributing to the project.
 
 ---
+
 [MIT License](/LICENSE)
