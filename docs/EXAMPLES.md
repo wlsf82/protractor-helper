@@ -13,7 +13,7 @@ Examples
 >
 > 5. `timeoutInMilliseconds` turns mandatory if you need to change the `errorMessage`, due to arguments order;
 >
-> 6. If the `errorMessage` argument is not provided a default message implemented for this specific method will be displayed instead. We recommend that you use the default message if possible, because they show a clear message.
+> 6. If the `errorMessage` argument is not provided a default message implemented for this specific method will be displayed instead. We recommend that you use the default message because it shows a clear message.
 
 ## setTimeout
 
@@ -27,17 +27,17 @@ const protractorHelper = require("protractor-helper");
 describe("foo", () => {
     it("bar", () => {
         // ...
-        // Here all `protractor-helper` method use the default timeout.
+        // Here all the protractor-helper methods use the default timeout.
         
         protractorHelper.setTimeout(1000);
 
         // ...
-        // Here all `protractor-helper` method use 1000 ms how timeout.
+        // Here all the protractor-helper methods use 1000 ms as timeout.
         // ...
         
         protractorHelper.setTimeout();
 
-        // Here all `protractor-helper` method use the default timeout.
+        // Here all the protractor-helper methods use the default timeout.
         // ...
     });
 });
