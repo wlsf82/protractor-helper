@@ -143,7 +143,10 @@ This method allows to change the timeout duration of all `protractor-helper` met
 
 The `timeoutInMilliseconds` default is 5000 milliseconds
 
-If is called without pass argument the timeout of the tests is changed to the default timeout.
+If called without passing an argument the timeout will be set to the default one.
+
+> An example of using this method is the need to ensure the screen loads within up to XX seconds, due to the request of the product management. This commonly occurs in ecommerce systems on special dates, such as Black Friday.
+
 [Example](docs/EXAMPLES.md#settimeout)
 
 ### `getBodyElementFromCurrentBrowserOrBrowserInstance`
