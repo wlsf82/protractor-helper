@@ -36,7 +36,11 @@ function waitForElementToBeClickable(
   timeoutInMilliseconds = config.timeoutInMilliseconds,
   errorMessage = getDefaultIsNotClickableMessage(htmlElement)
 ) {
-  browser.wait(EC.elementToBeClickable(htmlElement), timeoutInMilliseconds, errorMessage);
+  browser.wait(
+    EC.elementToBeClickable(htmlElement),
+    timeoutInMilliseconds,
+    errorMessage
+  );
 }
 
 function requiredParam(
@@ -91,7 +95,11 @@ const waitForElementNotToBePresent = function(
     htmlElement.parentElementArrayFinder.locator_.value
   }' ${IS_STILL_PRESENT_MESSAGE}`
 ) {
-  browser.wait(EC.stalenessOf(htmlElement), timeoutInMilliseconds, errorMessage);
+  browser.wait(
+    EC.stalenessOf(htmlElement),
+    timeoutInMilliseconds,
+    errorMessage
+  );
 };
 
 const waitForElementVisibility = function(
@@ -99,7 +107,11 @@ const waitForElementVisibility = function(
   timeoutInMilliseconds = config.timeoutInMilliseconds,
   errorMessage = getDefaultIsNotVisibleMessage(htmlElement)
 ) {
-  browser.wait(EC.visibilityOf(htmlElement), timeoutInMilliseconds, errorMessage);
+  browser.wait(
+    EC.visibilityOf(htmlElement),
+    timeoutInMilliseconds,
+    errorMessage
+  );
 };
 
 const waitForElementNotToBeVisible = function(
@@ -109,7 +121,11 @@ const waitForElementNotToBeVisible = function(
     htmlElement.parentElementArrayFinder.locator_.value
   }' ${IS_STILL_VISIBLE_MESSAGE}`
 ) {
-  browser.wait(EC.invisibilityOf(htmlElement), timeoutInMilliseconds, errorMessage);
+  browser.wait(
+    EC.invisibilityOf(htmlElement),
+    timeoutInMilliseconds,
+    errorMessage
+  );
 };
 
 const clickWhenClickable = function(
@@ -127,13 +143,20 @@ const fillFieldWithTextWhenVisible = function(
   timeoutInMilliseconds = config.timeoutInMilliseconds,
   errorMessage = getDefaultIsNotVisibleMessage(htmlElement)
 ) {
-  this.waitForElementVisibility(htmlElement, timeoutInMilliseconds, errorMessage);
+  this.waitForElementVisibility(
+    htmlElement,
+    timeoutInMilliseconds,
+    errorMessage
+  );
   htmlElement.sendKeys(text);
 };
 
 const fillInputFieldWithFileWhenPresent = function(
   htmlElement = requiredParam(fillInputFieldWithFileWhenPresent),
-  absolutePath = requiredParam(fillInputFieldWithFileWhenPresent, "absolutePath"),
+  absolutePath = requiredParam(
+    fillInputFieldWithFileWhenPresent,
+    "absolutePath"
+  ),
   timeoutInMilliseconds = config.timeoutInMilliseconds,
   errorMessage = getDefaultIsNotPresentMessage(htmlElement)
 ) {
@@ -146,7 +169,11 @@ const clearFieldWhenVisible = function(
   timeoutInMilliseconds = config.timeoutInMilliseconds,
   errorMessage = getDefaultIsNotVisibleMessage(htmlElement)
 ) {
-  this.waitForElementVisibility(htmlElement, timeoutInMilliseconds, errorMessage);
+  this.waitForElementVisibility(
+    htmlElement,
+    timeoutInMilliseconds,
+    errorMessage
+  );
   htmlElement.clear();
 };
 
@@ -156,7 +183,11 @@ const clearFieldWhenVisibleAndFillItWithText = function(
   timeoutInMilliseconds = config.timeoutInMilliseconds,
   errorMessage = getDefaultIsNotVisibleMessage(htmlElement)
 ) {
-  this.waitForElementVisibility(htmlElement, timeoutInMilliseconds, errorMessage);
+  this.waitForElementVisibility(
+    htmlElement,
+    timeoutInMilliseconds,
+    errorMessage
+  );
   htmlElement.clear();
   htmlElement.sendKeys(text);
 };
@@ -221,7 +252,11 @@ const waitForUrlNotToBeEqualToExpectedUrl = function(
   timeoutInMilliseconds = config.timeoutInMilliseconds,
   errorMessage = `current URL is equal to expected URL: '${expectedUrl}'`
 ) {
-  browser.wait(EC.not(EC.urlIs(expectedUrl)), timeoutInMilliseconds, errorMessage);
+  browser.wait(
+    EC.not(EC.urlIs(expectedUrl)),
+    timeoutInMilliseconds,
+    errorMessage
+  );
 };
 
 const waitForUrlToContainString = function(
@@ -237,7 +272,11 @@ const waitForUrlNotToContainString = function(
   timeoutInMilliseconds = config.timeoutInMilliseconds,
   errorMessage = `current URL contains the string '${string}'`
 ) {
-  browser.wait(EC.not(EC.urlContains(string)), timeoutInMilliseconds, errorMessage);
+  browser.wait(
+    EC.not(EC.urlContains(string)),
+    timeoutInMilliseconds,
+    errorMessage
+  );
 };
 
 const fillFieldWithTextWhenVisibleAndPressEnter = function(
@@ -246,7 +285,12 @@ const fillFieldWithTextWhenVisibleAndPressEnter = function(
   timeoutInMilliseconds = config.timeoutInMilliseconds,
   errorMessage = getDefaultIsNotVisibleMessage(htmlElement)
 ) {
-  this.fillFieldWithTextWhenVisible(htmlElement, text, timeoutInMilliseconds, errorMessage);
+  this.fillFieldWithTextWhenVisible(
+    htmlElement,
+    text,
+    timeoutInMilliseconds,
+    errorMessage
+  );
   this.fillFieldWithTextWhenVisible(
     htmlElement,
     protractor.Key.ENTER,
@@ -260,13 +304,15 @@ const scrollToElementWhenVisible = function(
   timeoutInMilliseconds = config.timeoutInMilliseconds,
   errorMessage = getDefaultIsNotVisibleMessage(htmlElement)
 ) {
-  this.waitForElementVisibility(htmlElement, timeoutInMilliseconds, errorMessage);
+  this.waitForElementVisibility(
+    htmlElement,
+    timeoutInMilliseconds,
+    errorMessage
+  );
   browser.executeScript("arguments[0].scrollIntoView(true);", htmlElement);
 };
 
-const setTimeout = function(
-  timeoutInMilliseconds = DEFAULT_TIMEOUT_IN_MS
-) {
+const setTimeout = function(timeoutInMilliseconds = DEFAULT_TIMEOUT_IN_MS) {
   config.timeoutInMilliseconds = timeoutInMilliseconds;
 };
 
