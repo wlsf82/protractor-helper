@@ -1,60 +1,9 @@
 const EC = protractor.ExpectedConditions;
 
-const DEFAULT_TIMEOUT_IN_MS = 5000;
-const config = { timeoutInMilliseconds: DEFAULT_TIMEOUT_IN_MS };
+const constants = require("./constants_and_utils/constants");
+const utils = require("./constants_and_utils/utils");
 
-const ELEMENT_WITH_LOCATOR_MESSAGE = "element with locator";
-const IS_NOT_CLICKABLE_MESSAGE = "is not clickable";
-const IS_NOT_PRESENT_MESSAGE = "is not present";
-const IS_NOT_TAPPABLE_MESSAGE = "is not tappable";
-const IS_NOT_VISIBLE_MESSAGE = "is not visible";
-const IS_STILL_PRESENT_MESSAGE = "is still present";
-const IS_STILL_VISIBLE_MESSAGE = "is still visible";
-const POSSIBLE_IT_IS_NOT_PRESENT_OR_VISIBLE_MESSAGE =
-  "Possibly it's not present or visible.";
-
-function getDefaultIsNotPresentMessage(htmlElement) {
-  return `${ELEMENT_WITH_LOCATOR_MESSAGE} '${
-    htmlElement.parentElementArrayFinder.locator_.value
-  }' ${IS_NOT_PRESENT_MESSAGE}`;
-}
-
-function getDefaultIsNotVisibleMessage(htmlElement) {
-  return `${ELEMENT_WITH_LOCATOR_MESSAGE} '${
-    htmlElement.parentElementArrayFinder.locator_.value
-  }' ${IS_NOT_VISIBLE_MESSAGE}`;
-}
-
-function getDefaultIsNotClickableMessage(htmlElement) {
-  return `${ELEMENT_WITH_LOCATOR_MESSAGE} '${
-    htmlElement.parentElementArrayFinder.locator_.value
-  }' ${IS_NOT_CLICKABLE_MESSAGE}. ${POSSIBLE_IT_IS_NOT_PRESENT_OR_VISIBLE_MESSAGE}`;
-}
-
-function waitForElementToBeClickable(
-  htmlElement,
-  timeoutInMilliseconds = config.timeoutInMilliseconds,
-  errorMessage = getDefaultIsNotClickableMessage(htmlElement)
-) {
-  browser.wait(
-    EC.elementToBeClickable(htmlElement),
-    timeoutInMilliseconds,
-    errorMessage
-  );
-}
-
-function requiredParam(
-  functionWithoutParam,
-  requiredParameter = "htmlElement"
-) {
-  const requiredParamError = new Error(
-    `Parameter '${requiredParameter}' is missing at function '${
-      functionWithoutParam.name
-    }()'. \nFill the required parameter.`
-  );
-  Error.captureStackTrace(requiredParamError, functionWithoutParam);
-  throw requiredParamError;
-}
+const config = { timeoutInMilliseconds: constants.DEFAULT_TIMEOUT_IN_MS };
 
 const getBodyElementFromCurrentBrowserOrBrowserInstance = function(
   browserInstance
@@ -81,19 +30,19 @@ const isCurrentUrlDifferentFromBaseUrl = function() {
 };
 
 const waitForElementPresence = function(
-  htmlElement = requiredParam(waitForElementPresence),
+  htmlElement = utils.requiredParam(waitForElementPresence),
   timeoutInMilliseconds = config.timeoutInMilliseconds,
-  errorMessage = getDefaultIsNotPresentMessage(htmlElement)
+  errorMessage = utils.getDefaultIsNotPresentMessage(htmlElement)
 ) {
   browser.wait(EC.presenceOf(htmlElement), timeoutInMilliseconds, errorMessage);
 };
 
 const waitForElementNotToBePresent = function(
-  htmlElement = requiredParam(waitForElementNotToBePresent),
+  htmlElement = utils.requiredParam(waitForElementNotToBePresent),
   timeoutInMilliseconds = config.timeoutInMilliseconds,
-  errorMessage = `${ELEMENT_WITH_LOCATOR_MESSAGE} '${
+  errorMessage = `${constants.ELEMENT_WITH_LOCATOR_MESSAGE} '${
     htmlElement.parentElementArrayFinder.locator_.value
-  }' ${IS_STILL_PRESENT_MESSAGE}`
+  }' ${constants.IS_STILL_PRESENT_MESSAGE}`
 ) {
   browser.wait(
     EC.stalenessOf(htmlElement),
@@ -103,9 +52,9 @@ const waitForElementNotToBePresent = function(
 };
 
 const waitForElementVisibility = function(
-  htmlElement = requiredParam(waitForElementVisibility),
+  htmlElement = utils.requiredParam(waitForElementVisibility),
   timeoutInMilliseconds = config.timeoutInMilliseconds,
-  errorMessage = getDefaultIsNotVisibleMessage(htmlElement)
+  errorMessage = utils.getDefaultIsNotVisibleMessage(htmlElement)
 ) {
   browser.wait(
     EC.visibilityOf(htmlElement),
@@ -115,11 +64,11 @@ const waitForElementVisibility = function(
 };
 
 const waitForElementNotToBeVisible = function(
-  htmlElement = requiredParam(waitForElementNotToBeVisible),
+  htmlElement = utils.requiredParam(waitForElementNotToBeVisible),
   timeoutInMilliseconds = config.timeoutInMilliseconds,
-  errorMessage = `${ELEMENT_WITH_LOCATOR_MESSAGE} '${
+  errorMessage = `${constants.ELEMENT_WITH_LOCATOR_MESSAGE} '${
     htmlElement.parentElementArrayFinder.locator_.value
-  }' ${IS_STILL_VISIBLE_MESSAGE}`
+  }' ${constants.IS_STILL_VISIBLE_MESSAGE}`
 ) {
   browser.wait(
     EC.invisibilityOf(htmlElement),
@@ -129,19 +78,23 @@ const waitForElementNotToBeVisible = function(
 };
 
 const clickWhenClickable = function(
-  htmlElement = requiredParam(clickWhenClickable),
+  htmlElement = utils.requiredParam(clickWhenClickable),
   timeoutInMilliseconds = config.timeoutInMilliseconds,
-  errorMessage = getDefaultIsNotClickableMessage(htmlElement)
+  errorMessage = utils.getDefaultIsNotClickableMessage(htmlElement)
 ) {
-  waitForElementToBeClickable(htmlElement, timeoutInMilliseconds, errorMessage);
+  utils.waitForElementToBeClickable(
+    htmlElement,
+    timeoutInMilliseconds,
+    errorMessage
+  );
   htmlElement.click();
 };
 
 const fillFieldWithTextWhenVisible = function(
-  htmlElement = requiredParam(fillFieldWithTextWhenVisible),
-  text = requiredParam(fillFieldWithTextWhenVisible, "text"),
+  htmlElement = utils.requiredParam(fillFieldWithTextWhenVisible),
+  text = utils.requiredParam(fillFieldWithTextWhenVisible, "text"),
   timeoutInMilliseconds = config.timeoutInMilliseconds,
-  errorMessage = getDefaultIsNotVisibleMessage(htmlElement)
+  errorMessage = utils.getDefaultIsNotVisibleMessage(htmlElement)
 ) {
   this.waitForElementVisibility(
     htmlElement,
@@ -152,22 +105,22 @@ const fillFieldWithTextWhenVisible = function(
 };
 
 const fillInputFieldWithFileWhenPresent = function(
-  htmlElement = requiredParam(fillInputFieldWithFileWhenPresent),
-  absolutePath = requiredParam(
+  htmlElement = utils.requiredParam(fillInputFieldWithFileWhenPresent),
+  absolutePath = utils.requiredParam(
     fillInputFieldWithFileWhenPresent,
     "absolutePath"
   ),
   timeoutInMilliseconds = config.timeoutInMilliseconds,
-  errorMessage = getDefaultIsNotPresentMessage(htmlElement)
+  errorMessage = utils.getDefaultIsNotPresentMessage(htmlElement)
 ) {
   this.waitForElementPresence(htmlElement, timeoutInMilliseconds, errorMessage);
   htmlElement.sendKeys(absolutePath);
 };
 
 const clearFieldWhenVisible = function(
-  htmlElement = requiredParam(clearFieldWhenVisible),
+  htmlElement = utils.requiredParam(clearFieldWhenVisible),
   timeoutInMilliseconds = config.timeoutInMilliseconds,
-  errorMessage = getDefaultIsNotVisibleMessage(htmlElement)
+  errorMessage = utils.getDefaultIsNotVisibleMessage(htmlElement)
 ) {
   this.waitForElementVisibility(
     htmlElement,
@@ -178,10 +131,10 @@ const clearFieldWhenVisible = function(
 };
 
 const clearFieldWhenVisibleAndFillItWithText = function(
-  htmlElement = requiredParam(clearFieldWhenVisibleAndFillItWithText),
-  text = requiredParam(clearFieldWhenVisibleAndFillItWithText, "text"),
+  htmlElement = utils.requiredParam(clearFieldWhenVisibleAndFillItWithText),
+  text = utils.requiredParam(clearFieldWhenVisibleAndFillItWithText, "text"),
   timeoutInMilliseconds = config.timeoutInMilliseconds,
-  errorMessage = getDefaultIsNotVisibleMessage(htmlElement)
+  errorMessage = utils.getDefaultIsNotVisibleMessage(htmlElement)
 ) {
   this.clearFieldWhenVisible(htmlElement, timeoutInMilliseconds, errorMessage);
   this.fillFieldWithTextWhenVisible(
@@ -193,13 +146,19 @@ const clearFieldWhenVisibleAndFillItWithText = function(
 };
 
 const tapWhenTappable = function(
-  htmlElement = requiredParam(tapWhenTappable),
+  htmlElement = utils.requiredParam(tapWhenTappable),
   timeoutInMilliseconds = config.timeoutInMilliseconds,
-  errorMessage = `${ELEMENT_WITH_LOCATOR_MESSAGE} '${
+  errorMessage = `${constants.ELEMENT_WITH_LOCATOR_MESSAGE} '${
     htmlElement.parentElementArrayFinder.locator_.value
-  }' ${IS_NOT_TAPPABLE_MESSAGE}. ${POSSIBLE_IT_IS_NOT_PRESENT_OR_VISIBLE_MESSAGE}`
+  }' ${constants.IS_NOT_TAPPABLE_MESSAGE}. ${
+    constants.POSSIBLE_IT_IS_NOT_PRESENT_OR_VISIBLE_MESSAGE
+  }`
 ) {
-  waitForElementToBeClickable(htmlElement, timeoutInMilliseconds, errorMessage);
+  utils.waitForElementToBeClickable(
+    htmlElement,
+    timeoutInMilliseconds,
+    errorMessage
+  );
   browser
     .touchActions()
     .tap(htmlElement)
@@ -207,12 +166,12 @@ const tapWhenTappable = function(
 };
 
 const waitForTextToBePresentInElement = function(
-  htmlElement = requiredParam(waitForTextToBePresentInElement),
-  text = requiredParam(waitForTextToBePresentInElement, "text"),
+  htmlElement = utils.requiredParam(waitForTextToBePresentInElement),
+  text = utils.requiredParam(waitForTextToBePresentInElement, "text"),
   timeoutInMilliseconds = config.timeoutInMilliseconds,
-  errorMessage = `text '${text}' not present on ${ELEMENT_WITH_LOCATOR_MESSAGE} '${
-    htmlElement.parentElementArrayFinder.locator_.value
-  }'`
+  errorMessage = `text '${text}' not present on ${
+    constants.ELEMENT_WITH_LOCATOR_MESSAGE
+  } '${htmlElement.parentElementArrayFinder.locator_.value}'`
 ) {
   browser.wait(
     EC.textToBePresentInElement(htmlElement, text),
@@ -222,12 +181,12 @@ const waitForTextToBePresentInElement = function(
 };
 
 const waitForTextNotToBePresentInElement = function(
-  htmlElement = requiredParam(waitForTextNotToBePresentInElement),
-  text = requiredParam(waitForTextNotToBePresentInElement, "text"),
+  htmlElement = utils.requiredParam(waitForTextNotToBePresentInElement),
+  text = utils.requiredParam(waitForTextNotToBePresentInElement, "text"),
   timeoutInMilliseconds = config.timeoutInMilliseconds,
-  errorMessage = `text '${text}' is still present on ${ELEMENT_WITH_LOCATOR_MESSAGE} '${
-    htmlElement.parentElementArrayFinder.locator_.value
-  }'`
+  errorMessage = `text '${text}' is still present on ${
+    constants.ELEMENT_WITH_LOCATOR_MESSAGE
+  } '${htmlElement.parentElementArrayFinder.locator_.value}'`
 ) {
   browser.wait(
     EC.not(EC.textToBePresentInElement(htmlElement, text)),
@@ -237,7 +196,10 @@ const waitForTextNotToBePresentInElement = function(
 };
 
 const waitForUrlToBeEqualToExpectedUrl = function(
-  expectedUrl = requiredParam(waitForUrlToBeEqualToExpectedUrl, "expectedUrl"),
+  expectedUrl = utils.requiredParam(
+    waitForUrlToBeEqualToExpectedUrl,
+    "expectedUrl"
+  ),
   timeoutInMilliseconds = config.timeoutInMilliseconds,
   errorMessage = `current URL is different than expected URL: '${expectedUrl}'`
 ) {
@@ -245,7 +207,7 @@ const waitForUrlToBeEqualToExpectedUrl = function(
 };
 
 const waitForUrlNotToBeEqualToExpectedUrl = function(
-  expectedUrl = requiredParam(
+  expectedUrl = utils.requiredParam(
     waitForUrlNotToBeEqualToExpectedUrl,
     "expectedUrl"
   ),
@@ -260,7 +222,7 @@ const waitForUrlNotToBeEqualToExpectedUrl = function(
 };
 
 const waitForUrlToContainString = function(
-  string = requiredParam(waitForUrlToContainString, "string"),
+  string = utils.requiredParam(waitForUrlToContainString, "string"),
   timeoutInMilliseconds = config.timeoutInMilliseconds,
   errorMessage = `current URL does not contains the string '${string}'`
 ) {
@@ -268,7 +230,7 @@ const waitForUrlToContainString = function(
 };
 
 const waitForUrlNotToContainString = function(
-  string = requiredParam(waitForUrlNotToContainString, "string"),
+  string = utils.requiredParam(waitForUrlNotToContainString, "string"),
   timeoutInMilliseconds = config.timeoutInMilliseconds,
   errorMessage = `current URL contains the string '${string}'`
 ) {
@@ -280,10 +242,10 @@ const waitForUrlNotToContainString = function(
 };
 
 const fillFieldWithTextWhenVisibleAndPressEnter = function(
-  htmlElement = requiredParam(fillFieldWithTextWhenVisibleAndPressEnter),
-  text = requiredParam(fillFieldWithTextWhenVisibleAndPressEnter, "text"),
+  htmlElement = utils.requiredParam(fillFieldWithTextWhenVisibleAndPressEnter),
+  text = utils.requiredParam(fillFieldWithTextWhenVisibleAndPressEnter, "text"),
   timeoutInMilliseconds = config.timeoutInMilliseconds,
-  errorMessage = getDefaultIsNotVisibleMessage(htmlElement)
+  errorMessage = utils.getDefaultIsNotVisibleMessage(htmlElement)
 ) {
   this.fillFieldWithTextWhenVisible(
     htmlElement,
@@ -300,9 +262,9 @@ const fillFieldWithTextWhenVisibleAndPressEnter = function(
 };
 
 const scrollToElementWhenVisible = function(
-  htmlElement = requiredParam(scrollToElementWhenVisible),
+  htmlElement = utils.requiredParam(scrollToElementWhenVisible),
   timeoutInMilliseconds = config.timeoutInMilliseconds,
-  errorMessage = getDefaultIsNotVisibleMessage(htmlElement)
+  errorMessage = utils.getDefaultIsNotVisibleMessage(htmlElement)
 ) {
   this.waitForElementVisibility(
     htmlElement,
