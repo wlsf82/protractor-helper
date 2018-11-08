@@ -1,3 +1,21 @@
+# 3.6.5
+
+## package.json
+
+- update lib's patch version
+
+## package-lock.json
+
+- update lib's version on package-lock file
+
+## Documentation
+
+- update change log with info about the latest patch version
+
+## index.js
+
+- reuse existing function to avoid code duplication
+
 # 3.6.4
 
 ## package.json
