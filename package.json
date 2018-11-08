@@ -1,6 +1,6 @@
 {
   "name": "protractor-helper",
-  "version": "3.6.5",
+  "version": "3.6.6",
   "scripts": {
     "test": "webdriver-manager update && protractor test/protractor.conf.js"
   },
