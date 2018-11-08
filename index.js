@@ -183,12 +183,13 @@ const clearFieldWhenVisibleAndFillItWithText = function(
   timeoutInMilliseconds = config.timeoutInMilliseconds,
   errorMessage = getDefaultIsNotVisibleMessage(htmlElement)
 ) {
-  this.clearFieldWhenVisible(
+  this.clearFieldWhenVisible(htmlElement, timeoutInMilliseconds, errorMessage);
+  this.fillFieldWithTextWhenVisible(
     htmlElement,
+    text,
     timeoutInMilliseconds,
     errorMessage
   );
-  htmlElement.sendKeys(text);
 };
 
 const tapWhenTappable = function(
