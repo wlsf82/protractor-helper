@@ -1,3 +1,21 @@
+# 3.6.6
+
+## package.json
+
+- update lib's patch version
+
+## package-lock.json
+
+- update lib's version on package-lock file
+
+## Documentation
+
+- update change log with info about the latest patch version
+
+## index.js, constants.js and utils.js
+
+- refactor: split files into main (index), constants and utils
+
 # 3.6.5
 
 ## package.json
