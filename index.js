@@ -183,12 +183,11 @@ const clearFieldWhenVisibleAndFillItWithText = function(
   timeoutInMilliseconds = config.timeoutInMilliseconds,
   errorMessage = getDefaultIsNotVisibleMessage(htmlElement)
 ) {
-  this.waitForElementVisibility(
+  this.clearFieldWhenVisible(
     htmlElement,
     timeoutInMilliseconds,
     errorMessage
   );
-  htmlElement.clear();
   htmlElement.sendKeys(text);
 };
 
