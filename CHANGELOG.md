@@ -6,11 +6,12 @@
 
 ## package-lock.json
 
-- fupdate lib's version on package-lock file
+- update lib's version on package-lock file
 
 ## Documentation
 
 - update change log with info about the latest patch version
+- prettify markdown files to improve readability
 
 # 3.6.1
 
