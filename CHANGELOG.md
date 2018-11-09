@@ -1,3 +1,21 @@
+# 3.6.8
+
+## package.json
+
+- update lib's patch version
+
+## package-lock.json
+
+- update lib's version on package-lock file
+
+## Documentation
+
+- update change log with info about the latest patch version
+
+## index.js
+
+- fix setTimout function affected by refactoring
+
 # 3.6.7
 
 ## package.json
