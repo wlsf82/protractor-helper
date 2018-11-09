@@ -274,7 +274,7 @@ const scrollToElementWhenVisible = function(
   browser.executeScript("arguments[0].scrollIntoView(true);", htmlElement);
 };
 
-const setTimeout = function(timeoutInMilliseconds = DEFAULT_TIMEOUT_IN_MS) {
+const setTimeout = function(timeoutInMilliseconds = constants.DEFAULT_TIMEOUT_IN_MS) {
   config.timeoutInMilliseconds = timeoutInMilliseconds;
 };
 
