@@ -1,3 +1,23 @@
+# 3.6.9
+
+## package.json
+
+- update lib's patch version
+
+## package-lock.json
+
+- update lib's version on package-lock file
+
+## Documentation
+
+- update change log with info about the latest patch version
+- minor adjustment on README to improve readability
+
+## Tests
+
+- change test conf to execute tests in random order
+- add test to setTimeout method.
+
 # 3.6.8
 
 ## package.json
