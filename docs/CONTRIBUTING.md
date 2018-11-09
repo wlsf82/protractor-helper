@@ -36,9 +36,10 @@ Started
 ..................
 
 
-21 specs, 0 failures
-Finished in 2.968 seconds
+22 specs, 0 failures
+Finished in 1.96 seconds
 
+Randomized with seed 19259
 [23:28:40] I/local - Shutting down selenium standalone server.
 [23:28:40] I/launcher - 0 instance(s) of WebDriver still running
 [23:28:40] I/launcher - chrome #01 passed
