@@ -3,8 +3,9 @@
 You can contribute in the following ways:
 
 - Finding and reporting bugs
-- Fixing bugs or implementing features
+- Fixing bugs or implementing new features
 - Improving the documentation
+- Improving the code structure
 
 ## Steps to contribute
 
@@ -14,7 +15,7 @@ You can contribute in the following ways:
 4. Send a [pull request](https://help.github.com/articles/about-pull-requests/) and I'll be happy to review it 🙌;
 5. Wait for feedback or approval (this should not take too long).
 
-**Pull requests that do not pass automated tests will not be reviewed**
+> Pull requests that do not pass the automated tests on [SemaphoreCI](http://semaphoreci.com) and the code quality verification on [Better Code Hub](https://bettercodehub.com/) will not be reviewed
 
 ## Build status
 
