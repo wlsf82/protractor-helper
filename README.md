@@ -295,19 +295,19 @@ Let's look how a failure would looks like when using some of this methods as exp
 
 - Failure when using `waitForElementPresence` as expectation:
 
-```
+```sh
 Failed: element with locator '*[id="foo"]' is not present
 ```
 
 - Failure when using `waitForElementVisibility` as expectation:
 
-```
+```sh
 Failed: element with locator '*[id="foo"]' is not visible
 ```
 
 - Failure when using `waitForTextToBePresentInElement` as expectation:
 
-```
+```sh
 Failed: text 'foo' not present on element with locator 'h1'
 ```
 
@@ -315,7 +315,7 @@ Failed: text 'foo' not present on element with locator 'h1'
 
 ## Contributing
 
-[Contribution guidelines](docs/CONTRIBUTING.md)
+See [contribution guidelines](docs/CONTRIBUTING.md).
 
 ## Credits
 
