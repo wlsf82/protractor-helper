@@ -118,7 +118,7 @@ describe("Sign up page", () => {
 });
 ```
 
-As you can see, by using the protractor-helper library the code is easier to read. Also, there is not need of unnecessary complexity.
+As you can see, by using the protractor-helper library the code is easier to read. Also, there is no need of unnecessary complexity.
 
 ## Installation
 
