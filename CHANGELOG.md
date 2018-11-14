@@ -1,3 +1,21 @@
+# 3.6.11
+
+## package.json
+
+- update lib's patch version
+
+## package-lock.json
+
+- update lib's version on package-lock file
+
+## Documentation
+
+- update change log with info about the latest patch version
+
+## Related to contributions
+
+- add templates for 'pull requests' and 'issues'
+
 # 3.6.10
 
 ## package.json
