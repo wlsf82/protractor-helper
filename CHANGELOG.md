@@ -1,3 +1,18 @@
+# 3.6.13
+
+## package.json
+
+- update lib's patch version
+
+## package-lock.json
+
+- update lib's version on package-lock file
+
+## Documentation
+
+- update change log with info about the latest patch version
+- minor addition to CONTRIBUTING.md file
+
 # 3.6.12
 
 ## package.json
