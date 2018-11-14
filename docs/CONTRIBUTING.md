@@ -29,6 +29,8 @@ A sample application using HTML and CSS is included in this repo in order to all
 
 Protractor is added as a dev dependency to allow running the tests.
 
+Run `npm t` to run the tests.
+
 If all tests have passed you should see a result like this:
 
 ```sh
