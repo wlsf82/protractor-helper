@@ -1,4 +1,4 @@
-v### Description
+### Description
 
 [Description of the bug or feature]
 
