@@ -4,7 +4,7 @@ const constants = require("./constants");
 
 function getDefaultIsNotClickableMessage(htmlElement) {
   return `${constants.ELEMENT_WITH_LOCATOR_MESSAGE} '${
-    htmlElement.parentElementArrayFinder.locator_.value
+    htmlElement.parentElementArrayFinder.locator_
   }' ${constants.IS_NOT_CLICKABLE_MESSAGE}. ${
     constants.POSSIBLE_IT_IS_NOT_PRESENT_OR_VISIBLE_MESSAGE
   }`;
@@ -12,13 +12,13 @@ function getDefaultIsNotClickableMessage(htmlElement) {
 
 function getDefaultIsNotPresentMessage(htmlElement) {
   return `${constants.ELEMENT_WITH_LOCATOR_MESSAGE} '${
-    htmlElement.parentElementArrayFinder.locator_.value
+    htmlElement.parentElementArrayFinder.locator_
   }' ${constants.IS_NOT_PRESENT_MESSAGE}`;
 }
 
 function getDefaultIsNotVisibleMessage(htmlElement) {
   return `${constants.ELEMENT_WITH_LOCATOR_MESSAGE} '${
-    htmlElement.parentElementArrayFinder.locator_.value
+    htmlElement.parentElementArrayFinder.locator_
   }' ${constants.IS_NOT_VISIBLE_MESSAGE}`;
 }
 
