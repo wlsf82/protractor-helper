@@ -2,8 +2,13 @@
   "name": "protractor-helper",
   "version": "3.6.13",
   "scripts": {
-    "test": "webdriver-manager update && protractor test/protractor.conf.js"
+    "pretest": "webdriver-manager update",
+    "test": "protractor test/protractor.conf.js",
+    "prettify": "prettier --write *.js */*.js"
   },
+  "pre-commit": [
+    "prettify"
+  ],
   "description": "Protractor helper's library",
   "main": "index.js",
   "keywords": [
@@ -20,6 +25,8 @@
     "protractor": ">= 5.0.0"
   },
   "devDependencies": {
+    "pre-commit": "^1.2.2",
+    "prettier": "1.15.2",
     "protractor": "^5.4.1"
   }
 }
