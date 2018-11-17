@@ -1,23 +1,28 @@
 const protractorHelper = require("../index.js");
 
 const constants = require("./constants");
+const utils = require("../constants_and_utils/utils");
 
-describe("Protractor helper", () => {
+const nonExistingElementLocatedById = element(by.id("foo"));
+
+describe("index.js file -", () => {
   const titleElement = element(by.css("h1"));
   const inputField = element(by.id("input"));
   const shortenButton = element(by.id("shorten"));
   const expandButton = element(by.id("expand"));
 
-  const nonExistingElement = element(by.id("foo"));
-
   beforeEach(() => browser.get(""));
 
   it("waitForElementNotToBePresent", () => {
-    protractorHelper.waitForElementNotToBePresent(nonExistingElement);
+    protractorHelper.waitForElementNotToBePresent(
+      nonExistingElementLocatedById
+    );
   });
 
   it("waitForElementNotToBeVisible", () => {
-    protractorHelper.waitForElementNotToBeVisible(nonExistingElement);
+    protractorHelper.waitForElementNotToBeVisible(
+      nonExistingElementLocatedById
+    );
   });
 
   it("waitForTextNotToBePresentInElement", () => {
@@ -123,9 +128,125 @@ describe("Protractor helper", () => {
   it("scrollToElementWhenVisible", () => {
     protractorHelper.scrollToElementWhenVisible(shortenButton);
   });
-  
+
   it("setTimeout", () => {
     protractorHelper.setTimeout(constants.TIMEOUT_IN_MS);
     protractorHelper.setTimeout();
+  });
+});
+
+describe("utils.js file -", () => {
+  const nonExistingElementLocatedByCssContainingText = element(
+    by.cssContainingText("foo", "bar")
+  );
+  const nonExistingElementLocatedByButtonText = element(by.buttonText("foo"));
+  const nonExistingElementLocatedByPartialButtonText = element(
+    by.partialButtonText("foo")
+  );
+
+  it("by.cssContainingText - function getDefaultIsNotClickableMessage", () => {
+    expect(
+      utils.getDefaultIsNotClickableMessage(
+        nonExistingElementLocatedByCssContainingText
+      )
+    ).toEqual(
+      'element with locator \'by.cssContainingText("foo", "bar")\' is not clickable. Possibly it\'s not present or visible.'
+    );
+  });
+
+  it("by.cssContainingText - function getDefaultIsNotPresentMessage", () => {
+    expect(
+      utils.getDefaultIsNotPresentMessage(
+        nonExistingElementLocatedByCssContainingText
+      )
+    ).toEqual(
+      'element with locator \'by.cssContainingText("foo", "bar")\' is not present'
+    );
+  });
+
+  it("by.cssContainingText - function getDefaultIsNotVisibleMessage", () => {
+    expect(
+      utils.getDefaultIsNotVisibleMessage(
+        nonExistingElementLocatedByCssContainingText
+      )
+    ).toEqual(
+      'element with locator \'by.cssContainingText("foo", "bar")\' is not visible'
+    );
+  });
+
+  it("by.buttonText - function getDefaultIsNotClickableMessage", () => {
+    expect(
+      utils.getDefaultIsNotClickableMessage(
+        nonExistingElementLocatedByButtonText
+      )
+    ).toEqual(
+      "element with locator 'by.buttonText(\"foo\")' is not clickable. Possibly it's not present or visible."
+    );
+  });
+
+  it("by.buttonText - function getDefaultIsNotPresentMessage", () => {
+    expect(
+      utils.getDefaultIsNotPresentMessage(nonExistingElementLocatedByButtonText)
+    ).toEqual("element with locator 'by.buttonText(\"foo\")' is not present");
+  });
+
+  it("by.buttonText - function getDefaultIsNotVisibleMessage", () => {
+    expect(
+      utils.getDefaultIsNotVisibleMessage(nonExistingElementLocatedByButtonText)
+    ).toEqual("element with locator 'by.buttonText(\"foo\")' is not visible");
+  });
+
+  it("by.partialButtonText - function getDefaultIsNotClickableMessage", () => {
+    expect(
+      utils.getDefaultIsNotClickableMessage(
+        nonExistingElementLocatedByPartialButtonText
+      )
+    ).toEqual(
+      "element with locator 'by.partialButtonText(\"foo\")' is not clickable. Possibly it's not present or visible."
+    );
+  });
+
+  it("by.partialButtonText - function getDefaultIsNotPresentMessage", () => {
+    expect(
+      utils.getDefaultIsNotPresentMessage(
+        nonExistingElementLocatedByPartialButtonText
+      )
+    ).toEqual(
+      "element with locator 'by.partialButtonText(\"foo\")' is not present"
+    );
+  });
+
+  it("by.partialButtonText - function getDefaultIsNotVisibleMessage", () => {
+    expect(
+      utils.getDefaultIsNotVisibleMessage(
+        nonExistingElementLocatedByPartialButtonText
+      )
+    ).toEqual(
+      "element with locator 'by.partialButtonText(\"foo\")' is not visible"
+    );
+  });
+
+  it("by.id - function getDefaultIsNotClickableMessage", () => {
+    expect(
+      utils.getDefaultIsNotClickableMessage(nonExistingElementLocatedById)
+    ).toEqual(
+      "element with locator 'By(css selector, *[id=\"foo\"])' is not clickable. Possibly it's not present or visible."
+    );
+  });
+
+  it("by.id - function getDefaultIsNotPresentMessage", () => {
+    expect(
+      utils.getDefaultIsNotPresentMessage(nonExistingElementLocatedById)
+    ).toEqual(
+      "element with locator 'By(css selector, *[id=\"foo\"])' is not present"
+    );
+  });
+
+  it("by.id - function getDefaultIsNotVisibleMessage", () => {
+    expect(
+      utils.getDefaultIsNotVisibleMessage(nonExistingElementLocatedById)
+    ).toEqual(
+      "element with locator 'By(css selector, *[id=\"foo\"])' is not visible"
+    );
   });
 });

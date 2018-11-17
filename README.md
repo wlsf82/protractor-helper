@@ -292,20 +292,38 @@ Below you can find the list of methods that can be used as expectations:
 
 > Note: if you use such methods as expectations they will not count as expectations, in a test report, for example, but if they fail a clear message will be shown to ease understanding why the test has failed. In the end, test reports are usually useful in cases where tests have failed and we need to understand why. If all tests are green there is nothing to worry about, at least not if they were well implemented.
 
-### Example of a test failure when using such methods as expectations
+### Examples of test failures when using such methods as expectations
 
 Let's look how a failure would looks like when using some of this methods as expectations.
 
-- Failure when using `waitForElementPresence` as expectation:
+- Failures when using `waitForElementPresence` as expectation:
 
 ```sh
-Failed: element with locator '*[id="foo"]' is not present
+Failed: element with locator 'by.cssContainingText("foo", "bar")' is not present
 ```
 
-- Failure when using `waitForElementVisibility` as expectation:
+```sh
+Failed: element with locator 'By(css selector, *[id="foo"])' is not present
+  ```
+
+- Failures when using `waitForElementVisibility` as expectation:
 
 ```sh
-Failed: element with locator '*[id="foo"]' is not visible
+Failed: element with locator 'by.buttonText("foo")' is not visible
+```
+
+```sh
+Failed: element with locator 'By(css selector, *[name="foo"])' is not visible
+```
+
+- Failures when using `clickWhenClickable` as expectation:
+
+```sh
+Failed: element with locator 'by.partialButtonText("foo")' is not clickable. Possibly it's not present or visible.
+```
+
+```sh
+Failed: element with locator 'By(css selector, .foo)' is not clickable. Possibly it's not present or visible.
 ```
 
 - Failure when using `waitForTextToBePresentInElement` as expectation:

@@ -35,11 +35,11 @@ If all tests have passed you should see a result like this:
 
 ```sh
 Started
-..................
+..........................*.......
 
 
-22 specs, 0 failures
-Finished in 1.96 seconds
+34 specs, 0 failures, 1 pending spec
+Finished in 3.467 seconds
 
 Randomized with seed 19259
 [23:28:40] I/local - Shutting down selenium standalone server.
