@@ -123,7 +123,7 @@ describe("Protractor helper", () => {
   it("scrollToElementWhenVisible", () => {
     protractorHelper.scrollToElementWhenVisible(shortenButton);
   });
-  
+
   it("setTimeout", () => {
     protractorHelper.setTimeout(constants.TIMEOUT_IN_MS);
     protractorHelper.setTimeout();

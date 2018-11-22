@@ -12,7 +12,7 @@ const constants = {
   SAMPLE_URL: "http://example.com/",
   SHORTEN_URL: "https://goo.gl/Us9Txw",
   TEXT_NOT_EXISTING_ON_VISIBLE_ELEMENTS: "foo",
-  TIMEOUT_IN_MS : 500,
+  TIMEOUT_IN_MS: 500,
   TITLE_TEXT: "Enter a URL"
 };
 
