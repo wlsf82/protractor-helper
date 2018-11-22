@@ -249,13 +249,7 @@ const fillFieldWithTextWhenVisibleAndPressEnter = function(
 ) {
   this.fillFieldWithTextWhenVisible(
     htmlElement,
-    text,
-    timeoutInMilliseconds,
-    errorMessage
-  );
-  this.fillFieldWithTextWhenVisible(
-    htmlElement,
-    protractor.Key.ENTER,
+    text + protractor.Key.ENTER,
     timeoutInMilliseconds,
     errorMessage
   );
