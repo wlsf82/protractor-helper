@@ -1,3 +1,25 @@
+# 3.6.14
+
+## package.json
+
+- update lib's patch version
+- update npm scripts
+- add prettier and pre-commit dependencies
+
+## package-lock.json
+
+- update lib's version on package-lock file
+- update dependencies
+
+## Documentation
+
+- update change log with info about the latest patch version
+- add new badges on README.md file
+
+# General
+
+- prettify files
+
 # 3.6.13
 
 ## package.json
