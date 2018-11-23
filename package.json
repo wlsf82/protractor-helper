@@ -2,7 +2,7 @@
   "name": "protractor-helper",
   "version": "3.6.18",
   "scripts": {
-    "pretest": "webdriver-manager update",
+    "pretest": "webdriver-manager update --gecko false",
     "test": "protractor test/protractor.conf.js",
     "prettify": "prettier --write **/*.js **/*.md package.json sampleApp/**/*"
   },
