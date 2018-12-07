@@ -41,7 +41,7 @@ const waitForElementNotToBePresent = function(
   htmlElement = utils.requiredParam(waitForElementNotToBePresent),
   timeoutInMilliseconds = config.timeoutInMilliseconds,
   errorMessage = `${constants.ELEMENT_WITH_LOCATOR_MESSAGE} '${
-    htmlElement.parentElementArrayFinder.locator_.value
+    htmlElement.parentElementArrayFinder.locator_
   }' ${constants.IS_STILL_PRESENT_MESSAGE}`
 ) {
   browser.wait(
@@ -67,7 +67,7 @@ const waitForElementNotToBeVisible = function(
   htmlElement = utils.requiredParam(waitForElementNotToBeVisible),
   timeoutInMilliseconds = config.timeoutInMilliseconds,
   errorMessage = `${constants.ELEMENT_WITH_LOCATOR_MESSAGE} '${
-    htmlElement.parentElementArrayFinder.locator_.value
+    htmlElement.parentElementArrayFinder.locator_
   }' ${constants.IS_STILL_VISIBLE_MESSAGE}`
 ) {
   browser.wait(
@@ -149,7 +149,7 @@ const tapWhenTappable = function(
   htmlElement = utils.requiredParam(tapWhenTappable),
   timeoutInMilliseconds = config.timeoutInMilliseconds,
   errorMessage = `${constants.ELEMENT_WITH_LOCATOR_MESSAGE} '${
-    htmlElement.parentElementArrayFinder.locator_.value
+    htmlElement.parentElementArrayFinder.locator_
   }' ${constants.IS_NOT_TAPPABLE_MESSAGE}. ${
     constants.POSSIBLE_IT_IS_NOT_PRESENT_OR_VISIBLE_MESSAGE
   }`
@@ -171,7 +171,7 @@ const waitForTextToBePresentInElement = function(
   timeoutInMilliseconds = config.timeoutInMilliseconds,
   errorMessage = `text '${text}' not present on ${
     constants.ELEMENT_WITH_LOCATOR_MESSAGE
-  } '${htmlElement.parentElementArrayFinder.locator_.value}'`
+  } '${htmlElement.parentElementArrayFinder.locator_}'`
 ) {
   browser.wait(
     EC.textToBePresentInElement(htmlElement, text),
@@ -186,7 +186,7 @@ const waitForTextNotToBePresentInElement = function(
   timeoutInMilliseconds = config.timeoutInMilliseconds,
   errorMessage = `text '${text}' is still present on ${
     constants.ELEMENT_WITH_LOCATOR_MESSAGE
-  } '${htmlElement.parentElementArrayFinder.locator_.value}'`
+  } '${htmlElement.parentElementArrayFinder.locator_}'`
 ) {
   browser.wait(
     EC.not(EC.textToBePresentInElement(htmlElement, text)),
