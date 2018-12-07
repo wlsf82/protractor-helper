@@ -1,3 +1,22 @@
+# 3.6.15
+
+## package.json
+
+- update lib's patch version
+
+## package-lock.json
+
+- update lib's version on package-lock file
+
+## Documentation
+
+- update change log with info about the latest patch version
+- update README.md file due to changes in the index.js file
+
+# index.js and constants_and_utils/utils.js
+
+- improve messages when tests fail
+
 # 3.6.14
 
 ## package.json
