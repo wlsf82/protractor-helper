@@ -7,7 +7,7 @@ function getDefaultIsNotClickableMessage(htmlElement) {
     htmlElement.parentElementArrayFinder.locator_
   }' ${constants.IS_NOT_CLICKABLE_MESSAGE}. ${
     constants.POSSIBLE_IT_IS_NOT_PRESENT_OR_VISIBLE_MESSAGE
-  }`;
+  } ${constants.OR_IT_MAY_BE_DISABLED_MESSAGE}`;
 }
 
 function getDefaultIsNotPresentMessage(htmlElement) {

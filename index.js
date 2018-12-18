@@ -152,7 +152,7 @@ const tapWhenTappable = function(
     htmlElement.parentElementArrayFinder.locator_
   }' ${constants.IS_NOT_TAPPABLE_MESSAGE}. ${
     constants.POSSIBLE_IT_IS_NOT_PRESENT_OR_VISIBLE_MESSAGE
-  }`
+  } ${constants.OR_IT_MAY_BE_DISABLED_MESSAGE}`
 ) {
   utils.waitForElementToBeClickable(
     htmlElement,
