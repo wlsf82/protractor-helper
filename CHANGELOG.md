@@ -1,3 +1,21 @@
+# 3.6.17
+
+## package.json
+
+- update lib's patch version
+
+## package-lock.json
+
+- update lib's version on package-lock file
+
+## Documentation
+
+- update change log with info about the latest patch version
+
+## index.js, constants.js and utils.js
+
+- improve error message when using click or tap functions
+
 # 3.6.16
 
 ## package.json
