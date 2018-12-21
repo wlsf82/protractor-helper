@@ -42,7 +42,7 @@ const waitForElementNotToBePresent = function(
   timeoutInMilliseconds = config.timeoutInMilliseconds,
   errorMessage = `${constants.ELEMENT_WITH_LOCATOR_MESSAGE} '${
     htmlElement.parentElementArrayFinder.locator_
-  }' ${constants.IS_STILL_PRESENT_MESSAGE}`
+  }' ${constants.IS_STILL_PRESENT_MESSAGE}.`
 ) {
   browser.wait(
     EC.stalenessOf(htmlElement),
@@ -68,7 +68,7 @@ const waitForElementNotToBeVisible = function(
   timeoutInMilliseconds = config.timeoutInMilliseconds,
   errorMessage = `${constants.ELEMENT_WITH_LOCATOR_MESSAGE} '${
     htmlElement.parentElementArrayFinder.locator_
-  }' ${constants.IS_STILL_VISIBLE_MESSAGE}`
+  }' ${constants.IS_STILL_VISIBLE_MESSAGE}.`
 ) {
   browser.wait(
     EC.invisibilityOf(htmlElement),
@@ -152,7 +152,7 @@ const tapWhenTappable = function(
     htmlElement.parentElementArrayFinder.locator_
   }' ${constants.IS_NOT_TAPPABLE_MESSAGE}. ${
     constants.POSSIBLE_IT_IS_NOT_PRESENT_OR_VISIBLE_MESSAGE
-  } ${constants.OR_IT_MAY_BE_DISABLED_MESSAGE}`
+  }, ${constants.OR_IT_MAY_BE_DISABLED_MESSAGE}.`
 ) {
   utils.waitForElementToBeClickable(
     htmlElement,
@@ -171,7 +171,7 @@ const waitForTextToBePresentInElement = function(
   timeoutInMilliseconds = config.timeoutInMilliseconds,
   errorMessage = `text '${text}' not present on ${
     constants.ELEMENT_WITH_LOCATOR_MESSAGE
-  } '${htmlElement.parentElementArrayFinder.locator_}'`
+  } '${htmlElement.parentElementArrayFinder.locator_}'.`
 ) {
   browser.wait(
     EC.textToBePresentInElement(htmlElement, text),
@@ -186,7 +186,7 @@ const waitForTextNotToBePresentInElement = function(
   timeoutInMilliseconds = config.timeoutInMilliseconds,
   errorMessage = `text '${text}' is still present on ${
     constants.ELEMENT_WITH_LOCATOR_MESSAGE
-  } '${htmlElement.parentElementArrayFinder.locator_}'`
+  } '${htmlElement.parentElementArrayFinder.locator_}'.`
 ) {
   browser.wait(
     EC.not(EC.textToBePresentInElement(htmlElement, text)),
@@ -201,7 +201,7 @@ const waitForUrlToBeEqualToExpectedUrl = function(
     "expectedUrl"
   ),
   timeoutInMilliseconds = config.timeoutInMilliseconds,
-  errorMessage = `current URL is different than expected URL: '${expectedUrl}'`
+  errorMessage = `current URL is different than expected URL: '${expectedUrl}'.`
 ) {
   browser.wait(EC.urlIs(expectedUrl), timeoutInMilliseconds, errorMessage);
 };
@@ -212,7 +212,7 @@ const waitForUrlNotToBeEqualToExpectedUrl = function(
     "expectedUrl"
   ),
   timeoutInMilliseconds = config.timeoutInMilliseconds,
-  errorMessage = `current URL is equal to expected URL: '${expectedUrl}'`
+  errorMessage = `current URL is equal to expected URL: '${expectedUrl}'.`
 ) {
   browser.wait(
     EC.not(EC.urlIs(expectedUrl)),
@@ -224,7 +224,7 @@ const waitForUrlNotToBeEqualToExpectedUrl = function(
 const waitForUrlToContainString = function(
   string = utils.requiredParam(waitForUrlToContainString, "string"),
   timeoutInMilliseconds = config.timeoutInMilliseconds,
-  errorMessage = `current URL does not contains the string '${string}'`
+  errorMessage = `current URL does not contains the string '${string}'.`
 ) {
   browser.wait(EC.urlContains(string), timeoutInMilliseconds, errorMessage);
 };
@@ -232,7 +232,7 @@ const waitForUrlToContainString = function(
 const waitForUrlNotToContainString = function(
   string = utils.requiredParam(waitForUrlNotToContainString, "string"),
   timeoutInMilliseconds = config.timeoutInMilliseconds,
-  errorMessage = `current URL contains the string '${string}'`
+  errorMessage = `current URL contains the string '${string}'.`
 ) {
   browser.wait(
     EC.not(EC.urlContains(string)),
