@@ -1,3 +1,22 @@
+# 3.6.18
+
+## package.json
+
+- update lib's patch version
+
+## package-lock.json
+
+- update lib's version on package-lock file
+
+## Documentation
+
+- update change log with info about the latest patch version
+- minor updates on readme due to improvements on error messages
+
+## index.js, constants.js and utils.js
+
+- minor improvements on error messages (punctuation related)
+
 # 3.6.17
 
 ## package.json
