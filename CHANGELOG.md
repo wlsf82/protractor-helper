@@ -1,3 +1,22 @@
+# 3.6.19
+
+## package.json
+
+- update lib's patch version
+- update pretest script to not update geckodriver before tests
+
+## package-lock.json
+
+- update lib's version on package-lock file
+
+## Documentation
+
+- update change log with info about the latest patch version
+
+## index.js
+
+- simplify method `fillFieldWithTextWhenVisibleAndPressEnter`
+
 # 3.6.18
 
 ## package.json
