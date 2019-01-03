@@ -1,6 +1,6 @@
 {
   "name": "protractor-helper",
-  "version": "3.6.19",
+  "version": "3.6.20",
   "scripts": {
     "pretest": "webdriver-manager update --gecko false",
     "test": "protractor test/protractor.conf.js",
