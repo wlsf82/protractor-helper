@@ -1,3 +1,18 @@
+# 3.6.20
+
+## package.json
+
+- update lib's patch version
+
+## package-lock.json
+
+- update lib's version on package-lock file
+
+## Documentation
+
+- update change log with info about the latest patch version
+- update credits section on reame file with new contributor
+
 # 3.6.19
 
 ## package.json
