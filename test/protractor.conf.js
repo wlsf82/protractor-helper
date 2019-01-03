@@ -10,7 +10,7 @@ module.exports.config = {
   },
   specs: ["*.spec.js"],
   onPrepare() {
-    browser.ignoreSynchronization = true;
+    browser.waitForAngularEnabled(false);
   },
   jasmineNodeOpts: {
     onComplete: null,
