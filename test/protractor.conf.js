@@ -12,11 +12,5 @@ module.exports.config = {
   onPrepare() {
     browser.waitForAngularEnabled(false);
   },
-  jasmineNodeOpts: {
-    onComplete: null,
-    isVerbose: false,
-    showColors: true,
-    includeStackTrace: true,
-    random: true
-  }
+  random: true
 };
