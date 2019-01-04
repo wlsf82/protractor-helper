@@ -35,12 +35,12 @@ function requiredParam(
   throw requiredParamError;
 }
 
-function waitForElementToBeClickable(
+async function waitForElementToBeClickable(
   htmlElement,
   timeoutInMilliseconds = config.timeoutInMilliseconds,
   errorMessage = getDefaultIsNotClickableMessage(htmlElement)
 ) {
-  browser.wait(
+  await browser.wait(
     EC.elementToBeClickable(htmlElement),
     timeoutInMilliseconds,
     errorMessage
