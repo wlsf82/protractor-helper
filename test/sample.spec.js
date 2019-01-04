@@ -109,7 +109,7 @@ describe("Protractor helper", () => {
 
   xit("openNewBrowserInTheSamePage", () => {
     const newBrowser = protractorHelper.openNewBrowserInTheSamePage(browser);
-    newBrowser.ignoreSynchronization = true;
+    newBrowser.waitForAngularEnabled(false);
     newBrowser.quit();
   }).pend("this needs protractor version 5.0.0, not higher");
 
