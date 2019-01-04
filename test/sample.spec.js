@@ -32,15 +32,11 @@ describe("Protractor helper", () => {
   });
 
   it("waitForUrlNotToBeEqualToExpectedUrl", async () => {
-    await protractorHelper.waitForUrlNotToBeEqualToExpectedUrl(
-      constants.SAMPLE_URL
-    );
+    await protractorHelper.waitForUrlNotToBeEqualToExpectedUrl(constants.SAMPLE_URL);
   });
 
   it("waitForUrlToContainString", async () => {
-    await protractorHelper.waitForUrlToContainString(
-      constants.INDEX_DOT_HTML_STRING
-    );
+    await protractorHelper.waitForUrlToContainString(constants.INDEX_DOT_HTML_STRING);
   });
 
   it("waitForUrlNotToContainString", async () => {
@@ -48,10 +44,7 @@ describe("Protractor helper", () => {
   });
 
   it("fillFieldWithTextWhenVisible", async () => {
-    await protractorHelper.fillFieldWithTextWhenVisible(
-      inputField,
-      constants.SHORTEN_URL
-    );
+    await protractorHelper.fillFieldWithTextWhenVisible(inputField, constants.SHORTEN_URL);
   });
 
   it("clickWhenClickable", async () => {
@@ -74,22 +67,13 @@ describe("Protractor helper", () => {
   });
 
   it("clearFieldWhenVisible", async () => {
-    await protractorHelper.fillFieldWithTextWhenVisible(
-      inputField,
-      constants.SHORTEN_URL
-    );
+    await protractorHelper.fillFieldWithTextWhenVisible(inputField, constants.SHORTEN_URL);
     await protractorHelper.clearFieldWhenVisible(inputField);
   });
 
   it("clearFieldWhenVisibleAndFillItWithText", async () => {
-    await protractorHelper.fillFieldWithTextWhenVisible(
-      inputField,
-      constants.SHORTEN_URL
-    );
-    await protractorHelper.clearFieldWhenVisibleAndFillItWithText(
-      inputField,
-      constants.SAMPLE_URL
-    );
+    await protractorHelper.fillFieldWithTextWhenVisible(inputField, constants.SHORTEN_URL);
+    await protractorHelper.clearFieldWhenVisibleAndFillItWithText(inputField, constants.SAMPLE_URL);
   });
 
   it("tapWhenTappable", async () => {
@@ -97,10 +81,7 @@ describe("Protractor helper", () => {
   });
 
   it("waitForTextToBePresentInElement", async () => {
-    await protractorHelper.waitForTextToBePresentInElement(
-      titleElement,
-      constants.TITLE_TEXT
-    );
+    await protractorHelper.waitForTextToBePresentInElement(titleElement, constants.TITLE_TEXT);
   });
 
   it("getBodyElementFromCurrentBrowserOrBrowserInstance", () => {
@@ -114,9 +95,7 @@ describe("Protractor helper", () => {
   }).pend("this needs protractor version 5.0.0, not higher");
 
   it("isCurrentUrlDifferentFromBaseUrl", async () => {
-    expect(false).toEqual(
-      await protractorHelper.isCurrentUrlDifferentFromBaseUrl()
-    );
+    expect(false).toEqual(await protractorHelper.isCurrentUrlDifferentFromBaseUrl());
   });
 
   it("fillFieldWithTextWhenVisibleAndPressEnter", async () => {

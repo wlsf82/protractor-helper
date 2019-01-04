@@ -51,9 +51,7 @@ describe("foo", () => {
   it("bar", () => {
     browser.get("https://example.com");
 
-    protractorHelper
-      .getBodyElementFromCurrentBrowserOrBrowserInstance()
-      .click();
+    protractorHelper.getBodyElementFromCurrentBrowserOrBrowserInstance().click();
 
     // ...
   });
@@ -73,13 +71,9 @@ describe("foo", () => {
   it("bar", () => {
     browser.get("https://example.com");
 
-    const anotherBrowser = protractorHelper.openNewBrowserInTheSamePage(
-      browser
-    );
+    const anotherBrowser = protractorHelper.openNewBrowserInTheSamePage(browser);
 
-    const textFieldFromAnotherBrowser = anotherBrowser.element(
-      by.id("text-field-id")
-    );
+    const textFieldFromAnotherBrowser = anotherBrowser.element(by.id("text-field-id"));
 
     textFieldFromAnotherBrowser.sendKeys("foobarbaz");
 
@@ -129,11 +123,7 @@ describe("foo", () => {
 
     const myElement = element(by.className("foo"));
 
-    protractorHelper.waitForElementPresence(
-      myElement,
-      3000,
-      "my element is not present"
-    );
+    protractorHelper.waitForElementPresence(myElement, 3000, "my element is not present");
 
     // ...
   });
@@ -155,11 +145,7 @@ describe("foo", () => {
 
     const myElement = element(by.className("foo"));
 
-    protractorHelper.waitForElementNotToBePresent(
-      myElement,
-      3000,
-      "my element is still present"
-    );
+    protractorHelper.waitForElementNotToBePresent(myElement, 3000, "my element is still present");
 
     // ...
   });
@@ -181,11 +167,7 @@ describe("foo", () => {
 
     const myElement = element(by.className("foo"));
 
-    protractorHelper.waitForElementVisibility(
-      myElement,
-      3000,
-      "my element not visible"
-    );
+    protractorHelper.waitForElementVisibility(myElement, 3000, "my element not visible");
 
     // ...
   });
@@ -207,11 +189,7 @@ describe("foo", () => {
 
     const myElement = element(by.className("foo"));
 
-    protractorHelper.waitForElementNotToBeVisible(
-      myElement,
-      3000,
-      "my element is still visible"
-    );
+    protractorHelper.waitForElementNotToBeVisible(myElement, 3000, "my element is still visible");
 
     // ...
   });
@@ -233,11 +211,7 @@ describe("foo", () => {
 
     const myLink = element(by.css("a.my-link"));
 
-    protractorHelper.clickWhenClickable(
-      myLink,
-      3000,
-      "my link is not clickable"
-    );
+    protractorHelper.clickWhenClickable(myLink, 3000, "my link is not clickable");
 
     // ...
   });
@@ -318,11 +292,7 @@ describe("foo", () => {
     const textField = element(by.css("input.some-text-field"));
 
     textField.sendKeys("foobar");
-    protractorHelper.clearFieldWhenVisible(
-      textField,
-      3000,
-      "textField is not visible"
-    );
+    protractorHelper.clearFieldWhenVisible(textField, 3000, "textField is not visible");
 
     // ...
   });
@@ -373,11 +343,7 @@ describe("foo", () => {
 
     const myButton = element(by.id("my-button"));
 
-    protractorHelper.tapWhenTappable(
-      myButton,
-      3000,
-      "myButton is not tappable"
-    );
+    protractorHelper.tapWhenTappable(myButton, 3000, "myButton is not tappable");
 
     // ...
   });
@@ -590,11 +556,7 @@ describe("foo", () => {
 
     const myLink = element(by.css("a.my-link"));
 
-    protractorHelper.scrollToElementWhenVisible(
-      myLink,
-      3000,
-      "my link is not visible"
-    );
+    protractorHelper.scrollToElementWhenVisible(myLink, 3000, "my link is not visible");
 
     // ...
   });

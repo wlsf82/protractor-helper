@@ -5,9 +5,7 @@ const utils = require("./constants_and_utils/utils");
 
 const config = { timeoutInMilliseconds: constants.DEFAULT_TIMEOUT_IN_MS };
 
-const getBodyElementFromCurrentBrowserOrBrowserInstance = function(
-  browserInstance
-) {
+const getBodyElementFromCurrentBrowserOrBrowserInstance = function(browserInstance) {
   const cssSelector = "body";
 
   if (browserInstance) {
@@ -44,11 +42,7 @@ const waitForElementNotToBePresent = async function(
     htmlElement.parentElementArrayFinder.locator_
   }' ${constants.IS_STILL_PRESENT_MESSAGE}.`
 ) {
-  return await browser.wait(
-    EC.stalenessOf(htmlElement),
-    timeoutInMilliseconds,
-    errorMessage
-  );
+  return await browser.wait(EC.stalenessOf(htmlElement), timeoutInMilliseconds, errorMessage);
 };
 
 const waitForElementVisibility = async function(
@@ -56,11 +50,7 @@ const waitForElementVisibility = async function(
   timeoutInMilliseconds = config.timeoutInMilliseconds,
   errorMessage = utils.getDefaultIsNotVisibleMessage(htmlElement)
 ) {
-  return await browser.wait(
-    EC.visibilityOf(htmlElement),
-    timeoutInMilliseconds,
-    errorMessage
-  );
+  return await browser.wait(EC.visibilityOf(htmlElement), timeoutInMilliseconds, errorMessage);
 };
 
 const waitForElementNotToBeVisible = async function(
@@ -70,11 +60,7 @@ const waitForElementNotToBeVisible = async function(
     htmlElement.parentElementArrayFinder.locator_
   }' ${constants.IS_STILL_VISIBLE_MESSAGE}.`
 ) {
-  return await browser.wait(
-    EC.invisibilityOf(htmlElement),
-    timeoutInMilliseconds,
-    errorMessage
-  );
+  return await browser.wait(EC.invisibilityOf(htmlElement), timeoutInMilliseconds, errorMessage);
 };
 
 const clickWhenClickable = async function(
@@ -82,11 +68,7 @@ const clickWhenClickable = async function(
   timeoutInMilliseconds = config.timeoutInMilliseconds,
   errorMessage = utils.getDefaultIsNotClickableMessage(htmlElement)
 ) {
-  await utils.waitForElementToBeClickable(
-    htmlElement,
-    timeoutInMilliseconds,
-    errorMessage
-  );
+  await utils.waitForElementToBeClickable(htmlElement, timeoutInMilliseconds, errorMessage);
   return await htmlElement.click();
 };
 
@@ -96,20 +78,13 @@ const fillFieldWithTextWhenVisible = async function(
   timeoutInMilliseconds = config.timeoutInMilliseconds,
   errorMessage = utils.getDefaultIsNotVisibleMessage(htmlElement)
 ) {
-  await this.waitForElementVisibility(
-    htmlElement,
-    timeoutInMilliseconds,
-    errorMessage
-  );
+  await this.waitForElementVisibility(htmlElement, timeoutInMilliseconds, errorMessage);
   return await htmlElement.sendKeys(text);
 };
 
 const fillInputFieldWithFileWhenPresent = async function(
   htmlElement = utils.requiredParam(fillInputFieldWithFileWhenPresent),
-  absolutePath = utils.requiredParam(
-    fillInputFieldWithFileWhenPresent,
-    "absolutePath"
-  ),
+  absolutePath = utils.requiredParam(fillInputFieldWithFileWhenPresent, "absolutePath"),
   timeoutInMilliseconds = config.timeoutInMilliseconds,
   errorMessage = utils.getDefaultIsNotPresentMessage(htmlElement)
 ) {
@@ -122,11 +97,7 @@ const clearFieldWhenVisible = async function(
   timeoutInMilliseconds = config.timeoutInMilliseconds,
   errorMessage = utils.getDefaultIsNotVisibleMessage(htmlElement)
 ) {
-  await this.waitForElementVisibility(
-    htmlElement,
-    timeoutInMilliseconds,
-    errorMessage
-  );
+  await this.waitForElementVisibility(htmlElement, timeoutInMilliseconds, errorMessage);
   return await htmlElement.clear();
 };
 
@@ -154,18 +125,8 @@ const tapWhenTappable = async function(
     constants.POSSIBLE_IT_IS_NOT_PRESENT_OR_VISIBLE_MESSAGE
   }, ${constants.OR_IT_MAY_BE_DISABLED_MESSAGE}.`
 ) {
-  await utils.waitForElementToBeClickable(
-    htmlElement,
-    timeoutInMilliseconds,
-    errorMessage
-  );
-  // @TODO: research needed here since this sttoped working on Protractor v6.0.0-beta.
-  // browser
-  //   .touchActions()
-  //   .tap(htmlElement)
-  //   .perform();
-
-  // The below code is just a work around.
+  await utils.waitForElementToBeClickable(htmlElement, timeoutInMilliseconds, errorMessage);
+  // @TODO: implement the correct way of tapping simulation.
   return await htmlElement.click();
 };
 
@@ -173,9 +134,9 @@ const waitForTextToBePresentInElement = async function(
   htmlElement = utils.requiredParam(waitForTextToBePresentInElement),
   text = utils.requiredParam(waitForTextToBePresentInElement, "text"),
   timeoutInMilliseconds = config.timeoutInMilliseconds,
-  errorMessage = `text '${text}' not present on ${
-    constants.ELEMENT_WITH_LOCATOR_MESSAGE
-  } '${htmlElement.parentElementArrayFinder.locator_}'.`
+  errorMessage = `text '${text}' not present on ${constants.ELEMENT_WITH_LOCATOR_MESSAGE} '${
+    htmlElement.parentElementArrayFinder.locator_
+  }'.`
 ) {
   return await browser.wait(
     EC.textToBePresentInElement(htmlElement, text),
@@ -188,9 +149,9 @@ const waitForTextNotToBePresentInElement = async function(
   htmlElement = utils.requiredParam(waitForTextNotToBePresentInElement),
   text = utils.requiredParam(waitForTextNotToBePresentInElement, "text"),
   timeoutInMilliseconds = config.timeoutInMilliseconds,
-  errorMessage = `text '${text}' is still present on ${
-    constants.ELEMENT_WITH_LOCATOR_MESSAGE
-  } '${htmlElement.parentElementArrayFinder.locator_}'.`
+  errorMessage = `text '${text}' is still present on ${constants.ELEMENT_WITH_LOCATOR_MESSAGE} '${
+    htmlElement.parentElementArrayFinder.locator_
+  }'.`
 ) {
   return await browser.wait(
     EC.not(EC.textToBePresentInElement(htmlElement, text)),
@@ -200,10 +161,7 @@ const waitForTextNotToBePresentInElement = async function(
 };
 
 const waitForUrlToBeEqualToExpectedUrl = async function(
-  expectedUrl = utils.requiredParam(
-    waitForUrlToBeEqualToExpectedUrl,
-    "expectedUrl"
-  ),
+  expectedUrl = utils.requiredParam(waitForUrlToBeEqualToExpectedUrl, "expectedUrl"),
   timeoutInMilliseconds = config.timeoutInMilliseconds,
   errorMessage = `current URL is different than expected URL: '${expectedUrl}'.`
 ) {
@@ -211,18 +169,11 @@ const waitForUrlToBeEqualToExpectedUrl = async function(
 };
 
 const waitForUrlNotToBeEqualToExpectedUrl = async function(
-  expectedUrl = utils.requiredParam(
-    waitForUrlNotToBeEqualToExpectedUrl,
-    "expectedUrl"
-  ),
+  expectedUrl = utils.requiredParam(waitForUrlNotToBeEqualToExpectedUrl, "expectedUrl"),
   timeoutInMilliseconds = config.timeoutInMilliseconds,
   errorMessage = `current URL is equal to expected URL: '${expectedUrl}'.`
 ) {
-  return await browser.wait(
-    EC.not(EC.urlIs(expectedUrl)),
-    timeoutInMilliseconds,
-    errorMessage
-  );
+  return await browser.wait(EC.not(EC.urlIs(expectedUrl)), timeoutInMilliseconds, errorMessage);
 };
 
 const waitForUrlToContainString = async function(
@@ -238,11 +189,7 @@ const waitForUrlNotToContainString = async function(
   timeoutInMilliseconds = config.timeoutInMilliseconds,
   errorMessage = `current URL contains the string '${string}'.`
 ) {
-  return await browser.wait(
-    EC.not(EC.urlContains(string)),
-    timeoutInMilliseconds,
-    errorMessage
-  );
+  return await browser.wait(EC.not(EC.urlContains(string)), timeoutInMilliseconds, errorMessage);
 };
 
 const fillFieldWithTextWhenVisibleAndPressEnter = async function(
@@ -264,17 +211,11 @@ const scrollToElementWhenVisible = async function(
   timeoutInMilliseconds = config.timeoutInMilliseconds,
   errorMessage = utils.getDefaultIsNotVisibleMessage(htmlElement)
 ) {
-  await this.waitForElementVisibility(
-    htmlElement,
-    timeoutInMilliseconds,
-    errorMessage
-  );
+  await this.waitForElementVisibility(htmlElement, timeoutInMilliseconds, errorMessage);
   return await browser.executeScript("arguments[0].scrollIntoView(true);", htmlElement);
 };
 
-const setTimeout = function(
-  timeoutInMilliseconds = constants.DEFAULT_TIMEOUT_IN_MS
-) {
+const setTimeout = function(timeoutInMilliseconds = constants.DEFAULT_TIMEOUT_IN_MS) {
   config.timeoutInMilliseconds = timeoutInMilliseconds;
 };
 

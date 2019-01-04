@@ -22,10 +22,7 @@ function getDefaultIsNotVisibleMessage(htmlElement) {
   }' ${constants.IS_NOT_VISIBLE_MESSAGE}.`;
 }
 
-function requiredParam(
-  functionWithoutParam,
-  requiredParameter = "htmlElement"
-) {
+function requiredParam(functionWithoutParam, requiredParameter = "htmlElement") {
   const requiredParamError = new Error(
     `Parameter '${requiredParameter}' is missing at function '${
       functionWithoutParam.name
@@ -40,11 +37,7 @@ async function waitForElementToBeClickable(
   timeoutInMilliseconds = config.timeoutInMilliseconds,
   errorMessage = getDefaultIsNotClickableMessage(htmlElement)
 ) {
-  await browser.wait(
-    EC.elementToBeClickable(htmlElement),
-    timeoutInMilliseconds,
-    errorMessage
-  );
+  await browser.wait(EC.elementToBeClickable(htmlElement), timeoutInMilliseconds, errorMessage);
 }
 
 module.exports = {
