@@ -63,25 +63,25 @@ const EC = protractor.ExpectedConditions;
 const DEFAULT_TIMEOUT_IN_MS = 5000;
 
 describe("Sign up page", () => {
-  it("successful sign up", () => {
-    browser.get("https://example.com/sign-up");
+  it("successful sign up", async () => {
+    await browser.get("https://example.com/sign-up");
 
     const emailField = element(by.id("email"));
     const passwordField = element(by.id("password"));
     const signupButton = element(by.id("signup"));
 
-    browser.wait(EC.visibilityOf(emailField), DEFAULT_TIMEOUT_IN_MS);
-    browser.wait(EC.visibilityOf(passwordField), DEFAULT_TIMEOUT_IN_MS);
-    browser.wait(EC.elementToBeClickable(signupButton), DEFAULT_TIMEOUT_IN_MS);
-    emailField.sendKeys("valid@email.com");
-    passwordField.sendKeys("validpassword");
-    signupButton.click();
+    await browser.wait(EC.visibilityOf(emailField), DEFAULT_TIMEOUT_IN_MS);
+    await browser.wait(EC.visibilityOf(passwordField), DEFAULT_TIMEOUT_IN_MS);
+    await browser.wait(EC.elementToBeClickable(signupButton), DEFAULT_TIMEOUT_IN_MS);
+    await emailField.sendKeys("valid@email.com");
+    await passwordField.sendKeys("validpassword");
+    await signupButton.click();
 
     const avatar = element(by.id("avatar"));
 
-    browser.wait(EC.visibilityOf(avatar), DEFAULT_TIMEOUT_IN_MS);
+    await browser.wait(EC.visibilityOf(avatar), DEFAULT_TIMEOUT_IN_MS);
 
-    expect(avatar.isDisplayed()).toBe(true);
+    expect(await avatar.isDisplayed()).toBe(true);
   });
 });
 ```
@@ -93,27 +93,27 @@ The same test could be written as below, using the protractor-helper library.
 ```js
 const protractorHelper = require("protractor-helper");
 
-describe("Sign up page", () => {
+describe("Sign up page", async () => {
   it("successful sign up", () => {
-    browser.get("https://example.com/sign-up");
+    await browser.get("https://example.com/sign-up");
 
     const emailField = element(by.id("email"));
     const passwordField = element(by.id("password"));
     const signupButton = element(by.id("signup"));
 
-    protractorHelper.fillFieldWithTextWhenVisible(
+    await protractorHelper.fillFieldWithTextWhenVisible(
       emailField,
       "valid@email.com"
     );
-    protractorHelper.fillFieldWithTextWhenVisible(
+    await protractorHelper.fillFieldWithTextWhenVisible(
       passwordField,
       "validpassword"
     );
-    protractorHelper.clickWhenClickable(signupButton);
+    await protractorHelper.clickWhenClickable(signupButton);
 
     const avatar = element(by.id("avatar"));
 
-    protractorHelper.waitForElementVisibility(avatar);
+    await protractorHelper.waitForElementVisibility(avatar);
   });
 });
 ```
