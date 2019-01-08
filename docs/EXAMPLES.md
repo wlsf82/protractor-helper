@@ -90,15 +90,15 @@ describe("foo", () => {
 const protractorHelper = require("protractor-helper");
 
 describe("foo", () => {
-  it("bar", () => {
-    browser.get(""); // Since you are passing an empty string you will go to the baseUrl.
+  it("bar", async () => {
+    await browser.get(""); // Since you are passing an empty string you will go to the baseUrl.
 
     const someButton = element(by.css("button"));
 
-    someButton.click();
+    await someButton.click();
 
-    browser.wait(
-      protractorHelper.isCurrentUrlDifferentFromBaseUrl,
+    await browser.wait(
+      await protractorHelper.isCurrentUrlDifferentFromBaseUrl,
       3000,
       "Current URL is not different from base URL after 3 seconds"
     );
@@ -118,12 +118,12 @@ describe("foo", () => {
 const protractorHelper = require("protractor-helper");
 
 describe("foo", () => {
-  it("bar", () => {
-    browser.get("https://example.com");
+  it("bar", async () => {
+    await browser.get("https://example.com");
 
     const myElement = element(by.className("foo"));
 
-    protractorHelper.waitForElementPresence(myElement, 3000, "my element is not present");
+    await protractorHelper.waitForElementPresence(myElement, 3000, "my element is not present");
 
     // ...
   });
@@ -140,12 +140,16 @@ describe("foo", () => {
 const protractorHelper = require("protractor-helper");
 
 describe("foo", () => {
-  it("bar", () => {
-    browser.get("https://example.com");
+  it("bar", async () => {
+    await browser.get("https://example.com");
 
     const myElement = element(by.className("foo"));
 
-    protractorHelper.waitForElementNotToBePresent(myElement, 3000, "my element is still present");
+    await protractorHelper.waitForElementNotToBePresent(
+      myElement,
+      3000,
+      "my element is still present"
+    );
 
     // ...
   });
@@ -162,12 +166,12 @@ describe("foo", () => {
 const protractorHelper = require("protractor-helper");
 
 describe("foo", () => {
-  it("bar", () => {
-    browser.get("https://example.com");
+  it("bar", async () => {
+    await browser.get("https://example.com");
 
     const myElement = element(by.className("foo"));
 
-    protractorHelper.waitForElementVisibility(myElement, 3000, "my element not visible");
+    await protractorHelper.waitForElementVisibility(myElement, 3000, "my element not visible");
 
     // ...
   });
@@ -184,12 +188,16 @@ describe("foo", () => {
 const protractorHelper = require("protractor-helper");
 
 describe("foo", () => {
-  it("bar", () => {
-    browser.get("https://example.com");
+  it("bar", async () => {
+    await browser.get("https://example.com");
 
     const myElement = element(by.className("foo"));
 
-    protractorHelper.waitForElementNotToBeVisible(myElement, 3000, "my element is still visible");
+    await protractorHelper.waitForElementNotToBeVisible(
+      myElement,
+      3000,
+      "my element is still visible"
+    );
 
     // ...
   });
@@ -206,12 +214,12 @@ describe("foo", () => {
 const protractorHelper = require("protractor-helper");
 
 describe("foo", () => {
-  it("bar", () => {
-    browser.get("https://example.com");
+  it("bar", async () => {
+    await browser.get("https://example.com");
 
     const myLink = element(by.css("a.my-link"));
 
-    protractorHelper.clickWhenClickable(myLink, 3000, "my link is not clickable");
+    await protractorHelper.clickWhenClickable(myLink, 3000, "my link is not clickable");
 
     // ...
   });
@@ -228,12 +236,12 @@ describe("foo", () => {
 const protractorHelper = require("protractor-helper");
 
 describe("foo", () => {
-  it("bar", () => {
-    browser.get("https://example.com");
+  it("bar", async () => {
+    await browser.get("https://example.com");
 
     const textField = element(by.css("input.some-text-field"));
 
-    protractorHelper.fillFieldWithTextWhenVisible(
+    await protractorHelper.fillFieldWithTextWhenVisible(
       textField,
       "some text",
       3000,
@@ -256,15 +264,15 @@ const path = require("path");
 const protractorHelper = require("protractor-helper");
 
 describe("foo", () => {
-  it("bar", () => {
+  it("bar", async () => {
     const fileToUpload = "../assets/someFile.png";
     const absolutePathOfFileToUpload = path.resolve(__dirname, fileToUpload);
 
-    browser.get("https://example.com");
+    await browser.get("https://example.com");
 
     const fileInputField = element(by.css("input.file-input"));
 
-    protractorHelper.fillInputFieldWithFileWhenPresent(
+    await protractorHelper.fillInputFieldWithFileWhenPresent(
       fileInputField,
       absolutePathOfFileToUpload,
       3000,
@@ -286,13 +294,13 @@ describe("foo", () => {
 const protractorHelper = require("protractor-helper");
 
 describe("foo", () => {
-  it("bar", () => {
-    browser.get("https://example.com");
+  it("bar", async () => {
+    await browser.get("https://example.com");
 
     const textField = element(by.css("input.some-text-field"));
 
-    textField.sendKeys("foobar");
-    protractorHelper.clearFieldWhenVisible(textField, 3000, "textField is not visible");
+    await textField.sendKeys("foobar");
+    await protractorHelper.clearFieldWhenVisible(textField, 3000, "textField is not visible");
 
     // ...
   });
@@ -309,12 +317,12 @@ describe("foo", () => {
 const protractorHelper = require("protractor-helper");
 
 describe("foo", () => {
-  it("bar", () => {
-    browser.get("https://example.com");
+  it("bar", async () => {
+    await browser.get("https://example.com");
 
     const textField = element(by.css("input.some-text-field"));
 
-    protractorHelper.clearFieldWhenVisibleAndFillItWithText(
+    await protractorHelper.clearFieldWhenVisibleAndFillItWithText(
       textField,
       "some text",
       3000,
@@ -338,12 +346,12 @@ describe("foo", () => {
 const protractorHelper = require("protractor-helper");
 
 describe("foo", () => {
-  it("bar", () => {
-    browser.get("https://example.com");
+  it("bar", async () => {
+    await browser.get("https://example.com");
 
     const myButton = element(by.id("my-button"));
 
-    protractorHelper.tapWhenTappable(myButton, 3000, "myButton is not tappable");
+    await protractorHelper.tapWhenTappable(myButton, 3000, "myButton is not tappable");
 
     // ...
   });
@@ -360,12 +368,12 @@ describe("foo", () => {
 const protractorHelper = require("protractor-helper");
 
 describe("foo", () => {
-  it("bar", () => {
-    browser.get("https://example.com");
+  it("bar", async () => {
+    await browser.get("https://example.com");
 
     const myButton = element(by.id("my-button"));
 
-    protractorHelper.waitForTextToBePresentInElement(
+    await protractorHelper.waitForTextToBePresentInElement(
       myButton,
       "ENTER",
       3000,
@@ -387,12 +395,12 @@ describe("foo", () => {
 const protractorHelper = require("protractor-helper");
 
 describe("foo", () => {
-  it("bar", () => {
-    browser.get("https://example.com");
+  it("bar", async () => {
+    await browser.get("https://example.com");
 
     const myButton = element(by.id("my-button"));
 
-    protractorHelper.waitForTextNotToBePresentInElement(
+    await protractorHelper.waitForTextNotToBePresentInElement(
       myButton,
       "ENTER",
       3000,
@@ -414,14 +422,14 @@ describe("foo", () => {
 const protractorHelper = require("protractor-helper");
 
 describe("foo", () => {
-  it("bar", () => {
-    browser.get("https://example.com");
+  it("bar", async () => {
+    await browser.get("https://example.com");
 
     const goToContactPageButton = element(by.className("contact-button"));
 
-    goToContactPageButton.click();
+    await goToContactPageButton.click();
 
-    protractorHelper.waitForUrlToBeEqualToExpectedUrl(
+    await protractorHelper.waitForUrlToBeEqualToExpectedUrl(
       "https://example.com/contact",
       3000,
       "URL is different from expected"
@@ -442,16 +450,16 @@ describe("foo", () => {
 const protractorHelper = require("protractor-helper");
 
 describe("foo", () => {
-  it("bar", () => {
+  it("bar", async () => {
     const homePageUrl = "https://example.com";
 
-    browser.get(homePageUrl);
+    await browser.get(homePageUrl);
 
     const goToContactPageButton = element(by.className("contact-button"));
 
-    goToContactPageButton.click();
+    await goToContactPageButton.click();
 
-    protractorHelper.waitForUrlNotToBeEqualToExpectedUrl(
+    await protractorHelper.waitForUrlNotToBeEqualToExpectedUrl(
       homePageUrl,
       3000,
       "URL is equal to " + homePageUrl
@@ -472,14 +480,14 @@ describe("foo", () => {
 const protractorHelper = require("protractor-helper");
 
 describe("foo", () => {
-  it("bar", () => {
-    browser.get("https://example.com");
+  it("bar", async () => {
+    await browser.get("https://example.com");
 
     const goToContactPageButton = element(by.className("contact-button"));
 
-    goToContactPageButton.click();
+    await goToContactPageButton.click();
 
-    protractorHelper.waitForUrlToContainString(
+    await protractorHelper.waitForUrlToContainString(
       "contact",
       3000,
       "URL does not contains the string 'contact'"
@@ -500,10 +508,10 @@ describe("foo", () => {
 const protractorHelper = require("protractor-helper");
 
 describe("foo", () => {
-  it("bar", () => {
-    browser.get("https://example.com");
+  it("bar", async () => {
+    await browser.get("https://example.com");
 
-    protractorHelper.waitForUrlNotToContainString(
+    await protractorHelper.waitForUrlNotToContainString(
       "foobarbaz",
       3000,
       "URL contains the string 'foobarbaz'"
@@ -524,12 +532,12 @@ describe("foo", () => {
 const protractorHelper = require("protractor-helper");
 
 describe("foo", () => {
-  it("bar", () => {
-    browser.get("https://example.com");
+  it("bar", async () => {
+    await browser.get("https://example.com");
 
     const textField = element(by.css("input.some-text-field"));
 
-    protractorHelper.fillFieldWithTextWhenVisibleAndPressEnter(
+    await protractorHelper.fillFieldWithTextWhenVisibleAndPressEnter(
       textField,
       "some text",
       3000,
@@ -551,12 +559,12 @@ describe("foo", () => {
 const protractorHelper = require("protractor-helper");
 
 describe("foo", () => {
-  it("bar", () => {
-    browser.get("https://example.com");
+  it("bar", async () => {
+    await browser.get("https://example.com");
 
     const myLink = element(by.css("a.my-link"));
 
-    protractorHelper.scrollToElementWhenVisible(myLink, 3000, "my link is not visible");
+    await protractorHelper.scrollToElementWhenVisible(myLink, 3000, "my link is not visible");
 
     // ...
   });
