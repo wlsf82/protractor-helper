@@ -1,3 +1,38 @@
+# 3.6.21
+
+## Breaking changes coming soon
+
+- soon protractor-helper will work using async/await
+
+> **how to** migrate tests to use async/await with the protractor-helper library will be available in the documentation when the changes are published.
+
+## Deprecations coming soon
+
+- Two functions will be deprecated soon (see below)
+  - `getBodyElementFromCurrentBrowserOrBrowserInstance`
+  - `openNewBrowserInTheSamePage`
+
+> This change will happen for the library to focus only on providing an easy way for software engineers to create robust end-to-end tests.
+
+## package.json
+
+- update lib's patch version
+- update protractor version from 5.4.1 to 5.4.2
+
+## package-lock.json
+
+- update lib's version on package-lock file
+
+## Documentation
+
+- update change log with info about the latest patch version
+- prettify README to keep the standard
+
+## Test files
+
+- remove unnecessary flag to use protractor in headless mode
+- replaced `ignoreSynchronization` with `waitForAngularEnabled`
+
 # 3.6.20
 
 ## package.json
