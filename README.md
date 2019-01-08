@@ -11,6 +11,7 @@ Many of the helper functions on this library uses `protractor.ExpectedConditions
 - [Basic example](#basic-example)
   - [Example without using the protractor-helper module](#example-without-using-the-protractor-helper-module)
   - [Example using the protractor-helper module](#example-using-the-protractor-helper-module)
+- [Pre-requirements](#pre-requirements)
 - [Installation](#installation)
 - [How to use and examples](#how-to-use-and-examples)
 - [Available helpers](#available-helpers)
@@ -119,6 +120,10 @@ describe("Sign up page", async () => {
 ```
 
 As you can see, by using the protractor-helper library the code is easier to read. Also, there is no need of unnecessary complexity.
+
+## Pre-requirements
+
+- Node.js v8+ (due to the use of async/await)
 
 ## Installation
 
