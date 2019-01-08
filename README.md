@@ -195,17 +195,17 @@ This method is the opposite of the previous one, so, it waits for an element not
 
 ### `waitForElementVisibility`
 
-This method waits for an element to be visible in the page. Being displayed means not only that the element is present in the DOM, but also that is has a height and width that is greater than 0.
+This method waits for an element to be visible in the page. Being visible means not only that the element is present in the DOM, but also that it has a height and width that is greater than 0.
 [Example](docs/EXAMPLES.md#waitforelementvisibility)
 
 ### `waitForElementNotToBeVisible`
 
-This method is the opposite of the previous one, so, it waits for an element not to be visible in the page. By saying not being displayed means that the element may be in the DOM, but not visible.
+This method is the opposite of the previous one, so, it waits for an element not to be visible in the page. By saying not being visible means that the element may be in the DOM, but not displayed.
 [Example](docs/EXAMPLES.md#waitforelementnottobevisible)
 
 ### `clickWhenClickable`
 
-This method is used to click in an element only as soon as it is in a clickable state. This means that the element is visible and enabled for clicking.
+This method is used to click in an element as soon as it is in a clickable state. This means that the element is visible and enabled for clicking.
 [Example](docs/EXAMPLES.md#clickwhenclickable)
 
 ### `fillFieldWithTextWhenVisible`
@@ -230,7 +230,7 @@ This method clears a text input field as soon as such field is visible, and then
 
 ### `tapWhenTappable`
 
-This method performs a tap action on a clickable/tappable HTML element as soon is it is clickable/tappable. This method is used when performing web mobile testing in mobile emulators, for example.
+This method performs a tap action on a clickable/tappable HTML element as soon as it is clickable/tappable. This method is used when performing web mobile testing in mobile emulators, for example.
 [Example](docs/EXAMPLES.md#tapwhentappable)
 
 ### `waitForTextToBePresentInElement`
@@ -265,12 +265,12 @@ This method waits for the URL not to contain an expected string. Such method is 
 
 ### `fillFieldWithTextWhenVisibleAndPressEnter`
 
-This method fills an input field with a text as soon as such field is visible and then it simulates pressing the ENTER key from the keyboard. This method is useful in cases such as when doing a search and pressing the ENTER key, instead of having to fill the input field and clicking the search button, for example.
+This method fills an input field with a text as soon as such field is visible, and then it simulates pressing the ENTER key from the keyboard. This method is useful in cases such as when doing a search and pressing the ENTER key, instead of having to fill the input field and clicking the search button, for example.
 [Example](docs/EXAMPLES.md#fillfieldwithtextwhenvisibleandpressenter)
 
 ### `scrollToElementWhenVisible`
 
-That method is used to scroll up to an element on the page as soon as the element is visible in the DOM.
+This method is used to scroll up to an element on the page as soon as the element is visible in the DOM.
 [Example](docs/EXAMPLES.md#scrolltoelementwhenvisible)
 
 ## Using methods that start with 'wait' as test expectations (or test assertions)
@@ -292,11 +292,11 @@ Below you can find the list of methods that can be used as expectations:
 - `waitForUrlToContainString(string)`
 - `waitForUrlNotToContainString(string)`
 
-> Note: if you use such methods as expectations they will not count as expectations, in a test report, for example, but if they fail a clear message will be shown to ease understanding why the test has failed. In the end, test reports are usually useful in cases where tests have failed and we need to understand why. If all tests are green there is nothing to worry about, at least not if they were well implemented.
+> Note: if you use such methods as expectations they will not count as expectations in a test report, for example, but if they fail a clear message will be shown to ease understanding why the test has failed. In the end, test reports are usually useful in cases where tests have failed and we need to understand why. If all tests are green there is nothing to worry about (at least not if they were well implemented).
 
 ### Example of a test failure when using such methods as expectations
 
-Let's look how a failure would looks like when using some of this methods as expectations.
+Let's look at how a failure would look like when using some of this methods as expectations.
 
 - Failure when using `waitForElementPresence` as expectation:
 
