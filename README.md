@@ -102,14 +102,8 @@ describe("Sign up page", async () => {
     const passwordField = element(by.id("password"));
     const signupButton = element(by.id("signup"));
 
-    await protractorHelper.fillFieldWithTextWhenVisible(
-      emailField,
-      "valid@email.com"
-    );
-    await protractorHelper.fillFieldWithTextWhenVisible(
-      passwordField,
-      "validpassword"
-    );
+    await protractorHelper.fillFieldWithTextWhenVisible(emailField, "valid@email.com");
+    await protractorHelper.fillFieldWithTextWhenVisible(passwordField, "validpassword");
     await protractorHelper.clickWhenClickable(signupButton);
 
     const avatar = element(by.id("avatar"));
