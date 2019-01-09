@@ -13,7 +13,8 @@
   "main": "index.js",
   "keywords": [
     "protractor",
-    "e2e"
+    "e2e",
+    "testing"
   ],
   "repository": {
     "type": "git",
