@@ -1,4 +1,4 @@
-const protractorHelper = require("../index.js");
+const helper = require("../index.js");
 
 const constants = require("./constants");
 
@@ -12,120 +12,154 @@ describe("Protractor helper", () => {
 
   beforeEach(() => browser.get(""));
 
-  it("waitForElementNotToBePresent", () => {
-    protractorHelper.waitForElementNotToBePresent(nonExistingElement);
+  describe("waits", () => {
+    it("waitForElementNotToBePresent", () => {
+      helper.waitForElementNotToBePresent(nonExistingElement);
+    });
+
+    it("waitForElementNotToBeVisible", () => {
+      helper.waitForElementNotToBeVisible(nonExistingElement);
+    });
+
+    it("waitForTextNotToBePresentInElement", () => {
+      helper.waitForTextNotToBePresentInElement(
+        titleElement,
+        constants.TEXT_NOT_EXISTING_ON_VISIBLE_ELEMENTS
+      );
+    });
+
+    it("waitForUrlToBeEqualToExpectedUrl", () => {
+      helper.waitForUrlToBeEqualToExpectedUrl(constants.BASE_URL);
+    });
+
+    it("waitForUrlNotToBeEqualToExpectedUrl", () => {
+      helper.waitForUrlNotToBeEqualToExpectedUrl(constants.SAMPLE_URL);
+    });
+
+    it("waitForUrlToContainString", () => {
+      helper.waitForUrlToContainString(constants.INDEX_DOT_HTML_STRING);
+    });
+
+    it("waitForUrlNotToContainString", () => {
+      helper.waitForUrlNotToContainString(constants.SAMPLE_URL);
+    });
+
+    it("waitForElementVisibility", () => {
+      helper.waitForElementVisibility(inputField);
+    });
+
+    it("waitForElementPresence", () => {
+      helper.waitForElementPresence(inputField);
+    });
+
+    it("waitForTextToBePresentInElement", () => {
+      helper.waitForTextToBePresentInElement(
+        titleElement,
+        constants.TITLE_TEXT
+      );
+    });
   });
 
-  it("waitForElementNotToBeVisible", () => {
-    protractorHelper.waitForElementNotToBeVisible(nonExistingElement);
+  describe("inputs and buttons", () => {
+    it("fillFieldWithTextWhenVisible", () => {
+      helper.fillFieldWithTextWhenVisible(inputField, constants.SHORTEN_URL);
+    });
+
+    it("fillFieldWithText", () => {
+      helper.fillFieldWithText(inputField, constants.SHORTEN_URL);
+    });
+
+    it("clickWhenClickable", () => {
+      helper.clickWhenClickable(shortenButton);
+    });
+
+    it("click", () => {
+      helper.click(shortenButton);
+    });
+
+    it("fillInputFieldWithFileWhenPresent", () => {
+      helper.fillInputFieldWithFileWhenPresent(
+        inputField,
+        constants.ABSOLUTE_PATH_OF_INDEX_FILE
+      );
+    });
+
+    it("uploadFileIntoInputField", () => {
+      helper.uploadFileIntoInputField(
+        inputField,
+        constants.ABSOLUTE_PATH_OF_INDEX_FILE
+      );
+    });
+
+    it("clearFieldWhenVisible", () => {
+      helper.fillFieldWithTextWhenVisible(inputField, constants.SHORTEN_URL);
+      helper.clearFieldWhenVisible(inputField);
+    });
+
+    it("clear", () => {
+      helper.fillFieldWithText(inputField, constants.SHORTEN_URL);
+      helper.clear(inputField);
+    });
+
+    it("clearFieldWhenVisibleAndFillItWithText", () => {
+      helper.fillFieldWithTextWhenVisible(inputField, constants.SHORTEN_URL);
+      helper.clearFieldWhenVisibleAndFillItWithText(
+        inputField,
+        constants.SAMPLE_URL
+      );
+    });
+
+    it("clearFieldAndFillItWithText", () => {
+      helper.fillFieldWithText(inputField, constants.SHORTEN_URL);
+      helper.clearFieldAndFillItWithText(inputField, constants.SAMPLE_URL);
+    });
+
+    it("tapWhenTappable", () => {
+      helper.tapWhenTappable(expandButton);
+    });
+
+    it("tap", () => {
+      helper.tap(expandButton);
+    });
+
+    it("fillFieldWithTextWhenVisibleAndPressEnter", () => {
+      helper.fillFieldWithTextWhenVisibleAndPressEnter(
+        inputField,
+        constants.SAMPLE_URL
+      );
+    });
+
+    it("fillFieldWithTextAndPressEnter", () => {
+      helper.fillFieldWithTextAndPressEnter(inputField, constants.SAMPLE_URL);
+    });
   });
 
-  it("waitForTextNotToBePresentInElement", () => {
-    protractorHelper.waitForTextNotToBePresentInElement(
-      titleElement,
-      constants.TEXT_NOT_EXISTING_ON_VISIBLE_ELEMENTS
-    );
-  });
+  describe("Misc", () => {
+    it("getBodyElementFromCurrentBrowserOrBrowserInstance", () => {
+      helper.getBodyElementFromCurrentBrowserOrBrowserInstance();
+    });
 
-  it("waitForUrlToBeEqualToExpectedUrl", () => {
-    protractorHelper.waitForUrlToBeEqualToExpectedUrl(constants.BASE_URL);
-  });
+    xit("openNewBrowserInTheSamePage", () => {
+      const newBrowser = helper.openNewBrowserInTheSamePage(browser);
+      newBrowser.ignoreSynchronization = true;
+      newBrowser.quit();
+    }).pend("this needs protractor version 5.0.0, not higher");
 
-  it("waitForUrlNotToBeEqualToExpectedUrl", () => {
-    protractorHelper.waitForUrlNotToBeEqualToExpectedUrl(constants.SAMPLE_URL);
-  });
+    it("isCurrentUrlDifferentFromBaseUrl", () => {
+      expect(false).toEqual(helper.isCurrentUrlDifferentFromBaseUrl());
+    });
 
-  it("waitForUrlToContainString", () => {
-    protractorHelper.waitForUrlToContainString(constants.INDEX_DOT_HTML_STRING);
-  });
+    it("scrollToElementWhenVisible", () => {
+      helper.scrollToElementWhenVisible(shortenButton);
+    });
 
-  it("waitForUrlNotToContainString", () => {
-    protractorHelper.waitForUrlNotToContainString(constants.SAMPLE_URL);
-  });
+    it("scrollToElement", () => {
+      helper.scrollToElement(shortenButton);
+    });
 
-  it("fillFieldWithTextWhenVisible", () => {
-    protractorHelper.fillFieldWithTextWhenVisible(
-      inputField,
-      constants.SHORTEN_URL
-    );
-  });
-
-  it("clickWhenClickable", () => {
-    protractorHelper.clickWhenClickable(shortenButton);
-  });
-
-  it("waitForElementVisibility", () => {
-    protractorHelper.waitForElementVisibility(inputField);
-  });
-
-  it("waitForElementPresence", () => {
-    protractorHelper.waitForElementPresence(inputField);
-  });
-
-  it("fillInputFieldWithFileWhenPresent", () => {
-    protractorHelper.fillInputFieldWithFileWhenPresent(
-      inputField,
-      constants.ABSOLUTE_PATH_OF_INDEX_FILE
-    );
-  });
-
-  it("clearFieldWhenVisible", () => {
-    protractorHelper.fillFieldWithTextWhenVisible(
-      inputField,
-      constants.SHORTEN_URL
-    );
-    protractorHelper.clearFieldWhenVisible(inputField);
-  });
-
-  it("clearFieldWhenVisibleAndFillItWithText", () => {
-    protractorHelper.fillFieldWithTextWhenVisible(
-      inputField,
-      constants.SHORTEN_URL
-    );
-    protractorHelper.clearFieldWhenVisibleAndFillItWithText(
-      inputField,
-      constants.SAMPLE_URL
-    );
-  });
-
-  it("tapWhenTappable", () => {
-    protractorHelper.tapWhenTappable(expandButton);
-  });
-
-  it("waitForTextToBePresentInElement", () => {
-    protractorHelper.waitForTextToBePresentInElement(
-      titleElement,
-      constants.TITLE_TEXT
-    );
-  });
-
-  it("getBodyElementFromCurrentBrowserOrBrowserInstance", () => {
-    protractorHelper.getBodyElementFromCurrentBrowserOrBrowserInstance();
-  });
-
-  xit("openNewBrowserInTheSamePage", () => {
-    const newBrowser = protractorHelper.openNewBrowserInTheSamePage(browser);
-    newBrowser.ignoreSynchronization = true;
-    newBrowser.quit();
-  }).pend("this needs protractor version 5.0.0, not higher");
-
-  it("isCurrentUrlDifferentFromBaseUrl", () => {
-    expect(false).toEqual(protractorHelper.isCurrentUrlDifferentFromBaseUrl());
-  });
-
-  it("fillFieldWithTextWhenVisibleAndPressEnter", () => {
-    protractorHelper.fillFieldWithTextWhenVisibleAndPressEnter(
-      inputField,
-      constants.SAMPLE_URL
-    );
-  });
-
-  it("scrollToElementWhenVisible", () => {
-    protractorHelper.scrollToElementWhenVisible(shortenButton);
-  });
-
-  it("setTimeout", () => {
-    protractorHelper.setTimeout(constants.TIMEOUT_IN_MS);
-    protractorHelper.setTimeout();
+    it("setTimeout", () => {
+      helper.setTimeout(constants.TIMEOUT_IN_MS);
+      helper.setTimeout();
+    });
   });
 });
