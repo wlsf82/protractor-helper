@@ -220,6 +220,8 @@ describe("foo", () => {
 
 ## clickWhenClickable
 
+> Note: this function will be deprecated in favor of the function `click`.
+
 | 1 mandatory argument |            2 optional arguments            |
 | :------------------: | :----------------------------------------: |
 |    `htmlElement`     | `timeoutInMilliseconds` and `errorMessage` |
@@ -244,7 +246,31 @@ describe("foo", () => {
 });
 ```
 
+## click
+
+| 1 mandatory argument |   1 optional argument    |
+| :------------------: | :----------------------: |
+|    `htmlElement`     | `timeoutInMilliseconds`` |
+
+```js
+const protractorHelper = require("protractor-helper");
+
+describe("foo", () => {
+  it("bar", () => {
+    browser.get("https://example.com");
+
+    const myLink = element(by.css("a.my-link"));
+
+    protractorHelper.click(myLink, 3000);
+
+    // ...
+  });
+});
+```
+
 ## fillFieldWithTextWhenVisible
+
+> Note: this function will be deprecated in favor of the function `fillFieldWithText`.
 
 |  2 mandatory arguments   |            2 optional arguments            |
 | :----------------------: | :----------------------------------------: |
@@ -271,7 +297,31 @@ describe("foo", () => {
 });
 ```
 
+## fillFieldWithText
+
+|  2 mandatory arguments   |   1 optional argument   |
+| :----------------------: | :---------------------: |
+| `htmlElement` and `text` | `timeoutInMilliseconds` |
+
+```js
+const protractorHelper = require("protractor-helper");
+
+describe("foo", () => {
+  it("bar", () => {
+    browser.get("https://example.com");
+
+    const textField = element(by.css("input.some-text-field"));
+
+    protractorHelper.fillFieldWithText(textField, "some text", 3000);
+
+    // ...
+  });
+});
+```
+
 ## fillInputFieldWithFileWhenPresent
+
+> Note: this function will be deprecated in favor of the function `uploadFileIntoInputField`.
 
 |      2 mandatory arguments       |            2 optional arguments            |
 | :------------------------------: | :----------------------------------------: |
@@ -283,8 +333,11 @@ const protractorHelper = require("protractor-helper");
 
 describe("foo", () => {
   it("bar", () => {
-    const fileToUpload = "../assets/someFile.png";
-    const absolutePathOfFileToUpload = path.resolve(__dirname, fileToUpload);
+    const relativePathOfFileToUpload = "../assets/someFile.png";
+    const absolutePathOfFileToUpload = path.resolve(
+      __dirname,
+      relativePathOfFileToUpload
+    );
 
     browser.get("https://example.com");
 
@@ -302,7 +355,42 @@ describe("foo", () => {
 });
 ```
 
+## uploadFileIntoInputField
+
+|      2 mandatory arguments       |   1 optional argument   |
+| :------------------------------: | :---------------------: |
+| `htmlElement` and `absolutePath` | `timeoutInMilliseconds` |
+
+```js
+const path = require("path");
+const protractorHelper = require("protractor-helper");
+
+describe("foo", () => {
+  it("bar", () => {
+    const relativePathOfFileToUpload = "../assets/someFile.png";
+    const absolutePathOfFileToUpload = path.resolve(
+      __dirname,
+      relativePathOfFileToUpload
+    );
+
+    browser.get("https://example.com");
+
+    const fileInputField = element(by.css("input.file-input"));
+
+    protractorHelper.uploadFileIntoInputField(
+      fileInputField,
+      absolutePathOfFileToUpload,
+      3000
+    );
+
+    // ...
+  });
+});
+```
+
 ## clearFieldWhenVisible
+
+> Note: this function will be deprecated in favor of the function `clear`.
 
 | 1 mandatory argument |            2 optional arguments            |
 | :------------------: | :----------------------------------------: |
@@ -329,7 +417,32 @@ describe("foo", () => {
 });
 ```
 
+## clear
+
+| 1 mandatory argument |   1 optional argument   |
+| :------------------: | :---------------------: |
+|    `htmlElement`     | `timeoutInMilliseconds` |
+
+```js
+const protractorHelper = require("protractor-helper");
+
+describe("foo", () => {
+  it("bar", () => {
+    browser.get("https://example.com");
+
+    const textField = element(by.css("input.some-text-field"));
+
+    textField.sendKeys("foobar");
+    protractorHelper.clear(textField, 3000);
+
+    // ...
+  });
+});
+```
+
 ## clearFieldWhenVisibleAndFillItWithText
+
+> Note: this function will be deprecated in favor of the function `clearFieldAndFillItWithText`.
 
 |  2 mandatory arguments   |            2 optional arguments            |
 | :----------------------: | :----------------------------------------: |
@@ -356,7 +469,31 @@ describe("foo", () => {
 });
 ```
 
+## clearFieldAndFillItWithText
+
+|  2 mandatory arguments   |   1 optional argument   |
+| :----------------------: | :---------------------: |
+| `htmlElement` and `text` | `timeoutInMilliseconds` |
+
+```js
+const protractorHelper = require("protractor-helper");
+
+describe("foo", () => {
+  it("bar", () => {
+    browser.get("https://example.com");
+
+    const textField = element(by.css("input.some-text-field"));
+
+    protractorHelper.clearFieldAndFillItWithText(textField, "some text", 3000);
+
+    // ...
+  });
+});
+```
+
 ## tapWhenTappable
+
+> Note: this function will be deprecated in favor of the function `tap`.
 
 | 1 mandatory argument |            2 optional arguments            |
 | :------------------: | :----------------------------------------: |
@@ -378,6 +515,30 @@ describe("foo", () => {
       3000,
       "myButton is not tappable"
     );
+
+    // ...
+  });
+});
+```
+
+## tap
+
+| 1 mandatory argument |   1 optional argument   |
+| :------------------: | :---------------------: |
+|    `htmlElement`     | `timeoutInMilliseconds` |
+
+```js
+// Imagine that in the `protractor.conf.js` file a mobile emulator is being defined.
+
+const protractorHelper = require("protractor-helper");
+
+describe("foo", () => {
+  it("bar", () => {
+    browser.get("https://example.com");
+
+    const myButton = element(by.id("my-button"));
+
+    protractorHelper.tap(myButton, 3000);
 
     // ...
   });
@@ -550,6 +711,8 @@ describe("foo", () => {
 
 ## fillFieldWithTextWhenVisibleAndPressEnter
 
+> Note: this function will be deprecated in favor of the function `fillFieldWithTextAndPressEnter`.
+
 |  2 mandatory arguments   |            2 optional arguments            |
 | :----------------------: | :----------------------------------------: |
 | `htmlElement` and `text` | `timeoutInMilliseconds` and `errorMessage` |
@@ -575,7 +738,35 @@ describe("foo", () => {
 });
 ```
 
+## fillFieldWithTextAndPressEnter
+
+|  2 mandatory arguments   |   1 optional argument   |
+| :----------------------: | :---------------------: |
+| `htmlElement` and `text` | `timeoutInMilliseconds` |
+
+```js
+const protractorHelper = require("protractor-helper");
+
+describe("foo", () => {
+  it("bar", () => {
+    browser.get("https://example.com");
+
+    const textField = element(by.css("input.some-text-field"));
+
+    protractorHelper.fillFieldWithTextAndPressEnter(
+      textField,
+      "some text",
+      3000
+    );
+
+    // ...
+  });
+});
+```
+
 ## scrollToElementWhenVisible
+
+> Note: this function will be deprecated in favor of the function `scrollToElement`.
 
 | 1 mandatory argument |            2 optional arguments            |
 | :------------------: | :----------------------------------------: |
@@ -595,6 +786,28 @@ describe("foo", () => {
       3000,
       "my link is not visible"
     );
+
+    // ...
+  });
+});
+```
+
+## scrollToElement
+
+| 1 mandatory argument |   1 optional argument   |
+| :------------------: | :---------------------: |
+|    `htmlElement`     | `timeoutInMilliseconds` |
+
+```js
+const protractorHelper = require("protractor-helper");
+
+describe("foo", () => {
+  it("bar", () => {
+    browser.get("https://example.com");
+
+    const myLink = element(by.css("a.my-link"));
+
+    protractorHelper.scrollToElement(myLink, 3000);
 
     // ...
   });
