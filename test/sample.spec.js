@@ -5,6 +5,7 @@ const constants = require("./constants");
 describe("Protractor helper", () => {
   const titleElement = element(by.css("h1"));
   const inputField = element(by.id("input"));
+  const inputFile = element(by.className("inputfile"));
   const shortenButton = element(by.id("shorten"));
   const expandButton = element(by.id("expand"));
 
@@ -79,14 +80,14 @@ describe("Protractor helper", () => {
 
     it("fillInputFieldWithFileWhenPresent", () => {
       helper.fillInputFieldWithFileWhenPresent(
-        inputField,
+        inputFile,
         constants.ABSOLUTE_PATH_OF_INDEX_FILE
       );
     });
 
     it("uploadFileIntoInputField", () => {
       helper.uploadFileIntoInputField(
-        inputField,
+        inputFile,
         constants.ABSOLUTE_PATH_OF_INDEX_FILE
       );
     });
