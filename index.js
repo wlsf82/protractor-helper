@@ -90,6 +90,18 @@ const clickWhenClickable = function(
   htmlElement.click();
 };
 
+const click = function(
+  htmlElement = utils.requiredParam(click),
+  timeoutInMilliseconds = config.timeoutInMilliseconds
+) {
+  utils.waitForElementToBeClickable(
+    htmlElement,
+    timeoutInMilliseconds,
+    utils.getDefaultIsNotClickableMessage(htmlElement)
+  );
+  htmlElement.click();
+};
+
 const fillFieldWithTextWhenVisible = function(
   htmlElement = utils.requiredParam(fillFieldWithTextWhenVisible),
   text = utils.requiredParam(fillFieldWithTextWhenVisible, "text"),
@@ -100,6 +112,19 @@ const fillFieldWithTextWhenVisible = function(
     htmlElement,
     timeoutInMilliseconds,
     errorMessage
+  );
+  htmlElement.sendKeys(text);
+};
+
+const fillFieldWithText = function(
+  htmlElement = utils.requiredParam(fillFieldWithText),
+  text = utils.requiredParam(fillFieldWithText, "text"),
+  timeoutInMilliseconds = config.timeoutInMilliseconds
+) {
+  this.waitForElementVisibility(
+    htmlElement,
+    timeoutInMilliseconds,
+    utils.getDefaultIsNotVisibleMessage(htmlElement)
   );
   htmlElement.sendKeys(text);
 };
@@ -117,6 +142,20 @@ const fillInputFieldWithFileWhenPresent = function(
   htmlElement.sendKeys(absolutePath);
 };
 
+const uploadFileIntoInputField = function(
+  htmlElement = utils.requiredParam(uploadFileIntoInputField),
+  absolutePath = utils.requiredParam(
+    uploadFileIntoInputField,
+    "absolutePath"
+  ),
+  timeoutInMilliseconds = config.timeoutInMilliseconds
+) {
+  const errorMessage = utils.getDefaultIsNotPresentMessage(htmlElement);
+
+  this.waitForElementPresence(htmlElement, timeoutInMilliseconds, errorMessage);
+  htmlElement.sendKeys(absolutePath);
+};
+
 const clearFieldWhenVisible = function(
   htmlElement = utils.requiredParam(clearFieldWhenVisible),
   timeoutInMilliseconds = config.timeoutInMilliseconds,
@@ -126,6 +165,18 @@ const clearFieldWhenVisible = function(
     htmlElement,
     timeoutInMilliseconds,
     errorMessage
+  );
+  htmlElement.clear();
+};
+
+const clear = function(
+  htmlElement = utils.requiredParam(clear),
+  timeoutInMilliseconds = config.timeoutInMilliseconds
+) {
+  this.waitForElementVisibility(
+    htmlElement,
+    timeoutInMilliseconds,
+    utils.getDefaultIsNotVisibleMessage(htmlElement)
   );
   htmlElement.clear();
 };
@@ -145,6 +196,19 @@ const clearFieldWhenVisibleAndFillItWithText = function(
   );
 };
 
+const clearFieldAndFillItWithText = function(
+  htmlElement = utils.requiredParam(clearFieldAndFillItWithText),
+  text = utils.requiredParam(clearFieldAndFillItWithText, "text"),
+  timeoutInMilliseconds = config.timeoutInMilliseconds
+) {
+  this.clear(htmlElement, timeoutInMilliseconds);
+  this.fillFieldWithText(
+    htmlElement,
+    text,
+    timeoutInMilliseconds
+  );
+};
+
 const tapWhenTappable = function(
   htmlElement = utils.requiredParam(tapWhenTappable),
   timeoutInMilliseconds = config.timeoutInMilliseconds,
@@ -154,6 +218,27 @@ const tapWhenTappable = function(
     constants.POSSIBLE_IT_IS_NOT_PRESENT_OR_VISIBLE_MESSAGE
   }, ${constants.OR_IT_MAY_BE_DISABLED_MESSAGE}.`
 ) {
+  utils.waitForElementToBeClickable(
+    htmlElement,
+    timeoutInMilliseconds,
+    errorMessage
+  );
+  browser
+    .touchActions()
+    .tap(htmlElement)
+    .perform();
+};
+
+const tap = function(
+  htmlElement = utils.requiredParam(tap),
+  timeoutInMilliseconds = config.timeoutInMilliseconds,
+) {
+  const errorMessage = `${constants.ELEMENT_WITH_LOCATOR_MESSAGE} '${
+    htmlElement.parentElementArrayFinder.locator_
+  }' ${constants.IS_NOT_TAPPABLE_MESSAGE}. ${
+    constants.POSSIBLE_IT_IS_NOT_PRESENT_OR_VISIBLE_MESSAGE
+  }, ${constants.OR_IT_MAY_BE_DISABLED_MESSAGE}.`;
+
   utils.waitForElementToBeClickable(
     htmlElement,
     timeoutInMilliseconds,
@@ -255,6 +340,18 @@ const fillFieldWithTextWhenVisibleAndPressEnter = function(
   );
 };
 
+const fillFieldWithTextAndPressEnter = function(
+  htmlElement = utils.requiredParam(fillFieldWithTextAndPressEnter),
+  text = utils.requiredParam(fillFieldWithTextAndPressEnter, "text"),
+  timeoutInMilliseconds = config.timeoutInMilliseconds
+) {
+  this.fillFieldWithText(
+    htmlElement,
+    text + protractor.Key.ENTER,
+    timeoutInMilliseconds
+  );
+};
+
 const scrollToElementWhenVisible = function(
   htmlElement = utils.requiredParam(scrollToElementWhenVisible),
   timeoutInMilliseconds = config.timeoutInMilliseconds,
@@ -264,6 +361,18 @@ const scrollToElementWhenVisible = function(
     htmlElement,
     timeoutInMilliseconds,
     errorMessage
+  );
+  browser.executeScript("arguments[0].scrollIntoView(true);", htmlElement);
+};
+
+const scrollToElement = function(
+  htmlElement = utils.requiredParam(scrollToElement),
+  timeoutInMilliseconds = config.timeoutInMilliseconds
+) {
+  this.waitForElementVisibility(
+    htmlElement,
+    timeoutInMilliseconds,
+    utils.getDefaultIsNotVisibleMessage(htmlElement)
   );
   browser.executeScript("arguments[0].scrollIntoView(true);", htmlElement);
 };
@@ -283,11 +392,17 @@ module.exports = {
   waitForElementVisibility,
   waitForElementNotToBeVisible,
   clickWhenClickable,
+  click,
   fillFieldWithTextWhenVisible,
+  fillFieldWithText,
   fillInputFieldWithFileWhenPresent,
+  uploadFileIntoInputField,
   clearFieldWhenVisible,
+  clear,
   clearFieldWhenVisibleAndFillItWithText,
+  clearFieldAndFillItWithText,
   tapWhenTappable,
+  tap,
   waitForTextToBePresentInElement,
   waitForTextNotToBePresentInElement,
   waitForUrlToBeEqualToExpectedUrl,
@@ -295,6 +410,8 @@ module.exports = {
   waitForUrlToContainString,
   waitForUrlNotToContainString,
   fillFieldWithTextWhenVisibleAndPressEnter,
+  fillFieldWithTextAndPressEnter,
   scrollToElementWhenVisible,
+  scrollToElement,
   setTimeout
 };
