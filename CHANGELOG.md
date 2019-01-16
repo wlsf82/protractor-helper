@@ -1,3 +1,33 @@
+# 3.7.1
+
+## package.json
+
+- update package keywords with "testing"
+- update package description to a better one
+- update lib's patch version
+
+## package-lock.json
+
+- update lib's version on package-lock file
+
+## Tests
+
+- update protractor config to help on debugging
+- update tests that upload of file to use file input field
+
+## Sample app
+
+- update sample app to improve testability
+
+## Documentation
+
+- minor update on examples notes
+- update basic example to use the "new" functions
+- update number of tests executed on contributing.md file
+- update change log with info about the latest patch version
+- update previous version on changelog with missing info
+- update readme and examples with info about "new" functions
+
 # 3.7.0
 
 ## "New" functions
