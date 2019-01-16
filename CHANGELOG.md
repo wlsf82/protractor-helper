@@ -1,3 +1,39 @@
+# 3.7.0
+
+## "New" functions
+
+- update lib with "new" functions
+
+Note: none of the existing functions were removed, but some functions were duplicated with shorter names to improve readability. The old ones will be deprecated in the future.
+
+See below the list of "new" functions and their equivalents:
+
+- `click` (equivalent to `clickWhenClickable`)
+- `fillFieldWithText` (equivalent to `fillFieldWithTextWhenVisible`)
+- `uploadFileIntoInputField` (equivalent to `fillInputFieldWithFileWhenPresent`)
+- `clear` (equivalent to `clearFieldWhenVisible`)
+- `clearFieldAndFillItWithText` (equivalent to `clearFieldWhenVisibleAndFillItWithText`)
+- `tap` (equivalent to `tapWhenTappable`)
+- `fillFieldWithTextAndPressEnter` (equivalent to `fillFieldWithTextWhenVisibleAndPressEnter`)
+- `scrollToElement` (equivalent to `scrollToElementWhenVisible`)
+
+## Tests
+
+- restructure tests and add new test cases
+
+## Documentation
+
+- update change log with info about the latest minor version
+- TODO: update documentation for all "new" functions
+
+## package.json
+
+- update lib's minor version
+
+## package-lock.json
+
+- update lib's version on package-lock file
+
 # 3.6.21
 
 ## Breaking changes coming soon
