@@ -95,3 +95,34 @@ h1 {
 a {
   color: #ffffff;
 }
+
+#file-upload {
+  font-family: Source Sans Pro;
+  padding-top: 25px;
+}
+
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.inputfile + label {
+  background-color: white;
+  border-radius: 5%;
+  cursor: pointer;
+  font-size: 1.25em;
+  font-weight: 700;
+  color: black;
+  display: inline-block;
+  padding: 14px 20px;
+}
+
+.inputfile:focus + label {
+  outline: 1px dotted #000;
+  outline: -webkit-focus-ring-color auto 5px;
+}
