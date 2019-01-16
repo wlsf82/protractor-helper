@@ -12,7 +12,7 @@
 >
 > 5. `timeoutInMilliseconds` turns mandatory if you need to change the `errorMessage`, due to arguments order;
 >
-> 6. If the `errorMessage` argument is not provided a default message implemented for this specific method will be displayed instead. We recommend that you use the default message because it shows a clear message.
+> 6. If the `errorMessage` argument is not provided a default message implemented for this specific method will be displayed instead. We recommend that you use the default message because it shows a clear message. Some new methods not even accept a message as argument, but implement a default one.
 
 ## setTimeout
 
