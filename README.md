@@ -101,15 +101,9 @@ describe("Sign up page", () => {
     const passwordField = element(by.id("password"));
     const signupButton = element(by.id("signup"));
 
-    protractorHelper.fillFieldWithTextWhenVisible(
-      emailField,
-      "valid@email.com"
-    );
-    protractorHelper.fillFieldWithTextWhenVisible(
-      passwordField,
-      "validpassword"
-    );
-    protractorHelper.clickWhenClickable(signupButton);
+    protractorHelper.fillFieldWithText(emailField, "valid@email.com");
+    protractorHelper.fillFieldWithText(passwordField, "validpassword");
+    protractorHelper.click(signupButton);
 
     const avatar = element(by.id("avatar"));
 
