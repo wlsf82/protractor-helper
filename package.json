@@ -9,7 +9,7 @@
   "pre-commit": [
     "prettify"
   ],
-  "description": "Protractor helper's library",
+  "description": "Write robust and flakiness free tests with Protractor",
   "main": "index.js",
   "keywords": [
     "protractor",
