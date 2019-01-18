@@ -21,6 +21,7 @@
 
 ## Documentation
 
+- Update list of available helper functions with the "new" ones
 - minor update on examples notes
 - update basic example to use the "new" functions
 - update number of tests executed on contributing.md file
