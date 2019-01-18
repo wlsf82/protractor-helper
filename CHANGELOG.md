@@ -1,3 +1,18 @@
+# 3.7.2
+
+## package.json
+
+- update lib's patch version
+
+## package-lock.json
+
+- update lib's version on package-lock file
+
+## Documentation
+
+- move available helper function to its right place on readme
+- update changelog with info about the latest patch version
+
 # 3.7.1
 
 ## package.json
