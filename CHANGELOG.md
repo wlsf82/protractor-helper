@@ -1,3 +1,33 @@
+# 3.7.1
+
+## package.json
+
+- update package keywords with "testing"
+- update package description to a better one
+- update lib's patch version
+
+## package-lock.json
+
+- update lib's version on package-lock file
+
+## Tests
+
+- update protractor config to help on debugging
+- update tests that upload of file to use file input field
+
+## Sample app
+
+- update sample app to improve testability
+
+## Documentation
+
+- minor update on examples notes
+- update basic example to use the "new" functions
+- update number of tests executed on contributing.md file
+- update change log with info about the latest patch version
+- update previous version on changelog with missing info
+- update readme and examples with info about "new" functions
+
 # 3.7.0
 
 ## "New" functions
@@ -16,6 +46,8 @@ See below the list of "new" functions and their equivalents:
 - `tap` (equivalent to `tapWhenTappable`)
 - `fillFieldWithTextAndPressEnter` (equivalent to `fillFieldWithTextWhenVisibleAndPressEnter`)
 - `scrollToElement` (equivalent to `scrollToElementWhenVisible`)
+
+> Note: the only difference between the "new" functions and their equivalents is that the "new" ones have no optional `errorMessage` argument. The default message provide by the lib is what is shown in case of a test failure.
 
 ## Tests
 

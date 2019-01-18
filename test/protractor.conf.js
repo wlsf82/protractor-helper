@@ -11,6 +11,7 @@ module.exports.config = {
   specs: ["*.spec.js"],
   onPrepare() {
     browser.waitForAngularEnabled(false);
+    // afterEach(() => browser.sleep(1000));
   },
   jasmineNodeOpts: {
     onComplete: null,
@@ -18,5 +19,6 @@ module.exports.config = {
     showColors: true,
     includeStackTrace: true,
     random: true
-  }
+  },
+  // highlightDelay: 1000
 };
