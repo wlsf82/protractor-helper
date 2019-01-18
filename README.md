@@ -26,11 +26,17 @@ Many of the helper functions on this library uses `protractor.ExpectedConditions
   - [`waitForElementVisibility`](#waitforelementvisibility)
   - [`waitForElementNotToBeVisible`](#waitforelementnottobevisible)
   - [`clickWhenClickable`](#clickwhenclickable)
+  - [`click`](#click)
   - [`fillFieldWithTextWhenVisible`](#fillfieldwithtextwhenvisible)
+  - [`fillFieldWithText`](#fillfieldwithtext)
   - [`fillInputFieldWithFileWhenPresent`](#fillinputfieldwithfilewhenpresent)
+  - [`uploadFileIntoInputField`](#uploadfileintoinputfield)
   - [`clearFieldWhenVisible`](#clearfieldwhenvisible)
   - [`clearFieldWhenVisibleAndFillItWithText`](#clearfieldwhenvisibleandfillitwithtext)
+  - [`clear`](#clear)
+  - [`clearFieldAndFillItWithText`](#clearfieldandfillitwithtext)
   - [`tapWhenTappable`](#tapwhentappable)
+  - [`tap`](#tap)
   - [`waitForTextToBePresentInElement`](#waitfortexttobepresentinelement)
   - [`waitForTextNotToBePresentInElement`](#waitfortextnottobepresentinelement)
   - [`waitForUrlToBeEqualToExpectedUrl`](#waitforurltobeequaltoexpectedurl)
@@ -38,7 +44,9 @@ Many of the helper functions on this library uses `protractor.ExpectedConditions
   - [`waitForUrlToContainString`](#waitforurltocontainstring)
   - [`waitForUrlNotToContainString`](#waitforurlnottocontainstring)
   - [`fillFieldWithTextWhenVisibleAndPressEnter`](#fillfieldwithtextwhenvisibleandpressenter)
+  - [`fillFieldWithTextAndPressEnter`](#fillfieldwithtextandpressenter)
   - [`scrollToElementWhenVisible`](#scrolltoelementwhenvisible)
+  - [`scrollToElement`](#scrolltoelement)
 
 </p> </details>
 
