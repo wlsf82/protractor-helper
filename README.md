@@ -27,11 +27,17 @@ Many of the helper functions on this library uses `protractor.ExpectedConditions
   - [`waitForElementVisibility`](#waitforelementvisibility)
   - [`waitForElementNotToBeVisible`](#waitforelementnottobevisible)
   - [`clickWhenClickable`](#clickwhenclickable)
+  - [`click`](#click)
   - [`fillFieldWithTextWhenVisible`](#fillfieldwithtextwhenvisible)
+  - [`fillFieldWithText`](#fillfieldwithtext)
   - [`fillInputFieldWithFileWhenPresent`](#fillinputfieldwithfilewhenpresent)
+  - [`uploadFileIntoInputField`](#uploadfileintoinputfield)
   - [`clearFieldWhenVisible`](#clearfieldwhenvisible)
+  - [`clear`](#clear)
   - [`clearFieldWhenVisibleAndFillItWithText`](#clearfieldwhenvisibleandfillitwithtext)
+  - [`clearFieldAndFillItWithText`](#clearfieldandfillitwithtext)
   - [`tapWhenTappable`](#tapwhentappable)
+  - [`tap`](#tap)
   - [`waitForTextToBePresentInElement`](#waitfortexttobepresentinelement)
   - [`waitForTextNotToBePresentInElement`](#waitfortextnottobepresentinelement)
   - [`waitForUrlToBeEqualToExpectedUrl`](#waitforurltobeequaltoexpectedurl)
@@ -39,7 +45,9 @@ Many of the helper functions on this library uses `protractor.ExpectedConditions
   - [`waitForUrlToContainString`](#waitforurltocontainstring)
   - [`waitForUrlNotToContainString`](#waitforurlnottocontainstring)
   - [`fillFieldWithTextWhenVisibleAndPressEnter`](#fillfieldwithtextwhenvisibleandpressenter)
+  - [`fillFieldWithTextAndPressEnter`](#fillfieldwithtextandpressenter)
   - [`scrollToElementWhenVisible`](#scrolltoelementwhenvisible)
+  - [`scrollToElement`](#scrolltoelement)
 
 </p> </details>
 
@@ -102,9 +110,9 @@ describe("Sign up page", async () => {
     const passwordField = element(by.id("password"));
     const signupButton = element(by.id("signup"));
 
-    await protractorHelper.fillFieldWithTextWhenVisible(emailField, "valid@email.com");
-    await protractorHelper.fillFieldWithTextWhenVisible(passwordField, "validpassword");
-    await protractorHelper.clickWhenClickable(signupButton);
+    protractorHelper.fillFieldWithText(emailField, "valid@email.com");
+    protractorHelper.fillFieldWithText(passwordField, "validpassword");
+    protractorHelper.click(signupButton);
 
     const avatar = element(by.id("avatar"));
 
@@ -202,30 +210,72 @@ This method is the opposite of the previous one, so, it waits for an element not
 This method is used to click in an element as soon as it is in a clickable state. This means that the element is visible and enabled for clicking.
 [Example](docs/EXAMPLES.md#clickwhenclickable)
 
+> Note: this function will be deprecated in favor of the function `click`.
+
+### `click`
+
+This method is used to click in an element as soon as it is in a clickable state. This means that the element is visible and enabled for clicking.
+[Example](docs/EXAMPLES.md#click)
+
 ### `fillFieldWithTextWhenVisible`
 
 This method fills an input field with a text as soon as such field is visible.
 [Example](docs/EXAMPLES.md#fillfieldwithtextwhenvisible)
+
+> Note: this function will be deprecated in favor of the function `fillFieldWithText`.
+
+### `fillFieldWithText`
+
+This method fills an input field with a text as soon as such field is visible.
+[Example](docs/EXAMPLES.md#fillFieldWithText)
 
 ### `fillInputFieldWithFileWhenPresent`
 
 This method fills a file input field with a specified file as soon as the file input field is present in the DOM.
 [Example](docs/EXAMPLES.md#fillinputfieldwithfilewhenpresent)
 
+> Note: this function will be deprecated in favor of the function `uploadFileIntoInputField`.
+
+### `uploadFileIntoInputField`
+
+This method uploads a file in a file input field as soon as the file input field is present in the DOM.
+[Example](docs/EXAMPLES.md#uploadFileIntoInputField)
+
 ### `clearFieldWhenVisible`
 
 This method clears a text input field as soon as such field is visible.
 [Example](docs/EXAMPLES.md#clearFieldWhenVisible)
+
+> Note: this function will be deprecated in favor of the function `clear`.
+
+### `clear`
+
+This method clears a text input field as soon as such field is visible.
+[Example](docs/EXAMPLES.md#clear)
 
 ### `clearFieldWhenVisibleAndFillItWithText`
 
 This method clears a text input field as soon as such field is visible, and then it fills it with a text.
 [Example](docs/EXAMPLES.md#clearfieldwhenvisibleandfillitwithtext)
 
+> Note: this function will be deprecated in favor of the function `clearFieldAndFillItWithText`.
+
+### `clearFieldAndFillItWithText`
+
+This method clears a text input field as soon as such field is visible, and then it fills it with a text.
+[Example](docs/EXAMPLES.md#clearFieldAndFillItWithText)
+
 ### `tapWhenTappable`
 
-This method performs a tap action on a clickable/tappable HTML element as soon as it is clickable/tappable. This method is used when performing web mobile testing in mobile emulators, for example.
+This method performs a tap action on a clickable/tappable HTML element as soon as it is in a clickable/tappable state. This method is used when performing web mobile testing in mobile emulators, for example.
 [Example](docs/EXAMPLES.md#tapwhentappable)
+
+> Note: this function will be deprecated in favor of the function `tap`.
+
+### `tap`
+
+This method performs a tap action on a clickable/tappable HTML element as soon as it is in a clickable/tappable state. This method is used when performing web mobile testing in mobile emulators, for example.
+[Example](docs/EXAMPLES.md#tap)
 
 ### `waitForTextToBePresentInElement`
 
@@ -262,10 +312,24 @@ This method waits for the URL not to contain an expected string. Such method is 
 This method fills an input field with a text as soon as such field is visible, and then it simulates pressing the ENTER key from the keyboard. This method is useful in cases such as when doing a search and pressing the ENTER key, instead of having to fill the input field and clicking the search button, for example.
 [Example](docs/EXAMPLES.md#fillfieldwithtextwhenvisibleandpressenter)
 
+> Note: this function will be deprecated in favor of the function `fillFieldWithTextAndPressEnter`.
+
+### `fillFieldWithTextAndPressEnter`
+
+This method fills an input field with a text as soon as such field is visible and then it simulates pressing the ENTER key from the keyboard. This method is useful in cases such as when doing a search and pressing the ENTER key, instead of having to fill the input field and clicking the search button, for example.
+[Example](docs/EXAMPLES.md#fillFieldWithTextAndPressEnter)
+
 ### `scrollToElementWhenVisible`
 
 This method is used to scroll up to an element on the page as soon as the element is visible in the DOM.
 [Example](docs/EXAMPLES.md#scrolltoelementwhenvisible)
+
+> Note: this function will be deprecated in favor of the function `scrollToElement`.
+
+### `scrollToElement`
+
+This method is used to scroll up to an element on the page as soon as the element is visible in the DOM.
+[Example](docs/EXAMPLES.md#scrollToElement)
 
 ## Using methods that start with 'wait' as test expectations (or test assertions)
 

@@ -11,6 +11,8 @@ module.exports.config = {
   specs: ["*.spec.js"],
   onPrepare() {
     browser.waitForAngularEnabled(false);
+    // afterEach(() => browser.sleep(1000));
   },
   random: true
+  // highlightDelay: 1000
 };

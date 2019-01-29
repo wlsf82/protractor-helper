@@ -1,3 +1,87 @@
+# 3.7.2
+
+## package.json
+
+- update lib's patch version
+
+## package-lock.json
+
+- update lib's version on package-lock file
+
+## Documentation
+
+- move available helper function to its right place on readme
+- update changelog with info about the latest patch version
+
+# 3.7.1
+
+## package.json
+
+- update package keywords with "testing"
+- update package description to a better one
+- update lib's patch version
+
+## package-lock.json
+
+- update lib's version on package-lock file
+
+## Tests
+
+- update protractor config to help on debugging
+- update tests that upload of file to use file input field
+
+## Sample app
+
+- update sample app to improve testability
+
+## Documentation
+
+- Update list of available helper functions with the "new" ones
+- minor update on examples notes
+- update basic example to use the "new" functions
+- update number of tests executed on contributing.md file
+- update change log with info about the latest patch version
+- update previous version on changelog with missing info
+- update readme and examples with info about "new" functions
+
+# 3.7.0
+
+## "New" functions
+
+- update lib with "new" functions
+
+Note: none of the existing functions were removed, but some functions were duplicated with shorter names to improve readability. The old ones will be deprecated in the future.
+
+See below the list of "new" functions and their equivalents:
+
+- `click` (equivalent to `clickWhenClickable`)
+- `fillFieldWithText` (equivalent to `fillFieldWithTextWhenVisible`)
+- `uploadFileIntoInputField` (equivalent to `fillInputFieldWithFileWhenPresent`)
+- `clear` (equivalent to `clearFieldWhenVisible`)
+- `clearFieldAndFillItWithText` (equivalent to `clearFieldWhenVisibleAndFillItWithText`)
+- `tap` (equivalent to `tapWhenTappable`)
+- `fillFieldWithTextAndPressEnter` (equivalent to `fillFieldWithTextWhenVisibleAndPressEnter`)
+- `scrollToElement` (equivalent to `scrollToElementWhenVisible`)
+
+> Note: the only difference between the "new" functions and their equivalents is that the "new" ones have no optional `errorMessage` argument. The default message provide by the lib is what is shown in case of a test failure.
+
+## Tests
+
+- restructure tests and add new test cases
+
+## Documentation
+
+- update change log with info about the latest minor version
+- TODO: update documentation for all "new" functions
+
+## package.json
+
+- update lib's minor version
+
+## package-lock.json
+
+- update lib's version on package-lock file
+
 # 3.6.21
 
 ## Breaking changes coming soon

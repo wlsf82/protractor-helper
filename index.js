@@ -71,6 +71,18 @@ const clickWhenClickable = async function(
   return await htmlElement.click();
 };
 
+const click = async function(
+  htmlElement = utils.requiredParam(click),
+  timeoutInMilliseconds = config.timeoutInMilliseconds
+) {
+  await utils.waitForElementToBeClickable(
+    htmlElement,
+    timeoutInMilliseconds,
+    utils.getDefaultIsNotClickableMessage(htmlElement)
+  );
+  return await htmlElement.click();
+};
+
 const fillFieldWithTextWhenVisible = async function(
   htmlElement = utils.requiredParam(fillFieldWithTextWhenVisible),
   text = utils.requiredParam(fillFieldWithTextWhenVisible, "text"),
@@ -78,6 +90,19 @@ const fillFieldWithTextWhenVisible = async function(
   errorMessage = utils.getDefaultIsNotVisibleMessage(htmlElement)
 ) {
   await this.waitForElementVisibility(htmlElement, timeoutInMilliseconds, errorMessage);
+  return await htmlElement.sendKeys(text);
+};
+
+const fillFieldWithText = async function(
+  htmlElement = utils.requiredParam(fillFieldWithText),
+  text = utils.requiredParam(fillFieldWithText, "text"),
+  timeoutInMilliseconds = config.timeoutInMilliseconds
+) {
+  await this.waitForElementVisibility(
+    htmlElement,
+    timeoutInMilliseconds,
+    utils.getDefaultIsNotVisibleMessage(htmlElement)
+  );
   return await htmlElement.sendKeys(text);
 };
 
@@ -91,12 +116,36 @@ const fillInputFieldWithFileWhenPresent = async function(
   return await htmlElement.sendKeys(absolutePath);
 };
 
+const uploadFileIntoInputField = async function(
+  htmlElement = utils.requiredParam(uploadFileIntoInputField),
+  absolutePath = utils.requiredParam(
+    uploadFileIntoInputField,
+    "absolutePath"
+  ),
+  timeoutInMilliseconds = config.timeoutInMilliseconds
+) {
+  await this.waitForElementPresence(htmlElement, timeoutInMilliseconds, utils.getDefaultIsNotVisibleMessage(htmlElement));
+  return await htmlElement.sendKeys(absolutePath);
+};
+
 const clearFieldWhenVisible = async function(
   htmlElement = utils.requiredParam(clearFieldWhenVisible),
   timeoutInMilliseconds = config.timeoutInMilliseconds,
   errorMessage = utils.getDefaultIsNotVisibleMessage(htmlElement)
 ) {
   await this.waitForElementVisibility(htmlElement, timeoutInMilliseconds, errorMessage);
+  return await htmlElement.clear();
+};
+
+const clear = async function(
+  htmlElement = utils.requiredParam(clear),
+  timeoutInMilliseconds = config.timeoutInMilliseconds
+) {
+  await this.waitForElementVisibility(
+    htmlElement,
+    timeoutInMilliseconds,
+    utils.getDefaultIsNotVisibleMessage(htmlElement)
+  );
   return await htmlElement.clear();
 };
 
@@ -115,6 +164,19 @@ const clearFieldWhenVisibleAndFillItWithText = async function(
   );
 };
 
+const clearFieldAndFillItWithText = async function(
+  htmlElement = utils.requiredParam(clearFieldAndFillItWithText),
+  text = utils.requiredParam(clearFieldAndFillItWithText, "text"),
+  timeoutInMilliseconds = config.timeoutInMilliseconds
+) {
+  await this.clear(htmlElement, timeoutInMilliseconds);
+  return await this.fillFieldWithText(
+    htmlElement,
+    text,
+    timeoutInMilliseconds
+  );
+};
+
 const tapWhenTappable = async function(
   htmlElement = utils.requiredParam(tapWhenTappable),
   timeoutInMilliseconds = config.timeoutInMilliseconds,
@@ -125,6 +187,25 @@ const tapWhenTappable = async function(
   }, ${constants.OR_IT_MAY_BE_DISABLED_MESSAGE}.`
 ) {
   await utils.waitForElementToBeClickable(htmlElement, timeoutInMilliseconds, errorMessage);
+  // @TODO: implement the correct way of tapping simulation.
+  return await htmlElement.click();
+};
+
+const tap = async function(
+  htmlElement = utils.requiredParam(tap),
+  timeoutInMilliseconds = config.timeoutInMilliseconds,
+) {
+  const errorMessage = `${constants.ELEMENT_WITH_LOCATOR_MESSAGE} '${
+    htmlElement.parentElementArrayFinder.locator_
+  }' ${constants.IS_NOT_TAPPABLE_MESSAGE}. ${
+    constants.POSSIBLE_IT_IS_NOT_PRESENT_OR_VISIBLE_MESSAGE
+  }, ${constants.OR_IT_MAY_BE_DISABLED_MESSAGE}.`;
+
+  await utils.waitForElementToBeClickable(
+    htmlElement,
+    timeoutInMilliseconds,
+    errorMessage
+  );
   // @TODO: implement the correct way of tapping simulation.
   return await htmlElement.click();
 };
@@ -205,6 +286,18 @@ const fillFieldWithTextWhenVisibleAndPressEnter = async function(
   );
 };
 
+const fillFieldWithTextAndPressEnter = async function(
+  htmlElement = utils.requiredParam(fillFieldWithTextAndPressEnter),
+  text = utils.requiredParam(fillFieldWithTextAndPressEnter, "text"),
+  timeoutInMilliseconds = config.timeoutInMilliseconds
+) {
+  return await this.fillFieldWithText(
+    htmlElement,
+    text + protractor.Key.ENTER,
+    timeoutInMilliseconds
+  );
+};
+
 const scrollToElementWhenVisible = async function(
   htmlElement = utils.requiredParam(scrollToElementWhenVisible),
   timeoutInMilliseconds = config.timeoutInMilliseconds,
@@ -214,7 +307,21 @@ const scrollToElementWhenVisible = async function(
   return await browser.executeScript("arguments[0].scrollIntoView(true);", htmlElement);
 };
 
-const setTimeout = function(timeoutInMilliseconds = constants.DEFAULT_TIMEOUT_IN_MS) {
+const scrollToElement = async function(
+  htmlElement = utils.requiredParam(scrollToElement),
+  timeoutInMilliseconds = config.timeoutInMilliseconds
+) {
+  await this.waitForElementVisibility(
+    htmlElement,
+    timeoutInMilliseconds,
+    utils.getDefaultIsNotVisibleMessage(htmlElement)
+  );
+  return await browser.executeScript("arguments[0].scrollIntoView(true);", htmlElement);
+};
+
+const setTimeout = function(
+  timeoutInMilliseconds = constants.DEFAULT_TIMEOUT_IN_MS
+) {
   config.timeoutInMilliseconds = timeoutInMilliseconds;
 };
 
@@ -227,11 +334,17 @@ module.exports = {
   waitForElementVisibility,
   waitForElementNotToBeVisible,
   clickWhenClickable,
+  click,
   fillFieldWithTextWhenVisible,
+  fillFieldWithText,
   fillInputFieldWithFileWhenPresent,
+  uploadFileIntoInputField,
   clearFieldWhenVisible,
+  clear,
   clearFieldWhenVisibleAndFillItWithText,
+  clearFieldAndFillItWithText,
   tapWhenTappable,
+  tap,
   waitForTextToBePresentInElement,
   waitForTextNotToBePresentInElement,
   waitForUrlToBeEqualToExpectedUrl,
@@ -239,6 +352,8 @@ module.exports = {
   waitForUrlToContainString,
   waitForUrlNotToContainString,
   fillFieldWithTextWhenVisibleAndPressEnter,
+  fillFieldWithTextAndPressEnter,
   scrollToElementWhenVisible,
+  scrollToElement,
   setTimeout
 };
