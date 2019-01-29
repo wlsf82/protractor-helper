@@ -92,17 +92,17 @@ describe("Protractor helper", () => {
       );
     });
 
-    it("clearFieldWhenVisible", () => {
+    it("clearFieldWhenVisible", async () => {
       await helper.fillFieldWithTextWhenVisible(inputField, constants.SHORTEN_URL);
       await helper.clearFieldWhenVisible(inputField);
     });
 
-    it("clear", () => {
+    it("clear", async () => {
       await helper.fillFieldWithText(inputField, constants.SHORTEN_URL);
       await helper.clear(inputField);
     });
 
-    it("clearFieldWhenVisibleAndFillItWithText", () => {
+    it("clearFieldWhenVisibleAndFillItWithText", async () => {
       await helper.fillFieldWithTextWhenVisible(inputField, constants.SHORTEN_URL);
       await helper.clearFieldWhenVisibleAndFillItWithText(
         inputField,
@@ -110,27 +110,27 @@ describe("Protractor helper", () => {
       );
     });
 
-    it("clearFieldAndFillItWithText", () => {
+    it("clearFieldAndFillItWithText", async () => {
       await helper.fillFieldWithText(inputField, constants.SHORTEN_URL);
       await helper.clearFieldAndFillItWithText(inputField, constants.SAMPLE_URL);
     });
 
-    it("tapWhenTappable", () => {
+    it("tapWhenTappable", async () => {
       await helper.tapWhenTappable(expandButton);
     });
 
-    it("tap", () => {
+    it("tap", async () => {
       await helper.tap(expandButton);
     });
 
-    it("fillFieldWithTextWhenVisibleAndPressEnter", () => {
+    it("fillFieldWithTextWhenVisibleAndPressEnter", async () => {
       await helper.fillFieldWithTextWhenVisibleAndPressEnter(
         inputField,
         constants.SAMPLE_URL
       );
     });
 
-    it("fillFieldWithTextAndPressEnter", () => {
+    it("fillFieldWithTextAndPressEnter", async () => {
       await helper.fillFieldWithTextAndPressEnter(inputField, constants.SAMPLE_URL);
     });
   });
