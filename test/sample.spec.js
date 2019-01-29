@@ -54,10 +54,7 @@ describe("Protractor helper", () => {
     });
 
     it("waitForTextToBePresentInElement", async () => {
-      await helper.waitForTextToBePresentInElement(
-        titleElement,
-        constants.TITLE_TEXT
-      );
+      await helper.waitForTextToBePresentInElement(titleElement, constants.TITLE_TEXT);
     });
   });
 
@@ -86,10 +83,7 @@ describe("Protractor helper", () => {
     });
 
     it("uploadFileIntoInputField", async () => {
-      await helper.uploadFileIntoInputField(
-        inputFile,
-        constants.ABSOLUTE_PATH_OF_INDEX_FILE
-      );
+      await helper.uploadFileIntoInputField(inputFile, constants.ABSOLUTE_PATH_OF_INDEX_FILE);
     });
 
     it("clearFieldWhenVisible", async () => {
@@ -104,10 +98,7 @@ describe("Protractor helper", () => {
 
     it("clearFieldWhenVisibleAndFillItWithText", async () => {
       await helper.fillFieldWithTextWhenVisible(inputField, constants.SHORTEN_URL);
-      await helper.clearFieldWhenVisibleAndFillItWithText(
-        inputField,
-        constants.SAMPLE_URL
-      );
+      await helper.clearFieldWhenVisibleAndFillItWithText(inputField, constants.SAMPLE_URL);
     });
 
     it("clearFieldAndFillItWithText", async () => {
@@ -124,10 +115,7 @@ describe("Protractor helper", () => {
     });
 
     it("fillFieldWithTextWhenVisibleAndPressEnter", async () => {
-      await helper.fillFieldWithTextWhenVisibleAndPressEnter(
-        inputField,
-        constants.SAMPLE_URL
-      );
+      await helper.fillFieldWithTextWhenVisibleAndPressEnter(inputField, constants.SAMPLE_URL);
     });
 
     it("fillFieldWithTextAndPressEnter", async () => {

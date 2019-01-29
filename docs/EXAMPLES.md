@@ -316,10 +316,7 @@ const protractorHelper = require("protractor-helper");
 describe("foo", () => {
   it("bar", () => {
     const relativePathOfFileToUpload = "../assets/someFile.png";
-    const absolutePathOfFileToUpload = path.resolve(
-      __dirname,
-      relativePathOfFileToUpload
-    );
+    const absolutePathOfFileToUpload = path.resolve(__dirname, relativePathOfFileToUpload);
 
     await browser.get("https://example.com");
 
@@ -350,20 +347,13 @@ const protractorHelper = require("protractor-helper");
 describe("foo", () => {
   it("bar", () => {
     const relativePathOfFileToUpload = "../assets/someFile.png";
-    const absolutePathOfFileToUpload = path.resolve(
-      __dirname,
-      relativePathOfFileToUpload
-    );
+    const absolutePathOfFileToUpload = path.resolve(__dirname, relativePathOfFileToUpload);
 
     browser.get("https://example.com");
 
     const fileInputField = element(by.css("input.file-input"));
 
-    protractorHelper.uploadFileIntoInputField(
-      fileInputField,
-      absolutePathOfFileToUpload,
-      3000
-    );
+    protractorHelper.uploadFileIntoInputField(fileInputField, absolutePathOfFileToUpload, 3000);
 
     // ...
   });
@@ -727,11 +717,7 @@ describe("foo", () => {
 
     const textField = element(by.css("input.some-text-field"));
 
-    protractorHelper.fillFieldWithTextAndPressEnter(
-      textField,
-      "some text",
-      3000
-    );
+    protractorHelper.fillFieldWithTextAndPressEnter(textField, "some text", 3000);
 
     // ...
   });
