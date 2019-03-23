@@ -1,6 +1,7 @@
 const EC = protractor.ExpectedConditions;
 
 const constants = require("./constants_and_utils/constants");
+const messageBuilder = require("./constants_and_utils/messageBuilder");
 const utils = require("./constants_and_utils/utils");
 
 const config = { timeoutInMilliseconds: constants.DEFAULT_TIMEOUT_IN_MS };
@@ -32,7 +33,7 @@ const isCurrentUrlDifferentFromBaseUrl = function() {
 const waitForElementPresence = function(
   htmlElement = utils.requiredParam(waitForElementPresence),
   timeoutInMilliseconds = config.timeoutInMilliseconds,
-  errorMessage = utils.getDefaultIsNotPresentMessage(htmlElement)
+  errorMessage = messageBuilder.getDefaultIsNotPresentMessage(htmlElement)
 ) {
   browser.wait(EC.presenceOf(htmlElement), timeoutInMilliseconds, errorMessage);
 };
@@ -40,9 +41,7 @@ const waitForElementPresence = function(
 const waitForElementNotToBePresent = function(
   htmlElement = utils.requiredParam(waitForElementNotToBePresent),
   timeoutInMilliseconds = config.timeoutInMilliseconds,
-  errorMessage = `${constants.ELEMENT_WITH_LOCATOR_MESSAGE} '${
-    htmlElement.parentElementArrayFinder.locator_
-  }' ${constants.IS_STILL_PRESENT_MESSAGE}.`
+  errorMessage = messageBuilder.getDefaultIsStillPresentMessage(htmlElement)
 ) {
   browser.wait(
     EC.stalenessOf(htmlElement),
@@ -54,7 +53,7 @@ const waitForElementNotToBePresent = function(
 const waitForElementVisibility = function(
   htmlElement = utils.requiredParam(waitForElementVisibility),
   timeoutInMilliseconds = config.timeoutInMilliseconds,
-  errorMessage = utils.getDefaultIsNotVisibleMessage(htmlElement)
+  errorMessage = messageBuilder.getDefaultIsNotVisibleMessage(htmlElement)
 ) {
   browser.wait(
     EC.visibilityOf(htmlElement),
@@ -66,9 +65,7 @@ const waitForElementVisibility = function(
 const waitForElementNotToBeVisible = function(
   htmlElement = utils.requiredParam(waitForElementNotToBeVisible),
   timeoutInMilliseconds = config.timeoutInMilliseconds,
-  errorMessage = `${constants.ELEMENT_WITH_LOCATOR_MESSAGE} '${
-    htmlElement.parentElementArrayFinder.locator_
-  }' ${constants.IS_STILL_VISIBLE_MESSAGE}.`
+  errorMessage = messageBuilder.getDefaultIsStillVisibleMessage(htmlElement)
 ) {
   browser.wait(
     EC.invisibilityOf(htmlElement),
@@ -80,7 +77,7 @@ const waitForElementNotToBeVisible = function(
 const clickWhenClickable = function(
   htmlElement = utils.requiredParam(clickWhenClickable),
   timeoutInMilliseconds = config.timeoutInMilliseconds,
-  errorMessage = utils.getDefaultIsNotClickableMessage(htmlElement)
+  errorMessage = messageBuilder.getDefaultIsNotClickableMessage(htmlElement)
 ) {
   utils.waitForElementToBeClickable(
     htmlElement,
@@ -97,7 +94,7 @@ const click = function(
   utils.waitForElementToBeClickable(
     htmlElement,
     timeoutInMilliseconds,
-    utils.getDefaultIsNotClickableMessage(htmlElement)
+    messageBuilder.getDefaultIsNotClickableMessage(htmlElement)
   );
   htmlElement.click();
 };
@@ -106,7 +103,7 @@ const fillFieldWithTextWhenVisible = function(
   htmlElement = utils.requiredParam(fillFieldWithTextWhenVisible),
   text = utils.requiredParam(fillFieldWithTextWhenVisible, "text"),
   timeoutInMilliseconds = config.timeoutInMilliseconds,
-  errorMessage = utils.getDefaultIsNotVisibleMessage(htmlElement)
+  errorMessage = messageBuilder.getDefaultIsNotVisibleMessage(htmlElement)
 ) {
   this.waitForElementVisibility(
     htmlElement,
@@ -124,7 +121,7 @@ const fillFieldWithText = function(
   this.waitForElementVisibility(
     htmlElement,
     timeoutInMilliseconds,
-    utils.getDefaultIsNotVisibleMessage(htmlElement)
+    messageBuilder.getDefaultIsNotVisibleMessage(htmlElement)
   );
   htmlElement.sendKeys(text);
 };
@@ -136,7 +133,7 @@ const fillInputFieldWithFileWhenPresent = function(
     "absolutePath"
   ),
   timeoutInMilliseconds = config.timeoutInMilliseconds,
-  errorMessage = utils.getDefaultIsNotPresentMessage(htmlElement)
+  errorMessage = messageBuilder.getDefaultIsNotPresentMessage(htmlElement)
 ) {
   this.waitForElementPresence(htmlElement, timeoutInMilliseconds, errorMessage);
   htmlElement.sendKeys(absolutePath);
@@ -144,13 +141,12 @@ const fillInputFieldWithFileWhenPresent = function(
 
 const uploadFileIntoInputField = function(
   htmlElement = utils.requiredParam(uploadFileIntoInputField),
-  absolutePath = utils.requiredParam(
-    uploadFileIntoInputField,
-    "absolutePath"
-  ),
+  absolutePath = utils.requiredParam(uploadFileIntoInputField, "absolutePath"),
   timeoutInMilliseconds = config.timeoutInMilliseconds
 ) {
-  const errorMessage = utils.getDefaultIsNotPresentMessage(htmlElement);
+  const errorMessage = messageBuilder.getDefaultIsNotPresentMessage(
+    htmlElement
+  );
 
   this.waitForElementPresence(htmlElement, timeoutInMilliseconds, errorMessage);
   htmlElement.sendKeys(absolutePath);
@@ -159,7 +155,7 @@ const uploadFileIntoInputField = function(
 const clearFieldWhenVisible = function(
   htmlElement = utils.requiredParam(clearFieldWhenVisible),
   timeoutInMilliseconds = config.timeoutInMilliseconds,
-  errorMessage = utils.getDefaultIsNotVisibleMessage(htmlElement)
+  errorMessage = messageBuilder.getDefaultIsNotVisibleMessage(htmlElement)
 ) {
   this.waitForElementVisibility(
     htmlElement,
@@ -176,7 +172,7 @@ const clear = function(
   this.waitForElementVisibility(
     htmlElement,
     timeoutInMilliseconds,
-    utils.getDefaultIsNotVisibleMessage(htmlElement)
+    messageBuilder.getDefaultIsNotVisibleMessage(htmlElement)
   );
   htmlElement.clear();
 };
@@ -185,7 +181,7 @@ const clearFieldWhenVisibleAndFillItWithText = function(
   htmlElement = utils.requiredParam(clearFieldWhenVisibleAndFillItWithText),
   text = utils.requiredParam(clearFieldWhenVisibleAndFillItWithText, "text"),
   timeoutInMilliseconds = config.timeoutInMilliseconds,
-  errorMessage = utils.getDefaultIsNotVisibleMessage(htmlElement)
+  errorMessage = messageBuilder.getDefaultIsNotVisibleMessage(htmlElement)
 ) {
   this.clearFieldWhenVisible(htmlElement, timeoutInMilliseconds, errorMessage);
   this.fillFieldWithTextWhenVisible(
@@ -202,21 +198,13 @@ const clearFieldAndFillItWithText = function(
   timeoutInMilliseconds = config.timeoutInMilliseconds
 ) {
   this.clear(htmlElement, timeoutInMilliseconds);
-  this.fillFieldWithText(
-    htmlElement,
-    text,
-    timeoutInMilliseconds
-  );
+  this.fillFieldWithText(htmlElement, text, timeoutInMilliseconds);
 };
 
 const tapWhenTappable = function(
   htmlElement = utils.requiredParam(tapWhenTappable),
   timeoutInMilliseconds = config.timeoutInMilliseconds,
-  errorMessage = `${constants.ELEMENT_WITH_LOCATOR_MESSAGE} '${
-    htmlElement.parentElementArrayFinder.locator_
-  }' ${constants.IS_NOT_TAPPABLE_MESSAGE}. ${
-    constants.POSSIBLE_IT_IS_NOT_PRESENT_OR_VISIBLE_MESSAGE
-  }, ${constants.OR_IT_MAY_BE_DISABLED_MESSAGE}.`
+  errorMessage = messageBuilder.getDefaultIsNotTappableMessage(htmlElement)
 ) {
   utils.waitForElementToBeClickable(
     htmlElement,
@@ -231,13 +219,11 @@ const tapWhenTappable = function(
 
 const tap = function(
   htmlElement = utils.requiredParam(tap),
-  timeoutInMilliseconds = config.timeoutInMilliseconds,
+  timeoutInMilliseconds = config.timeoutInMilliseconds
 ) {
-  const errorMessage = `${constants.ELEMENT_WITH_LOCATOR_MESSAGE} '${
-    htmlElement.parentElementArrayFinder.locator_
-  }' ${constants.IS_NOT_TAPPABLE_MESSAGE}. ${
-    constants.POSSIBLE_IT_IS_NOT_PRESENT_OR_VISIBLE_MESSAGE
-  }, ${constants.OR_IT_MAY_BE_DISABLED_MESSAGE}.`;
+  const errorMessage = messageBuilder.getDefaultIsNotTappableMessage(
+    htmlElement
+  );
 
   utils.waitForElementToBeClickable(
     htmlElement,
@@ -254,9 +240,10 @@ const waitForTextToBePresentInElement = function(
   htmlElement = utils.requiredParam(waitForTextToBePresentInElement),
   text = utils.requiredParam(waitForTextToBePresentInElement, "text"),
   timeoutInMilliseconds = config.timeoutInMilliseconds,
-  errorMessage = `text '${text}' not present on ${
-    constants.ELEMENT_WITH_LOCATOR_MESSAGE
-  } '${htmlElement.parentElementArrayFinder.locator_}'.`
+  errorMessage = messageBuilder.getDefaultTextTextNotPresentOnElementMessage(
+    htmlElement,
+    text
+  )
 ) {
   browser.wait(
     EC.textToBePresentInElement(htmlElement, text),
@@ -269,9 +256,10 @@ const waitForTextNotToBePresentInElement = function(
   htmlElement = utils.requiredParam(waitForTextNotToBePresentInElement),
   text = utils.requiredParam(waitForTextNotToBePresentInElement, "text"),
   timeoutInMilliseconds = config.timeoutInMilliseconds,
-  errorMessage = `text '${text}' is still present on ${
-    constants.ELEMENT_WITH_LOCATOR_MESSAGE
-  } '${htmlElement.parentElementArrayFinder.locator_}'.`
+  errorMessage = messageBuilder.getDeafultTextTextIsStillPresentOnElementMessage(
+    htmlElement,
+    text
+  )
 ) {
   browser.wait(
     EC.not(EC.textToBePresentInElement(htmlElement, text)),
@@ -286,7 +274,9 @@ const waitForUrlToBeEqualToExpectedUrl = function(
     "expectedUrl"
   ),
   timeoutInMilliseconds = config.timeoutInMilliseconds,
-  errorMessage = `current URL is different than expected URL: '${expectedUrl}'.`
+  errorMessage = messageBuilder.getDefaultCurrentUrlIsDifferentThanExpectedUrlMessage(
+    expectedUrl
+  )
 ) {
   browser.wait(EC.urlIs(expectedUrl), timeoutInMilliseconds, errorMessage);
 };
@@ -297,7 +287,9 @@ const waitForUrlNotToBeEqualToExpectedUrl = function(
     "expectedUrl"
   ),
   timeoutInMilliseconds = config.timeoutInMilliseconds,
-  errorMessage = `current URL is equal to expected URL: '${expectedUrl}'.`
+  errorMessage = messageBuilder.getDefaultCurrentUrlIsEqualToExpectedUrlMessage(
+    expectedUrl
+  )
 ) {
   browser.wait(
     EC.not(EC.urlIs(expectedUrl)),
@@ -309,7 +301,9 @@ const waitForUrlNotToBeEqualToExpectedUrl = function(
 const waitForUrlToContainString = function(
   string = utils.requiredParam(waitForUrlToContainString, "string"),
   timeoutInMilliseconds = config.timeoutInMilliseconds,
-  errorMessage = `current URL does not contains the string '${string}'.`
+  errorMessage = messageBuilder.getDefaultCurrentUrlDoesNotContainStringMessage(
+    string
+  )
 ) {
   browser.wait(EC.urlContains(string), timeoutInMilliseconds, errorMessage);
 };
@@ -317,7 +311,7 @@ const waitForUrlToContainString = function(
 const waitForUrlNotToContainString = function(
   string = utils.requiredParam(waitForUrlNotToContainString, "string"),
   timeoutInMilliseconds = config.timeoutInMilliseconds,
-  errorMessage = `current URL contains the string '${string}'.`
+  errorMessage = messageBuilder.getDefaultCurrentUrlContainsTheString(string)
 ) {
   browser.wait(
     EC.not(EC.urlContains(string)),
@@ -330,7 +324,7 @@ const fillFieldWithTextWhenVisibleAndPressEnter = function(
   htmlElement = utils.requiredParam(fillFieldWithTextWhenVisibleAndPressEnter),
   text = utils.requiredParam(fillFieldWithTextWhenVisibleAndPressEnter, "text"),
   timeoutInMilliseconds = config.timeoutInMilliseconds,
-  errorMessage = utils.getDefaultIsNotVisibleMessage(htmlElement)
+  errorMessage = messageBuilder.getDefaultIsNotVisibleMessage(htmlElement)
 ) {
   this.fillFieldWithTextWhenVisible(
     htmlElement,
@@ -355,7 +349,7 @@ const fillFieldWithTextAndPressEnter = function(
 const scrollToElementWhenVisible = function(
   htmlElement = utils.requiredParam(scrollToElementWhenVisible),
   timeoutInMilliseconds = config.timeoutInMilliseconds,
-  errorMessage = utils.getDefaultIsNotVisibleMessage(htmlElement)
+  errorMessage = messageBuilder.getDefaultIsNotVisibleMessage(htmlElement)
 ) {
   this.waitForElementVisibility(
     htmlElement,
@@ -372,7 +366,7 @@ const scrollToElement = function(
   this.waitForElementVisibility(
     htmlElement,
     timeoutInMilliseconds,
-    utils.getDefaultIsNotVisibleMessage(htmlElement)
+    messageBuilder.getDefaultIsNotVisibleMessage(htmlElement)
   );
   browser.executeScript("arguments[0].scrollIntoView(true);", htmlElement);
 };
