@@ -11,7 +11,7 @@ main {
 
 h1 {
   height: 38px;
-  font-family: Roboto;
+  font-family: Roboto, serif;
   font-size: 32px;
   font-weight: 300;
   letter-spacing: 0.6px;
@@ -41,7 +41,7 @@ h1 {
   background-color: inherit;
   display: block;
   margin: auto;
-  font-family: Source Sans Pro;
+  font-family: Source Sans Pro, serif;
   font-size: 14px;
   letter-spacing: 0.2px;
   text-align: center;
@@ -55,7 +55,7 @@ h1 {
   border: solid 0.8px #1f233e;
   background-color: inherit;
   margin-top: 48px;
-  font-family: Source Sans Pro;
+  font-family: Source Sans Pro, serif;
   font-size: 14px;
   letter-spacing: 0.2px;
   text-align: center;
@@ -70,7 +70,7 @@ h1 {
   background-color: #1f233e;
   border: solid 0.8px #4a4a4a;
   margin-top: 48px;
-  font-family: Source Sans Pro;
+  font-family: Source Sans Pro, serif;
   font-size: 14px;
   letter-spacing: 0.2px;
   text-align: center;
@@ -84,7 +84,7 @@ h1 {
   border: solid 2px #ffffff;
   margin: auto;
   margin-top: 25px;
-  font-family: Source Sans Pro;
+  font-family: Source Sans Pro, serif;
   font-size: 16px;
   letter-spacing: 0.2px;
   text-align: center;
@@ -97,7 +97,7 @@ a {
 }
 
 #file-upload {
-  font-family: Source Sans Pro;
+  font-family: Source Sans Pro, serif;
   padding-top: 25px;
 }
 
