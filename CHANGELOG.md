@@ -1,3 +1,23 @@
+# 3.7.3
+
+## package.json
+
+- update lib's patch version
+
+## package-lock.json
+
+- update lib's version on package-lock file
+
+## Documentation
+
+- update changelog with info about the latest patch version
+
+## JavaScript files
+
+- Update main file to use message builder
+- Remove from utils functions moved to message builder
+- Create message builder to address issue #19
+
 # 3.7.2
 
 ## package.json
