@@ -23,7 +23,7 @@
   "author": "Walmyr Filho <wlsf82@gmail.com> (http://walmyr-filho.com)",
   "license": "MIT",
   "peerDependencies": {
-    "protractor": ">= 5.0.0"
+    "protractor": ">= 5.0.0 < 6"
   },
   "devDependencies": {
     "pre-commit": "^1.2.2",
