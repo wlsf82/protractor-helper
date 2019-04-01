@@ -1,3 +1,31 @@
+# 3.7.4
+
+## package.json
+
+- Update prettier config to allow longer lines of code
+- Update lib's patch version
+- Update peerDependencies to be less than protractor 6
+
+## package-lock.json
+
+- Update lib's version on package-lock file
+- Update dependencies on package-lock file
+
+## Documentation
+
+- Update changelog with info about the latest patch version
+
+## JavaScript files
+
+- Move sample app to test directory since it is only used by tests
+- Move directory only used by src files to src directory
+- Prettify files based on new prettier config
+- Update main file to use files from src
+- Separate other functions into misc file
+- Separate clickers and tapper functions into their on file
+- Separate input field interaction functions into their on file
+- Separate waiter functions into their on file
+
 # 3.7.3
 
 ## package.json
