@@ -1,9 +1,6 @@
 const path = require("path");
 
-const absolutePathOfIndexFile = path.resolve(
-  __dirname,
-  "../sampleApp/index.html"
-);
+const absolutePathOfIndexFile = path.resolve(__dirname, "../sampleApp/index.html");
 
 const constants = {
   ABSOLUTE_PATH_OF_INDEX_FILE: absolutePathOfIndexFile,

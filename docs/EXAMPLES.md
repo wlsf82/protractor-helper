@@ -51,9 +51,7 @@ describe("foo", () => {
   it("bar", () => {
     browser.get("https://example.com");
 
-    protractorHelper
-      .getBodyElementFromCurrentBrowserOrBrowserInstance()
-      .click();
+    protractorHelper.getBodyElementFromCurrentBrowserOrBrowserInstance().click();
 
     // ...
   });
@@ -73,13 +71,9 @@ describe("foo", () => {
   it("bar", () => {
     browser.get("https://example.com");
 
-    const anotherBrowser = protractorHelper.openNewBrowserInTheSamePage(
-      browser
-    );
+    const anotherBrowser = protractorHelper.openNewBrowserInTheSamePage(browser);
 
-    const textFieldFromAnotherBrowser = anotherBrowser.element(
-      by.id("text-field-id")
-    );
+    const textFieldFromAnotherBrowser = anotherBrowser.element(by.id("text-field-id"));
 
     textFieldFromAnotherBrowser.sendKeys("foobarbaz");
 
@@ -129,11 +123,7 @@ describe("foo", () => {
 
     const myElement = element(by.className("foo"));
 
-    protractorHelper.waitForElementPresence(
-      myElement,
-      3000,
-      "my element is not present"
-    );
+    protractorHelper.waitForElementPresence(myElement, 3000, "my element is not present");
 
     // ...
   });
@@ -155,11 +145,7 @@ describe("foo", () => {
 
     const myElement = element(by.className("foo"));
 
-    protractorHelper.waitForElementNotToBePresent(
-      myElement,
-      3000,
-      "my element is still present"
-    );
+    protractorHelper.waitForElementNotToBePresent(myElement, 3000, "my element is still present");
 
     // ...
   });
@@ -181,11 +167,7 @@ describe("foo", () => {
 
     const myElement = element(by.className("foo"));
 
-    protractorHelper.waitForElementVisibility(
-      myElement,
-      3000,
-      "my element not visible"
-    );
+    protractorHelper.waitForElementVisibility(myElement, 3000, "my element not visible");
 
     // ...
   });
@@ -207,11 +189,7 @@ describe("foo", () => {
 
     const myElement = element(by.className("foo"));
 
-    protractorHelper.waitForElementNotToBeVisible(
-      myElement,
-      3000,
-      "my element is still visible"
-    );
+    protractorHelper.waitForElementNotToBeVisible(myElement, 3000, "my element is still visible");
 
     // ...
   });
@@ -235,11 +213,7 @@ describe("foo", () => {
 
     const myLink = element(by.css("a.my-link"));
 
-    protractorHelper.clickWhenClickable(
-      myLink,
-      3000,
-      "my link is not clickable"
-    );
+    protractorHelper.clickWhenClickable(myLink, 3000, "my link is not clickable");
 
     // ...
   });
@@ -285,12 +259,7 @@ describe("foo", () => {
 
     const textField = element(by.css("input.some-text-field"));
 
-    protractorHelper.fillFieldWithTextWhenVisible(
-      textField,
-      "some text",
-      3000,
-      "textField is not visible"
-    );
+    protractorHelper.fillFieldWithTextWhenVisible(textField, "some text", 3000, "textField is not visible");
 
     // ...
   });
@@ -334,10 +303,7 @@ const protractorHelper = require("protractor-helper");
 describe("foo", () => {
   it("bar", () => {
     const relativePathOfFileToUpload = "../assets/someFile.png";
-    const absolutePathOfFileToUpload = path.resolve(
-      __dirname,
-      relativePathOfFileToUpload
-    );
+    const absolutePathOfFileToUpload = path.resolve(__dirname, relativePathOfFileToUpload);
 
     browser.get("https://example.com");
 
@@ -368,20 +334,13 @@ const protractorHelper = require("protractor-helper");
 describe("foo", () => {
   it("bar", () => {
     const relativePathOfFileToUpload = "../assets/someFile.png";
-    const absolutePathOfFileToUpload = path.resolve(
-      __dirname,
-      relativePathOfFileToUpload
-    );
+    const absolutePathOfFileToUpload = path.resolve(__dirname, relativePathOfFileToUpload);
 
     browser.get("https://example.com");
 
     const fileInputField = element(by.css("input.file-input"));
 
-    protractorHelper.uploadFileIntoInputField(
-      fileInputField,
-      absolutePathOfFileToUpload,
-      3000
-    );
+    protractorHelper.uploadFileIntoInputField(fileInputField, absolutePathOfFileToUpload, 3000);
 
     // ...
   });
@@ -406,11 +365,7 @@ describe("foo", () => {
     const textField = element(by.css("input.some-text-field"));
 
     textField.sendKeys("foobar");
-    protractorHelper.clearFieldWhenVisible(
-      textField,
-      3000,
-      "textField is not visible"
-    );
+    protractorHelper.clearFieldWhenVisible(textField, 3000, "textField is not visible");
 
     // ...
   });
@@ -457,12 +412,7 @@ describe("foo", () => {
 
     const textField = element(by.css("input.some-text-field"));
 
-    protractorHelper.clearFieldWhenVisibleAndFillItWithText(
-      textField,
-      "some text",
-      3000,
-      "textField is not visible"
-    );
+    protractorHelper.clearFieldWhenVisibleAndFillItWithText(textField, "some text", 3000, "textField is not visible");
 
     // ...
   });
@@ -510,11 +460,7 @@ describe("foo", () => {
 
     const myButton = element(by.id("my-button"));
 
-    protractorHelper.tapWhenTappable(
-      myButton,
-      3000,
-      "myButton is not tappable"
-    );
+    protractorHelper.tapWhenTappable(myButton, 3000, "myButton is not tappable");
 
     // ...
   });
@@ -646,11 +592,7 @@ describe("foo", () => {
 
     goToContactPageButton.click();
 
-    protractorHelper.waitForUrlNotToBeEqualToExpectedUrl(
-      homePageUrl,
-      3000,
-      "URL is equal to " + homePageUrl
-    );
+    protractorHelper.waitForUrlNotToBeEqualToExpectedUrl(homePageUrl, 3000, "URL is equal to " + homePageUrl);
 
     // ...
   });
@@ -674,11 +616,7 @@ describe("foo", () => {
 
     goToContactPageButton.click();
 
-    protractorHelper.waitForUrlToContainString(
-      "contact",
-      3000,
-      "URL does not contains the string 'contact'"
-    );
+    protractorHelper.waitForUrlToContainString("contact", 3000, "URL does not contains the string 'contact'");
 
     // ...
   });
@@ -698,11 +636,7 @@ describe("foo", () => {
   it("bar", () => {
     browser.get("https://example.com");
 
-    protractorHelper.waitForUrlNotToContainString(
-      "foobarbaz",
-      3000,
-      "URL contains the string 'foobarbaz'"
-    );
+    protractorHelper.waitForUrlNotToContainString("foobarbaz", 3000, "URL contains the string 'foobarbaz'");
 
     // ...
   });
@@ -753,11 +687,7 @@ describe("foo", () => {
 
     const textField = element(by.css("input.some-text-field"));
 
-    protractorHelper.fillFieldWithTextAndPressEnter(
-      textField,
-      "some text",
-      3000
-    );
+    protractorHelper.fillFieldWithTextAndPressEnter(textField, "some text", 3000);
 
     // ...
   });
@@ -781,11 +711,7 @@ describe("foo", () => {
 
     const myLink = element(by.css("a.my-link"));
 
-    protractorHelper.scrollToElementWhenVisible(
-      myLink,
-      3000,
-      "my link is not visible"
-    );
+    protractorHelper.scrollToElementWhenVisible(myLink, 3000, "my link is not visible");
 
     // ...
   });

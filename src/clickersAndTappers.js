@@ -10,18 +10,11 @@ const clickWhenClickable = function(
   timeoutInMilliseconds = config.timeoutInMilliseconds,
   errorMessage = messageBuilder.getDefaultIsNotClickableMessage(htmlElement)
 ) {
-  utils.waitForElementToBeClickable(
-    htmlElement,
-    timeoutInMilliseconds,
-    errorMessage
-  );
+  utils.waitForElementToBeClickable(htmlElement, timeoutInMilliseconds, errorMessage);
   htmlElement.click();
 };
 
-const click = function(
-  htmlElement = utils.requiredParam(click),
-  timeoutInMilliseconds = config.timeoutInMilliseconds
-) {
+const click = function(htmlElement = utils.requiredParam(click), timeoutInMilliseconds = config.timeoutInMilliseconds) {
   utils.waitForElementToBeClickable(
     htmlElement,
     timeoutInMilliseconds,
@@ -35,30 +28,17 @@ const tapWhenTappable = function(
   timeoutInMilliseconds = config.timeoutInMilliseconds,
   errorMessage = messageBuilder.getDefaultIsNotTappableMessage(htmlElement)
 ) {
-  utils.waitForElementToBeClickable(
-    htmlElement,
-    timeoutInMilliseconds,
-    errorMessage
-  );
+  utils.waitForElementToBeClickable(htmlElement, timeoutInMilliseconds, errorMessage);
   browser
     .touchActions()
     .tap(htmlElement)
     .perform();
 };
 
-const tap = function(
-  htmlElement = utils.requiredParam(tap),
-  timeoutInMilliseconds = config.timeoutInMilliseconds
-) {
-  const errorMessage = messageBuilder.getDefaultIsNotTappableMessage(
-    htmlElement
-  );
+const tap = function(htmlElement = utils.requiredParam(tap), timeoutInMilliseconds = config.timeoutInMilliseconds) {
+  const errorMessage = messageBuilder.getDefaultIsNotTappableMessage(htmlElement);
 
-  utils.waitForElementToBeClickable(
-    htmlElement,
-    timeoutInMilliseconds,
-    errorMessage
-  );
+  utils.waitForElementToBeClickable(htmlElement, timeoutInMilliseconds, errorMessage);
   browser
     .touchActions()
     .tap(htmlElement)
