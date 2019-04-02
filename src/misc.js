@@ -1,6 +1,6 @@
-const constants = require("../constants_and_utils/constants");
-const messageBuilder = require("../constants_and_utils/messageBuilder");
-const utils = require("../constants_and_utils/utils");
+const constants = require("./constants_and_utils/constants");
+const messageBuilder = require("./constants_and_utils/messageBuilder");
+const utils = require("./constants_and_utils/utils");
 const waiters = require("./waiters");
 
 const config = { timeoutInMilliseconds: constants.DEFAULT_TIMEOUT_IN_MS };
