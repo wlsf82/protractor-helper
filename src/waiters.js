@@ -1,8 +1,8 @@
 const EC = protractor.ExpectedConditions;
 
-const constants = require("../constants_and_utils/constants");
-const messageBuilder = require("../constants_and_utils/messageBuilder");
-const utils = require("../constants_and_utils/utils");
+const constants = require("./constants_and_utils/constants");
+const messageBuilder = require("./constants_and_utils/messageBuilder");
+const utils = require("./constants_and_utils/utils");
 
 const config = { timeoutInMilliseconds: constants.DEFAULT_TIMEOUT_IN_MS };
 
