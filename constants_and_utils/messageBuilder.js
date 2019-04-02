@@ -17,55 +17,51 @@ function getDefaultCurrentUrlIsEqualToExpectedUrlMessage(expectedUrl) {
 }
 
 function getDefaultIsNotClickableMessage(htmlElement) {
-  return `${constants.ELEMENT_WITH_LOCATOR_MESSAGE} '${
-    htmlElement.parentElementArrayFinder.locator_
-  }' ${constants.IS_NOT_CLICKABLE_MESSAGE}. ${
-    constants.POSSIBLE_IT_IS_NOT_PRESENT_OR_VISIBLE_MESSAGE
-  }, ${constants.OR_IT_MAY_BE_DISABLED_MESSAGE}.`;
+  return `${constants.ELEMENT_WITH_LOCATOR_MESSAGE} '${htmlElement.parentElementArrayFinder.locator_}' ${
+    constants.IS_NOT_CLICKABLE_MESSAGE
+  }. ${constants.POSSIBLE_IT_IS_NOT_PRESENT_OR_VISIBLE_MESSAGE}, ${constants.OR_IT_MAY_BE_DISABLED_MESSAGE}.`;
 }
 
 function getDefaultIsNotPresentMessage(htmlElement) {
-  return `${constants.ELEMENT_WITH_LOCATOR_MESSAGE} '${
-    htmlElement.parentElementArrayFinder.locator_
-  }' ${constants.IS_NOT_PRESENT_MESSAGE}.`;
+  return `${constants.ELEMENT_WITH_LOCATOR_MESSAGE} '${htmlElement.parentElementArrayFinder.locator_}' ${
+    constants.IS_NOT_PRESENT_MESSAGE
+  }.`;
 }
 
 function getDefaultIsNotVisibleMessage(htmlElement) {
-  return `${constants.ELEMENT_WITH_LOCATOR_MESSAGE} '${
-    htmlElement.parentElementArrayFinder.locator_
-  }' ${constants.IS_NOT_VISIBLE_MESSAGE}.`;
+  return `${constants.ELEMENT_WITH_LOCATOR_MESSAGE} '${htmlElement.parentElementArrayFinder.locator_}' ${
+    constants.IS_NOT_VISIBLE_MESSAGE
+  }.`;
 }
 
 function getDefaultIsStillPresentMessage(htmlElement) {
-  return `${constants.ELEMENT_WITH_LOCATOR_MESSAGE} '${
-    htmlElement.parentElementArrayFinder.locator_
-  }' ${constants.IS_STILL_PRESENT_MESSAGE}.`;
+  return `${constants.ELEMENT_WITH_LOCATOR_MESSAGE} '${htmlElement.parentElementArrayFinder.locator_}' ${
+    constants.IS_STILL_PRESENT_MESSAGE
+  }.`;
 }
 
 function getDefaultIsNotTappableMessage(htmlElement) {
-  return `${constants.ELEMENT_WITH_LOCATOR_MESSAGE} '${
-    htmlElement.parentElementArrayFinder.locator_
-  }' ${constants.IS_NOT_TAPPABLE_MESSAGE}. ${
-    constants.POSSIBLE_IT_IS_NOT_PRESENT_OR_VISIBLE_MESSAGE
-  }, ${constants.OR_IT_MAY_BE_DISABLED_MESSAGE}.`;
+  return `${constants.ELEMENT_WITH_LOCATOR_MESSAGE} '${htmlElement.parentElementArrayFinder.locator_}' ${
+    constants.IS_NOT_TAPPABLE_MESSAGE
+  }. ${constants.POSSIBLE_IT_IS_NOT_PRESENT_OR_VISIBLE_MESSAGE}, ${constants.OR_IT_MAY_BE_DISABLED_MESSAGE}.`;
 }
 
 function getDefaultIsStillVisibleMessage(htmlElement) {
-  return `${constants.ELEMENT_WITH_LOCATOR_MESSAGE} '${
-    htmlElement.parentElementArrayFinder.locator_
-  }' ${constants.IS_STILL_VISIBLE_MESSAGE}.`;
+  return `${constants.ELEMENT_WITH_LOCATOR_MESSAGE} '${htmlElement.parentElementArrayFinder.locator_}' ${
+    constants.IS_STILL_VISIBLE_MESSAGE
+  }.`;
 }
 
 function getDeafultTextTextIsStillPresentOnElementMessage(htmlElement, text) {
-  return `text '${text}' is still present on ${
-    constants.ELEMENT_WITH_LOCATOR_MESSAGE
-  } '${htmlElement.parentElementArrayFinder.locator_}'.`;
+  return `text '${text}' is still present on ${constants.ELEMENT_WITH_LOCATOR_MESSAGE} '${
+    htmlElement.parentElementArrayFinder.locator_
+  }'.`;
 }
 
 function getDefaultTextTextNotPresentOnElementMessage(htmlElement, text) {
-  return `text '${text}' not present on ${
-    constants.ELEMENT_WITH_LOCATOR_MESSAGE
-  } '${htmlElement.parentElementArrayFinder.locator_}'.`;
+  return `text '${text}' not present on ${constants.ELEMENT_WITH_LOCATOR_MESSAGE} '${
+    htmlElement.parentElementArrayFinder.locator_
+  }'.`;
 }
 
 module.exports = {

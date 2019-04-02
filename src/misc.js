@@ -5,9 +5,7 @@ const waiters = require("./waiters");
 
 const config = { timeoutInMilliseconds: constants.DEFAULT_TIMEOUT_IN_MS };
 
-const getBodyElementFromCurrentBrowserOrBrowserInstance = function(
-  browserInstance
-) {
+const getBodyElementFromCurrentBrowserOrBrowserInstance = function(browserInstance) {
   const cssSelector = "body";
 
   if (browserInstance) {
@@ -17,9 +15,7 @@ const getBodyElementFromCurrentBrowserOrBrowserInstance = function(
   }
 };
 
-const openNewBrowserInTheSamePage = function(
-  browser = requiredParam(openNewBrowserInTheSamePage, "browser")
-) {
+const openNewBrowserInTheSamePage = function(browser = requiredParam(openNewBrowserInTheSamePage, "browser")) {
   return browser.forkNewDriverInstance(true);
 };
 
@@ -34,11 +30,7 @@ const scrollToElementWhenVisible = function(
   timeoutInMilliseconds = config.timeoutInMilliseconds,
   errorMessage = messageBuilder.getDefaultIsNotVisibleMessage(htmlElement)
 ) {
-  waiters.waitForElementVisibility(
-    htmlElement,
-    timeoutInMilliseconds,
-    errorMessage
-  );
+  waiters.waitForElementVisibility(htmlElement, timeoutInMilliseconds, errorMessage);
   browser.executeScript("arguments[0].scrollIntoView(true);", htmlElement);
 };
 
@@ -54,9 +46,7 @@ const scrollToElement = function(
   browser.executeScript("arguments[0].scrollIntoView(true);", htmlElement);
 };
 
-const setTimeout = function(
-  timeoutInMilliseconds = constants.DEFAULT_TIMEOUT_IN_MS
-) {
+const setTimeout = function(timeoutInMilliseconds = constants.DEFAULT_TIMEOUT_IN_MS) {
   config.timeoutInMilliseconds = timeoutInMilliseconds;
 };
 

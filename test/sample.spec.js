@@ -23,10 +23,7 @@ describe("Protractor helper", () => {
     });
 
     it("waitForTextNotToBePresentInElement", () => {
-      helper.waitForTextNotToBePresentInElement(
-        titleElement,
-        constants.TEXT_NOT_EXISTING_ON_VISIBLE_ELEMENTS
-      );
+      helper.waitForTextNotToBePresentInElement(titleElement, constants.TEXT_NOT_EXISTING_ON_VISIBLE_ELEMENTS);
     });
 
     it("waitForUrlToBeEqualToExpectedUrl", () => {
@@ -54,10 +51,7 @@ describe("Protractor helper", () => {
     });
 
     it("waitForTextToBePresentInElement", () => {
-      helper.waitForTextToBePresentInElement(
-        titleElement,
-        constants.TITLE_TEXT
-      );
+      helper.waitForTextToBePresentInElement(titleElement, constants.TITLE_TEXT);
     });
   });
 
@@ -79,17 +73,11 @@ describe("Protractor helper", () => {
     });
 
     it("fillInputFieldWithFileWhenPresent", () => {
-      helper.fillInputFieldWithFileWhenPresent(
-        inputFile,
-        constants.ABSOLUTE_PATH_OF_INDEX_FILE
-      );
+      helper.fillInputFieldWithFileWhenPresent(inputFile, constants.ABSOLUTE_PATH_OF_INDEX_FILE);
     });
 
     it("uploadFileIntoInputField", () => {
-      helper.uploadFileIntoInputField(
-        inputFile,
-        constants.ABSOLUTE_PATH_OF_INDEX_FILE
-      );
+      helper.uploadFileIntoInputField(inputFile, constants.ABSOLUTE_PATH_OF_INDEX_FILE);
     });
 
     it("clearFieldWhenVisible", () => {
@@ -104,10 +92,7 @@ describe("Protractor helper", () => {
 
     it("clearFieldWhenVisibleAndFillItWithText", () => {
       helper.fillFieldWithTextWhenVisible(inputField, constants.SHORTEN_URL);
-      helper.clearFieldWhenVisibleAndFillItWithText(
-        inputField,
-        constants.SAMPLE_URL
-      );
+      helper.clearFieldWhenVisibleAndFillItWithText(inputField, constants.SAMPLE_URL);
     });
 
     it("clearFieldAndFillItWithText", () => {
@@ -124,10 +109,7 @@ describe("Protractor helper", () => {
     });
 
     it("fillFieldWithTextWhenVisibleAndPressEnter", () => {
-      helper.fillFieldWithTextWhenVisibleAndPressEnter(
-        inputField,
-        constants.SAMPLE_URL
-      );
+      helper.fillFieldWithTextWhenVisibleAndPressEnter(inputField, constants.SAMPLE_URL);
     });
 
     it("fillFieldWithTextAndPressEnter", () => {

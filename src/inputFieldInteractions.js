@@ -11,11 +11,7 @@ const fillFieldWithTextWhenVisible = function(
   timeoutInMilliseconds = config.timeoutInMilliseconds,
   errorMessage = messageBuilder.getDefaultIsNotVisibleMessage(htmlElement)
 ) {
-  waiters.waitForElementVisibility(
-    htmlElement,
-    timeoutInMilliseconds,
-    errorMessage
-  );
+  waiters.waitForElementVisibility(htmlElement, timeoutInMilliseconds, errorMessage);
   htmlElement.sendKeys(text);
 };
 
@@ -34,18 +30,11 @@ const fillFieldWithText = function(
 
 const fillInputFieldWithFileWhenPresent = function(
   htmlElement = utils.requiredParam(fillInputFieldWithFileWhenPresent),
-  absolutePath = utils.requiredParam(
-    fillInputFieldWithFileWhenPresent,
-    "absolutePath"
-  ),
+  absolutePath = utils.requiredParam(fillInputFieldWithFileWhenPresent, "absolutePath"),
   timeoutInMilliseconds = config.timeoutInMilliseconds,
   errorMessage = messageBuilder.getDefaultIsNotPresentMessage(htmlElement)
 ) {
-  waiters.waitForElementPresence(
-    htmlElement,
-    timeoutInMilliseconds,
-    errorMessage
-  );
+  waiters.waitForElementPresence(htmlElement, timeoutInMilliseconds, errorMessage);
   htmlElement.sendKeys(absolutePath);
 };
 
@@ -54,15 +43,9 @@ const uploadFileIntoInputField = function(
   absolutePath = utils.requiredParam(uploadFileIntoInputField, "absolutePath"),
   timeoutInMilliseconds = config.timeoutInMilliseconds
 ) {
-  const errorMessage = messageBuilder.getDefaultIsNotPresentMessage(
-    htmlElement
-  );
+  const errorMessage = messageBuilder.getDefaultIsNotPresentMessage(htmlElement);
 
-  waiters.waitForElementPresence(
-    htmlElement,
-    timeoutInMilliseconds,
-    errorMessage
-  );
+  waiters.waitForElementPresence(htmlElement, timeoutInMilliseconds, errorMessage);
   htmlElement.sendKeys(absolutePath);
 };
 
@@ -71,18 +54,11 @@ const clearFieldWhenVisible = function(
   timeoutInMilliseconds = config.timeoutInMilliseconds,
   errorMessage = messageBuilder.getDefaultIsNotVisibleMessage(htmlElement)
 ) {
-  waiters.waitForElementVisibility(
-    htmlElement,
-    timeoutInMilliseconds,
-    errorMessage
-  );
+  waiters.waitForElementVisibility(htmlElement, timeoutInMilliseconds, errorMessage);
   htmlElement.clear();
 };
 
-const clear = function(
-  htmlElement = utils.requiredParam(clear),
-  timeoutInMilliseconds = config.timeoutInMilliseconds
-) {
+const clear = function(htmlElement = utils.requiredParam(clear), timeoutInMilliseconds = config.timeoutInMilliseconds) {
   waiters.waitForElementVisibility(
     htmlElement,
     timeoutInMilliseconds,
@@ -98,12 +74,7 @@ const clearFieldWhenVisibleAndFillItWithText = function(
   errorMessage = messageBuilder.getDefaultIsNotVisibleMessage(htmlElement)
 ) {
   this.clearFieldWhenVisible(htmlElement, timeoutInMilliseconds, errorMessage);
-  this.fillFieldWithTextWhenVisible(
-    htmlElement,
-    text,
-    timeoutInMilliseconds,
-    errorMessage
-  );
+  this.fillFieldWithTextWhenVisible(htmlElement, text, timeoutInMilliseconds, errorMessage);
 };
 
 const clearFieldAndFillItWithText = function(
@@ -121,12 +92,7 @@ const fillFieldWithTextWhenVisibleAndPressEnter = function(
   timeoutInMilliseconds = config.timeoutInMilliseconds,
   errorMessage = messageBuilder.getDefaultIsNotVisibleMessage(htmlElement)
 ) {
-  this.fillFieldWithTextWhenVisible(
-    htmlElement,
-    text + protractor.Key.ENTER,
-    timeoutInMilliseconds,
-    errorMessage
-  );
+  this.fillFieldWithTextWhenVisible(htmlElement, text + protractor.Key.ENTER, timeoutInMilliseconds, errorMessage);
 };
 
 const fillFieldWithTextAndPressEnter = function(
@@ -134,11 +100,7 @@ const fillFieldWithTextAndPressEnter = function(
   text = utils.requiredParam(fillFieldWithTextAndPressEnter, "text"),
   timeoutInMilliseconds = config.timeoutInMilliseconds
 ) {
-  this.fillFieldWithText(
-    htmlElement,
-    text + protractor.Key.ENTER,
-    timeoutInMilliseconds
-  );
+  this.fillFieldWithText(htmlElement, text + protractor.Key.ENTER, timeoutInMilliseconds);
 };
 
 module.exports = {

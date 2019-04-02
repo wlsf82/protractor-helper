@@ -8,8 +8,7 @@ const constants = {
   IS_STILL_PRESENT_MESSAGE: "is still present",
   IS_STILL_VISIBLE_MESSAGE: "is still visible",
   OR_IT_MAY_BE_DISABLED_MESSAGE: "or it may be disabled",
-  POSSIBLE_IT_IS_NOT_PRESENT_OR_VISIBLE_MESSAGE:
-    "Possibly it's not present or visible"
+  POSSIBLE_IT_IS_NOT_PRESENT_OR_VISIBLE_MESSAGE: "Possibly it's not present or visible"
 };
 
 module.exports = constants;

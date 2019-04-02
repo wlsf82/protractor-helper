@@ -1,9 +1,6 @@
 const EC = protractor.ExpectedConditions;
 
-function requiredParam(
-  functionWithoutParam,
-  requiredParameter = "htmlElement"
-) {
+function requiredParam(functionWithoutParam, requiredParameter = "htmlElement") {
   const requiredParamError = new Error(
     `Parameter '${requiredParameter}' is missing at function '${
       functionWithoutParam.name
@@ -18,11 +15,7 @@ function waitForElementToBeClickable(
   timeoutInMilliseconds = config.timeoutInMilliseconds,
   errorMessage = getDefaultIsNotClickableMessage(htmlElement)
 ) {
-  browser.wait(
-    EC.elementToBeClickable(htmlElement),
-    timeoutInMilliseconds,
-    errorMessage
-  );
+  browser.wait(EC.elementToBeClickable(htmlElement), timeoutInMilliseconds, errorMessage);
 }
 
 module.exports = {
