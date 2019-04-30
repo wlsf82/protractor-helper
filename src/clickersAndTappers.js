@@ -4,15 +4,6 @@ const utils = require("./constants_and_utils/utils");
 
 const config = { timeoutInMilliseconds: constants.DEFAULT_TIMEOUT_IN_MS };
 
-const clickWhenClickable = function(
-  htmlElement = utils.requiredParam(clickWhenClickable),
-  timeoutInMilliseconds = config.timeoutInMilliseconds,
-  errorMessage = messageBuilder.getDefaultIsNotClickableMessage(htmlElement)
-) {
-  utils.waitForElementToBeClickable(htmlElement, timeoutInMilliseconds, errorMessage);
-  htmlElement.click();
-};
-
 const click = function(htmlElement = utils.requiredParam(click), timeoutInMilliseconds = config.timeoutInMilliseconds) {
   utils.waitForElementToBeClickable(
     htmlElement,
@@ -20,18 +11,6 @@ const click = function(htmlElement = utils.requiredParam(click), timeoutInMillis
     messageBuilder.getDefaultIsNotClickableMessage(htmlElement)
   );
   htmlElement.click();
-};
-
-const tapWhenTappable = function(
-  htmlElement = utils.requiredParam(tapWhenTappable),
-  timeoutInMilliseconds = config.timeoutInMilliseconds,
-  errorMessage = messageBuilder.getDefaultIsNotTappableMessage(htmlElement)
-) {
-  utils.waitForElementToBeClickable(htmlElement, timeoutInMilliseconds, errorMessage);
-  browser
-    .touchActions()
-    .tap(htmlElement)
-    .perform();
 };
 
 const tap = function(htmlElement = utils.requiredParam(tap), timeoutInMilliseconds = config.timeoutInMilliseconds) {
@@ -45,8 +24,6 @@ const tap = function(htmlElement = utils.requiredParam(tap), timeoutInMillisecon
 };
 
 module.exports = {
-  clickWhenClickable,
   click,
-  tapWhenTappable,
   tap
 };

@@ -25,15 +25,6 @@ const isCurrentUrlDifferentFromBaseUrl = function() {
   });
 };
 
-const scrollToElementWhenVisible = function(
-  htmlElement = utils.requiredParam(scrollToElementWhenVisible),
-  timeoutInMilliseconds = config.timeoutInMilliseconds,
-  errorMessage = messageBuilder.getDefaultIsNotVisibleMessage(htmlElement)
-) {
-  waiters.waitForElementVisibility(htmlElement, timeoutInMilliseconds, errorMessage);
-  browser.executeScript("arguments[0].scrollIntoView(true);", htmlElement);
-};
-
 const scrollToElement = function(
   htmlElement = utils.requiredParam(scrollToElement),
   timeoutInMilliseconds = config.timeoutInMilliseconds
@@ -54,7 +45,6 @@ module.exports = {
   getBodyElementFromCurrentBrowserOrBrowserInstance,
   openNewBrowserInTheSamePage,
   isCurrentUrlDifferentFromBaseUrl,
-  scrollToElementWhenVisible,
   scrollToElement,
   setTimeout
 };
