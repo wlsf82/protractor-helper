@@ -1,6 +1,7 @@
 const constants = require("./constants");
 
 module.exports.config = {
+  directConnect: true,
   baseUrl: constants.BASE_URL,
   capabilities: {
     browserName: "chrome",
