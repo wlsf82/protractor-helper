@@ -196,7 +196,7 @@ describe("foo", () => {
 });
 ```
 
-## clickWhenClickable
+## clickWhenClickable (deprecated)
 
 > Note: this function will be deprecated in favor of the function `click`.
 
@@ -242,7 +242,7 @@ describe("foo", () => {
 });
 ```
 
-## fillFieldWithTextWhenVisible
+## fillFieldWithTextWhenVisible (deprecated)
 
 > Note: this function will be deprecated in favor of the function `fillFieldWithText`.
 
@@ -288,7 +288,7 @@ describe("foo", () => {
 });
 ```
 
-## fillInputFieldWithFileWhenPresent
+## fillInputFieldWithFileWhenPresent (deprecated)
 
 > Note: this function will be deprecated in favor of the function `uploadFileIntoInputField`.
 
@@ -347,7 +347,7 @@ describe("foo", () => {
 });
 ```
 
-## clearFieldWhenVisible
+## clearFieldWhenVisible (deprecated)
 
 > Note: this function will be deprecated in favor of the function `clear`.
 
@@ -395,7 +395,7 @@ describe("foo", () => {
 });
 ```
 
-## clearFieldWhenVisibleAndFillItWithText
+## clearFieldWhenVisibleAndFillItWithText (deprecated)
 
 > Note: this function will be deprecated in favor of the function `clearFieldAndFillItWithText`.
 
@@ -441,7 +441,7 @@ describe("foo", () => {
 });
 ```
 
-## tapWhenTappable
+## tapWhenTappable (deprecated)
 
 > Note: this function will be deprecated in favor of the function `tap`.
 
@@ -643,7 +643,7 @@ describe("foo", () => {
 });
 ```
 
-## fillFieldWithTextWhenVisibleAndPressEnter
+## fillFieldWithTextWhenVisibleAndPressEnter (deprecated)
 
 > Note: this function will be deprecated in favor of the function `fillFieldWithTextAndPressEnter`.
 
@@ -694,7 +694,7 @@ describe("foo", () => {
 });
 ```
 
-## scrollToElementWhenVisible
+## scrollToElementWhenVisible (deprecated)
 
 > Note: this function will be deprecated in favor of the function `scrollToElement`.
 

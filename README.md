@@ -25,17 +25,17 @@ Many of the helper functions on this library uses `protractor.ExpectedConditions
   - [`waitForElementNotToBePresent`](#waitforelementnottobepresent)
   - [`waitForElementVisibility`](#waitforelementvisibility)
   - [`waitForElementNotToBeVisible`](#waitforelementnottobevisible)
-  - [`clickWhenClickable`](#clickwhenclickable)
+  - [`clickWhenClickable` (deprecated)](#clickwhenclickable)
   - [`click`](#click)
-  - [`fillFieldWithTextWhenVisible`](#fillfieldwithtextwhenvisible)
+  - [`fillFieldWithTextWhenVisible` (deprecated)](#fillfieldwithtextwhenvisible)
   - [`fillFieldWithText`](#fillfieldwithtext)
-  - [`fillInputFieldWithFileWhenPresent`](#fillinputfieldwithfilewhenpresent)
+  - [`fillInputFieldWithFileWhenPresent` (deprecated)](#fillinputfieldwithfilewhenpresent)
   - [`uploadFileIntoInputField`](#uploadfileintoinputfield)
-  - [`clearFieldWhenVisible`](#clearfieldwhenvisible)
+  - [`clearFieldWhenVisible` (deprecated)](#clearfieldwhenvisible)
   - [`clear`](#clear)
-  - [`clearFieldWhenVisibleAndFillItWithText`](#clearfieldwhenvisibleandfillitwithtext)
+  - [`clearFieldWhenVisibleAndFillItWithText` (deprecated)](#clearfieldwhenvisibleandfillitwithtext)
   - [`clearFieldAndFillItWithText`](#clearfieldandfillitwithtext)
-  - [`tapWhenTappable`](#tapwhentappable)
+  - [`tapWhenTappable` (deprecated)](#tapwhentappable)
   - [`tap`](#tap)
   - [`waitForTextToBePresentInElement`](#waitfortexttobepresentinelement)
   - [`waitForTextNotToBePresentInElement`](#waitfortextnottobepresentinelement)
@@ -43,9 +43,9 @@ Many of the helper functions on this library uses `protractor.ExpectedConditions
   - [`waitForUrlNotToBeEqualToExpectedUrl`](#waitforurlnottobeequaltoexpectedurl)
   - [`waitForUrlToContainString`](#waitforurltocontainstring)
   - [`waitForUrlNotToContainString`](#waitforurlnottocontainstring)
-  - [`fillFieldWithTextWhenVisibleAndPressEnter`](#fillfieldwithtextwhenvisibleandpressenter)
+  - [`fillFieldWithTextWhenVisibleAndPressEnter` (deprecated)](#fillfieldwithtextwhenvisibleandpressenter)
   - [`fillFieldWithTextAndPressEnter`](#fillfieldwithtextandpressenter)
-  - [`scrollToElementWhenVisible`](#scrolltoelementwhenvisible)
+  - [`scrollToElementWhenVisible` (deprecated)](#scrolltoelementwhenvisible)
   - [`scrollToElement`](#scrolltoelement)
 
 </p> </details>
@@ -200,7 +200,7 @@ This method waits for an element to be visible in the page. Being displayed mean
 This method is the opposite of the previous one, so, it waits for an element not to be visible in the page. By saying not being displayed means that the element may be in the DOM, but not visible.
 [Example](docs/EXAMPLES.md#waitforelementnottobevisible)
 
-### `clickWhenClickable`
+### `clickWhenClickable` (deprecated)
 
 This method is used to click in an element as soon as it is in a clickable state. This means that the element is visible and enabled for clicking.
 [Example](docs/EXAMPLES.md#clickwhenclickable)
@@ -212,7 +212,7 @@ This method is used to click in an element as soon as it is in a clickable state
 This method is used to click in an element as soon as it is in a clickable state. This means that the element is visible and enabled for clicking.
 [Example](docs/EXAMPLES.md#click)
 
-### `fillFieldWithTextWhenVisible`
+### `fillFieldWithTextWhenVisible` (deprecated)
 
 This method fills an input field with a text as soon as such field is visible.
 [Example](docs/EXAMPLES.md#fillfieldwithtextwhenvisible)
@@ -224,7 +224,7 @@ This method fills an input field with a text as soon as such field is visible.
 This method fills an input field with a text as soon as such field is visible.
 [Example](docs/EXAMPLES.md#fillFieldWithText)
 
-### `fillInputFieldWithFileWhenPresent`
+### `fillInputFieldWithFileWhenPresent` (deprecated)
 
 This method fills a file input field with a specified file as soon as the file input field is present in the DOM.
 [Example](docs/EXAMPLES.md#fillinputfieldwithfilewhenpresent)
@@ -236,7 +236,7 @@ This method fills a file input field with a specified file as soon as the file i
 This method uploads a file in a file input field as soon as the file input field is present in the DOM.
 [Example](docs/EXAMPLES.md#uploadFileIntoInputField)
 
-### `clearFieldWhenVisible`
+### `clearFieldWhenVisible` (deprecated)
 
 This method clears a text input field as soon as such field is visible.
 [Example](docs/EXAMPLES.md#clearFieldWhenVisible)
@@ -248,7 +248,7 @@ This method clears a text input field as soon as such field is visible.
 This method clears a text input field as soon as such field is visible.
 [Example](docs/EXAMPLES.md#clear)
 
-### `clearFieldWhenVisibleAndFillItWithText`
+### `clearFieldWhenVisibleAndFillItWithText` (deprecated)
 
 This method clears a text input field as soon as such field is visible, and then it fills it with a text.
 [Example](docs/EXAMPLES.md#clearfieldwhenvisibleandfillitwithtext)
@@ -260,7 +260,7 @@ This method clears a text input field as soon as such field is visible, and then
 This method clears a text input field as soon as such field is visible, and then it fills it with a text.
 [Example](docs/EXAMPLES.md#clearFieldAndFillItWithText)
 
-### `tapWhenTappable`
+### `tapWhenTappable` (deprecated)
 
 This method performs a tap action on a clickable/tappable HTML element as soon as it is in a clickable/tappable state. This method is used when performing web mobile testing in mobile emulators, for example.
 [Example](docs/EXAMPLES.md#tapwhentappable)
@@ -302,7 +302,7 @@ This method waits for the URL to contain an expected string. Such method is usef
 This method waits for the URL not to contain an expected string. Such method is useful when you want to perform verifications based on the current URL.
 [Example](docs/EXAMPLES.md#waitforurlnottocontainstring)
 
-### `fillFieldWithTextWhenVisibleAndPressEnter`
+### `fillFieldWithTextWhenVisibleAndPressEnter` (deprecated)
 
 This method fills an input field with a text as soon as such field is visible and then it simulates pressing the ENTER key from the keyboard. This method is useful in cases such as when doing a search and pressing the ENTER key, instead of having to fill the input field and clicking the search button, for example.
 [Example](docs/EXAMPLES.md#fillfieldwithtextwhenvisibleandpressenter)
@@ -314,7 +314,7 @@ This method fills an input field with a text as soon as such field is visible an
 This method fills an input field with a text as soon as such field is visible and then it simulates pressing the ENTER key from the keyboard. This method is useful in cases such as when doing a search and pressing the ENTER key, instead of having to fill the input field and clicking the search button, for example.
 [Example](docs/EXAMPLES.md#fillFieldWithTextAndPressEnter)
 
-### `scrollToElementWhenVisible`
+### `scrollToElementWhenVisible` (deprecated)
 
 This method is used to scroll up to an element on the page as soon as the element is visible in the DOM.
 [Example](docs/EXAMPLES.md#scrolltoelementwhenvisible)
