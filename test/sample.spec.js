@@ -56,33 +56,16 @@ describe("Protractor helper", () => {
   });
 
   describe("inputs and buttons", () => {
-    it("fillFieldWithTextWhenVisible", () => {
-      helper.fillFieldWithTextWhenVisible(inputField, constants.SHORTEN_URL);
-    });
-
     it("fillFieldWithText", () => {
       helper.fillFieldWithText(inputField, constants.SHORTEN_URL);
-    });
-
-    it("clickWhenClickable", () => {
-      helper.clickWhenClickable(shortenButton);
     });
 
     it("click", () => {
       helper.click(shortenButton);
     });
 
-    it("fillInputFieldWithFileWhenPresent", () => {
-      helper.fillInputFieldWithFileWhenPresent(inputFile, constants.ABSOLUTE_PATH_OF_INDEX_FILE);
-    });
-
     it("uploadFileIntoInputField", () => {
       helper.uploadFileIntoInputField(inputFile, constants.ABSOLUTE_PATH_OF_INDEX_FILE);
-    });
-
-    it("clearFieldWhenVisible", () => {
-      helper.fillFieldWithTextWhenVisible(inputField, constants.SHORTEN_URL);
-      helper.clearFieldWhenVisible(inputField);
     });
 
     it("clear", () => {
@@ -90,26 +73,13 @@ describe("Protractor helper", () => {
       helper.clear(inputField);
     });
 
-    it("clearFieldWhenVisibleAndFillItWithText", () => {
-      helper.fillFieldWithTextWhenVisible(inputField, constants.SHORTEN_URL);
-      helper.clearFieldWhenVisibleAndFillItWithText(inputField, constants.SAMPLE_URL);
-    });
-
     it("clearFieldAndFillItWithText", () => {
       helper.fillFieldWithText(inputField, constants.SHORTEN_URL);
       helper.clearFieldAndFillItWithText(inputField, constants.SAMPLE_URL);
     });
 
-    it("tapWhenTappable", () => {
-      helper.tapWhenTappable(expandButton);
-    });
-
     it("tap", () => {
       helper.tap(expandButton);
-    });
-
-    it("fillFieldWithTextWhenVisibleAndPressEnter", () => {
-      helper.fillFieldWithTextWhenVisibleAndPressEnter(inputField, constants.SAMPLE_URL);
     });
 
     it("fillFieldWithTextAndPressEnter", () => {
@@ -130,10 +100,6 @@ describe("Protractor helper", () => {
 
     it("isCurrentUrlDifferentFromBaseUrl", () => {
       expect(false).toEqual(helper.isCurrentUrlDifferentFromBaseUrl());
-    });
-
-    it("scrollToElementWhenVisible", () => {
-      helper.scrollToElementWhenVisible(shortenButton);
     });
 
     it("scrollToElement", () => {
