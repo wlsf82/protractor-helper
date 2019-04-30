@@ -1,3 +1,24 @@
+# 4.0.0
+
+## package.json
+
+- Update lib's major version
+
+## package-lock.json
+
+- Update lib's version on package-lock file
+
+## Documentation
+
+- Update changelog with info about the latest major version
+- Update docs with deprecations of replaced functions
+
+## JavaScript files
+
+- Update protractor conf to use the browser's webdriver
+- Remove deprecated functions from tests
+- Remove deprecated functions from main files
+
 # 3.7.4
 
 ## package.json
