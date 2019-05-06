@@ -1,4 +1,7 @@
+const timeoutInMilliseconds = require("./constants").DEFAULT_TIMEOUT_IN_MS;
+
 const EC = protractor.ExpectedConditions;
+const timeout = { timeoutInMilliseconds };
 
 function requiredParam(functionWithoutParam, requiredParameter = "htmlElement") {
   const requiredParamError = new Error(
@@ -20,5 +23,6 @@ function waitForElementToBeClickable(
 
 module.exports = {
   requiredParam,
+  timeout,
   waitForElementToBeClickable
 };

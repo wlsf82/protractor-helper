@@ -9,11 +9,14 @@ module.exports = {
   uploadFileIntoInputField: require("./src/inputFieldInteractions").uploadFileIntoInputField,
   clearFieldWhenVisible: require("./src/inputFieldInteractions").clearFieldWhenVisible,
   clear: require("./src/inputFieldInteractions").clear,
-  clearFieldWhenVisibleAndFillItWithText: require("./src/inputFieldInteractions").clearFieldWhenVisibleAndFillItWithText,
+  clearFieldWhenVisibleAndFillItWithText: require("./src/inputFieldInteractions")
+    .clearFieldWhenVisibleAndFillItWithText,
   clearFieldAndFillItWithText: require("./src/inputFieldInteractions").clearFieldAndFillItWithText,
-  fillFieldWithTextWhenVisibleAndPressEnter: require("./src/inputFieldInteractions").fillFieldWithTextWhenVisibleAndPressEnter,
+  fillFieldWithTextWhenVisibleAndPressEnter: require("./src/inputFieldInteractions")
+    .fillFieldWithTextWhenVisibleAndPressEnter,
   fillFieldWithTextAndPressEnter: require("./src/inputFieldInteractions").fillFieldWithTextAndPressEnter,
-  getBodyElementFromCurrentBrowserOrBrowserInstance: require("./src/misc").getBodyElementFromCurrentBrowserOrBrowserInstance,
+  getBodyElementFromCurrentBrowserOrBrowserInstance: require("./src/misc")
+    .getBodyElementFromCurrentBrowserOrBrowserInstance,
   openNewBrowserInTheSamePage: require("./src/misc").openNewBrowserInTheSamePage,
   isCurrentUrlDifferentFromBaseUrl: require("./src/misc").isCurrentUrlDifferentFromBaseUrl,
   scrollToElementWhenVisible: require("./src/misc").scrollToElementWhenVisible,
