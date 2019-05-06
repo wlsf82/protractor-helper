@@ -12,8 +12,8 @@ function requiredParam(functionWithoutParam, requiredParameter = "htmlElement") 
 
 function waitForElementToBeClickable(
   htmlElement,
-  timeoutInMilliseconds = config.timeoutInMilliseconds,
-  errorMessage = getDefaultIsNotClickableMessage(htmlElement)
+  timeoutInMilliseconds,
+  errorMessage
 ) {
   browser.wait(EC.elementToBeClickable(htmlElement), timeoutInMilliseconds, errorMessage);
 }
