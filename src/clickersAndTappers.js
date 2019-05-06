@@ -10,7 +10,10 @@ const clickWhenClickable = function(
   htmlElement.click();
 };
 
-const click = function(htmlElement = utils.requiredParam(click), timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds) {
+const click = function(
+  htmlElement = utils.requiredParam(click),
+  timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds
+) {
   utils.waitForElementToBeClickable(
     htmlElement,
     timeoutInMilliseconds,
@@ -31,7 +34,10 @@ const tapWhenTappable = function(
     .perform();
 };
 
-const tap = function(htmlElement = utils.requiredParam(tap), timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds) {
+const tap = function(
+  htmlElement = utils.requiredParam(tap),
+  timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds
+) {
   const errorMessage = messageBuilder.getDefaultIsNotTappableMessage(htmlElement);
   utils.waitForElementToBeClickable(htmlElement, timeoutInMilliseconds, errorMessage);
   browser

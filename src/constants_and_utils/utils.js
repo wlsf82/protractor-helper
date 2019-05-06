@@ -13,11 +13,7 @@ function requiredParam(functionWithoutParam, requiredParameter = "htmlElement") 
   throw requiredParamError;
 }
 
-function waitForElementToBeClickable(
-  htmlElement,
-  timeoutInMilliseconds,
-  errorMessage
-) {
+function waitForElementToBeClickable(htmlElement, timeoutInMilliseconds, errorMessage) {
   browser.wait(EC.elementToBeClickable(htmlElement), timeoutInMilliseconds, errorMessage);
 }
 
