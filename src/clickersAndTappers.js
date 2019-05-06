@@ -1,19 +1,16 @@
-const constants = require("./constants_and_utils/constants");
 const messageBuilder = require("./constants_and_utils/messageBuilder");
 const utils = require("./constants_and_utils/utils");
 
-const config = { timeoutInMilliseconds: constants.DEFAULT_TIMEOUT_IN_MS };
-
 const clickWhenClickable = function(
   htmlElement = utils.requiredParam(clickWhenClickable),
-  timeoutInMilliseconds = config.timeoutInMilliseconds,
+  timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds,
   errorMessage = messageBuilder.getDefaultIsNotClickableMessage(htmlElement)
 ) {
   utils.waitForElementToBeClickable(htmlElement, timeoutInMilliseconds, errorMessage);
   htmlElement.click();
 };
 
-const click = function(htmlElement = utils.requiredParam(click), timeoutInMilliseconds = config.timeoutInMilliseconds) {
+const click = function(htmlElement = utils.requiredParam(click), timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds) {
   utils.waitForElementToBeClickable(
     htmlElement,
     timeoutInMilliseconds,
@@ -24,7 +21,7 @@ const click = function(htmlElement = utils.requiredParam(click), timeoutInMillis
 
 const tapWhenTappable = function(
   htmlElement = utils.requiredParam(tapWhenTappable),
-  timeoutInMilliseconds = config.timeoutInMilliseconds,
+  timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds,
   errorMessage = messageBuilder.getDefaultIsNotTappableMessage(htmlElement)
 ) {
   utils.waitForElementToBeClickable(htmlElement, timeoutInMilliseconds, errorMessage);
@@ -34,9 +31,8 @@ const tapWhenTappable = function(
     .perform();
 };
 
-const tap = function(htmlElement = utils.requiredParam(tap), timeoutInMilliseconds = config.timeoutInMilliseconds) {
+const tap = function(htmlElement = utils.requiredParam(tap), timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds) {
   const errorMessage = messageBuilder.getDefaultIsNotTappableMessage(htmlElement);
-
   utils.waitForElementToBeClickable(htmlElement, timeoutInMilliseconds, errorMessage);
   browser
     .touchActions()

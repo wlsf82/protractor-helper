@@ -1,6 +1,7 @@
 const constants = require("./constants");
 
 module.exports.config = {
+  directConnect: true,
   baseUrl: constants.BASE_URL,
   capabilities: {
     browserName: "chrome",
@@ -9,6 +10,7 @@ module.exports.config = {
     }
   },
   specs: ["*.spec.js"],
+  // highlightDelay: 1000,
   onPrepare() {
     browser.waitForAngularEnabled(false);
     // afterEach(() => browser.sleep(1000));
@@ -19,6 +21,5 @@ module.exports.config = {
     showColors: true,
     includeStackTrace: true,
     random: true
-  },
-  // highlightDelay: 1000
+  }
 };
