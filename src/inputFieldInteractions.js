@@ -55,7 +55,10 @@ const clearFieldWhenVisible = function(
   htmlElement.clear();
 };
 
-const clear = function(htmlElement = utils.requiredParam(clear), timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds) {
+const clear = function(
+  htmlElement = utils.requiredParam(clear),
+  timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds
+) {
   waiters.waitForElementVisibility(
     htmlElement,
     timeoutInMilliseconds,
