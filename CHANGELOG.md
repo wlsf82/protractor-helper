@@ -1,3 +1,23 @@
+# 3.7.7
+
+## package.json
+
+- Update lib's patch version
+
+## package-lock.json
+
+- Update lib's version on package-lock file
+
+## Documentation
+
+- Update changelog with info about the latest patch version
+
+## JavaScript files
+
+- Minor changes with prettier
+- Fix setTimeout method
+- Remove undefined parameters from utils
+
 # 3.7.4
 
 ## package.json
