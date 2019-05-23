@@ -18,24 +18,24 @@ Many of the helper functions on this library uses `protractor.ExpectedConditions
   <details><p><summary>Open to see all available helpers</summary>
 
   - [`setTimeout`](#settimeout)
-  - [`getBodyElementFromCurrentBrowserOrBrowserInstance`](#getbodyelementfromcurrentbrowserorbrowserinstance)
-  - [`openNewBrowserInTheSamePage`](#opennewbrowserinthesamepage)
+  - [`getBodyElementFromCurrentBrowserOrBrowserInstance`](#getbodyelementfromcurrentbrowserorbrowserinstance) **- Will be deprecated in version 4.0.0**
+  - [`openNewBrowserInTheSamePage`](#opennewbrowserinthesamepage) **- Will be deprecated in version 4.0.0**
   - [`isCurrentUrlDifferentFromBaseUrl`](#iscurrenturldifferentfrombaseurl)
   - [`waitForElementPresence`](#waitforelementpresence)
   - [`waitForElementNotToBePresent`](#waitforelementnottobepresent)
   - [`waitForElementVisibility`](#waitforelementvisibility)
   - [`waitForElementNotToBeVisible`](#waitforelementnottobevisible)
-  - [`clickWhenClickable`](#clickwhenclickable)
+  - [`clickWhenClickable`](#clickwhenclickable) **- Will be deprecated in version 4.0.0**
   - [`click`](#click)
-  - [`fillFieldWithTextWhenVisible`](#fillfieldwithtextwhenvisible)
+  - [`fillFieldWithTextWhenVisible`](#fillfieldwithtextwhenvisible) **- Will be deprecated in version 4.0.0**
   - [`fillFieldWithText`](#fillfieldwithtext)
-  - [`fillInputFieldWithFileWhenPresent`](#fillinputfieldwithfilewhenpresent)
+  - [`fillInputFieldWithFileWhenPresent`](#fillinputfieldwithfilewhenpresent) **- Will be deprecated in version 4.0.0**
   - [`uploadFileIntoInputField`](#uploadfileintoinputfield)
-  - [`clearFieldWhenVisible`](#clearfieldwhenvisible)
+  - [`clearFieldWhenVisible`](#clearfieldwhenvisible) **- Will be deprecated in version 4.0.0**
   - [`clear`](#clear)
-  - [`clearFieldWhenVisibleAndFillItWithText`](#clearfieldwhenvisibleandfillitwithtext)
+  - [`clearFieldWhenVisibleAndFillItWithText`](#clearfieldwhenvisibleandfillitwithtext) **- Will be deprecated in version 4.0.0**
   - [`clearFieldAndFillItWithText`](#clearfieldandfillitwithtext)
-  - [`tapWhenTappable`](#tapwhentappable)
+  - [`tapWhenTappable`](#tapwhentappable) **- Will be deprecated in version 4.0.0**
   - [`tap`](#tap)
   - [`waitForTextToBePresentInElement`](#waitfortexttobepresentinelement)
   - [`waitForTextNotToBePresentInElement`](#waitfortextnottobepresentinelement)
@@ -43,9 +43,9 @@ Many of the helper functions on this library uses `protractor.ExpectedConditions
   - [`waitForUrlNotToBeEqualToExpectedUrl`](#waitforurlnottobeequaltoexpectedurl)
   - [`waitForUrlToContainString`](#waitforurltocontainstring)
   - [`waitForUrlNotToContainString`](#waitforurlnottocontainstring)
-  - [`fillFieldWithTextWhenVisibleAndPressEnter`](#fillfieldwithtextwhenvisibleandpressenter)
+  - [`fillFieldWithTextWhenVisibleAndPressEnter`](#fillfieldwithtextwhenvisibleandpressenter) **- Will be deprecated in version 4.0.0**
   - [`fillFieldWithTextAndPressEnter`](#fillfieldwithtextandpressenter)
-  - [`scrollToElementWhenVisible`](#scrolltoelementwhenvisible)
+  - [`scrollToElementWhenVisible`](#scrolltoelementwhenvisible) **- Will be deprecated in version 4.0.0**
   - [`scrollToElement`](#scrolltoelement)
 
 </p> </details>
@@ -54,6 +54,7 @@ Many of the helper functions on this library uses `protractor.ExpectedConditions
 
   - [Example of a test failure when using such methods as expectations](#example-of-a-test-failure-when-using-such-methods-as-expectations)
 
+- [Deprecations on version 4.0.0](#deprecations-on-version-400)
 - [Contributing](#contributing)
 - [Credits](#credits)
 - [License](/LICENSE)
@@ -161,10 +162,14 @@ If called without passing an argument the timeout will be set to the default one
 
 ### `getBodyElementFromCurrentBrowserOrBrowserInstance`
 
+> **Will be removed in version 4.0.0, read more [here](#deprecations-on-version-400).**
+
 This method returns the body element of the current browser if nothing is passed as argument or the body element of a specific browser instance in case the browser instance is passed as an argument. This second option is useful when working with two browsers interacting with each other, for example.
 [Example](docs/EXAMPLES.md#getbodyelementfromcurrentbrowserorbrowserinstance)
 
 ### `openNewBrowserInTheSamePage`
+
+> **Will be removed in version 4.0.0, read more [here](#deprecations-on-version-400).**
 
 This method opens a new browser instance in the same page of the main browser.
 
@@ -202,10 +207,10 @@ This method is the opposite of the previous one, so, it waits for an element not
 
 ### `clickWhenClickable`
 
+> **Will be deprecated in version 4.0.0, please use the new ['click'](#click) function instead! Read more [here](#deprecations-on-version-400).**
+
 This method is used to click in an element as soon as it is in a clickable state. This means that the element is visible and enabled for clicking.
 [Example](docs/EXAMPLES.md#clickwhenclickable)
-
-> Note: this function will be deprecated in favor of the function `click`.
 
 ### `click`
 
@@ -214,10 +219,10 @@ This method is used to click in an element as soon as it is in a clickable state
 
 ### `fillFieldWithTextWhenVisible`
 
+> **Will be deprecated in version 4.0.0, please use the new ['fillFieldWithText'](#fillFieldWithText) function instead! Read more [here](#deprecations-on-version-400).**
+
 This method fills an input field with a text as soon as such field is visible.
 [Example](docs/EXAMPLES.md#fillfieldwithtextwhenvisible)
-
-> Note: this function will be deprecated in favor of the function `fillFieldWithText`.
 
 ### `fillFieldWithText`
 
@@ -226,10 +231,10 @@ This method fills an input field with a text as soon as such field is visible.
 
 ### `fillInputFieldWithFileWhenPresent`
 
+> **Will be deprecated in version 4.0.0, please use the new ['uploadFileIntoInputField'](#uploadFileIntoInputField) function instead! Read more [here](#deprecations-on-version-400).**
+
 This method fills a file input field with a specified file as soon as the file input field is present in the DOM.
 [Example](docs/EXAMPLES.md#fillinputfieldwithfilewhenpresent)
-
-> Note: this function will be deprecated in favor of the function `uploadFileIntoInputField`.
 
 ### `uploadFileIntoInputField`
 
@@ -238,10 +243,10 @@ This method uploads a file in a file input field as soon as the file input field
 
 ### `clearFieldWhenVisible`
 
+> **Will be deprecated in version 4.0.0, please use the new ['clear'](#clear) function instead! Read more [here](#deprecations-on-version-400).**
+
 This method clears a text input field as soon as such field is visible.
 [Example](docs/EXAMPLES.md#clearFieldWhenVisible)
-
-> Note: this function will be deprecated in favor of the function `clear`.
 
 ### `clear`
 
@@ -250,10 +255,10 @@ This method clears a text input field as soon as such field is visible.
 
 ### `clearFieldWhenVisibleAndFillItWithText`
 
+> **Will be deprecated in version 4.0.0, please use the new ['clearFieldAndFillItWithText'](#clearFieldAndFillItWithText) function instead! Read more [here](#deprecations-on-version-400).**
+
 This method clears a text input field as soon as such field is visible, and then it fills it with a text.
 [Example](docs/EXAMPLES.md#clearfieldwhenvisibleandfillitwithtext)
-
-> Note: this function will be deprecated in favor of the function `clearFieldAndFillItWithText`.
 
 ### `clearFieldAndFillItWithText`
 
@@ -262,10 +267,10 @@ This method clears a text input field as soon as such field is visible, and then
 
 ### `tapWhenTappable`
 
+> **Will be deprecated in version 4.0.0, please use the new ['tap'](#tap) function instead! Read more [here](#deprecations-on-version-400).**
+
 This method performs a tap action on a clickable/tappable HTML element as soon as it is in a clickable/tappable state. This method is used when performing web mobile testing in mobile emulators, for example.
 [Example](docs/EXAMPLES.md#tapwhentappable)
-
-> Note: this function will be deprecated in favor of the function `tap`.
 
 ### `tap`
 
@@ -304,10 +309,10 @@ This method waits for the URL not to contain an expected string. Such method is 
 
 ### `fillFieldWithTextWhenVisibleAndPressEnter`
 
+> **Will be deprecated in version 4.0.0, please use the new ['fillFieldWithTextAndPressEnter'](#fillFieldWithTextAndPressEnter) function instead! Read more [here](#deprecations-on-version-400).**
+
 This method fills an input field with a text as soon as such field is visible and then it simulates pressing the ENTER key from the keyboard. This method is useful in cases such as when doing a search and pressing the ENTER key, instead of having to fill the input field and clicking the search button, for example.
 [Example](docs/EXAMPLES.md#fillfieldwithtextwhenvisibleandpressenter)
-
-> Note: this function will be deprecated in favor of the function `fillFieldWithTextAndPressEnter`.
 
 ### `fillFieldWithTextAndPressEnter`
 
@@ -316,10 +321,10 @@ This method fills an input field with a text as soon as such field is visible an
 
 ### `scrollToElementWhenVisible`
 
+> **Will be deprecated in version 4.0.0, please use the new ['scrollToElement'](#scrollToElement) function instead! Read more [here](#deprecations-on-version-400).**
+
 This method is used to scroll up to an element on the page as soon as the element is visible in the DOM.
 [Example](docs/EXAMPLES.md#scrolltoelementwhenvisible)
-
-> Note: this function will be deprecated in favor of the function `scrollToElement`.
 
 ### `scrollToElement`
 
@@ -370,6 +375,30 @@ Failed: text 'foo' not present on element with locator 'By(css selector, h1)'.
 ```
 
 > As you can see, the messages are clear and tell you exactly why the test has failed, such as in the previous example, where a specific text ('foo') is not present in a heading element (an element with css selector 'h1').
+
+## Deprecations on version 4.0.0
+
+Ten functions will be removed or deprecated soon.
+
+- The 2 below will be removed for the library focus only on providing an easy way for software engineers to create robust end-to-end tests.
+
+  - [getBodyElementFromCurrentBrowserOrBrowserInstance](#getBodyElementFromCurrentBrowserOrBrowserInstance)
+  - [openNewBrowserInTheSamePage](#openNewBrowserInTheSamePage)
+
+- The 8 below will be deprecated to reduce complexity, with the new functions with less arguments and smaller name. Change the function on **Old** column to the matching function of **New** column.
+
+  > Note: All new methods don't use the `errorMessage` argument, remove it.
+
+  | Old (Before v4.0.0)                                                                     | New (Since v4.0.0)                                                |
+  | --------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
+  | [clickWhenClickable](#clickWhenClickable)                                               | [click](#click)                                                   |
+  | [fillFieldWithTextWhenVisible](#fillFieldWithTextWhenVisible)                           | [fillFieldWithText](#fillFieldWithText)                           |
+  | [fillInputFieldWithFileWhenPresent](#fillInputFieldWithFileWhenPresent)                 | [uploadFileIntoInputField](#uploadFileIntoInputField)             |
+  | [clearFieldWhenVisible](#clearFieldWhenVisible)                                         | [clear](#clear)                                                   |
+  | [clearFieldWhenVisibleAndFillItWithText](#clearFieldWhenVisibleAndFillItWithText)       | [clearFieldAndFillItWithText](#clearFieldAndFillItWithText)       |
+  | [tapWhenTappable](#tapWhenTappable)                                                     | [tap](#tap)                                                       |
+  | [fillFieldWithTextWhenVisibleAndPressEnter](#fillFieldWithTextWhenVisibleAndPressEnter) | [fillFieldWithTextAndPressEnter](#fillFieldWithTextAndPressEnter) |
+  | [scrollToElementWhenVisible](#scrollToElementWhenVisible)                               | [scrollToElement](#scrollToElement)                               |
 
 ## Contributing
 
