@@ -8,8 +8,8 @@ const fillFieldWithTextWhenVisible = function(
   timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds,
   errorMessage = messageBuilder.getDefaultIsNotVisibleMessage(htmlElement)
 ) {
-  waiters.waitForElementVisibility(htmlElement, timeoutInMilliseconds, errorMessage);
-  htmlElement.sendKeys(text);
+  utils.replaceObsoleteFunction("fillFieldWithTextWhenVisible", "fillFieldWithText");
+  this.fillFieldWithText(htmlElement, text, timeoutInMilliseconds);
 };
 
 const fillFieldWithText = function(
@@ -31,8 +31,8 @@ const fillInputFieldWithFileWhenPresent = function(
   timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds,
   errorMessage = messageBuilder.getDefaultIsNotPresentMessage(htmlElement)
 ) {
-  waiters.waitForElementPresence(htmlElement, timeoutInMilliseconds, errorMessage);
-  htmlElement.sendKeys(absolutePath);
+  utils.replaceObsoleteFunction("fillInputFieldWithFileWhenPresent", "uploadFileIntoInputField");
+  this.uploadFileIntoInputField(htmlElement, absolutePath, timeoutInMilliseconds);
 };
 
 const uploadFileIntoInputField = function(
@@ -51,8 +51,8 @@ const clearFieldWhenVisible = function(
   timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds,
   errorMessage = messageBuilder.getDefaultIsNotVisibleMessage(htmlElement)
 ) {
-  waiters.waitForElementVisibility(htmlElement, timeoutInMilliseconds, errorMessage);
-  htmlElement.clear();
+  utils.replaceObsoleteFunction("clearFieldWhenVisible", "clear");
+  this.clear(htmlElement, timeoutInMilliseconds);
 };
 
 const clear = function(
@@ -73,8 +73,8 @@ const clearFieldWhenVisibleAndFillItWithText = function(
   timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds,
   errorMessage = messageBuilder.getDefaultIsNotVisibleMessage(htmlElement)
 ) {
-  this.clearFieldWhenVisible(htmlElement, timeoutInMilliseconds, errorMessage);
-  this.fillFieldWithTextWhenVisible(htmlElement, text, timeoutInMilliseconds, errorMessage);
+  utils.replaceObsoleteFunction("clearFieldWhenVisibleAndFillItWithText", "clearFieldAndFillItWithText");
+  this.clearFieldAndFillItWithText(htmlElement, text, timeoutInMilliseconds);
 };
 
 const clearFieldAndFillItWithText = function(
@@ -92,7 +92,8 @@ const fillFieldWithTextWhenVisibleAndPressEnter = function(
   timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds,
   errorMessage = messageBuilder.getDefaultIsNotVisibleMessage(htmlElement)
 ) {
-  this.fillFieldWithTextWhenVisible(htmlElement, text + protractor.Key.ENTER, timeoutInMilliseconds, errorMessage);
+  utils.replaceObsoleteFunction("fillFieldWithTextWhenVisibleAndPressEnter", "fillFieldWithTextAndPressEnter");
+  this.fillFieldWithTextAndPressEnter(htmlElement, text, timeoutInMilliseconds);
 };
 
 const fillFieldWithTextAndPressEnter = function(
