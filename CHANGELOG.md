@@ -1,3 +1,29 @@
+# 3.7.8
+
+## Deprecation
+
+- Started the deprecation of all functions below:
+
+  - getBodyElementFromCurrentBrowserOrBrowserInstance
+  - openNewBrowserInTheSamePage
+  - clickWhenClickable
+  - fillFieldWithTextWhenVisible
+  - fillInputFieldWithFileWhenPresent
+  - clearFieldWhenVisible
+  - clearFieldWhenVisibleAndFillItWithText
+  - tapWhenTappable
+  - fillFieldWithTextWhenVisibleAndPressEnter
+  - scrollToElementWhenVisible
+
+  In that patch we added a warning on console with information about what functions will be deprecated and a URL to the documentation about.
+  They will be deprecated on version 4.0.0
+
+  > Note: On all old functions the `errorMessage` argument isn't more necessary.
+
+## JavaScript files
+
+- Refactored some lines ocurring more 1 time.
+
 # 3.7.7
 
 ## package.json
