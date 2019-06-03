@@ -1,3 +1,5 @@
+const colors = require("colors");
+
 const timeoutInMilliseconds = require("./constants").DEFAULT_TIMEOUT_IN_MS;
 
 const EC = protractor.ExpectedConditions;
@@ -17,8 +19,32 @@ function waitForElementToBeClickable(htmlElement, timeoutInMilliseconds, errorMe
   browser.wait(EC.elementToBeClickable(htmlElement), timeoutInMilliseconds, errorMessage);
 }
 
+function warning(text) {
+  console.warn(
+    `${colors.yellow("protractor-helper warning:")} ${text} ${colors.cyan(
+      "[Read more on www.npmjs.com/package/protractor-helper#preparation-to-next-major-version]"
+    )}`
+  );
+}
+
+function obsoleteFunction(functionName, text = "") {
+  warning(`Function '${functionName}' will be deprecated in version 4.0.0!${text}`);
+}
+
+function replaceObsoleteFunction(oldFunctionName, newFunctionName) {
+  obsoleteFunction(oldFunctionName, ` Please use the new '${newFunctionName}' function instead!`);
+}
+
+function warnRemoveErrorMessage(functionName, errorMessage, defaultMessage) {
+  if (errorMessage != defaultMessage)
+    warning(`Remove the 'errorMessage' argument from the function '${functionName}'!`);
+}
+
 module.exports = {
+  obsoleteFunction,
+  replaceObsoleteFunction,
   requiredParam,
   timeout,
-  waitForElementToBeClickable
+  waitForElementToBeClickable,
+  warnRemoveErrorMessage
 };

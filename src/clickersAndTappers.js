@@ -6,8 +6,8 @@ const clickWhenClickable = function(
   timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds,
   errorMessage = messageBuilder.getDefaultIsNotClickableMessage(htmlElement)
 ) {
-  utils.waitForElementToBeClickable(htmlElement, timeoutInMilliseconds, errorMessage);
-  htmlElement.click();
+  utils.replaceObsoleteFunction("clickWhenClickable", "click");
+  this.click(htmlElement, timeoutInMilliseconds);
 };
 
 const click = function(
@@ -27,11 +27,8 @@ const tapWhenTappable = function(
   timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds,
   errorMessage = messageBuilder.getDefaultIsNotTappableMessage(htmlElement)
 ) {
-  utils.waitForElementToBeClickable(htmlElement, timeoutInMilliseconds, errorMessage);
-  browser
-    .touchActions()
-    .tap(htmlElement)
-    .perform();
+  utils.replaceObsoleteFunction("tapWhenTappable", "tap");
+  this.tap(htmlElement, timeoutInMilliseconds);
 };
 
 const tap = function(
