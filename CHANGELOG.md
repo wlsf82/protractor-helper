@@ -1,3 +1,34 @@
+# 3.7.8
+
+## Deprecation
+
+- Deprecate all the below functions with warnings in the console:
+
+  - getBodyElementFromCurrentBrowserOrBrowserInstance
+  - openNewBrowserInTheSamePage
+  - clickWhenClickable
+  - fillFieldWithTextWhenVisible
+  - fillInputFieldWithFileWhenPresent
+  - clearFieldWhenVisible
+  - clearFieldWhenVisibleAndFillItWithText
+  - tapWhenTappable
+  - fillFieldWithTextWhenVisibleAndPressEnter
+  - scrollToElementWhenVisible
+
+- Include warnings in the console to remove the `errorMessage` argument from all wait functions.
+
+- Include warnings in the console about two functions that will be removed on version 4.x.x.
+
+- Add documentation about deprecation warnings in preparation for version 4.x.x.
+
+## JavaScript files
+
+- Remove code duplication.
+
+## Package
+
+- Reduce package size.
+
 # 3.7.7
 
 ## package.json

@@ -26,7 +26,7 @@ const protractorHelper = require("protractor-helper");
 describe("foo", () => {
   it("bar", () => {
     // ...
-    // Here all the protractor-helper methods use the default timeout.
+    // Here all the protractor-helper methods use the default timeout (5000 ms).
 
     protractorHelper.setTimeout(1000);
 
@@ -36,13 +36,15 @@ describe("foo", () => {
 
     protractorHelper.setTimeout();
 
-    // Here all the protractor-helper methods use the default timeout.
+    // Here all the protractor-helper methods use the default timeout (5000 ms).
     // ...
   });
 });
 ```
 
 ## getBodyElementFromCurrentBrowserOrBrowserInstance
+
+> Note: This function will be removed in version 4.0.0.
 
 ```js
 const protractorHelper = require("protractor-helper");
@@ -59,6 +61,8 @@ describe("foo", () => {
 ```
 
 ## openNewBrowserInTheSamePage
+
+> Note: This function will be removed in version 4.0.0.
 
 | 1 mandatory argument |
 | :------------------: |
@@ -110,6 +114,8 @@ describe("foo", () => {
 
 ## waitForElementPresence
 
+> Note: The `errorMessage` argument will no longer be used in version 4.0.0. More info [here](www.npmjs.com/package/protractor-helper#preparation-to-next-major-version).
+
 | 1 mandatory argument |            2 optional arguments            |
 | :------------------: | :----------------------------------------: |
 |    `htmlElement`     | `timeoutInMilliseconds` and `errorMessage` |
@@ -131,6 +137,8 @@ describe("foo", () => {
 ```
 
 ## waitForElementNotToBePresent
+
+> Note: The `errorMessage` argument will no longer be used in version 4.0.0. More info [here](www.npmjs.com/package/protractor-helper#preparation-to-next-major-version).
 
 | 1 mandatory argument |            2 optional arguments            |
 | :------------------: | :----------------------------------------: |
@@ -154,6 +162,8 @@ describe("foo", () => {
 
 ## waitForElementVisibility
 
+> Note: The `errorMessage` argument will no longer be used in version 4.0.0. More info [here](www.npmjs.com/package/protractor-helper#preparation-to-next-major-version).
+
 | 1 mandatory argument |            2 optional arguments            |
 | :------------------: | :----------------------------------------: |
 |    `htmlElement`     | `timeoutInMilliseconds` and `errorMessage` |
@@ -175,6 +185,8 @@ describe("foo", () => {
 ```
 
 ## waitForElementNotToBeVisible
+
+> Note: The `errorMessage` argument will no longer be used in version 4.0.0. More info [here](www.npmjs.com/package/protractor-helper#preparation-to-next-major-version).
 
 | 1 mandatory argument |            2 optional arguments            |
 | :------------------: | :----------------------------------------: |
@@ -198,7 +210,7 @@ describe("foo", () => {
 
 ## clickWhenClickable
 
-> Note: this function will be deprecated in favor of the function `click`.
+> Note: This function will be deprecated in version 4.0.0 in favor of the function [`click`](#click).
 
 | 1 mandatory argument |            2 optional arguments            |
 | :------------------: | :----------------------------------------: |
@@ -222,9 +234,9 @@ describe("foo", () => {
 
 ## click
 
-| 1 mandatory argument |   1 optional argument    |
-| :------------------: | :----------------------: |
-|    `htmlElement`     | `timeoutInMilliseconds`` |
+| 1 mandatory argument |   1 optional argument   |
+| :------------------: | :---------------------: |
+|    `htmlElement`     | `timeoutInMilliseconds` |
 
 ```js
 const protractorHelper = require("protractor-helper");
@@ -244,7 +256,7 @@ describe("foo", () => {
 
 ## fillFieldWithTextWhenVisible
 
-> Note: this function will be deprecated in favor of the function `fillFieldWithText`.
+> Note: This function will be deprecated in version 4.0.0 in favor of the function [`fillFieldWithText`](#fillFieldWithText).
 
 |  2 mandatory arguments   |            2 optional arguments            |
 | :----------------------: | :----------------------------------------: |
@@ -290,7 +302,7 @@ describe("foo", () => {
 
 ## fillInputFieldWithFileWhenPresent
 
-> Note: this function will be deprecated in favor of the function `uploadFileIntoInputField`.
+> Note: This function will be deprecated in version 4.0.0 in favor of the function ['uploadFileIntoInputField'](#uploadFileIntoInputField).
 
 |      2 mandatory arguments       |            2 optional arguments            |
 | :------------------------------: | :----------------------------------------: |
@@ -349,7 +361,7 @@ describe("foo", () => {
 
 ## clearFieldWhenVisible
 
-> Note: this function will be deprecated in favor of the function `clear`.
+> Note: This function will be deprecated in version 4.0.0 in favor of the function [`clear`](#clear).
 
 | 1 mandatory argument |            2 optional arguments            |
 | :------------------: | :----------------------------------------: |
@@ -397,7 +409,7 @@ describe("foo", () => {
 
 ## clearFieldWhenVisibleAndFillItWithText
 
-> Note: this function will be deprecated in favor of the function `clearFieldAndFillItWithText`.
+> Note: This function will be deprecated in version 4.0.0 in favor of the function [`clearFieldAndFillItWithText`](#clearFieldAndFillItWithText).
 
 |  2 mandatory arguments   |            2 optional arguments            |
 | :----------------------: | :----------------------------------------: |
@@ -443,7 +455,7 @@ describe("foo", () => {
 
 ## tapWhenTappable
 
-> Note: this function will be deprecated in favor of the function `tap`.
+> Note: This function will be deprecated in version 4.0.0 in favor of the function [`tap`](#tap).
 
 | 1 mandatory argument |            2 optional arguments            |
 | :------------------: | :----------------------------------------: |
@@ -493,6 +505,8 @@ describe("foo", () => {
 
 ## waitForTextToBePresentInElement
 
+> Note: The `errorMessage` argument will no longer be used in version 4.0.0. More info [here](www.npmjs.com/package/protractor-helper#preparation-to-next-major-version).
+
 |  2 mandatory arguments   |            2 optional arguments            |
 | :----------------------: | :----------------------------------------: |
 | `htmlElement` and `text` | `timeoutInMilliseconds` and `errorMessage` |
@@ -520,6 +534,8 @@ describe("foo", () => {
 
 ## waitForTextNotToBePresentInElement
 
+> Note: The `errorMessage` argument will no longer be used in version 4.0.0. More info [here](www.npmjs.com/package/protractor-helper#preparation-to-next-major-version).
+
 |  2 mandatory arguments   |            2 optional arguments            |
 | :----------------------: | :----------------------------------------: |
 | `htmlElement` and `text` | `timeoutInMilliseconds` and `errorMessage` |
@@ -546,6 +562,8 @@ describe("foo", () => {
 ```
 
 ## waitForUrlToBeEqualToExpectedUrl
+
+> Note: The `errorMessage` argument will no longer be used in version 4.0.0. More info [here](www.npmjs.com/package/protractor-helper#preparation-to-next-major-version).
 
 | 1 mandatory argument |            2 optional arguments            |
 | :------------------: | :----------------------------------------: |
@@ -575,6 +593,8 @@ describe("foo", () => {
 
 ## waitForUrlNotToBeEqualToExpectedUrl
 
+> Note: The `errorMessage` argument will no longer be used in version 4.0.0. More info [here](www.npmjs.com/package/protractor-helper#preparation-to-next-major-version).
+
 | 1 mandatory argument |            2 optional arguments            |
 | :------------------: | :----------------------------------------: |
 |    `expectedUrl`     | `timeoutInMilliseconds` and `errorMessage` |
@@ -601,6 +621,8 @@ describe("foo", () => {
 
 ## waitForUrlToContainString
 
+> Note: The `errorMessage` argument will no longer be used in version 4.0.0. More info [here](www.npmjs.com/package/protractor-helper#preparation-to-next-major-version).
+
 | 1 mandatory argument |            2 optional arguments            |
 | :------------------: | :----------------------------------------: |
 |       `string`       | `timeoutInMilliseconds` and `errorMessage` |
@@ -625,6 +647,8 @@ describe("foo", () => {
 
 ## waitForUrlNotToContainString
 
+> Note: The `errorMessage` argument will no longer be used in version 4.0.0. More info [here](www.npmjs.com/package/protractor-helper#preparation-to-next-major-version).
+
 | 1 mandatory argument |            2 optional arguments            |
 | :------------------: | :----------------------------------------: |
 |       `string`       | `timeoutInMilliseconds` and `errorMessage` |
@@ -645,7 +669,7 @@ describe("foo", () => {
 
 ## fillFieldWithTextWhenVisibleAndPressEnter
 
-> Note: this function will be deprecated in favor of the function `fillFieldWithTextAndPressEnter`.
+> Note: This function will be deprecated in version 4.0.0 in favor of the function [`fillFieldWithTextAndPressEnter`](#fillFieldWithTextAndPressEnter).
 
 |  2 mandatory arguments   |            2 optional arguments            |
 | :----------------------: | :----------------------------------------: |
@@ -696,7 +720,7 @@ describe("foo", () => {
 
 ## scrollToElementWhenVisible
 
-> Note: this function will be deprecated in favor of the function `scrollToElement`.
+> Note: This function will be deprecated in version 4.0.0 in favor of the function [`scrollToElement`](#scrollToElement).
 
 | 1 mandatory argument |            2 optional arguments            |
 | :------------------: | :----------------------------------------: |
