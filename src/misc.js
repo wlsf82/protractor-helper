@@ -6,6 +6,7 @@ const waiters = require("./waiters");
 const getBodyElementFromCurrentBrowserOrBrowserInstance = function(browserInstance) {
   const cssSelector = "body";
 
+  utils.obsoleteFunction("getBodyElementFromCurrentBrowserOrBrowserInstance");
   if (browserInstance) {
     return browserInstance.element(by.css(cssSelector));
   } else {
@@ -14,6 +15,7 @@ const getBodyElementFromCurrentBrowserOrBrowserInstance = function(browserInstan
 };
 
 const openNewBrowserInTheSamePage = function(browser = requiredParam(openNewBrowserInTheSamePage, "browser")) {
+  utils.obsoleteFunction("openNewBrowserInTheSamePage");
   return browser.forkNewDriverInstance(true);
 };
 
@@ -28,8 +30,8 @@ const scrollToElementWhenVisible = function(
   timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds,
   errorMessage = messageBuilder.getDefaultIsNotVisibleMessage(htmlElement)
 ) {
-  waiters.waitForElementVisibility(htmlElement, timeoutInMilliseconds, errorMessage);
-  browser.executeScript("arguments[0].scrollIntoView(true);", htmlElement);
+  utils.replaceObsoleteFunction("scrollToElementWhenVisible", "scrollToElement");
+  this.scrollToElement(htmlElement, timeoutInMilliseconds);
 };
 
 const scrollToElement = function(
