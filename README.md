@@ -393,7 +393,7 @@ The below changes intend to make it easier for software engineers to create robu
 
 #### How do I know that my code still works?
 
-You will know that you have solved all issues when no warnings are shown in the console, like this:
+You will know that you have solved all issues when no warnings are shown in the console, like the one below:
 
 ```
 Protractor-helper warning: Function 'getBodyElementFromCurrentBrowserOrBrowserInstance' will be deprecated in version 4.0.0! [Read more on www.npmjs.com/package/protractor-helper#preparation-to-next-major-version]
@@ -421,7 +421,7 @@ The 8 below functions will be replaced to reduce complexity and code duplication
 
 #### How do I know that my code still works?
 
-You will know that you have solved all issues when no warnings are shown in the console, like this:
+You will know that you have solved all issues when no warnings are shown in the console, like the one below:
 
 ```
 Protractor-helper warning: Function 'fillFieldWithTextWhenVisible' will be deprecated in version 4.0.0! Please use the new 'fillFieldWithText' function instead! [Read more on www.npmjs.com/package/protractor-helper#preparation-to-next-major-version]
@@ -451,7 +451,7 @@ Affected functions:
 
 #### How do I know that my code still works?
 
-You will know that you have solved all issues when no warnings are shown in the console, like this:
+You will know that you have solved all issues when no warnings are shown in the console, like the one below:
 
 ```
 Protractor-helper warning: Remove the 'errorMessage' argument from the function 'waitForElementPresence'! [Read more on www.npmjs.com/package/protractor-helper#preparation-to-next-major-version]
