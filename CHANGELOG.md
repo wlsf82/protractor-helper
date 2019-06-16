@@ -1,5 +1,9 @@
 # 3.7.8
 
+## GitHub Page
+
+Yay, now [protractor-helper has a GitHub Page](https://wlsf82.github.io/protractor-helper/)! Thanks to [Paulo Gonçalves](https://www.npmjs.com/~paulogoncalves)!
+
 ## Deprecation
 
 - Deprecate all the below functions with warnings in the console:
