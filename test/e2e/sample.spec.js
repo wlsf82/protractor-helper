@@ -1,4 +1,4 @@
-const helper = require("../index.js");
+const helper = require("../../index.js");
 
 const constants = require("./constants");
 
