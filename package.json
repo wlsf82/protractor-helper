@@ -3,7 +3,7 @@
   "version": "3.7.8",
   "scripts": {
     "pretest": "webdriver-manager update --gecko false",
-    "test": "protractor test/protractor.conf.js",
+    "test": "protractor test/e2e/protractor.conf.js",
     "prettify": "prettier --write **/*.js **/*.md package.json sampleApp/**/* --print-width 120"
   },
   "pre-commit": [
