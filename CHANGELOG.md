@@ -1,3 +1,8 @@
+# 3.7.9
+
+- Add unit tests for `messageBuilder` functions.
+- Move end-to-end tests to their own directory.
+
 # 3.7.8
 
 ## GitHub Page
