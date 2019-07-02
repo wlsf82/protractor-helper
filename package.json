@@ -32,6 +32,7 @@
     "protractor": ">= 5.0.0 < 6"
   },
   "devDependencies": {
+    "jasmine": "^3.4.0",
     "pre-commit": "^1.2.2",
     "prettier": "1.15.2",
     "protractor": "^5.4.2"
