@@ -1,3 +1,7 @@
+# 3.7.10
+
+- Add unit tests for `utils` functions.
+
 # 3.7.9
 
 - Add unit tests for `messageBuilder` functions.
