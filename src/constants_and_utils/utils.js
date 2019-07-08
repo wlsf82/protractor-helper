@@ -1,4 +1,5 @@
 const colors = require("colors");
+const protractor = require("protractor");
 
 const timeoutInMilliseconds = require("./constants").DEFAULT_TIMEOUT_IN_MS;
 
