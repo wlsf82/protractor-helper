@@ -9,9 +9,8 @@ const getBodyElementFromCurrentBrowserOrBrowserInstance = function(browserInstan
   utils.obsoleteFunction("getBodyElementFromCurrentBrowserOrBrowserInstance");
   if (browserInstance) {
     return browserInstance.element(by.css(cssSelector));
-  } else {
-    return browser.element(by.css(cssSelector));
   }
+  return browser.element(by.css(cssSelector));
 };
 
 const openNewBrowserInTheSamePage = function(browser = requiredParam(openNewBrowserInTheSamePage, "browser")) {
