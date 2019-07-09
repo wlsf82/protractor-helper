@@ -16,8 +16,21 @@ function requiredParam(functionWithoutParam, requiredParameter = "htmlElement") 
   throw requiredParamError;
 }
 
+function replaceObsoleteFunction(oldFunctionName, newFunctionName) {
+  obsoleteFunction(oldFunctionName, ` Please use the new '${newFunctionName}' function instead!`);
+}
+
+function obsoleteFunction(functionName, text = "") {
+  warning(`Function '${functionName}' will be deprecated in version 4.0.0!${text}`);
+}
+
 function waitForElementToBeClickable(htmlElement, timeoutInMilliseconds, errorMessage) {
   browser.wait(EC.elementToBeClickable(htmlElement), timeoutInMilliseconds, errorMessage);
+}
+
+function warnRemoveErrorMessage(functionName, errorMessage, defaultMessage) {
+  if (errorMessage != defaultMessage)
+    warning(`Remove the 'errorMessage' argument from the function '${functionName}'!`);
 }
 
 function warning(text) {
@@ -26,19 +39,6 @@ function warning(text) {
       "[Read more on www.npmjs.com/package/protractor-helper#preparation-to-next-major-version]"
     )}`
   );
-}
-
-function obsoleteFunction(functionName, text = "") {
-  warning(`Function '${functionName}' will be deprecated in version 4.0.0!${text}`);
-}
-
-function replaceObsoleteFunction(oldFunctionName, newFunctionName) {
-  obsoleteFunction(oldFunctionName, ` Please use the new '${newFunctionName}' function instead!`);
-}
-
-function warnRemoveErrorMessage(functionName, errorMessage, defaultMessage) {
-  if (errorMessage != defaultMessage)
-    warning(`Remove the 'errorMessage' argument from the function '${functionName}'!`);
 }
 
 module.exports = {
