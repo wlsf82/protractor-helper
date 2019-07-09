@@ -19,9 +19,7 @@ const openNewBrowserInTheSamePage = function(browser = requiredParam(openNewBrow
 };
 
 const isCurrentUrlDifferentFromBaseUrl = function() {
-  return browser.getCurrentUrl().then(url => {
-    return url !== browser.baseUrl;
-  });
+  return browser.getCurrentUrl().then(url => url !== browser.baseUrl);
 };
 
 const scrollToElementWhenVisible = function(
