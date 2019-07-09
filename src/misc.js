@@ -24,8 +24,7 @@ const isCurrentUrlDifferentFromBaseUrl = function() {
 
 const scrollToElementWhenVisible = function(
   htmlElement = utils.requiredParam(scrollToElementWhenVisible),
-  timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds,
-  errorMessage = messageBuilder.getDefaultIsNotVisibleMessage(htmlElement)
+  timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds
 ) {
   utils.replaceObsoleteFunction("scrollToElementWhenVisible", "scrollToElement");
   this.scrollToElement(htmlElement, timeoutInMilliseconds);

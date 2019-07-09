@@ -3,8 +3,7 @@ const utils = require("./constants_and_utils/utils");
 
 const clickWhenClickable = function(
   htmlElement = utils.requiredParam(clickWhenClickable),
-  timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds,
-  errorMessage = messageBuilder.getDefaultIsNotClickableMessage(htmlElement)
+  timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds
 ) {
   utils.replaceObsoleteFunction("clickWhenClickable", "click");
   this.click(htmlElement, timeoutInMilliseconds);
@@ -24,8 +23,7 @@ const click = function(
 
 const tapWhenTappable = function(
   htmlElement = utils.requiredParam(tapWhenTappable),
-  timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds,
-  errorMessage = messageBuilder.getDefaultIsNotTappableMessage(htmlElement)
+  timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds
 ) {
   utils.replaceObsoleteFunction("tapWhenTappable", "tap");
   this.tap(htmlElement, timeoutInMilliseconds);
