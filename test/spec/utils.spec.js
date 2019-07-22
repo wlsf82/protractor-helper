@@ -1,7 +1,7 @@
 const utils = require("../../src/constants_and_utils/utils");
 
 describe("utils", () => {
-  it("requiredParam() - passing only mandatory argument", () => {
+  it("requiredParam() - passing only mandatory arguments", () => {
     const someFunction = function() {};
     const actualResult = function() {
       utils.requiredParam(someFunction)
@@ -13,7 +13,7 @@ describe("utils", () => {
     expect(actualResult).toThrow(new Error(expectedResult));
   });
 
-  it("requiredParam() - passing all argument", () => {
+  it("requiredParam() - passing all arguments", () => {
     const someOtherFunction = function() {};
     const requiredParameter = "text"
     const actualResult = function() {
