@@ -1,22 +1,24 @@
 const colors = require("colors");
 
+const messageBuilder = require("./messageBuilder");
+
 function replaceObsoleteFunction(oldFunctionName, newFunctionName) {
-  obsoleteFunction(oldFunctionName, ` Please use the new '${newFunctionName}' function instead!`);
+  obsoleteFunction(oldFunctionName, messageBuilder.pleaseUseNewFunction(newFunctionName));
 }
 
 function obsoleteFunction(functionName, text = "") {
-  warning(`Function '${functionName}' will be deprecated in version 4.0.0!${text}`);
+  warning(`${messageBuilder.functionWillBeDeprecated(functionName)}${text}`);
 }
 
 function warnRemoveErrorMessage(functionName, errorMessage, defaultMessage) {
   if (errorMessage != defaultMessage)
-    warning(`Remove the 'errorMessage' argument from the function '${functionName}'!`);
+    warning(messageBuilder.removeErrorMessageArgFromFunction(functionName));
 }
 
 function warning(text) {
   console.warn(
     `${colors.yellow("protractor-helper warning:")} ${text} ${colors.cyan(
-      "[Read more on www.npmjs.com/package/protractor-helper#preparation-to-next-major-version]"
+      messageBuilder.getReadMoreMessage()
     )}`
   );
 }
