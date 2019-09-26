@@ -1,3 +1,4 @@
+const deprecation = require("./constants_and_utils/deprecation");
 const messageBuilder = require("./constants_and_utils/messageBuilder");
 const utils = require("./constants_and_utils/utils");
 
@@ -5,7 +6,7 @@ const clickWhenClickable = function(
   htmlElement = utils.requiredParam(clickWhenClickable),
   timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds
 ) {
-  utils.replaceObsoleteFunction("clickWhenClickable", "click");
+  deprecation.replaceObsoleteFunction("clickWhenClickable", "click");
   this.click(htmlElement, timeoutInMilliseconds);
 };
 
@@ -25,7 +26,7 @@ const tapWhenTappable = function(
   htmlElement = utils.requiredParam(tapWhenTappable),
   timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds
 ) {
-  utils.replaceObsoleteFunction("tapWhenTappable", "tap");
+  deprecation.replaceObsoleteFunction("tapWhenTappable", "tap");
   this.tap(htmlElement, timeoutInMilliseconds);
 };
 

@@ -1,3 +1,4 @@
+const deprecation = require("./constants_and_utils/deprecation");
 const messageBuilder = require("./constants_and_utils/messageBuilder");
 const utils = require("./constants_and_utils/utils");
 const waiters = require("./waiters");
@@ -7,7 +8,7 @@ const fillFieldWithTextWhenVisible = function(
   text = utils.requiredParam(fillFieldWithTextWhenVisible, "text"),
   timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds
 ) {
-  utils.replaceObsoleteFunction("fillFieldWithTextWhenVisible", "fillFieldWithText");
+  deprecation.replaceObsoleteFunction("fillFieldWithTextWhenVisible", "fillFieldWithText");
   this.fillFieldWithText(htmlElement, text, timeoutInMilliseconds);
 };
 
@@ -29,7 +30,7 @@ const fillInputFieldWithFileWhenPresent = function(
   absolutePath = utils.requiredParam(fillInputFieldWithFileWhenPresent, "absolutePath"),
   timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds
 ) {
-  utils.replaceObsoleteFunction("fillInputFieldWithFileWhenPresent", "uploadFileIntoInputField");
+  deprecation.replaceObsoleteFunction("fillInputFieldWithFileWhenPresent", "uploadFileIntoInputField");
   this.uploadFileIntoInputField(htmlElement, absolutePath, timeoutInMilliseconds);
 };
 
@@ -48,7 +49,7 @@ const clearFieldWhenVisible = function(
   htmlElement = utils.requiredParam(clearFieldWhenVisible),
   timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds
 ) {
-  utils.replaceObsoleteFunction("clearFieldWhenVisible", "clear");
+  deprecation.replaceObsoleteFunction("clearFieldWhenVisible", "clear");
   this.clear(htmlElement, timeoutInMilliseconds);
 };
 
@@ -69,7 +70,7 @@ const clearFieldWhenVisibleAndFillItWithText = function(
   text = utils.requiredParam(clearFieldWhenVisibleAndFillItWithText, "text"),
   timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds
 ) {
-  utils.replaceObsoleteFunction("clearFieldWhenVisibleAndFillItWithText", "clearFieldAndFillItWithText");
+  deprecation.replaceObsoleteFunction("clearFieldWhenVisibleAndFillItWithText", "clearFieldAndFillItWithText");
   this.clearFieldAndFillItWithText(htmlElement, text, timeoutInMilliseconds);
 };
 
@@ -87,7 +88,7 @@ const fillFieldWithTextWhenVisibleAndPressEnter = function(
   text = utils.requiredParam(fillFieldWithTextWhenVisibleAndPressEnter, "text"),
   timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds
 ) {
-  utils.replaceObsoleteFunction("fillFieldWithTextWhenVisibleAndPressEnter", "fillFieldWithTextAndPressEnter");
+  deprecation.replaceObsoleteFunction("fillFieldWithTextWhenVisibleAndPressEnter", "fillFieldWithTextAndPressEnter");
   this.fillFieldWithTextAndPressEnter(htmlElement, text, timeoutInMilliseconds);
 };
 

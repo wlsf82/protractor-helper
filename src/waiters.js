@@ -1,5 +1,6 @@
 const EC = protractor.ExpectedConditions;
 
+const deprecation = require("./constants_and_utils/deprecation");
 const messageBuilder = require("./constants_and_utils/messageBuilder");
 const utils = require("./constants_and_utils/utils");
 
@@ -8,7 +9,7 @@ const waitForElementPresence = function(
   timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds,
   errorMessage = messageBuilder.getDefaultIsNotPresentMessage(htmlElement)
 ) {
-  utils.warnRemoveErrorMessage(
+  deprecation.warnRemoveErrorMessage(
     "waitForElementPresence",
     errorMessage,
     messageBuilder.getDefaultIsNotPresentMessage(htmlElement)
@@ -21,7 +22,7 @@ const waitForElementNotToBePresent = function(
   timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds,
   errorMessage = messageBuilder.getDefaultIsStillPresentMessage(htmlElement)
 ) {
-  utils.warnRemoveErrorMessage(
+  deprecation.warnRemoveErrorMessage(
     "waitForElementNotToBePresent",
     errorMessage,
     messageBuilder.getDefaultIsStillPresentMessage(htmlElement)
@@ -34,7 +35,7 @@ const waitForElementVisibility = function(
   timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds,
   errorMessage = messageBuilder.getDefaultIsNotVisibleMessage(htmlElement)
 ) {
-  utils.warnRemoveErrorMessage(
+  deprecation.warnRemoveErrorMessage(
     "waitForElementVisibility",
     errorMessage,
     messageBuilder.getDefaultIsNotVisibleMessage(htmlElement)
@@ -47,7 +48,7 @@ const waitForElementNotToBeVisible = function(
   timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds,
   errorMessage = messageBuilder.getDefaultIsStillVisibleMessage(htmlElement)
 ) {
-  utils.warnRemoveErrorMessage(
+  deprecation.warnRemoveErrorMessage(
     "waitForElementNotToBeVisible",
     errorMessage,
     messageBuilder.getDefaultIsStillVisibleMessage(htmlElement)
@@ -61,7 +62,7 @@ const waitForTextToBePresentInElement = function(
   timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds,
   errorMessage = messageBuilder.getDefaultTextTextNotPresentOnElementMessage(htmlElement, text)
 ) {
-  utils.warnRemoveErrorMessage(
+  deprecation.warnRemoveErrorMessage(
     "waitForTextToBePresentInElement",
     errorMessage,
     messageBuilder.getDefaultTextTextNotPresentOnElementMessage(htmlElement, text)
@@ -75,7 +76,7 @@ const waitForTextNotToBePresentInElement = function(
   timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds,
   errorMessage = messageBuilder.getDeafultTextTextIsStillPresentOnElementMessage(htmlElement, text)
 ) {
-  utils.warnRemoveErrorMessage(
+  deprecation.warnRemoveErrorMessage(
     "waitForTextNotToBePresentInElement",
     errorMessage,
     messageBuilder.getDeafultTextTextIsStillPresentOnElementMessage(htmlElement, text)
@@ -88,7 +89,7 @@ const waitForUrlToBeEqualToExpectedUrl = function(
   timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds,
   errorMessage = messageBuilder.getDefaultCurrentUrlIsDifferentThanExpectedUrlMessage(expectedUrl)
 ) {
-  utils.warnRemoveErrorMessage(
+  deprecation.warnRemoveErrorMessage(
     "waitForUrlToBeEqualToExpectedUrl",
     errorMessage,
     messageBuilder.getDefaultCurrentUrlIsDifferentThanExpectedUrlMessage(expectedUrl)
@@ -101,7 +102,7 @@ const waitForUrlNotToBeEqualToExpectedUrl = function(
   timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds,
   errorMessage = messageBuilder.getDefaultCurrentUrlIsEqualToExpectedUrlMessage(expectedUrl)
 ) {
-  utils.warnRemoveErrorMessage(
+  deprecation.warnRemoveErrorMessage(
     "waitForUrlNotToBeEqualToExpectedUrl",
     errorMessage,
     messageBuilder.getDefaultCurrentUrlIsEqualToExpectedUrlMessage(expectedUrl)
@@ -114,7 +115,7 @@ const waitForUrlToContainString = function(
   timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds,
   errorMessage = messageBuilder.getDefaultCurrentUrlDoesNotContainStringMessage(string)
 ) {
-  utils.warnRemoveErrorMessage(
+  deprecation.warnRemoveErrorMessage(
     "waitForUrlToContainString",
     errorMessage,
     messageBuilder.getDefaultCurrentUrlDoesNotContainStringMessage(string)
@@ -127,7 +128,7 @@ const waitForUrlNotToContainString = function(
   timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds,
   errorMessage = messageBuilder.getDefaultCurrentUrlContainsTheString(string)
 ) {
-  utils.warnRemoveErrorMessage(
+  deprecation.warnRemoveErrorMessage(
     "waitForUrlNotToContainString",
     errorMessage,
     messageBuilder.getDefaultCurrentUrlContainsTheString(string)
