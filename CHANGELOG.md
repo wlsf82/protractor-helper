@@ -1,3 +1,9 @@
+# 3.7.12
+
+- Update package-lock due to new version of selenium and related libraries, such as chromedriver
+- Modularize deprecation related functions
+- Improve modules' responsibilities and add new unit tests
+
 # 3.7.11
 
 - Add unit tests for `utils` functions.
