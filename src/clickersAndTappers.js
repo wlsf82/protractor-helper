@@ -1,6 +1,7 @@
 const deprecation = require("./constants_and_utils/deprecation");
 const messageBuilder = require("./constants_and_utils/messageBuilder");
 const utils = require("./constants_and_utils/utils");
+const waiters = require("./waiters");
 
 const clickWhenClickable = function(
   htmlElement = utils.requiredParam(clickWhenClickable),
@@ -20,6 +21,18 @@ const click = function(
     messageBuilder.getDefaultIsNotClickableMessage(htmlElement)
   );
   htmlElement.click();
+};
+
+const hoverAndClick = function(
+  htmlElement = utils.requiredParam(hoverAndClick),
+  timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds
+) {
+  waiters.waitForElementPresence(htmlElement, timeoutInMilliseconds);
+  browser
+    .actions()
+    .mouseMove(htmlElement)
+    .click()
+    .perform();
 };
 
 const tapWhenTappable = function(
@@ -45,6 +58,7 @@ const tap = function(
 module.exports = {
   clickWhenClickable,
   click,
+  hoverAndClick,
   tapWhenTappable,
   tap
 };

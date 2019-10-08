@@ -1,6 +1,7 @@
 module.exports = {
   clickWhenClickable: require("./src/clickersAndTappers").clickWhenClickable,
   click: require("./src/clickersAndTappers").click,
+  hoverAndClick: require("./src/clickersAndTappers").hoverAndClick,
   tapWhenTappable: require("./src/clickersAndTappers").tapWhenTappable,
   tap: require("./src/clickersAndTappers").tap,
   fillFieldWithTextWhenVisible: require("./src/inputFieldInteractions").fillFieldWithTextWhenVisible,

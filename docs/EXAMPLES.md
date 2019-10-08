@@ -254,6 +254,28 @@ describe("foo", () => {
 });
 ```
 
+## hoverAndClick
+
+| 1 mandatory argument |   1 optional argument   |
+| :------------------: | :---------------------: |
+|    `htmlElement`     | `timeoutInMilliseconds` |
+
+```js
+const protractorHelper = require("protractor-helper");
+
+describe("foo", () => {
+  it("bar", () => {
+    browser.get("https://example.com");
+
+    const myButton = element(by.css("button.my-btn"));
+
+    protractorHelper.hoverAndClick(myButton, 3000);
+
+    // ...
+  });
+});
+```
+
 ## fillFieldWithTextWhenVisible
 
 > Note: This function will be deprecated in version 4.0.0 in favor of the function [`fillFieldWithText`](#fillFieldWithText).

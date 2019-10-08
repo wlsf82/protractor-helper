@@ -27,6 +27,7 @@ Many of the helper functions on this library uses `protractor.ExpectedConditions
   - [`waitForElementNotToBeVisible`](#waitforelementnottobevisible)
   - [`clickWhenClickable`](#clickwhenclickable) **- Will be deprecated in version 4.0.0**
   - [`click`](#click)
+  - [`hoverAndClick`](#hoverAndClick)
   - [`fillFieldWithTextWhenVisible`](#fillfieldwithtextwhenvisible) **- Will be deprecated in version 4.0.0**
   - [`fillFieldWithText`](#fillfieldwithtext)
   - [`fillInputFieldWithFileWhenPresent`](#fillinputfieldwithfilewhenpresent) **- Will be deprecated in version 4.0.0**
@@ -216,6 +217,11 @@ This method is used to click in an element as soon as it is in a clickable state
 
 This method is used to click in an element as soon as it is in a clickable state. This means that the element is visible and enabled for clicking.
 [Example](docs/EXAMPLES.md#click)
+
+### `hoverAndClick`
+
+This method is used to hover over an element as soon as it is present in the DOM, and then click on it.
+[Example](docs/EXAMPLES.md#hoverAndClick)
 
 ### `fillFieldWithTextWhenVisible`
 

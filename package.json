@@ -1,6 +1,6 @@
 {
   "name": "protractor-helper",
-  "version": "3.7.12",
+  "version": "3.8.0",
   "scripts": {
     "pretest": "webdriver-manager update --gecko false",
     "test": "jasmine test/spec/*.spec.js && protractor test/e2e/protractor.conf.js",

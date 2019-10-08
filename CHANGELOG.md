@@ -1,3 +1,7 @@
+# 3.8.0
+
+- Implement `hoverAndClick` function and document it
+
 # 3.7.12
 
 - Update package-lock due to new version of selenium and related libraries, such as chromedriver

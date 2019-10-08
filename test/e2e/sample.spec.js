@@ -115,6 +115,10 @@ describe("Protractor helper", () => {
     it("fillFieldWithTextAndPressEnter", () => {
       helper.fillFieldWithTextAndPressEnter(inputField, constants.SAMPLE_URL);
     });
+
+    it("hoverAndClick", () => {
+      helper.hoverAndClick(expandButton);
+    });
   });
 
   describe("Misc", () => {
