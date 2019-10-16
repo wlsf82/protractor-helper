@@ -18,25 +18,17 @@ Many of the helper functions on this library uses `protractor.ExpectedConditions
   <details><p><summary>Open to see all available helpers</summary>
 
   - [`setTimeout`](#settimeout)
-  - [`getBodyElementFromCurrentBrowserOrBrowserInstance`](#getbodyelementfromcurrentbrowserorbrowserinstance) **- Will be deprecated in version 4.0.0**
-  - [`openNewBrowserInTheSamePage`](#opennewbrowserinthesamepage) **- Will be deprecated in version 4.0.0**
   - [`isCurrentUrlDifferentFromBaseUrl`](#iscurrenturldifferentfrombaseurl)
   - [`waitForElementPresence`](#waitforelementpresence)
   - [`waitForElementNotToBePresent`](#waitforelementnottobepresent)
   - [`waitForElementVisibility`](#waitforelementvisibility)
   - [`waitForElementNotToBeVisible`](#waitforelementnottobevisible)
-  - [`clickWhenClickable`](#clickwhenclickable) **- Will be deprecated in version 4.0.0**
   - [`click`](#click)
   - [`hoverAndClick`](#hoverAndClick)
-  - [`fillFieldWithTextWhenVisible`](#fillfieldwithtextwhenvisible) **- Will be deprecated in version 4.0.0**
   - [`fillFieldWithText`](#fillfieldwithtext)
-  - [`fillInputFieldWithFileWhenPresent`](#fillinputfieldwithfilewhenpresent) **- Will be deprecated in version 4.0.0**
   - [`uploadFileIntoInputField`](#uploadfileintoinputfield)
-  - [`clearFieldWhenVisible`](#clearfieldwhenvisible) **- Will be deprecated in version 4.0.0**
   - [`clear`](#clear)
-  - [`clearFieldWhenVisibleAndFillItWithText`](#clearfieldwhenvisibleandfillitwithtext) **- Will be deprecated in version 4.0.0**
   - [`clearFieldAndFillItWithText`](#clearfieldandfillitwithtext)
-  - [`tapWhenTappable`](#tapwhentappable) **- Will be deprecated in version 4.0.0**
   - [`tap`](#tap)
   - [`waitForTextToBePresentInElement`](#waitfortexttobepresentinelement)
   - [`waitForTextNotToBePresentInElement`](#waitfortextnottobepresentinelement)
@@ -44,9 +36,6 @@ Many of the helper functions on this library uses `protractor.ExpectedConditions
   - [`waitForUrlNotToBeEqualToExpectedUrl`](#waitforurlnottobeequaltoexpectedurl)
   - [`waitForUrlToContainString`](#waitforurltocontainstring)
   - [`waitForUrlNotToContainString`](#waitforurlnottocontainstring)
-  - [`fillFieldWithTextWhenVisibleAndPressEnter`](#fillfieldwithtextwhenvisibleandpressenter) **- Will be deprecated in version 4.0.0**
-  - [`fillFieldWithTextAndPressEnter`](#fillfieldwithtextandpressenter)
-  - [`scrollToElementWhenVisible`](#scrolltoelementwhenvisible) **- Will be deprecated in version 4.0.0**
   - [`scrollToElement`](#scrolltoelement)
 
 </p> </details>
@@ -161,23 +150,6 @@ If called without passing an argument the timeout will be set to the default one
 
 [Example](docs/EXAMPLES.md#settimeout)
 
-### `getBodyElementFromCurrentBrowserOrBrowserInstance`
-
-> **Will be removed in version 4.0.0, read more [here](#preparation-to-next-major-version).**
-
-This method returns the body element of the current browser if nothing is passed as argument or the body element of a specific browser instance in case the browser instance is passed as an argument. This second option is useful when working with two browsers interacting with each other, for example.
-[Example](docs/EXAMPLES.md#getbodyelementfromcurrentbrowserorbrowserinstance)
-
-### `openNewBrowserInTheSamePage`
-
-> **Will be removed in version 4.0.0, read more [here](#preparation-to-next-major-version).**
-
-This method opens a new browser instance in the same page of the main browser.
-
-> Note: Only works with Protractor version 5.0.0, not higher.
-
-[Example](docs/EXAMPLES.md#opennewbrowserinthesamepage)
-
 ### `isCurrentUrlDifferentFromBaseUrl`
 
 This method returns a boolean depending if the current url is different from the base url. No argument needed.
@@ -206,13 +178,6 @@ This method waits for an element to be visible in the page. Being displayed mean
 This method is the opposite of the previous one, so, it waits for an element not to be visible in the page. By saying not being displayed means that the element may be in the DOM, but not visible.
 [Example](docs/EXAMPLES.md#waitforelementnottobevisible)
 
-### `clickWhenClickable`
-
-> **Will be deprecated in version 4.0.0, please use the new ['click'](#click) function instead! Read more [here](#preparation-to-next-major-version).**
-
-This method is used to click in an element as soon as it is in a clickable state. This means that the element is visible and enabled for clicking.
-[Example](docs/EXAMPLES.md#clickwhenclickable)
-
 ### `click`
 
 This method is used to click in an element as soon as it is in a clickable state. This means that the element is visible and enabled for clicking.
@@ -223,60 +188,25 @@ This method is used to click in an element as soon as it is in a clickable state
 This method is used to hover over an element as soon as it is present in the DOM, and then click on it.
 [Example](docs/EXAMPLES.md#hoverAndClick)
 
-### `fillFieldWithTextWhenVisible`
-
-> **Will be deprecated in version 4.0.0, please use the new ['fillFieldWithText'](#fillFieldWithText) function instead! Read more [here](#preparation-to-next-major-version).**
-
-This method fills an input field with a text as soon as such field is visible.
-[Example](docs/EXAMPLES.md#fillfieldwithtextwhenvisible)
-
 ### `fillFieldWithText`
 
 This method fills an input field with a text as soon as such field is visible.
 [Example](docs/EXAMPLES.md#fillFieldWithText)
-
-### `fillInputFieldWithFileWhenPresent`
-
-> **Will be deprecated in version 4.0.0, please use the new ['uploadFileIntoInputField'](#uploadFileIntoInputField) function instead! Read more [here](#preparation-to-next-major-version).**
-
-This method fills a file input field with a specified file as soon as the file input field is present in the DOM.
-[Example](docs/EXAMPLES.md#fillinputfieldwithfilewhenpresent)
 
 ### `uploadFileIntoInputField`
 
 This method uploads a file in a file input field as soon as the file input field is present in the DOM.
 [Example](docs/EXAMPLES.md#uploadFileIntoInputField)
 
-### `clearFieldWhenVisible`
-
-> **Will be deprecated in version 4.0.0, please use the new ['clear'](#clear) function instead! Read more [here](#preparation-to-next-major-version).**
-
-This method clears a text input field as soon as such field is visible.
-[Example](docs/EXAMPLES.md#clearFieldWhenVisible)
-
 ### `clear`
 
 This method clears a text input field as soon as such field is visible.
 [Example](docs/EXAMPLES.md#clear)
 
-### `clearFieldWhenVisibleAndFillItWithText`
-
-> **Will be deprecated in version 4.0.0, please use the new ['clearFieldAndFillItWithText'](#clearFieldAndFillItWithText) function instead! Read more [here](#preparation-to-next-major-version).**
-
-This method clears a text input field as soon as such field is visible, and then it fills it with a text.
-[Example](docs/EXAMPLES.md#clearfieldwhenvisibleandfillitwithtext)
-
 ### `clearFieldAndFillItWithText`
 
 This method clears a text input field as soon as such field is visible, and then it fills it with a text.
 [Example](docs/EXAMPLES.md#clearFieldAndFillItWithText)
-
-### `tapWhenTappable`
-
-> **Will be deprecated in version 4.0.0, please use the new ['tap'](#tap) function instead! Read more [here](#preparation-to-next-major-version).**
-
-This method performs a tap action on a clickable/tappable HTML element as soon as it is in a clickable/tappable state. This method is used when performing web mobile testing in mobile emulators, for example.
-[Example](docs/EXAMPLES.md#tapwhentappable)
 
 ### `tap`
 
@@ -313,24 +243,10 @@ This method waits for the URL to contain an expected string. Such method is usef
 This method waits for the URL not to contain an expected string. Such method is useful when you want to perform verifications based on the current URL.
 [Example](docs/EXAMPLES.md#waitforurlnottocontainstring)
 
-### `fillFieldWithTextWhenVisibleAndPressEnter`
-
-> **Will be deprecated in version 4.0.0, please use the new ['fillFieldWithTextAndPressEnter'](#fillFieldWithTextAndPressEnter) function instead! Read more [here](#preparation-to-next-major-version).**
-
-This method fills an input field with a text as soon as such field is visible and then it simulates pressing the ENTER key from the keyboard. This method is useful in cases such as when doing a search and pressing the ENTER key, instead of having to fill the input field and clicking the search button, for example.
-[Example](docs/EXAMPLES.md#fillfieldwithtextwhenvisibleandpressenter)
-
 ### `fillFieldWithTextAndPressEnter`
 
 This method fills an input field with a text as soon as such field is visible and then it simulates pressing the ENTER key from the keyboard. This method is useful in cases such as when doing a search and pressing the ENTER key, instead of having to fill the input field and clicking the search button, for example.
 [Example](docs/EXAMPLES.md#fillFieldWithTextAndPressEnter)
-
-### `scrollToElementWhenVisible`
-
-> **Will be deprecated in version 4.0.0, please use the new ['scrollToElement'](#scrollToElement) function instead! Read more [here](#preparation-to-next-major-version).**
-
-This method is used to scroll up to an element on the page as soon as the element is visible in the DOM.
-[Example](docs/EXAMPLES.md#scrolltoelementwhenvisible)
 
 ### `scrollToElement`
 
@@ -381,87 +297,6 @@ Failed: text 'foo' not present on element with locator 'By(css selector, h1)'.
 ```
 
 > As you can see, the messages are clear and tell you exactly why the test has failed, such as in the previous example, where a specific text ('foo') is not present in a heading element (an element with css selector 'h1').
-
-## Preparation to next major version
-
-We will alert users on the console about which changes need to be done.
-
-The below changes intend to make it easier for software engineers to create robust end-to-end tests.
-
-### Functions that will be removed
-
-1. [getBodyElementFromCurrentBrowserOrBrowserInstance](#getBodyElementFromCurrentBrowserOrBrowserInstance)
-2. [openNewBrowserInTheSamePage](#openNewBrowserInTheSamePage)
-
-#### What to do?
-
-- Remove the two functions above and use native Protractor code to not break your code.
-
-#### How do I know that my code still works?
-
-You will know that you have solved all issues when no warnings are shown in the console, like the one below:
-
-```
-Protractor-helper warning: Function 'getBodyElementFromCurrentBrowserOrBrowserInstance' will be deprecated in version 4.0.0! [Read more on www.npmjs.com/package/protractor-helper#preparation-to-next-major-version]
-```
-
-### Functions that will be replaced
-
-The 8 below functions will be replaced to reduce complexity and code duplication. Also, they you have shorter names and less arguments.
-
-| Old                                                                                     | New                                                               |
-| --------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
-| [clickWhenClickable](#clickWhenClickable)                                               | [click](#click)                                                   |
-| [fillFieldWithTextWhenVisible](#fillFieldWithTextWhenVisible)                           | [fillFieldWithText](#fillFieldWithText)                           |
-| [fillInputFieldWithFileWhenPresent](#fillInputFieldWithFileWhenPresent)                 | [uploadFileIntoInputField](#uploadFileIntoInputField)             |
-| [clearFieldWhenVisible](#clearFieldWhenVisible)                                         | [clear](#clear)                                                   |
-| [clearFieldWhenVisibleAndFillItWithText](#clearFieldWhenVisibleAndFillItWithText)       | [clearFieldAndFillItWithText](#clearFieldAndFillItWithText)       |
-| [tapWhenTappable](#tapWhenTappable)                                                     | [tap](#tap)                                                       |
-| [fillFieldWithTextWhenVisibleAndPressEnter](#fillFieldWithTextWhenVisibleAndPressEnter) | [fillFieldWithTextAndPressEnter](#fillFieldWithTextAndPressEnter) |
-| [scrollToElementWhenVisible](#scrollToElementWhenVisible)                               | [scrollToElement](#scrollToElement)                               |
-
-#### What to do?
-
-- Only change the function on **Old** column to the matching function of **New** column, removing the `errorMessage` argument.
-  - All new methods, unlike the old ones, don't use the `errorMessage` argument.
-
-#### How do I know that my code still works?
-
-You will know that you have solved all issues when no warnings are shown in the console, like the one below:
-
-```
-Protractor-helper warning: Function 'fillFieldWithTextWhenVisible' will be deprecated in version 4.0.0! Please use the new 'fillFieldWithText' function instead! [Read more on www.npmjs.com/package/protractor-helper#preparation-to-next-major-version]
-```
-
-### Argument `errorMessage` will be removed
-
-We will remove all the `errorMessage` arguments in favor of the messages provided by the library, which are clear and tell exactly why the test has failed.
-
-Affected functions:
-
-1. [waitForElementPresence](#waitForElementPresence)
-2. [waitForElementNotToBePresent](#waitForElementNotToBePresent)
-3. [waitForElementVisibility](#waitForElementVisibility)
-4. [waitForElementNotToBeVisible](#waitForElementNotToBeVisible)
-5. [waitForTextToBePresentInElement](#waitForTextToBePresentInElement)
-6. [waitForTextNotToBePresentInElement](#waitForTextNotToBePresentInElement)
-7. [waitForUrlToBeEqualToExpectedUrl](#waitForUrlToBeEqualToExpectedUrl)
-8. [waitForUrlNotToBeEqualToExpectedUrl](#waitForUrlNotToBeEqualToExpectedUrl)
-9. [waitForUrlToContainString](#waitForUrlToContainString)
-10. [waitForUrlNotToContainString](#waitForUrlNotToContainString)
-
-#### What to do?
-
-- Remove all `errorMessage` arguments to avoid breakages in the next major version (v4.x.x).
-  - The `errorMessage` is the argument after the `timeoutInMilliseconds`.
-
-#### How do I know that my code still works?
-
-You will know that you have solved all issues when no warnings are shown in the console, like the one below:
-
-```
-Protractor-helper warning: Remove the 'errorMessage' argument from the function 'waitForElementPresence'! [Read more on www.npmjs.com/package/protractor-helper#preparation-to-next-major-version]
-```
 
 ## Contributing
 

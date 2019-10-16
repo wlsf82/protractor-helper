@@ -1,139 +1,118 @@
 const EC = protractor.ExpectedConditions;
 
-const deprecation = require("./constants_and_utils/deprecation");
 const messageBuilder = require("./constants_and_utils/messageBuilder");
 const utils = require("./constants_and_utils/utils");
 
 const waitForElementPresence = function(
   htmlElement = utils.requiredParam(waitForElementPresence),
-  timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds,
-  errorMessage = messageBuilder.getDefaultIsNotPresentMessage(htmlElement)
+  timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds
 ) {
-  deprecation.warnRemoveErrorMessage(
-    "waitForElementPresence",
-    errorMessage,
+  browser.wait(
+    EC.presenceOf(htmlElement),
+    timeoutInMilliseconds,
     messageBuilder.getDefaultIsNotPresentMessage(htmlElement)
   );
-  browser.wait(EC.presenceOf(htmlElement), timeoutInMilliseconds, errorMessage);
 };
 
 const waitForElementNotToBePresent = function(
   htmlElement = utils.requiredParam(waitForElementNotToBePresent),
-  timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds,
-  errorMessage = messageBuilder.getDefaultIsStillPresentMessage(htmlElement)
+  timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds
 ) {
-  deprecation.warnRemoveErrorMessage(
-    "waitForElementNotToBePresent",
-    errorMessage,
+  browser.wait(
+    EC.stalenessOf(htmlElement),
+    timeoutInMilliseconds,
     messageBuilder.getDefaultIsStillPresentMessage(htmlElement)
   );
-  browser.wait(EC.stalenessOf(htmlElement), timeoutInMilliseconds, errorMessage);
 };
 
 const waitForElementVisibility = function(
   htmlElement = utils.requiredParam(waitForElementVisibility),
-  timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds,
-  errorMessage = messageBuilder.getDefaultIsNotVisibleMessage(htmlElement)
+  timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds
 ) {
-  deprecation.warnRemoveErrorMessage(
-    "waitForElementVisibility",
-    errorMessage,
+  browser.wait(
+    EC.visibilityOf(htmlElement),
+    timeoutInMilliseconds,
     messageBuilder.getDefaultIsNotVisibleMessage(htmlElement)
   );
-  browser.wait(EC.visibilityOf(htmlElement), timeoutInMilliseconds, errorMessage);
 };
 
 const waitForElementNotToBeVisible = function(
   htmlElement = utils.requiredParam(waitForElementNotToBeVisible),
-  timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds,
-  errorMessage = messageBuilder.getDefaultIsStillVisibleMessage(htmlElement)
+  timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds
 ) {
-  deprecation.warnRemoveErrorMessage(
-    "waitForElementNotToBeVisible",
-    errorMessage,
+  browser.wait(
+    EC.invisibilityOf(htmlElement),
+    timeoutInMilliseconds,
     messageBuilder.getDefaultIsStillVisibleMessage(htmlElement)
   );
-  browser.wait(EC.invisibilityOf(htmlElement), timeoutInMilliseconds, errorMessage);
 };
 
 const waitForTextToBePresentInElement = function(
   htmlElement = utils.requiredParam(waitForTextToBePresentInElement),
   text = utils.requiredParam(waitForTextToBePresentInElement, "text"),
-  timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds,
-  errorMessage = messageBuilder.getDefaultTextTextNotPresentOnElementMessage(htmlElement, text)
+  timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds
 ) {
-  deprecation.warnRemoveErrorMessage(
-    "waitForTextToBePresentInElement",
-    errorMessage,
+  browser.wait(
+    EC.textToBePresentInElement(htmlElement, text),
+    timeoutInMilliseconds,
     messageBuilder.getDefaultTextTextNotPresentOnElementMessage(htmlElement, text)
   );
-  browser.wait(EC.textToBePresentInElement(htmlElement, text), timeoutInMilliseconds, errorMessage);
 };
 
 const waitForTextNotToBePresentInElement = function(
   htmlElement = utils.requiredParam(waitForTextNotToBePresentInElement),
   text = utils.requiredParam(waitForTextNotToBePresentInElement, "text"),
-  timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds,
-  errorMessage = messageBuilder.getDeafultTextTextIsStillPresentOnElementMessage(htmlElement, text)
+  timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds
 ) {
-  deprecation.warnRemoveErrorMessage(
-    "waitForTextNotToBePresentInElement",
-    errorMessage,
+  browser.wait(
+    EC.not(EC.textToBePresentInElement(htmlElement, text)),
+    timeoutInMilliseconds,
     messageBuilder.getDeafultTextTextIsStillPresentOnElementMessage(htmlElement, text)
   );
-  browser.wait(EC.not(EC.textToBePresentInElement(htmlElement, text)), timeoutInMilliseconds, errorMessage);
 };
 
 const waitForUrlToBeEqualToExpectedUrl = function(
   expectedUrl = utils.requiredParam(waitForUrlToBeEqualToExpectedUrl, "expectedUrl"),
-  timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds,
-  errorMessage = messageBuilder.getDefaultCurrentUrlIsDifferentThanExpectedUrlMessage(expectedUrl)
+  timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds
 ) {
-  deprecation.warnRemoveErrorMessage(
-    "waitForUrlToBeEqualToExpectedUrl",
-    errorMessage,
+  browser.wait(
+    EC.urlIs(expectedUrl),
+    timeoutInMilliseconds,
     messageBuilder.getDefaultCurrentUrlIsDifferentThanExpectedUrlMessage(expectedUrl)
   );
-  browser.wait(EC.urlIs(expectedUrl), timeoutInMilliseconds, errorMessage);
 };
 
 const waitForUrlNotToBeEqualToExpectedUrl = function(
   expectedUrl = utils.requiredParam(waitForUrlNotToBeEqualToExpectedUrl, "expectedUrl"),
-  timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds,
-  errorMessage = messageBuilder.getDefaultCurrentUrlIsEqualToExpectedUrlMessage(expectedUrl)
+  timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds
 ) {
-  deprecation.warnRemoveErrorMessage(
-    "waitForUrlNotToBeEqualToExpectedUrl",
-    errorMessage,
+  browser.wait(
+    EC.not(EC.urlIs(expectedUrl)),
+    timeoutInMilliseconds,
     messageBuilder.getDefaultCurrentUrlIsEqualToExpectedUrlMessage(expectedUrl)
   );
-  browser.wait(EC.not(EC.urlIs(expectedUrl)), timeoutInMilliseconds, errorMessage);
 };
 
 const waitForUrlToContainString = function(
   string = utils.requiredParam(waitForUrlToContainString, "string"),
-  timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds,
-  errorMessage = messageBuilder.getDefaultCurrentUrlDoesNotContainStringMessage(string)
+  timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds
 ) {
-  deprecation.warnRemoveErrorMessage(
-    "waitForUrlToContainString",
-    errorMessage,
+  browser.wait(
+    EC.urlContains(string),
+    timeoutInMilliseconds,
     messageBuilder.getDefaultCurrentUrlDoesNotContainStringMessage(string)
   );
-  browser.wait(EC.urlContains(string), timeoutInMilliseconds, errorMessage);
 };
 
 const waitForUrlNotToContainString = function(
   string = utils.requiredParam(waitForUrlNotToContainString, "string"),
-  timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds,
-  errorMessage = messageBuilder.getDefaultCurrentUrlContainsTheString(string)
+  timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds
 ) {
-  deprecation.warnRemoveErrorMessage(
-    "waitForUrlNotToContainString",
-    errorMessage,
+  browser.wait(
+    EC.not(EC.urlContains(string)),
+    timeoutInMilliseconds,
     messageBuilder.getDefaultCurrentUrlContainsTheString(string)
   );
-  browser.wait(EC.not(EC.urlContains(string)), timeoutInMilliseconds, errorMessage);
 };
 
 module.exports = {
