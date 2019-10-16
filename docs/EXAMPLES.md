@@ -11,8 +11,6 @@
 > 4. If you pass the `timeoutInMilliseconds` argument, the timeout is changed only in the respective method. Except on the method `setTimeout`, that changes the timeout of all methods;
 >
 > 5. `timeoutInMilliseconds` turns mandatory if you need to change the `errorMessage`, due to arguments order;
->
-> 6. If the `errorMessage` argument is not provided a default message implemented for this specific method will be displayed instead. We recommend that you use the default message because it shows a clear message. Some new methods not even accept a message as argument, but implement a default one.
 
 ## setTimeout
 
@@ -37,50 +35,6 @@ describe("foo", () => {
     protractorHelper.setTimeout();
 
     // Here all the protractor-helper methods use the default timeout (5000 ms).
-    // ...
-  });
-});
-```
-
-## getBodyElementFromCurrentBrowserOrBrowserInstance
-
-> Note: This function will be removed in version 4.0.0.
-
-```js
-const protractorHelper = require("protractor-helper");
-
-describe("foo", () => {
-  it("bar", () => {
-    browser.get("https://example.com");
-
-    protractorHelper.getBodyElementFromCurrentBrowserOrBrowserInstance().click();
-
-    // ...
-  });
-});
-```
-
-## openNewBrowserInTheSamePage
-
-> Note: This function will be removed in version 4.0.0.
-
-| 1 mandatory argument |
-| :------------------: |
-|      `browser`       |
-
-```js
-const protractorHelper = require("protractor-helper");
-
-describe("foo", () => {
-  it("bar", () => {
-    browser.get("https://example.com");
-
-    const anotherBrowser = protractorHelper.openNewBrowserInTheSamePage(browser);
-
-    const textFieldFromAnotherBrowser = anotherBrowser.element(by.id("text-field-id"));
-
-    textFieldFromAnotherBrowser.sendKeys("foobarbaz");
-
     // ...
   });
 });
@@ -114,11 +68,9 @@ describe("foo", () => {
 
 ## waitForElementPresence
 
-> Note: The `errorMessage` argument will no longer be used in version 4.0.0. More info [here](www.npmjs.com/package/protractor-helper#preparation-to-next-major-version).
-
-| 1 mandatory argument |            2 optional arguments            |
-| :------------------: | :----------------------------------------: |
-|    `htmlElement`     | `timeoutInMilliseconds` and `errorMessage` |
+| 1 mandatory argument |   1 optional argument   |
+| :------------------: | :---------------------: |
+|    `htmlElement`     | `timeoutInMilliseconds` |
 
 ```js
 const protractorHelper = require("protractor-helper");
@@ -129,7 +81,7 @@ describe("foo", () => {
 
     const myElement = element(by.className("foo"));
 
-    protractorHelper.waitForElementPresence(myElement, 3000, "my element is not present");
+    protractorHelper.waitForElementPresence(myElement, 3000);
 
     // ...
   });
@@ -138,11 +90,9 @@ describe("foo", () => {
 
 ## waitForElementNotToBePresent
 
-> Note: The `errorMessage` argument will no longer be used in version 4.0.0. More info [here](www.npmjs.com/package/protractor-helper#preparation-to-next-major-version).
-
-| 1 mandatory argument |            2 optional arguments            |
-| :------------------: | :----------------------------------------: |
-|    `htmlElement`     | `timeoutInMilliseconds` and `errorMessage` |
+| 1 mandatory argument |   1 optional argument   |
+| :------------------: | :---------------------: |
+|    `htmlElement`     | `timeoutInMilliseconds` |
 
 ```js
 const protractorHelper = require("protractor-helper");
@@ -153,7 +103,7 @@ describe("foo", () => {
 
     const myElement = element(by.className("foo"));
 
-    protractorHelper.waitForElementNotToBePresent(myElement, 3000, "my element is still present");
+    protractorHelper.waitForElementNotToBePresent(myElement, 3000);
 
     // ...
   });
@@ -162,11 +112,9 @@ describe("foo", () => {
 
 ## waitForElementVisibility
 
-> Note: The `errorMessage` argument will no longer be used in version 4.0.0. More info [here](www.npmjs.com/package/protractor-helper#preparation-to-next-major-version).
-
-| 1 mandatory argument |            2 optional arguments            |
-| :------------------: | :----------------------------------------: |
-|    `htmlElement`     | `timeoutInMilliseconds` and `errorMessage` |
+| 1 mandatory argument |   1 optional argument   |
+| :------------------: | :---------------------: |
+|    `htmlElement`     | `timeoutInMilliseconds` |
 
 ```js
 const protractorHelper = require("protractor-helper");
@@ -177,7 +125,7 @@ describe("foo", () => {
 
     const myElement = element(by.className("foo"));
 
-    protractorHelper.waitForElementVisibility(myElement, 3000, "my element not visible");
+    protractorHelper.waitForElementVisibility(myElement, 3000);
 
     // ...
   });
@@ -186,11 +134,9 @@ describe("foo", () => {
 
 ## waitForElementNotToBeVisible
 
-> Note: The `errorMessage` argument will no longer be used in version 4.0.0. More info [here](www.npmjs.com/package/protractor-helper#preparation-to-next-major-version).
-
-| 1 mandatory argument |            2 optional arguments            |
-| :------------------: | :----------------------------------------: |
-|    `htmlElement`     | `timeoutInMilliseconds` and `errorMessage` |
+| 1 mandatory argument |   1 optional argument   |
+| :------------------: | :---------------------: |
+|    `htmlElement`     | `timeoutInMilliseconds` |
 
 ```js
 const protractorHelper = require("protractor-helper");
@@ -201,31 +147,7 @@ describe("foo", () => {
 
     const myElement = element(by.className("foo"));
 
-    protractorHelper.waitForElementNotToBeVisible(myElement, 3000, "my element is still visible");
-
-    // ...
-  });
-});
-```
-
-## clickWhenClickable
-
-> Note: This function will be deprecated in version 4.0.0 in favor of the function [`click`](#click).
-
-| 1 mandatory argument |            2 optional arguments            |
-| :------------------: | :----------------------------------------: |
-|    `htmlElement`     | `timeoutInMilliseconds` and `errorMessage` |
-
-```js
-const protractorHelper = require("protractor-helper");
-
-describe("foo", () => {
-  it("bar", () => {
-    browser.get("https://example.com");
-
-    const myLink = element(by.css("a.my-link"));
-
-    protractorHelper.clickWhenClickable(myLink, 3000, "my link is not clickable");
+    protractorHelper.waitForElementNotToBeVisible(myElement, 3000);
 
     // ...
   });
@@ -276,30 +198,6 @@ describe("foo", () => {
 });
 ```
 
-## fillFieldWithTextWhenVisible
-
-> Note: This function will be deprecated in version 4.0.0 in favor of the function [`fillFieldWithText`](#fillFieldWithText).
-
-|  2 mandatory arguments   |            2 optional arguments            |
-| :----------------------: | :----------------------------------------: |
-| `htmlElement` and `text` | `timeoutInMilliseconds` and `errorMessage` |
-
-```js
-const protractorHelper = require("protractor-helper");
-
-describe("foo", () => {
-  it("bar", () => {
-    browser.get("https://example.com");
-
-    const textField = element(by.css("input.some-text-field"));
-
-    protractorHelper.fillFieldWithTextWhenVisible(textField, "some text", 3000, "textField is not visible");
-
-    // ...
-  });
-});
-```
-
 ## fillFieldWithText
 
 |  2 mandatory arguments   |   1 optional argument   |
@@ -316,39 +214,6 @@ describe("foo", () => {
     const textField = element(by.css("input.some-text-field"));
 
     protractorHelper.fillFieldWithText(textField, "some text", 3000);
-
-    // ...
-  });
-});
-```
-
-## fillInputFieldWithFileWhenPresent
-
-> Note: This function will be deprecated in version 4.0.0 in favor of the function ['uploadFileIntoInputField'](#uploadFileIntoInputField).
-
-|      2 mandatory arguments       |            2 optional arguments            |
-| :------------------------------: | :----------------------------------------: |
-| `htmlElement` and `absolutePath` | `timeoutInMilliseconds` and `errorMessage` |
-
-```js
-const path = require("path");
-const protractorHelper = require("protractor-helper");
-
-describe("foo", () => {
-  it("bar", () => {
-    const relativePathOfFileToUpload = "../assets/someFile.png";
-    const absolutePathOfFileToUpload = path.resolve(__dirname, relativePathOfFileToUpload);
-
-    browser.get("https://example.com");
-
-    const fileInputField = element(by.css("input.file-input"));
-
-    protractorHelper.fillInputFieldWithFileWhenPresent(
-      fileInputField,
-      absolutePathOfFileToUpload,
-      3000,
-      "fileInputField is not present"
-    );
 
     // ...
   });
@@ -381,31 +246,6 @@ describe("foo", () => {
 });
 ```
 
-## clearFieldWhenVisible
-
-> Note: This function will be deprecated in version 4.0.0 in favor of the function [`clear`](#clear).
-
-| 1 mandatory argument |            2 optional arguments            |
-| :------------------: | :----------------------------------------: |
-|    `htmlElement`     | `timeoutInMilliseconds` and `errorMessage` |
-
-```js
-const protractorHelper = require("protractor-helper");
-
-describe("foo", () => {
-  it("bar", () => {
-    browser.get("https://example.com");
-
-    const textField = element(by.css("input.some-text-field"));
-
-    textField.sendKeys("foobar");
-    protractorHelper.clearFieldWhenVisible(textField, 3000, "textField is not visible");
-
-    // ...
-  });
-});
-```
-
 ## clear
 
 | 1 mandatory argument |   1 optional argument   |
@@ -429,30 +269,6 @@ describe("foo", () => {
 });
 ```
 
-## clearFieldWhenVisibleAndFillItWithText
-
-> Note: This function will be deprecated in version 4.0.0 in favor of the function [`clearFieldAndFillItWithText`](#clearFieldAndFillItWithText).
-
-|  2 mandatory arguments   |            2 optional arguments            |
-| :----------------------: | :----------------------------------------: |
-| `htmlElement` and `text` | `timeoutInMilliseconds` and `errorMessage` |
-
-```js
-const protractorHelper = require("protractor-helper");
-
-describe("foo", () => {
-  it("bar", () => {
-    browser.get("https://example.com");
-
-    const textField = element(by.css("input.some-text-field"));
-
-    protractorHelper.clearFieldWhenVisibleAndFillItWithText(textField, "some text", 3000, "textField is not visible");
-
-    // ...
-  });
-});
-```
-
 ## clearFieldAndFillItWithText
 
 |  2 mandatory arguments   |   1 optional argument   |
@@ -469,32 +285,6 @@ describe("foo", () => {
     const textField = element(by.css("input.some-text-field"));
 
     protractorHelper.clearFieldAndFillItWithText(textField, "some text", 3000);
-
-    // ...
-  });
-});
-```
-
-## tapWhenTappable
-
-> Note: This function will be deprecated in version 4.0.0 in favor of the function [`tap`](#tap).
-
-| 1 mandatory argument |            2 optional arguments            |
-| :------------------: | :----------------------------------------: |
-|    `htmlElement`     | `timeoutInMilliseconds` and `errorMessage` |
-
-```js
-// Imagine that in the `protractor.conf.js` file a mobile emulator is being defined.
-
-const protractorHelper = require("protractor-helper");
-
-describe("foo", () => {
-  it("bar", () => {
-    browser.get("https://example.com");
-
-    const myButton = element(by.id("my-button"));
-
-    protractorHelper.tapWhenTappable(myButton, 3000, "myButton is not tappable");
 
     // ...
   });
@@ -527,11 +317,9 @@ describe("foo", () => {
 
 ## waitForTextToBePresentInElement
 
-> Note: The `errorMessage` argument will no longer be used in version 4.0.0. More info [here](www.npmjs.com/package/protractor-helper#preparation-to-next-major-version).
-
-|  2 mandatory arguments   |            2 optional arguments            |
-| :----------------------: | :----------------------------------------: |
-| `htmlElement` and `text` | `timeoutInMilliseconds` and `errorMessage` |
+|  2 mandatory arguments   |   1 optional argument   |
+| :----------------------: | :---------------------: |
+| `htmlElement` and `text` | `timeoutInMilliseconds` |
 
 ```js
 const protractorHelper = require("protractor-helper");
@@ -542,12 +330,7 @@ describe("foo", () => {
 
     const myButton = element(by.id("my-button"));
 
-    protractorHelper.waitForTextToBePresentInElement(
-      myButton,
-      "ENTER",
-      3000,
-      "ENTER text is not present on myButton element"
-    );
+    protractorHelper.waitForTextToBePresentInElement(myButton, "ENTER", 3000);
 
     // ...
   });
@@ -556,11 +339,9 @@ describe("foo", () => {
 
 ## waitForTextNotToBePresentInElement
 
-> Note: The `errorMessage` argument will no longer be used in version 4.0.0. More info [here](www.npmjs.com/package/protractor-helper#preparation-to-next-major-version).
-
-|  2 mandatory arguments   |            2 optional arguments            |
-| :----------------------: | :----------------------------------------: |
-| `htmlElement` and `text` | `timeoutInMilliseconds` and `errorMessage` |
+|  2 mandatory arguments   |   1 optional argument   |
+| :----------------------: | :---------------------: |
+| `htmlElement` and `text` | `timeoutInMilliseconds` |
 
 ```js
 const protractorHelper = require("protractor-helper");
@@ -571,12 +352,7 @@ describe("foo", () => {
 
     const myButton = element(by.id("my-button"));
 
-    protractorHelper.waitForTextNotToBePresentInElement(
-      myButton,
-      "ENTER",
-      3000,
-      "ENTER text is still present on myButton element"
-    );
+    protractorHelper.waitForTextNotToBePresentInElement(myButton, "ENTER", 3000);
 
     // ...
   });
@@ -585,11 +361,9 @@ describe("foo", () => {
 
 ## waitForUrlToBeEqualToExpectedUrl
 
-> Note: The `errorMessage` argument will no longer be used in version 4.0.0. More info [here](www.npmjs.com/package/protractor-helper#preparation-to-next-major-version).
-
-| 1 mandatory argument |            2 optional arguments            |
-| :------------------: | :----------------------------------------: |
-|    `expectedUrl`     | `timeoutInMilliseconds` and `errorMessage` |
+| 1 mandatory argument |   1 optional argument   |
+| :------------------: | :---------------------: |
+|    `expectedUrl`     | `timeoutInMilliseconds` |
 
 ```js
 const protractorHelper = require("protractor-helper");
@@ -602,11 +376,7 @@ describe("foo", () => {
 
     goToContactPageButton.click();
 
-    protractorHelper.waitForUrlToBeEqualToExpectedUrl(
-      "https://example.com/contact",
-      3000,
-      "URL is different from expected"
-    );
+    protractorHelper.waitForUrlToBeEqualToExpectedUrl("https://example.com/contact", 3000);
 
     // ...
   });
@@ -615,11 +385,9 @@ describe("foo", () => {
 
 ## waitForUrlNotToBeEqualToExpectedUrl
 
-> Note: The `errorMessage` argument will no longer be used in version 4.0.0. More info [here](www.npmjs.com/package/protractor-helper#preparation-to-next-major-version).
-
-| 1 mandatory argument |            2 optional arguments            |
-| :------------------: | :----------------------------------------: |
-|    `expectedUrl`     | `timeoutInMilliseconds` and `errorMessage` |
+| 1 mandatory argument |   1 optional argument   |
+| :------------------: | :---------------------: |
+|    `expectedUrl`     | `timeoutInMilliseconds` |
 
 ```js
 const protractorHelper = require("protractor-helper");
@@ -634,7 +402,7 @@ describe("foo", () => {
 
     goToContactPageButton.click();
 
-    protractorHelper.waitForUrlNotToBeEqualToExpectedUrl(homePageUrl, 3000, "URL is equal to " + homePageUrl);
+    protractorHelper.waitForUrlNotToBeEqualToExpectedUrl(homePageUrl, 3000);
 
     // ...
   });
@@ -643,11 +411,9 @@ describe("foo", () => {
 
 ## waitForUrlToContainString
 
-> Note: The `errorMessage` argument will no longer be used in version 4.0.0. More info [here](www.npmjs.com/package/protractor-helper#preparation-to-next-major-version).
-
-| 1 mandatory argument |            2 optional arguments            |
-| :------------------: | :----------------------------------------: |
-|       `string`       | `timeoutInMilliseconds` and `errorMessage` |
+| 1 mandatory argument |   1 optional argument   |
+| :------------------: | :---------------------: |
+|       `string`       | `timeoutInMilliseconds` |
 
 ```js
 const protractorHelper = require("protractor-helper");
@@ -660,7 +426,7 @@ describe("foo", () => {
 
     goToContactPageButton.click();
 
-    protractorHelper.waitForUrlToContainString("contact", 3000, "URL does not contains the string 'contact'");
+    protractorHelper.waitForUrlToContainString("contact", 3000);
 
     // ...
   });
@@ -669,11 +435,9 @@ describe("foo", () => {
 
 ## waitForUrlNotToContainString
 
-> Note: The `errorMessage` argument will no longer be used in version 4.0.0. More info [here](www.npmjs.com/package/protractor-helper#preparation-to-next-major-version).
-
-| 1 mandatory argument |            2 optional arguments            |
-| :------------------: | :----------------------------------------: |
-|       `string`       | `timeoutInMilliseconds` and `errorMessage` |
+| 1 mandatory argument |   1 optional argument   |
+| :------------------: | :---------------------: |
+|       `string`       | `timeoutInMilliseconds` |
 
 ```js
 const protractorHelper = require("protractor-helper");
@@ -682,36 +446,7 @@ describe("foo", () => {
   it("bar", () => {
     browser.get("https://example.com");
 
-    protractorHelper.waitForUrlNotToContainString("foobarbaz", 3000, "URL contains the string 'foobarbaz'");
-
-    // ...
-  });
-});
-```
-
-## fillFieldWithTextWhenVisibleAndPressEnter
-
-> Note: This function will be deprecated in version 4.0.0 in favor of the function [`fillFieldWithTextAndPressEnter`](#fillFieldWithTextAndPressEnter).
-
-|  2 mandatory arguments   |            2 optional arguments            |
-| :----------------------: | :----------------------------------------: |
-| `htmlElement` and `text` | `timeoutInMilliseconds` and `errorMessage` |
-
-```js
-const protractorHelper = require("protractor-helper");
-
-describe("foo", () => {
-  it("bar", () => {
-    browser.get("https://example.com");
-
-    const textField = element(by.css("input.some-text-field"));
-
-    protractorHelper.fillFieldWithTextWhenVisibleAndPressEnter(
-      textField,
-      "some text",
-      3000,
-      "textField is not visible"
-    );
+    protractorHelper.waitForUrlNotToContainString("foobarbaz", 3000);
 
     // ...
   });
@@ -734,30 +469,6 @@ describe("foo", () => {
     const textField = element(by.css("input.some-text-field"));
 
     protractorHelper.fillFieldWithTextAndPressEnter(textField, "some text", 3000);
-
-    // ...
-  });
-});
-```
-
-## scrollToElementWhenVisible
-
-> Note: This function will be deprecated in version 4.0.0 in favor of the function [`scrollToElement`](#scrollToElement).
-
-| 1 mandatory argument |            2 optional arguments            |
-| :------------------: | :----------------------------------------: |
-|    `htmlElement`     | `timeoutInMilliseconds` and `errorMessage` |
-
-```js
-const protractorHelper = require("protractor-helper");
-
-describe("foo", () => {
-  it("bar", () => {
-    browser.get("https://example.com");
-
-    const myLink = element(by.css("a.my-link"));
-
-    protractorHelper.scrollToElementWhenVisible(myLink, 3000, "my link is not visible");
 
     // ...
   });

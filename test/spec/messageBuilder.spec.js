@@ -172,34 +172,4 @@ describe("messageBuilder", () => {
 
     expect(actualResult).toEqual(expectedResult);
   });
-
-  describe("Deprecation module", () => {
-    it("getReadMoreMessage", () => {
-      const actualResult = messageBuilder.getReadMoreMessage();
-      const expectedResult = "[Read more on www.npmjs.com/package/protractor-helper#preparation-to-next-major-version]";
-
-      expect(actualResult).toEqual(expectedResult);
-    });
-
-    it("pleaseUseNewFunction", () => {
-      const actualResult = messageBuilder.pleaseUseNewFunction("click");
-      const expectedResult = " Please use the new 'click' function instead!";
-
-      expect(actualResult).toEqual(expectedResult);
-    });
-
-    it("functionWillBeDeprecated", () => {
-      const actualResult = messageBuilder.functionWillBeDeprecated("clickWhenClickable");
-      const expectedResult = "Function 'clickWhenClickable' will be deprecated in version 4.0.0!"
-
-      expect(actualResult).toEqual(expectedResult);
-    });
-
-    it("removeErrorMessageArgFromFunction", () => {
-      const actualResult = messageBuilder.removeErrorMessageArgFromFunction("waitForElementNotToBePresent");
-      const expectedResult = "Remove the 'errorMessage' argument from the function 'waitForElementNotToBePresent'!"
-
-      expect(actualResult).toEqual(expectedResult);
-    });
-  });
 });

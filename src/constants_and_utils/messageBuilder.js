@@ -68,18 +68,6 @@ function getDefaultTextTextNotPresentOnElementMessage(htmlElement, text) {
   }'.`;
 }
 
-function getReadMoreMessage() {
-  return "[Read more on www.npmjs.com/package/protractor-helper#preparation-to-next-major-version]";
-}
-
-function pleaseUseNewFunction(functionName) {
-  return ` Please use the new '${functionName}' function instead!`;
-}
-
-function removeErrorMessageArgFromFunction(functionName) {
-  return `Remove the 'errorMessage' argument from the function '${functionName}'!`;
-}
-
 module.exports = {
   functionWillBeDeprecated,
   getDefaultCurrentUrlContainsTheString,
@@ -93,8 +81,5 @@ module.exports = {
   getDefaultIsNotTappableMessage,
   getDefaultIsStillVisibleMessage,
   getDeafultTextTextIsStillPresentOnElementMessage,
-  getDefaultTextTextNotPresentOnElementMessage,
-  getReadMoreMessage,
-  pleaseUseNewFunction,
-  removeErrorMessageArgFromFunction
+  getDefaultTextTextNotPresentOnElementMessage
 };
