@@ -44,7 +44,6 @@ Many of the helper functions on this library uses `protractor.ExpectedConditions
 
   - [Example of a test failure when using such methods as expectations](#example-of-a-test-failure-when-using-such-methods-as-expectations)
 
-- [Deprecations on version 4.0.0](#preparation-to-next-major-version)
 - [Contributing](#contributing)
 - [Credits](#credits)
 - [License](/LICENSE)

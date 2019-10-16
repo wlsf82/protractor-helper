@@ -1,9 +1,5 @@
 const constants = require("./constants");
 
-function functionWillBeDeprecated(functionName) {
-  return `Function '${functionName}' will be deprecated in version 4.0.0!`;
-}
-
 function getDefaultCurrentUrlContainsTheString(string) {
   return `current URL contains the string '${string}'.`;
 }
@@ -69,7 +65,6 @@ function getDefaultTextTextNotPresentOnElementMessage(htmlElement, text) {
 }
 
 module.exports = {
-  functionWillBeDeprecated,
   getDefaultCurrentUrlContainsTheString,
   getDefaultCurrentUrlDoesNotContainStringMessage,
   getDefaultCurrentUrlIsDifferentThanExpectedUrlMessage,

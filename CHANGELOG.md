@@ -1,3 +1,11 @@
+# 4.0.1
+
+- Delete missing deprecation stuff
+
+# 4.0.0
+
+- Deprecate lots of functions and message arguments
+
 # 3.8.0
 
 - Implement `hoverAndClick` function and document it
