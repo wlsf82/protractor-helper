@@ -9,8 +9,6 @@
 > 3. The `timeoutInMilliseconds` default is 5000 milliseconds;
 >
 > 4. If you pass the `timeoutInMilliseconds` argument, the timeout is changed only in the respective method. Except on the method `setTimeout`, that changes the timeout of all methods;
->
-> 5. `timeoutInMilliseconds` turns mandatory if you need to change the `errorMessage`, due to arguments order;
 
 ## setTimeout
 

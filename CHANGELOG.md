@@ -1,3 +1,7 @@
+# 4.0.2
+
+- Delete not valid doc info
+
 # 4.0.1
 
 - Delete missing deprecation stuff
