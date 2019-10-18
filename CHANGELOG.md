@@ -1,3 +1,7 @@
+# 4.0.3
+
+- Update contributing docs and fix changelog typo
+
 # 4.0.2
 
 - Delete not valid doc info
@@ -197,7 +201,7 @@ See below the list of "new" functions and their equivalents:
 - `fillFieldWithTextAndPressEnter` (equivalent to `fillFieldWithTextWhenVisibleAndPressEnter`)
 - `scrollToElement` (equivalent to `scrollToElementWhenVisible`)
 
-> Note: the only difference between the "new" functions and their equivalents is that the "new" ones have no optional `errorMessage` argument. The default message provide by the lib is what is shown in case of a test failure.
+> Note: the only difference between the "new" functions and their equivalents is that the "new" ones have no optional `errorMessage` argument. The default message provided by the lib is what is shown in case of a test failure.
 
 ## Tests
 

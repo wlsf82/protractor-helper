@@ -25,26 +25,55 @@ After changes to master branch all tests are executed and the build status can b
 
 ## Library tests
 
-A sample application using HTML and CSS is included in this repo in order to allow testing each of the lib's methods.
+There are unit and end-to-end tests available to exercise the librariy's code.
 
-Protractor is added as a dev dependency to allow running the tests.
+For the unit tests, we use Jasmine.
+
+For the end-to-end tests, we use Protractor and the protractor-helper lib itself, and a sample application using HTML, CSS, and JS is included in the repo in order for such tests to run against.
 
 Run `npm t` to run the tests.
 
 If all tests have passed you should see a result like this:
 
 ```sh
+$ npm t
+
+> protractor-helper@4.0.2 pretest /Users/walmyr/www/protractor-helper
+> webdriver-manager update --gecko false
+
+[02:06:18] I/config_source - curl -o/Users/walmyr/www/protractor-helper/node_modules/protractor/node_modules/webdriver-manager/selenium/standalone-response.xml https://selenium-release.storage.googleapis.com/
+[02:06:18] I/config_source - curl -o/Users/walmyr/www/protractor-helper/node_modules/protractor/node_modules/webdriver-manager/selenium/chrome-response.xml https://chromedriver.storage.googleapis.com/
+[02:06:19] I/update - selenium standalone: file exists /Users/walmyr/www/protractor-helper/node_modules/protractor/node_modules/webdriver-manager/selenium/selenium-server-standalone-3.141.59.jar
+[02:06:19] I/update - selenium standalone: selenium-server-standalone-3.141.59.jar up to date
+[02:06:19] I/update - chromedriver: file exists /Users/walmyr/www/protractor-helper/node_modules/protractor/node_modules/webdriver-manager/selenium/chromedriver_77.0.3865.40.zip
+[02:06:19] I/update - chromedriver: unzipping chromedriver_77.0.3865.40.zip
+[02:06:19] I/update - chromedriver: setting permissions to 0755 for /Users/walmyr/www/protractor-helper/node_modules/protractor/node_modules/webdriver-manager/selenium/chromedriver_77.0.3865.40
+[02:06:19] I/update - chromedriver: chromedriver_77.0.3865.40 up to date
+
+> protractor-helper@4.0.2 test /Users/walmyr/www/protractor-helper
+> jasmine test/spec/*.spec.js && protractor test/e2e/protractor.conf.js
+
+Randomized with seed 36096
 Started
-..............................
+..............
 
 
-30 specs, 0 failures
-Finished in 3.601 seconds
+14 specs, 0 failures
+Finished in 0.017 seconds
+Randomized with seed 36096 (jasmine --random=true --seed=36096)
+[02:06:20] I/launcher - Running 1 instances of WebDriver
+[02:06:20] I/direct - Using ChromeDriver directly...
+Randomized with seed 33447
+Started
+.....................
 
-Randomized with seed 19259
-[23:28:40] I/local - Shutting down selenium standalone server.
-[23:28:40] I/launcher - 0 instance(s) of WebDriver still running
-[23:28:40] I/launcher - chrome #01 passed
+
+21 specs, 0 failures
+Finished in 2.348 seconds
+
+Randomized with seed 33447
+[02:06:23] I/launcher - 0 instance(s) of WebDriver still running
+[02:06:23] I/launcher - chrome #01 passed
 ```
 
 [Back to section 'Contributing' on README.md](../README.md#contributing)
