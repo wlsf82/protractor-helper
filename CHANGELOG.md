@@ -1,3 +1,7 @@
+# 4.0.4
+
+- Increase code coverage
+
 # 4.0.3
 
 - Update contributing docs and fix changelog typo
