@@ -43,8 +43,8 @@ const clearFieldAndFillItWithText = function(
   text = utils.requiredParam(clearFieldAndFillItWithText, "text"),
   timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds
 ) {
-  this.clear(htmlElement, timeoutInMilliseconds);
-  this.fillFieldWithText(htmlElement, text, timeoutInMilliseconds);
+  clear(htmlElement, timeoutInMilliseconds);
+  fillFieldWithText(htmlElement, text, timeoutInMilliseconds);
 };
 
 const fillFieldWithTextAndPressEnter = function(
@@ -52,7 +52,7 @@ const fillFieldWithTextAndPressEnter = function(
   text = utils.requiredParam(fillFieldWithTextAndPressEnter, "text"),
   timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds
 ) {
-  this.fillFieldWithText(htmlElement, text + protractor.Key.ENTER, timeoutInMilliseconds);
+  fillFieldWithText(htmlElement, text + protractor.Key.ENTER, timeoutInMilliseconds);
 };
 
 module.exports = {

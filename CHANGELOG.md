@@ -1,3 +1,7 @@
+# 4.0.5
+
+- Remove unnecessary keyword this from functions
+
 # 4.0.4
 
 - Increase code coverage
