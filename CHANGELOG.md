@@ -1,3 +1,7 @@
+# 4.0.6
+
+- Update package-lock to fix vulnerability issues
+
 # 4.0.5
 
 - Remove unnecessary keyword this from functions
