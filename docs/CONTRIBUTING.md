@@ -15,13 +15,21 @@ You can contribute in the following ways:
 4. Send a [pull request](https://help.github.com/articles/about-pull-requests/) and I'll be happy to review it 🙌;
 5. Wait for feedback or approval (this should not take too long).
 
-> Pull requests that do not pass the automated tests on [SemaphoreCI](http://semaphoreci.com) and the code quality verification on [Better Code Hub](https://bettercodehub.com/) will not be reviewed
+> Pull requests that do not pass the coding static analysis and the automated tests on [SemaphoreCI](http://semaphoreci.com), and the code quality verification on [Better Code Hub](https://bettercodehub.com/) will not be reviewed.
 
 ## Build status
 
 After changes to master branch all tests are executed and the build status can be seen below.
 
 [![Build Status](https://semaphoreci.com/api/v1/wlsf82/protractor-helper/branches/master/badge.svg)](https://semaphoreci.com/wlsf82/protractor-helper)
+
+## Code style
+
+We use basic ESLint configuration as our coding style guide, together with Prettier.
+
+Run `npm run lint` to lint source and test files.
+
+Run `npm run lint:fix` to automatically fix lint issues on source and test files.
 
 ## Library tests
 
