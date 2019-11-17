@@ -105,7 +105,7 @@ describe("messageBuilder", () => {
   it("getDefaultIsNotTappableMessage()", () => {
     const sampleElement = {
       parentElementArrayFinder: {
-        locator_: '[type="submit"]'
+        locator_: "[type='submit']"
       }
     };
 
@@ -121,7 +121,7 @@ describe("messageBuilder", () => {
   it("getDefaultIsStillVisibleMessage()", () => {
     const sampleElement = {
       parentElementArrayFinder: {
-        locator_: '[href="/"]'
+        locator_: "[href='/']"
       }
     };
 
@@ -136,7 +136,7 @@ describe("messageBuilder", () => {
   it("getDeafultTextTextIsStillPresentOnElementMessage()", () => {
     const sampleElement = {
       parentElementArrayFinder: {
-        locator_: '[href="/some-page"]'
+        locator_: "[href='/some-page']"
       }
     };
 
@@ -148,7 +148,7 @@ describe("messageBuilder", () => {
       someText
     }' is still present on element with locator '${
       sampleElement.parentElementArrayFinder.locator_
-    }'.`
+    }'.`;
 
     expect(actualResult).toEqual(expectedResult);
   });
@@ -156,7 +156,7 @@ describe("messageBuilder", () => {
   it("getDefaultTextTextNotPresentOnElementMessage()", () => {
     const sampleElement = {
       parentElementArrayFinder: {
-        locator_: '[href="/some-other-page"]'
+        locator_: "[href='/some-other-page']"
       }
     };
 
@@ -168,7 +168,7 @@ describe("messageBuilder", () => {
       someOtherText
     }' not present on element with locator '${
       sampleElement.parentElementArrayFinder.locator_
-    }'.`
+    }'.`;
 
     expect(actualResult).toEqual(expectedResult);
   });

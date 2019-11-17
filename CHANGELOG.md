@@ -1,3 +1,7 @@
+# 4.0.7
+
+- Implement eslint basic config and fix some issues with `eslint --fix`
+
 # 4.0.6
 
 - Update package-lock to fix vulnerability issues

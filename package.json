@@ -1,7 +1,9 @@
 {
   "name": "protractor-helper",
-  "version": "4.0.6",
+  "version": "4.0.7",
   "scripts": {
+    "lint": "npx eslint src/ && npx eslint test/",
+    "lint:fix": "npx eslint --fix src/ && npx eslint --fix test/",
     "pretest": "webdriver-manager update --gecko false",
     "test": "jasmine test/spec/*.spec.js && protractor test/e2e/protractor.conf.js",
     "prettify": "prettier --write **/*.js **/*.md package.json sampleApp/**/* --print-width 120"
@@ -32,6 +34,7 @@
     "protractor": ">= 5.0.0 < 6"
   },
   "devDependencies": {
+    "eslint": "^6.6.0",
     "jasmine": "^3.4.0",
     "pre-commit": "^1.2.2",
     "prettier": "1.15.2",
