@@ -10,10 +10,8 @@ module.exports.config = {
     }
   },
   specs: ["*.spec.js"],
-  // highlightDelay: 1000,
   onPrepare() {
     browser.waitForAngularEnabled(false);
-    // afterEach(() => browser.sleep(1000));
   },
   jasmineNodeOpts: {
     onComplete: null,
