@@ -1,3 +1,7 @@
+# 4.0.8
+
+- Fix PR template
+
 # 4.0.7
 
 - Implement eslint basic config and fix some issues with `eslint --fix`
