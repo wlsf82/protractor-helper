@@ -31,7 +31,7 @@ Run `npm run lint` to lint source and test files.
 
 Run `npm run lint:fix` to automatically fix lint issues on source and test files.
 
-## Library tests
+## Tests
 
 There are unit and end-to-end tests available to exercise the librariy's code.
 
