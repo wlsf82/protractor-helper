@@ -1,3 +1,7 @@
+# 4.0.9
+
+- Remove duplication from sample test app
+
 # 4.0.8
 
 - Fix PR template

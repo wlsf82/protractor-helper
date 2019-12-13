@@ -3,7 +3,7 @@ const $shortenButton = $("#shorten");
 const $responseField = $("#responseField");
 
 function expandUrl() {
-  $("#responseField").append(
+  $responseField.append(
     `<p> Your expanded URL is: </p><a href="https://foo.bar.baz.bah.boo" target="_blank">
     https://foo.bar.baz.bah.boo
     </a>`
@@ -11,7 +11,7 @@ function expandUrl() {
 }
 
 function shortenUrl() {
-  $("#responseField").append(
+  $responseField.append(
     `<p> Your expanded URL is: </p><a href="https://foo.bar" target="_blank">
     https://foo.bar
     </a>`
