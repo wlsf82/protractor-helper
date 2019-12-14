@@ -2,6 +2,21 @@ const $expandButton = $("#expand");
 const $shortenButton = $("#shorten");
 const $responseField = $("#responseField");
 
+$expandButton.click(expand);
+$shortenButton.click(shorten);
+
+function expand() {
+  $responseField.empty();
+  expandUrl();
+  return false;
+}
+
+function shorten() {
+  $responseField.empty();
+  shortenUrl();
+  return false;
+}
+
 function expandUrl() {
   $responseField.append(
     `<p> Your expanded URL is: </p><a href="https://foo.bar.baz.bah.boo" target="_blank">
@@ -17,21 +32,6 @@ function shortenUrl() {
     </a>`
   );
 }
-
-function expand() {
-  $responseField.empty();
-  expandUrl();
-  return false;
-}
-
-function shorten() {
-  $responseField.empty();
-  shortenUrl();
-  return false;
-}
-
-$expandButton.click(expand);
-$shortenButton.click(shorten);
 
 $("[type=file]").on("change", function() {
   const file = this.files[0].name;

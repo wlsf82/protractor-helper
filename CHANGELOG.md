@@ -1,3 +1,7 @@
+# 4.0.10
+
+- Rearrange test sample app functions
+
 # 4.0.9
 
 - Remove duplication from sample test app
