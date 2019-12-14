@@ -6,6 +6,7 @@ const constants = {
   ABSOLUTE_PATH_OF_INDEX_FILE: absolutePathOfIndexFile,
   BASE_URL: `file://${absolutePathOfIndexFile}`,
   INDEX_DOT_HTML_STRING: "index.html",
+  ONE_SEC_IN_MS: 1000,
   SAMPLE_URL: "http://example.com/",
   SHORTEN_URL: "https://goo.gl/Us9Txw",
   TEXT_NOT_EXISTING_ON_VISIBLE_ELEMENTS: "foo",

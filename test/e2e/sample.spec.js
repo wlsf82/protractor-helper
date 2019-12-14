@@ -11,8 +11,6 @@ describe("Protractor helper", () => {
 
   const nonExistingElement = element(by.id("foo"));
 
-  const ONE_SEC_IN_MS = 1000;
-
   beforeEach(() => browser.get(""));
 
   describe("waits", () => {
@@ -21,7 +19,7 @@ describe("Protractor helper", () => {
     });
 
     it("waitForElementNotToBePresent with different timeout", () => {
-      helper.waitForElementNotToBePresent(nonExistingElement, ONE_SEC_IN_MS);
+      helper.waitForElementNotToBePresent(nonExistingElement, constants.ONE_SEC_IN_MS);
     });
 
     it("waitForElementNotToBeVisible", () => {
@@ -29,7 +27,7 @@ describe("Protractor helper", () => {
     });
 
     it("waitForElementNotToBeVisible with different timeout", () => {
-      helper.waitForElementNotToBeVisible(nonExistingElement, ONE_SEC_IN_MS);
+      helper.waitForElementNotToBeVisible(nonExistingElement, constants.ONE_SEC_IN_MS);
     });
 
     it("waitForTextNotToBePresentInElement", () => {
@@ -37,7 +35,7 @@ describe("Protractor helper", () => {
     });
 
     it("waitForTextNotToBePresentInElement with different timeout", () => {
-      helper.waitForTextNotToBePresentInElement(titleElement, constants.TEXT_NOT_EXISTING_ON_VISIBLE_ELEMENTS, ONE_SEC_IN_MS);
+      helper.waitForTextNotToBePresentInElement(titleElement, constants.TEXT_NOT_EXISTING_ON_VISIBLE_ELEMENTS, constants.ONE_SEC_IN_MS);
     });
 
     it("waitForUrlToBeEqualToExpectedUrl", () => {
@@ -45,7 +43,7 @@ describe("Protractor helper", () => {
     });
 
     it("waitForUrlToBeEqualToExpectedUrl with different timeout", () => {
-      helper.waitForUrlToBeEqualToExpectedUrl(constants.BASE_URL, ONE_SEC_IN_MS);
+      helper.waitForUrlToBeEqualToExpectedUrl(constants.BASE_URL, constants.ONE_SEC_IN_MS);
     });
 
     it("waitForUrlNotToBeEqualToExpectedUrl", () => {
@@ -53,7 +51,7 @@ describe("Protractor helper", () => {
     });
 
     it("waitForUrlNotToBeEqualToExpectedUrl with different timeout", () => {
-      helper.waitForUrlNotToBeEqualToExpectedUrl(constants.SAMPLE_URL, ONE_SEC_IN_MS);
+      helper.waitForUrlNotToBeEqualToExpectedUrl(constants.SAMPLE_URL, constants.ONE_SEC_IN_MS);
     });
 
     it("waitForUrlToContainString", () => {
@@ -61,7 +59,7 @@ describe("Protractor helper", () => {
     });
 
     it("waitForUrlToContainString with different timeout", () => {
-      helper.waitForUrlToContainString(constants.INDEX_DOT_HTML_STRING, ONE_SEC_IN_MS);
+      helper.waitForUrlToContainString(constants.INDEX_DOT_HTML_STRING, constants.ONE_SEC_IN_MS);
     });
 
     it("waitForUrlNotToContainString", () => {
@@ -69,7 +67,7 @@ describe("Protractor helper", () => {
     });
 
     it("waitForUrlNotToContainString with different timeout", () => {
-      helper.waitForUrlNotToContainString(constants.SAMPLE_URL, ONE_SEC_IN_MS);
+      helper.waitForUrlNotToContainString(constants.SAMPLE_URL, constants.ONE_SEC_IN_MS);
     });
 
     it("waitForElementVisibility", () => {
@@ -77,7 +75,7 @@ describe("Protractor helper", () => {
     });
 
     it("waitForElementVisibility with different timeout", () => {
-      helper.waitForElementVisibility(inputField, ONE_SEC_IN_MS);
+      helper.waitForElementVisibility(inputField, constants.ONE_SEC_IN_MS);
     });
 
     it("waitForElementPresence", () => {
@@ -85,7 +83,7 @@ describe("Protractor helper", () => {
     });
 
     it("waitForElementPresence with different timeout", () => {
-      helper.waitForElementPresence(inputField, ONE_SEC_IN_MS);
+      helper.waitForElementPresence(inputField, constants.ONE_SEC_IN_MS);
     });
 
     it("waitForTextToBePresentInElement", () => {
@@ -93,7 +91,7 @@ describe("Protractor helper", () => {
     });
 
     it("waitForTextToBePresentInElement with different timeout", () => {
-      helper.waitForTextToBePresentInElement(titleElement, constants.TITLE_TEXT, ONE_SEC_IN_MS);
+      helper.waitForTextToBePresentInElement(titleElement, constants.TITLE_TEXT, constants.ONE_SEC_IN_MS);
     });
   });
 
@@ -103,7 +101,7 @@ describe("Protractor helper", () => {
     });
 
     it("fillFieldWithText with different timeout", () => {
-      helper.fillFieldWithText(inputField, constants.SHORTEN_URL, ONE_SEC_IN_MS);
+      helper.fillFieldWithText(inputField, constants.SHORTEN_URL, constants.ONE_SEC_IN_MS);
     });
 
     it("click", () => {
@@ -111,7 +109,7 @@ describe("Protractor helper", () => {
     });
 
     it("click with different timeout", () => {
-      helper.click(shortenButton, ONE_SEC_IN_MS);
+      helper.click(shortenButton, constants.ONE_SEC_IN_MS);
     });
 
     it("uploadFileIntoInputField", () => {
@@ -119,7 +117,7 @@ describe("Protractor helper", () => {
     });
 
     it("uploadFileIntoInputField with different timeout", () => {
-      helper.uploadFileIntoInputField(inputFile, constants.ABSOLUTE_PATH_OF_INDEX_FILE, ONE_SEC_IN_MS);
+      helper.uploadFileIntoInputField(inputFile, constants.ABSOLUTE_PATH_OF_INDEX_FILE, constants.ONE_SEC_IN_MS);
     });
 
     it("clear", () => {
@@ -129,7 +127,7 @@ describe("Protractor helper", () => {
 
     it("clear with different timeout", () => {
       helper.fillFieldWithText(inputField, constants.SHORTEN_URL);
-      helper.clear(inputField, ONE_SEC_IN_MS);
+      helper.clear(inputField, constants.ONE_SEC_IN_MS);
     });
 
     it("clearFieldAndFillItWithText", () => {
@@ -139,7 +137,7 @@ describe("Protractor helper", () => {
 
     it("clearFieldAndFillItWithText with different timeout", () => {
       helper.fillFieldWithText(inputField, constants.SHORTEN_URL);
-      helper.clearFieldAndFillItWithText(inputField, constants.SAMPLE_URL, ONE_SEC_IN_MS);
+      helper.clearFieldAndFillItWithText(inputField, constants.SAMPLE_URL, constants.ONE_SEC_IN_MS);
     });
 
     it("tap", () => {
@@ -147,7 +145,7 @@ describe("Protractor helper", () => {
     });
 
     it("tap with different timeout", () => {
-      helper.tap(expandButton, ONE_SEC_IN_MS);
+      helper.tap(expandButton, constants.ONE_SEC_IN_MS);
     });
 
     it("fillFieldWithTextAndPressEnter", () => {
@@ -155,7 +153,7 @@ describe("Protractor helper", () => {
     });
 
     it("fillFieldWithTextAndPressEnter with different timeout", () => {
-      helper.fillFieldWithTextAndPressEnter(inputField, constants.SAMPLE_URL, ONE_SEC_IN_MS);
+      helper.fillFieldWithTextAndPressEnter(inputField, constants.SAMPLE_URL, constants.ONE_SEC_IN_MS);
     });
 
     it("hoverAndClick", () => {
@@ -163,7 +161,7 @@ describe("Protractor helper", () => {
     });
 
     it("hoverAndClick with different timeout", () => {
-      helper.hoverAndClick(expandButton, ONE_SEC_IN_MS);
+      helper.hoverAndClick(expandButton, constants.ONE_SEC_IN_MS);
     });
   });
 
@@ -177,7 +175,7 @@ describe("Protractor helper", () => {
     });
 
     it("scrollToElement with different timeout", () => {
-      helper.scrollToElement(shortenButton, ONE_SEC_IN_MS);
+      helper.scrollToElement(shortenButton, constants.ONE_SEC_IN_MS);
     });
 
     it("setTimeout", () => {

@@ -1,3 +1,7 @@
+# 4.0.11
+
+- Move test constant to its own module
+
 # 4.0.10
 
 - Rearrange test sample app functions
