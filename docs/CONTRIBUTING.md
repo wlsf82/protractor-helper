@@ -15,13 +15,13 @@ You can contribute in the following ways:
 4. Send a [pull request](https://help.github.com/articles/about-pull-requests/) and I'll be happy to review it 🙌;
 5. Wait for feedback or approval (this should not take too long).
 
-> Pull requests that do not pass the coding static analysis and the automated tests on [SemaphoreCI](http://semaphoreci.com), and the code quality verification on [Better Code Hub](https://bettercodehub.com/) will not be reviewed.
+> Pull requests that do not pass the coding static analysis and the automated tests on [Github Actions](https://github.com/wlsf82/protractor-helper/actions), and the code quality verification on [Better Code Hub](https://bettercodehub.com/) will not be reviewed.
 
 ## Build status
 
 After changes to master branch all tests are executed and the build status can be seen below.
 
-[![Build Status](https://semaphoreci.com/api/v1/wlsf82/protractor-helper/branches/master/badge.svg)](https://semaphoreci.com/wlsf82/protractor-helper)
+[![Build Status](https://github.com/wlsf82/protractor-helper/workflows/Lint%20and%20tests/badge.svg)](https://github.com/wlsf82/protractor-helper/actions)
 
 ## Code style
 

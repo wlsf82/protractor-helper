@@ -8,4 +8,4 @@
 - [ ] Have you made improvements to the documentation, if necessary? ([docs/](https://github.com/wlsf82/protractor-helper/tree/master/docs) folder and [README.md](https://github.com/wlsf82/protractor-helper/blob/master/README.md))
 - [ ] Have you linked the correct [GitHub issue](https://github.com/wlsf82/protractor-helper/issues), if there is any?
 
-> Pull requests that do not pass the automated tests on [SemaphoreCI](http://semaphoreci.com) and the code quality verification on [Better Code Hub](https://bettercodehub.com/) will not be reviewed
+> Pull requests that do not pass the coding static analysis and the automated tests on [Github Actions](https://github.com/wlsf82/protractor-helper/actions), and the code quality verification on [Better Code Hub](https://bettercodehub.com/) will not be reviewed.
