@@ -10,9 +10,6 @@
     "test": "npm run test:unit && npm run test:e2e",
     "prettify": "prettier --write **/*.js **/*.md package.json sampleApp/**/* --print-width 120"
   },
-  "pre-commit": [
-    "prettify"
-  ],
   "description": "Write robust and flakiness free tests with Protractor",
   "main": "index.js",
   "keywords": [
@@ -38,7 +35,6 @@
   "devDependencies": {
     "eslint": "^6.6.0",
     "jasmine": "^3.4.0",
-    "pre-commit": "^1.2.2",
     "prettier": "1.15.2",
     "protractor": "^5.4.2"
   }
