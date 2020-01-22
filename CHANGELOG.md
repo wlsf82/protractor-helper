@@ -1,3 +1,7 @@
+# 4.0.12
+
+- Change CI from semaphore to github actions
+
 # 4.0.11
 
 - Move test constant to its own module
