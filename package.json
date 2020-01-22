@@ -4,8 +4,10 @@
   "scripts": {
     "lint": "npx eslint src/ && npx eslint test/",
     "lint:fix": "npx eslint --fix src/ && npx eslint --fix test/",
-    "pretest": "webdriver-manager update --gecko false",
-    "test": "jasmine test/spec/*.spec.js && protractor test/e2e/protractor.conf.js",
+    "webdriver-update": "webdriver-manager update --gecko false",
+    "test:e2e": "npm run webdriver-update && protractor test/e2e/protractor.conf.js",
+    "test:unit": "jasmine test/spec/*.spec.js",
+    "test": "npm run test:unit && npm run test:e2e",
     "prettify": "prettier --write **/*.js **/*.md package.json sampleApp/**/* --print-width 120"
   },
   "pre-commit": [
