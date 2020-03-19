@@ -1,6 +1,6 @@
 {
   "name": "protractor-helper",
-  "version": "4.0.13",
+  "version": "4.0.14",
   "scripts": {
     "lint": "npx eslint src/ && npx eslint test/",
     "lint:fix": "npx eslint --fix src/ && npx eslint --fix test/",
