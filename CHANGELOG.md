@@ -1,3 +1,7 @@
+# 4.0.13
+
+- Fix `acorn` dependency security vulnerability
+
 # 4.0.12
 
 - Change CI from semaphore to github actions
