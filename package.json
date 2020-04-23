@@ -4,7 +4,7 @@
   "scripts": {
     "lint": "npx eslint src/ && npx eslint test/",
     "lint:fix": "npx eslint --fix src/ && npx eslint --fix test/",
-    "webdriver-update": "webdriver-manager update --gecko false",
+    "webdriver-update": "webdriver-manager update --gecko false --versions.chrome 80.0.3987.163",
     "test:e2e": "npm run webdriver-update && protractor test/e2e/protractor.conf.js",
     "test:unit": "jasmine test/spec/*.spec.js",
     "test": "npm run test:unit && npm run test:e2e",
