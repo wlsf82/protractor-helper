@@ -1,3 +1,7 @@
+# 4.1.0
+
+- Add type definition for all public methods to improve user's experience
+
 # 4.0.14
 
 - Tag v4.0.13 had been already created by mistake
