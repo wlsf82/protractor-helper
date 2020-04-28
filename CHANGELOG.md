@@ -1,3 +1,7 @@
+# 4.1.1
+
+- Include missing file on files property on package.json
+
 # 4.1.0
 
 - Add type definition for all public methods to improve user's experience

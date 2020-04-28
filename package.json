@@ -1,6 +1,6 @@
 {
   "name": "protractor-helper",
-  "version": "4.1.0",
+  "version": "4.1.1",
   "scripts": {
     "lint": "npx eslint src/ && npx eslint test/",
     "lint:fix": "npx eslint --fix src/ && npx eslint --fix test/",
@@ -26,7 +26,8 @@
     "Paulo Gonçalves <paulorochag@hotmail.com> (https://www.linkedin.com/in/paulo-goncalves)"
   ],
   "files": [
-    "src"
+    "src",
+    "index.d.ts"
   ],
   "license": "MIT",
   "peerDependencies": {
