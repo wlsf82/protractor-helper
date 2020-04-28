@@ -16,7 +16,7 @@ const scrollToElement = function(
     timeoutInMilliseconds,
     messageBuilder.getDefaultIsNotVisibleMessage(htmlElement)
   );
-  browser.executeScript("arguments[0].scrollIntoView(true);", htmlElement);
+  return browser.executeScript("arguments[0].scrollIntoView(true);", htmlElement);
 };
 
 const setTimeout = function(timeoutInMilliseconds = defaultTimeoutInMs) {

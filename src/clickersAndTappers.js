@@ -11,7 +11,7 @@ const click = function(
     timeoutInMilliseconds,
     messageBuilder.getDefaultIsNotClickableMessage(htmlElement)
   );
-  htmlElement.click();
+  return htmlElement.click();
 };
 
 const hoverAndClick = function(
@@ -19,7 +19,7 @@ const hoverAndClick = function(
   timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds
 ) {
   waiters.waitForElementPresence(htmlElement, timeoutInMilliseconds);
-  browser
+  return browser
     .actions()
     .mouseMove(htmlElement)
     .click()
@@ -32,7 +32,7 @@ const tap = function(
 ) {
   const errorMessage = messageBuilder.getDefaultIsNotTappableMessage(htmlElement);
   utils.waitForElementToBeClickable(htmlElement, timeoutInMilliseconds, errorMessage);
-  browser
+  return browser
     .touchActions()
     .tap(htmlElement)
     .perform();

@@ -12,7 +12,7 @@ const fillFieldWithText = function(
     timeoutInMilliseconds,
     messageBuilder.getDefaultIsNotVisibleMessage(htmlElement)
   );
-  htmlElement.sendKeys(text);
+  return htmlElement.sendKeys(text);
 };
 
 const uploadFileIntoInputField = function(
@@ -23,7 +23,7 @@ const uploadFileIntoInputField = function(
   const errorMessage = messageBuilder.getDefaultIsNotPresentMessage(htmlElement);
 
   waiters.waitForElementPresence(htmlElement, timeoutInMilliseconds, errorMessage);
-  htmlElement.sendKeys(absolutePath);
+  return htmlElement.sendKeys(absolutePath);
 };
 
 const clear = function(
@@ -35,7 +35,7 @@ const clear = function(
     timeoutInMilliseconds,
     messageBuilder.getDefaultIsNotVisibleMessage(htmlElement)
   );
-  htmlElement.clear();
+  return htmlElement.clear();
 };
 
 const clearFieldAndFillItWithText = function(
@@ -44,7 +44,7 @@ const clearFieldAndFillItWithText = function(
   timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds
 ) {
   clear(htmlElement, timeoutInMilliseconds);
-  fillFieldWithText(htmlElement, text, timeoutInMilliseconds);
+  return fillFieldWithText(htmlElement, text, timeoutInMilliseconds);
 };
 
 const fillFieldWithTextAndPressEnter = function(
@@ -52,7 +52,7 @@ const fillFieldWithTextAndPressEnter = function(
   text = utils.requiredParam(fillFieldWithTextAndPressEnter, "text"),
   timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds
 ) {
-  fillFieldWithText(htmlElement, text + protractor.Key.ENTER, timeoutInMilliseconds);
+  return fillFieldWithText(htmlElement, text + protractor.Key.ENTER, timeoutInMilliseconds);
 };
 
 module.exports = {
