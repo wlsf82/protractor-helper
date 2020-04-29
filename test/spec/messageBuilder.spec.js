@@ -172,4 +172,16 @@ describe("messageBuilder", () => {
 
     expect(actualResult).toEqual(expectedResult);
   });
+
+  it("getParameterIsMissingForFunctionMessage", () => {
+    const sampleParam = "text";
+    const fn = { name: "sampleFunction" };
+
+    const actualResult = messageBuilder.getParameterIsMissingForFunctionMessage(sampleParam, fn);
+    const expectedResult = `Parameter '${sampleParam}' is missing at function '${
+      fn.name
+    }()'. \nFill the required parameter.`;
+
+    expect(actualResult).toEqual(expectedResult);
+  });
 });
