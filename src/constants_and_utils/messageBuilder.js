@@ -64,6 +64,12 @@ function getDefaultTextTextNotPresentOnElementMessage(htmlElement, text) {
   }'.`;
 }
 
+function getParameterIsMissingForFunctionMessage(param, fn) {
+  return `Parameter '${param}' is missing at function '${
+    fn.name
+  }()'. \nFill the required parameter.`;
+}
+
 module.exports = {
   getDefaultCurrentUrlContainsTheString,
   getDefaultCurrentUrlDoesNotContainStringMessage,
@@ -76,5 +82,6 @@ module.exports = {
   getDefaultIsNotTappableMessage,
   getDefaultIsStillVisibleMessage,
   getDeafultTextTextIsStillPresentOnElementMessage,
-  getDefaultTextTextNotPresentOnElementMessage
+  getDefaultTextTextNotPresentOnElementMessage,
+  getParameterIsMissingForFunctionMessage
 };
