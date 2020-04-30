@@ -167,7 +167,7 @@ describe("Protractor helper", () => {
 
   describe("Misc", () => {
     it("isCurrentUrlDifferentFromBaseUrl", () => {
-      expect(false).toEqual(helper.isCurrentUrlDifferentFromBaseUrl());
+      expect(helper.isCurrentUrlDifferentFromBaseUrl()).toBe(false);
     });
 
     it("scrollToElement", () => {

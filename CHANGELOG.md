@@ -1,3 +1,7 @@
+# 4.1.6
+
+- Improve test readability
+
 # 4.1.5
 
 - Update docs with missing item on summary
