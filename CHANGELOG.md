@@ -1,3 +1,7 @@
+# 4.1.2
+
+- Extract message to message builder, uses it on utils, and test it out
+
 # 4.1.1
 
 - Include missing file on files property on package.json
