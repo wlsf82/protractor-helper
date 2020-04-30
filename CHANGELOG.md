@@ -1,3 +1,7 @@
+# 4.1.3
+
+- Update docs with external resources section
+
 # 4.1.2
 
 - Extract message to message builder, uses it on utils, and test it out

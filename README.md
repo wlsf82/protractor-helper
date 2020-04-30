@@ -297,6 +297,13 @@ Failed: text 'foo' not present on element with locator 'By(css selector, h1)'.
 
 > As you can see, the messages are clear and tell you exactly why the test has failed, such as in the previous example, where a specific text ('foo') is not present in a heading element (an element with css selector 'h1').
 
+## External resources
+
+Here we list some external resources such as blog posts about the protractor-helper library.
+
+- [Launch of protractor-helper v4](https://medium.com/@walmyrlimaesilv/launch-of-protractor-helper-v4-d038bcc18560)
+- [Release of protractor-helper version 4.1.1](https://medium.com/@walmyrlimaesilv/release-of-protractor-helper-version-4-1-1-f770bbf362ff)
+
 ## Contributing
 
 See [contribution guidelines](docs/CONTRIBUTING.md).
