@@ -1,3 +1,7 @@
+# 4.1.4
+
+- Update link to external resources
+
 # 4.1.3
 
 - Update docs with external resources section
