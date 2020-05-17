@@ -1,3 +1,7 @@
+# 4.1.7
+
+- Change peer dependencies and update dev dependency
+
 # 4.1.6
 
 - Improve test readability
