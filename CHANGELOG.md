@@ -1,3 +1,7 @@
+# 4.1.8
+
+- Minor fixes on ci flow
+
 # 4.1.7
 
 - Change peer dependencies and update dev dependency
