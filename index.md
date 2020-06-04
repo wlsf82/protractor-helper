@@ -1,4 +1,4 @@
-# Protractor helper's library
+# protractor-helper
 
 [![npm version](https://badge.fury.io/js/protractor-helper.svg)](https://www.npmjs.com/package/protractor-helper) [![npm weekly downloads](https://img.shields.io/npm/dw/protractor-helper.svg)](https://www.npmjs.com/package/protractor-helper) 
 
