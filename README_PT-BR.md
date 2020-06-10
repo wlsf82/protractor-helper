@@ -22,26 +22,26 @@ Sem o protractor-helper o teste poderia ser escrito da seguinte forma:
 
 ```js
 const EC = protractor.ExpectedConditions;
-const DEFAULT_TIMEOUT_IN_MS = 5000;
+const TIMEOUT_PADRAO_EM_MS = 5000;
 
 describe("Página de cadastro de usuário", () => {
   it("cadastro realizado com sucesso", () => {
-    browser.get("https://example.com/sign-up");
+    browser.get("https://exemplo.com/cadastro");
 
-    const emailField = element(by.id("email"));
-    const passwordField = element(by.id("password"));
-    const signupButton = element(by.id("signup"));
+    const campoEmail = element(by.id("email"));
+    const campoSenha = element(by.id("senha"));
+    const botaoCadastrar = element(by.id("cadastrar"));
 
-    browser.wait(EC.visibilityOf(emailField), DEFAULT_TIMEOUT_IN_MS);
-    browser.wait(EC.visibilityOf(passwordField), DEFAULT_TIMEOUT_IN_MS);
-    browser.wait(EC.elementToBeClickable(signupButton), DEFAULT_TIMEOUT_IN_MS);
-    emailField.sendKeys("valid@email.com");
-    passwordField.sendKeys("validpassword");
-    signupButton.click();
+    browser.wait(EC.visibilityOf(campoEmail), TIMEOUT_PADRAO_EM_MS);
+    browser.wait(EC.visibilityOf(campoSenha), TIMEOUT_PADRAO_EM_MS);
+    browser.wait(EC.elementToBeClickable(botaoCadastrar), TIMEOUT_PADRAO_EM_MS);
+    campoEmail.sendKeys("valid@email.com");
+    campoSenha.sendKeys("validpassword");
+    botaoCadastrar.click();
 
     const avatar = element(by.id("avatar"));
 
-    browser.wait(EC.visibilityOf(avatar), DEFAULT_TIMEOUT_IN_MS);
+    browser.wait(EC.visibilityOf(avatar), TIMEOUT_PADRAO_EM_MS);
 
     expect(avatar.isDisplayed()).toBe(true);
   });
@@ -57,7 +57,7 @@ const protractorHelper = require("protractor-helper");
 
 describe("Página de cadastro de usuário", () => {
   it("cadastro realizado com sucesso", () => {
-    navegador.get("https://exemplo.com/cadastro");
+    browser.get("https://exemplo.com/cadastro");
 
     const campoEmail = element(by.id("email"));
     const campoSenha = element(by.id("senha"));
