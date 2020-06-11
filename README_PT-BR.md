@@ -11,6 +11,7 @@ Muitas das funções auxiliares neste módulo usam a classe `protractor.Expected
 - [Exemplo básico](#exemplo-básico)
   - [Exemplo sem utilizar o protractor-helper](#exemplo-sem-utilizar-o-protractor-helper)
   - [Exemplo utilizando o protractor-helper](#exemplo-utilizando-o-protractor-helper)
+- [Instalação](#instalação)
 
 ## Exemplo básico
 
@@ -75,6 +76,12 @@ describe("Página de cadastro de usuário", () => {
 ```
 
 Como você pode notar, utizando o módulo protractor-helper o código é mais legível e menos complexo.
+
+## Instalação
+
+Abaixo é descrito o processo de instalação do protractor-helper.
+
+Execute o comando `npm install protractor-helper --save-dev` para instalar o módulo como uma dependência de desenvolvimento do seu projeto.
 
 ---
 
