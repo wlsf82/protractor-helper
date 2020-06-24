@@ -209,7 +209,8 @@ Este método limpa o conteúdo de um campo de input assim que estiver visível, 
 
 ### `tap`
 
-This method performs a tap action on a clickable/tappable HTML element as soon as it is in a clickable/tappable state. This method is used when performing web mobile testing in mobile emulators, for example.
+Este método executa  a ação de toque em um elemento HTML capaz de eventos de toque/clique assim que estiver em um estado viável de toque/clique. É utilizado quando se está fazendo testes web mobile em emuladores, por exemplo.
+
 [Exemplo](docs/EXAMPLES.md#tap)
 
 ### `waitForTextToBePresentInElement`
