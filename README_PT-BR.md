@@ -13,6 +13,33 @@ Muitas das funções auxiliares neste módulo usam a classe `protractor.Expected
   - [Exemplo utilizando o protractor-helper](#exemplo-utilizando-o-protractor-helper)
 - [Instalação](#instalação)
 - [Como usar e exemplos](#como-usar-e-exemplos)
+- [Helpers disponíveis](#helpers-disponíveis)
+
+  <details>
+    <p><summary>Abrir para visualizar os helpers disponíveis</summary>
+
+  - [`setTimeout`](#settimeout)
+  - [`isCurrentUrlDifferentFromBaseUrl`](#iscurrenturldifferentfrombaseurl)
+  - [`waitForElementPresence`](#waitforelementpresence)
+  - [`waitForElementNotToBePresent`](#waitforelementnottobepresent)
+  - [`waitForElementVisibility`](#waitforelementvisibility)
+  - [`waitForElementNotToBeVisible`](#waitforelementnottobevisible)
+  - [`click`](#click)
+  - [`hoverAndClick`](#hoverAndClick)
+  - [`fillFieldWithText`](#fillfieldwithtext)
+  - [`uploadFileIntoInputField`](#uploadfileintoinputfield)
+  - [`clear`](#clear)
+  - [`clearFieldAndFillItWithText`](#clearfieldandfillitwithtext)
+  - [`tap`](#tap)
+  - [`waitForTextToBePresentInElement`](#waitfortexttobepresentinelement)
+  - [`waitForTextNotToBePresentInElement`](#waitfortextnottobepresentinelement)
+  - [`waitForUrlToBeEqualToExpectedUrl`](#waitforurltobeequaltoexpectedurl)
+  - [`waitForUrlNotToBeEqualToExpectedUrl`](#waitforurlnottobeequaltoexpectedurl)
+  - [`waitForUrlToContainString`](#waitforurltocontainstring)
+  - [`waitForUrlNotToContainString`](#waitforurlnottocontainstring)
+  - [`scrollToElement`](#scrolltoelement)
+
+</p> </details>
 
 ## Exemplo básico
 
@@ -97,6 +124,8 @@ const protractorHelper = require("protractor-helper");
 Assim que for importado no seu arquivo de testes, você poderá utilizar os métodos do protractor-helper.
 
 [Aqui você encontrará exemplos de uso de cada um dos métodos disponíveis.](docs/EXAMPLES.md#examples) (Importante: leia as notas no topo)
+
+## Helpers disponíveis
 
 ---
 
