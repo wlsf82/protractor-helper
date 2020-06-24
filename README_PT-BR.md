@@ -135,7 +135,7 @@ Este método permite alterar o tempo de timeout de todos os métodos chamados ap
 
 O `timeoutInMilliseconds` padrão é 5000 millisegundos
 
-Caso seja invocado sem que um parametro seja passado, o timeout será definido como o padrão.
+Caso seja invocado sem que um parametro seja passado, o _timeout_ será definido com o valor padrão.
 
 > Um exemplo de uso desse método é a necessidade de assegurar que a tela seja carregada dentro de XX segundos, devido uma necessidade expressa pelo gerente de produtos. Isso ocorre frequentemente em sistemas de e-commerce emdatas especiais como a Blackfriday.
 
