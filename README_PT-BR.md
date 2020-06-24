@@ -143,7 +143,8 @@ Caso seja invocado sem que um parametro seja passado, o timeout será definido c
 
 ### `isCurrentUrlDifferentFromBaseUrl`
 
-This method returns a boolean depending if the current url is different from the base url. No argument needed.
+Este método retorna um valor booleano dependendo se a url atual é diferente da url base. Não necessita de parâmetros.
+
 [Exemplo](docs/EXAMPLES.md#iscurrenturldifferentfrombaseurl)
 
 ### `waitForElementPresence`
