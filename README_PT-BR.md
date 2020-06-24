@@ -251,12 +251,14 @@ Este método aguarda até que a URL não contenha um determinado texto. É utili
 
 ### `fillFieldWithTextAndPressEnter`
 
-This method fills an input field with a text as soon as such field is visible and then it simulates pressing the ENTER key from the keyboard. This method is useful in cases such as when doing a search and pressing the ENTER key, instead of having to fill the input field and clicking the search button, for example.
+Este método preenche um campo de input com um texto assim que estiver visível e então simula a ação de pressionar a tecla ENTER do teclado. É utilizado em casos como fazer uma busca e pressionar ENTER, em vez de preencher o campo e selecionar o botão de busca, por exemplo.
+
 [Exemplo](docs/EXAMPLES.md#fillFieldWithTextAndPressEnter)
 
 ### `scrollToElement`
 
-This method is used to scroll up to an element on the page as soon as the element is visible in the DOM.
+Este método é usado para rolar a página até um elemento até que esteja visível no DOM.
+
 [Exemplo](docs/EXAMPLES.md#scrollToElement)
 
 ---
