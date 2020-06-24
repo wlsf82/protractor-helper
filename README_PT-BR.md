@@ -133,7 +133,7 @@ Abaixo segue a lista de todas as funções disponíveis no protractor-helper com
 
 Este método permite alterar o tempo de timeout de todos os métodos chamados após `setTimeout`.
 
-O `timeoutInMilliseconds` padrão é 5000 millisegundos
+O `timeoutInMilliseconds` padrão é 5000 milisegundos
 
 Caso seja invocado sem que um parametro seja passado, o _timeout_ será definido com o valor padrão.
 
