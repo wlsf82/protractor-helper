@@ -157,12 +157,14 @@ Este método espera até que um elemento esteja presente no DOM.
 
 ### `waitForElementNotToBePresent`
 
-This method is the opposite of the previous one, so, it waits for an element not to be present in the DOM.
+Este método é o oposto do anterior, de tal forma que espera até que um elemento não esteja presente no DOM.
+
 [Exemplo](docs/EXAMPLES.md#waitforelementnottobepresent)
 
 ### `waitForElementVisibility`
 
 This method waits for an element to be visible in the page. Being displayed means not only that the element is present in the DOM, but also that is has a height and width that is greater than 0.
+
 [Exemplo](docs/EXAMPLES.md#waitforelementvisibility)
 
 ### `waitForElementNotToBeVisible`
