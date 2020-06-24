@@ -203,7 +203,8 @@ Este método limpa o conteúdo de um campo de input assim que estiver visível.
 
 ### `clearFieldAndFillItWithText`
 
-This method clears a text input field as soon as such field is visible, and then it fills it with a text.
+Este método limpa o conteúdo de um campo de input assim que estiver visível, então preenche o mesmo com um texto.
+
 [Exemplo](docs/EXAMPLES.md#clearFieldAndFillItWithText)
 
 ### `tap`
