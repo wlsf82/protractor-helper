@@ -149,7 +149,7 @@ Este método retorna um valor booleano dependendo se a url atual é diferente da
 
 ### `waitForElementPresence`
 
-Este método espera que um elemento esteja presente no DOM.
+Este método espera até que um elemento esteja presente no DOM.
 
 > Nota: Um elemento pode estar presente mas não visível. Se você deseja esperar até que o elemento esteja visível, use o método `waitForElementVisibility`
 
@@ -167,12 +167,14 @@ This method waits for an element to be visible in the page. Being displayed mean
 
 ### `waitForElementNotToBeVisible`
 
-This method is the opposite of the previous one, so, it waits for an element not to be visible in the page. By saying not being displayed means that the element may be in the DOM, but not visible.
+Este método é o oposto do anterior, de tal forma que espera que um elemento não esteja visível na página. Por não visível, entenda-se que o elemento pode estar no DOM mas não estar visível.
+
 [Exemplo](docs/EXAMPLES.md#waitforelementnottobevisible)
 
 ### `click`
 
-This method is used to click in an element as soon as it is in a clickable state. This means that the element is visible and enabled for clicking.
+Este método é utilizado para efetuar um clique em um elemento assim que estiver em um estado viável e habilitado para o clique.
+
 [Exemplo](docs/EXAMPLES.md#click)
 
 ### `hoverAndClick`
