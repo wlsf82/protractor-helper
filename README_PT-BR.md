@@ -211,7 +211,7 @@ Este método limpa o conteúdo de um campo de input assim que estiver visível, 
 
 ### `tap`
 
-Este método executa  a ação de toque em um elemento HTML capaz de eventos de toque/clique assim que estiver em um estado viável de toque/clique. É utilizado quando se está fazendo testes web mobile em emuladores, por exemplo.
+Este método executa  a ação de toque em um elemento HTML capaz de eventos de toque/clique assim que estiver em um estado possível de toque/clique. Tal método é utilizado quando se está fazendo testes web _mobile_ em emuladores, por exemplo.
 
 [Exemplo](docs/EXAMPLES.md#tap)
 
