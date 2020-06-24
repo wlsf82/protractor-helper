@@ -125,7 +125,7 @@ Assim que for importado no seu arquivo de testes, você poderá utilizar os mét
 
 [Aqui você encontrará exemplos de uso de cada um dos métodos disponíveis.](docs/EXAMPLES.md#examples) (Importante: leia as notas no topo)
 
-## Helpers disponíveis
+## Funções disponíveis
 
 Abaixo segue a lista de todas as funções disponíveis no protractor-helper com seus respectivos exemplos:
 
