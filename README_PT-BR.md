@@ -215,7 +215,8 @@ Este método executa  a ação de toque em um elemento HTML capaz de eventos de 
 
 ### `waitForTextToBePresentInElement`
 
-This method waits for a specific text to be present in a specific HTML element.
+Este método espera por um texto específico em um determinado elemento HTML.
+
 [Exemplo](docs/EXAMPLES.md#waitfortexttobepresentinelement)
 
 ### `waitForTextNotToBePresentInElement`
