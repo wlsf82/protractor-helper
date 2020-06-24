@@ -1,13 +1,16 @@
 name: Lint and tests
-on: push
+on:
+  push:
+    branch: [ '*' ]
+    pull_request: [ '*' ]
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
     - name: Project checkout
-      uses: actions/checkout@v1
+      uses: actions/checkout@v2
     - name: Node.js setup
-      uses: actions/setup-node@v1.1.0
+      uses: actions/setup-node@v1
     - name: Installation of dependencies
       run: npm ci
     - name: Lint
