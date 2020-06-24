@@ -227,7 +227,8 @@ Este método é o oposto do anterior, de tal forma que espera que um texto não 
 
 ### `waitForUrlToBeEqualToExpectedUrl`
 
-This method waits for the URL to be equal to an expected URL. Such method is useful when you want to continue performing actions on elements only when in the correct URL.
+Este método aguarda até que a URL seja igual a outra esperada. Este método é útil quando se quer executar ações em elementos apenas se estiver na URL correta.
+
 [Exemplo](docs/EXAMPLES.md#waitforurltobeequaltoexpectedurl)
 
 ### `waitForUrlNotToBeEqualToExpectedUrl`
