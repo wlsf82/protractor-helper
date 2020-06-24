@@ -253,7 +253,7 @@ Este método aguarda até que a URL não contenha um determinado texto. É utili
 
 ### `fillFieldWithTextAndPressEnter`
 
-Este método preenche um campo de input com um texto assim que estiver visível e então simula a ação de pressionar a tecla ENTER do teclado. É utilizado em casos como fazer uma busca e pressionar ENTER, em vez de preencher o campo e selecionar o botão de busca, por exemplo.
+Este método preenche um campo de input com um texto assim que estiver visível e então simula a ação de pressionar a tecla ENTER do teclado. É utilizado em casos como fazer uma busca e pressionar ENTER, em vez de preencher o campo e clicar no botão de busca, por exemplo.
 
 [Exemplo](docs/EXAMPLES.md#fillFieldWithTextAndPressEnter)
 
