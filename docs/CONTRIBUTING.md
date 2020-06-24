@@ -21,7 +21,7 @@ You can contribute in the following ways:
 
 After changes to master branch all tests are executed and the build status can be seen below.
 
-[![Build Status](https://github.com/wlsf82/protractor-helper/workflows/Lint%20and%20tests/badge.svg)](https://github.com/wlsf82/protractor-helper/actions)
+[![Build Status](https://github.com/wlsf82/protractor-helper/workflows/Continuous%20Integration/badge.svg)](https://github.com/wlsf82/protractor-helper/actions)
 
 ## Code style
 
