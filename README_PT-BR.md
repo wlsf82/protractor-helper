@@ -191,7 +191,8 @@ Este médoto preenche um campo de input com um texto assim que estiver visível.
 
 ### `uploadFileIntoInputField`
 
-This method uploads a file in a file input field as soon as the file input field is present in the DOM.
+Este método efetua o upload de um arquivo em um input de arquivos assim que estiver presente no DOM.
+
 [Exemplo](docs/EXAMPLES.md#uploadFileIntoInputField)
 
 ### `clear`
