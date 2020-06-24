@@ -12,6 +12,7 @@ Muitas das funções auxiliares neste módulo usam a classe `protractor.Expected
   - [Exemplo sem utilizar o protractor-helper](#exemplo-sem-utilizar-o-protractor-helper)
   - [Exemplo utilizando o protractor-helper](#exemplo-utilizando-o-protractor-helper)
 - [Instalação](#instalação)
+- [Como usar e exemplos](#como-usar-e-exemplos)
 
 ## Exemplo básico
 
@@ -82,6 +83,20 @@ Como você pode notar, utizando o módulo protractor-helper o código é mais le
 Abaixo é descrito o processo de instalação do protractor-helper.
 
 Execute o comando `npm install protractor-helper --save-dev` para instalar o módulo como uma dependência de desenvolvimento do seu projeto.
+
+## Como usar e exemplos
+
+Após a instalação do protractor-helper você precisará requisitá-lo no seu arquivo de teste (veja abaixo).
+
+```javascript
+// foobar.spec.js
+
+const protractorHelper = require("protractor-helper");
+```
+
+Assim que for importado no seu arquivo de testes, você poderá utilizar os métodos do protractor-helper.
+
+[Aqui você encontrará exemplos de uso de cada um dos métodos disponíveis.](docs/EXAMPLES.md#examples) (Importante: leia as notas no topo)
 
 ---
 
