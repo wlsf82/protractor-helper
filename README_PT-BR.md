@@ -179,7 +179,8 @@ Este método é utilizado para efetuar um clique em um elemento assim que estive
 
 ### `hoverAndClick`
 
-This method is used to hover over an element as soon as it is present in the DOM, and then click on it.
+Este método é utilizado para mover o mouse sobre o elemento assim que estiver presente no DOM e então efetuar um clique.
+
 [Exemplo](docs/EXAMPLES.md#hoverAndClick)
 
 ### `fillFieldWithText`
