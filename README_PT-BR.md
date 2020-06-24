@@ -16,7 +16,7 @@ Muitas das funções auxiliares neste módulo usam a classe `protractor.Expected
 - [Helpers disponíveis](#helpers-disponíveis)
 
   <details>
-    <p><summary>Abrir para visualizar os helpers disponíveis</summary>
+    <p><summary>Abrir para visualizar todas as funções disponíveis</summary>
 
   - [`setTimeout`](#settimeout)
   - [`isCurrentUrlDifferentFromBaseUrl`](#iscurrenturldifferentfrombaseurl)
