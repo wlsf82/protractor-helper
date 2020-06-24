@@ -239,13 +239,14 @@ Este método aguarda até que a URL não seja igual a uma a uma determinada URL.
 
 ### `waitForUrlToContainString`
 
-Este método aguarda até que a URL contenha uma determinado texto. É utilizado quando se deseja fazer verificações baseadas na URL atual.
+Este método aguarda até que a URL contenha um determinado texto. É utilizado quando se deseja fazer verificações baseadas na URL atual.
 
 [Exemplo](docs/EXAMPLES.md#waitforurltocontainstring)
 
 ### `waitForUrlNotToContainString`
 
-This method waits for the URL not to contain an expected string. Such method is useful when you want to perform verifications based on the current URL.
+Este método aguarda até que a URL não contenha um determinado texto. É utilizado quando se deseja fazer verificações baseadas na URL atual.
+
 [Exemplo](docs/EXAMPLES.md#waitforurlnottocontainstring)
 
 ### `fillFieldWithTextAndPressEnter`
