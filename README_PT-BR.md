@@ -233,7 +233,8 @@ Este método aguarda até que a URL seja igual a outra esperada. Este método é
 
 ### `waitForUrlNotToBeEqualToExpectedUrl`
 
-This method waits for the URL not to be equal to an expected URL. Such method is useful when you want to continue performing actions on elements only when not in a specific URL.
+Este método aguarda até que a URL não seja igual a uma a uma determinada URL. Este método é útil quando se quer continuar a executar ações em elementos apenas quando não estiver em uma URL específica.
+
 [Exemplo](docs/EXAMPLES.md#waitforurlnottobeequaltoexpectedurl)
 
 ### `waitForUrlToContainString`
