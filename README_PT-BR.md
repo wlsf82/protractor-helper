@@ -185,7 +185,8 @@ Este método é utilizado para mover o mouse sobre o elemento assim que estiver 
 
 ### `fillFieldWithText`
 
-This method fills an input field with a text as soon as such field is visible.
+Este médoto preenche um campo de input com um texto assim que estiver visível.
+
 [Exemplo](docs/EXAMPLES.md#fillFieldWithText)
 
 ### `uploadFileIntoInputField`
