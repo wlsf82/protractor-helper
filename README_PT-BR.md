@@ -127,7 +127,7 @@ Assim que for importado no seu arquivo de testes, você poderá utilizar os mét
 
 ## Helpers disponíveis
 
-Abaixo segue a lista de todos os helpers disponíveis no protractor-helper com seus respectivos exemplos:
+Abaixo segue a lista de todas as funções disponíveis no protractor-helper com seus respectivos exemplos:
 
 ### `setTimeout`
 
