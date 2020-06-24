@@ -131,7 +131,7 @@ Abaixo segue a lista de todas as funções disponíveis no protractor-helper com
 
 ### `setTimeout`
 
-Este método permite alterar o tempo de timeout de todos os métodos chamados após `setTimeout`.
+Este método permite alterar o _timeout_ de todos os métodos chamados após o `setTimeout`.
 
 O `timeoutInMilliseconds` padrão é 5000 milisegundos
 
