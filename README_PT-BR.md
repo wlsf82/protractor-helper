@@ -149,9 +149,9 @@ Este método retorna um valor booleano dependendo se a url atual é diferente da
 
 ### `waitForElementPresence`
 
-This method waits for an element to be present in the DOM.
+Este método espera que um elemento esteja presente no DOM.
 
-> Note: An element may be present but not displayed. If you want to wait for the element to be displayed use the method `waitForElementVisibility`.
+> Nota: Um elemento pode estar presente mas não visível. Se você deseja esperar até que o elemento esteja visível, use o método `waitForElementVisibility`
 
 [Exemplo](docs/EXAMPLES.md#waitforelementpresence)
 
