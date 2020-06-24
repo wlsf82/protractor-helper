@@ -221,7 +221,8 @@ Este método espera por um texto específico em um determinado elemento HTML.
 
 ### `waitForTextNotToBePresentInElement`
 
-This method is the opposite of the previous one, so, it waits for a specific text not to be present in a specific HTML element.
+Este método é o oposto do anterior, de tal forma que espera que um texto não esteja presente em um determinado elemento do HTML.
+
 [Exemplo](docs/EXAMPLES.md#waitfortextnottobepresentinelement)
 
 ### `waitForUrlToBeEqualToExpectedUrl`
