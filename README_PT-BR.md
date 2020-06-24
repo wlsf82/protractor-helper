@@ -197,7 +197,8 @@ Este método efetua o upload de um arquivo em um input de arquivos assim que est
 
 ### `clear`
 
-This method clears a text input field as soon as such field is visible.
+Este método limpa o conteúdo de um campo de input assim que estiver visível.
+
 [Exemplo](docs/EXAMPLES.md#clear)
 
 ### `clearFieldAndFillItWithText`
