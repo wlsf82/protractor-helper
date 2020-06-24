@@ -259,7 +259,7 @@ Este método preenche um campo de input com um texto assim que estiver visível 
 
 ### `scrollToElement`
 
-Este método é usado para rolar a página até um elemento até que esteja visível no DOM.
+Este método é usado para rolar a página até um elemento até que tal elemento esteja visível no DOM.
 
 [Exemplo](docs/EXAMPLES.md#scrollToElement)
 
