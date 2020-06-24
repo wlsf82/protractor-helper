@@ -127,6 +127,123 @@ Assim que for importado no seu arquivo de testes, você poderá utilizar os mét
 
 ## Helpers disponíveis
 
+Abaixo segue a lista de todos os helpers disponíveis no protractor-helper com seus respectivos exemplos:
+
+### `setTimeout`
+
+Este método permite alterar o tempo de timeout de todos os métodos chamados após `setTimeout`.
+
+O `timeoutInMilliseconds` padrão é 5000 millisegundos
+
+Caso seja invocado sem que um parametro seja passado, o timeout será definido como o padrão.
+
+> Um exemplo de uso desse método é a necessidade de assegurar que a tela seja carregada dentro de XX segundos, devido uma necessidade expressa pelo gerente de produtos. Isso ocorre frequentemente em sistemas de e-commerce emdatas especiais como a Blackfriday.
+
+[Exemplo](docs/EXAMPLES.md#settimeout)
+
+### `isCurrentUrlDifferentFromBaseUrl`
+
+This method returns a boolean depending if the current url is different from the base url. No argument needed.
+[Exemplo](docs/EXAMPLES.md#iscurrenturldifferentfrombaseurl)
+
+### `waitForElementPresence`
+
+This method waits for an element to be present in the DOM.
+
+> Note: An element may be present but not displayed. If you want to wait for the element to be displayed use the method `waitForElementVisibility`.
+
+[Exemplo](docs/EXAMPLES.md#waitforelementpresence)
+
+### `waitForElementNotToBePresent`
+
+This method is the opposite of the previous one, so, it waits for an element not to be present in the DOM.
+[Exemplo](docs/EXAMPLES.md#waitforelementnottobepresent)
+
+### `waitForElementVisibility`
+
+This method waits for an element to be visible in the page. Being displayed means not only that the element is present in the DOM, but also that is has a height and width that is greater than 0.
+[Exemplo](docs/EXAMPLES.md#waitforelementvisibility)
+
+### `waitForElementNotToBeVisible`
+
+This method is the opposite of the previous one, so, it waits for an element not to be visible in the page. By saying not being displayed means that the element may be in the DOM, but not visible.
+[Exemplo](docs/EXAMPLES.md#waitforelementnottobevisible)
+
+### `click`
+
+This method is used to click in an element as soon as it is in a clickable state. This means that the element is visible and enabled for clicking.
+[Exemplo](docs/EXAMPLES.md#click)
+
+### `hoverAndClick`
+
+This method is used to hover over an element as soon as it is present in the DOM, and then click on it.
+[Exemplo](docs/EXAMPLES.md#hoverAndClick)
+
+### `fillFieldWithText`
+
+This method fills an input field with a text as soon as such field is visible.
+[Exemplo](docs/EXAMPLES.md#fillFieldWithText)
+
+### `uploadFileIntoInputField`
+
+This method uploads a file in a file input field as soon as the file input field is present in the DOM.
+[Exemplo](docs/EXAMPLES.md#uploadFileIntoInputField)
+
+### `clear`
+
+This method clears a text input field as soon as such field is visible.
+[Exemplo](docs/EXAMPLES.md#clear)
+
+### `clearFieldAndFillItWithText`
+
+This method clears a text input field as soon as such field is visible, and then it fills it with a text.
+[Exemplo](docs/EXAMPLES.md#clearFieldAndFillItWithText)
+
+### `tap`
+
+This method performs a tap action on a clickable/tappable HTML element as soon as it is in a clickable/tappable state. This method is used when performing web mobile testing in mobile emulators, for example.
+[Exemplo](docs/EXAMPLES.md#tap)
+
+### `waitForTextToBePresentInElement`
+
+This method waits for a specific text to be present in a specific HTML element.
+[Exemplo](docs/EXAMPLES.md#waitfortexttobepresentinelement)
+
+### `waitForTextNotToBePresentInElement`
+
+This method is the opposite of the previous one, so, it waits for a specific text not to be present in a specific HTML element.
+[Exemplo](docs/EXAMPLES.md#waitfortextnottobepresentinelement)
+
+### `waitForUrlToBeEqualToExpectedUrl`
+
+This method waits for the URL to be equal to an expected URL. Such method is useful when you want to continue performing actions on elements only when in the correct URL.
+[Exemplo](docs/EXAMPLES.md#waitforurltobeequaltoexpectedurl)
+
+### `waitForUrlNotToBeEqualToExpectedUrl`
+
+This method waits for the URL not to be equal to an expected URL. Such method is useful when you want to continue performing actions on elements only when not in a specific URL.
+[Exemplo](docs/EXAMPLES.md#waitforurlnottobeequaltoexpectedurl)
+
+### `waitForUrlToContainString`
+
+This method waits for the URL to contain an expected string. Such method is useful when you want to perform verifications based on the current URL.
+[Exemplo](docs/EXAMPLES.md#waitforurltocontainstring)
+
+### `waitForUrlNotToContainString`
+
+This method waits for the URL not to contain an expected string. Such method is useful when you want to perform verifications based on the current URL.
+[Exemplo](docs/EXAMPLES.md#waitforurlnottocontainstring)
+
+### `fillFieldWithTextAndPressEnter`
+
+This method fills an input field with a text as soon as such field is visible and then it simulates pressing the ENTER key from the keyboard. This method is useful in cases such as when doing a search and pressing the ENTER key, instead of having to fill the input field and clicking the search button, for example.
+[Exemplo](docs/EXAMPLES.md#fillFieldWithTextAndPressEnter)
+
+### `scrollToElement`
+
+This method is used to scroll up to an element on the page as soon as the element is visible in the DOM.
+[Exemplo](docs/EXAMPLES.md#scrollToElement)
+
 ---
 
 [Licença MIT](/LICENSE)
