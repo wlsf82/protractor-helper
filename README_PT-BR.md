@@ -163,7 +163,7 @@ Este método é o oposto do anterior, de tal forma que espera até que um elemen
 
 ### `waitForElementVisibility`
 
-Este método aguarda até que um elemento esteja visível na página. Estar visível não significa apenas estar presente no DOM, mas também tem altura e largura superior a 0.
+Este método aguarda até que um elemento esteja visível na página. Estar visível significa não apenas estar presente no DOM, mas também ter altura e largura maior que 0.
 
 [Exemplo](docs/EXAMPLES.md#waitforelementvisibility)
 
