@@ -143,7 +143,7 @@ Caso seja invocado sem que um parametro seja passado, o _timeout_ será definido
 
 ### `isCurrentUrlDifferentFromBaseUrl`
 
-Este método retorna um valor booleano dependendo se a url atual é diferente da url base. Não necessita de parâmetros.
+Este método retorna um valor booleano dependendo se a URL atual é diferente da URL base e não necessita de parâmetros.
 
 [Exemplo](docs/EXAMPLES.md#iscurrenturldifferentfrombaseurl)
 
