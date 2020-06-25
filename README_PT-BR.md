@@ -13,7 +13,7 @@ Muitas das funções auxiliares neste módulo usam a classe `protractor.Expected
   - [Exemplo utilizando o protractor-helper](#exemplo-utilizando-o-protractor-helper)
 - [Instalação](#instalação)
 - [Como usar e exemplos](#como-usar-e-exemplos)
-- [Helpers disponíveis](#helpers-disponíveis)
+- [Funções disponíveis](#funções-disponíveis)
 
   <details>
     <p><summary>Abrir para visualizar todas as funções disponíveis</summary>
