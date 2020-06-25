@@ -175,7 +175,7 @@ Este método é o oposto do anterior, de tal forma que espera que um elemento n�
 
 ### `click`
 
-Este método é utilizado para efetuar um clique em um elemento assim que estiver em um estado viável e habilitado para o clique.
+Este método é utilizado para efetuar um clique em um elemento assim que estiver em um estado visível e habilitado para o clique.
 
 [Exemplo](docs/EXAMPLES.md#click)
 
