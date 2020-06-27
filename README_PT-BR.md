@@ -41,6 +41,8 @@ Muitas das funções auxiliares neste módulo usam a classe `protractor.Expected
 </p></details>
 
 - [Recursos externos](#recursos-externos)
+- [Contribuindo](#contribuindo)
+- [Créditos](#créditos)
 
 ## Exemplo básico
 
