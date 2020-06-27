@@ -38,8 +38,9 @@ Muitas das funções auxiliares neste módulo usam a classe `protractor.Expected
   - [`waitForUrlToContainString`](#waitforurltocontainstring)
   - [`waitForUrlNotToContainString`](#waitforurlnottocontainstring)
   - [`scrollToElement`](#scrolltoelement)
+</p></details>
 
-</p> </details>
+- [Recursos externos](#recursos-externos)
 
 ## Exemplo básico
 
@@ -262,6 +263,25 @@ Este método preenche um campo de input com um texto assim que estiver visível 
 Este método é usado para rolar a página até um elemento até que tal elemento esteja visível no DOM.
 
 [Exemplo](docs/EXAMPLES.md#scrollToElement)
+
+## Recursos externos
+
+Listamos aqui algun recursos externos como postagens de blog sobre o `protractor-helper`.
+
+- [Lançamento do protractor-helper v4](https://medium.com/@walmyrlimaesilv/launch-of-protractor-helper-v4-d038bcc18560) [EN]
+- [_Release_ da versão 4.1.1 do protractor-helper](https://medium.com/p/release-of-protractor-helper-version-4-1-1-f770bbf362ff?source=email-375212fd9a4a--writer.postDistributed&sk=8e49d93b3ab575a9476ef94fecc2984f)   [EN]
+
+## Contribuindo
+
+Veja as [orientações de contribuição](docs/CONTRIBUTING.md).
+
+## Créditos
+
+O `protractor-helper` foi criado e é mantido por [Walmyr Filho](https://br.linkedin.com/in/walmyr-lima-e-silva-filho-147a9110a).
+
+Siga Walmyr no Twitter ([@wlsf82](https://twitter.com/walmyrlimaesilv)).
+
+Agradecimentos a [Paulo Gonçalves](https://www.linkedin.com/in/paulo-goncalves/), [Lucas Amaral](https://www.linkedin.com/in/lopesdoamaral/), e [Michiel Cuijpers](https://github.com/MichielCuijpers) por contribuir no projeto.
 
 ---
 
