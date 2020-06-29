@@ -271,7 +271,7 @@ Este método é usado para rolar a página até um elemento até que tal element
 Listamos aqui algun recursos externos como postagens de blog sobre o `protractor-helper`.
 
 - [Lançamento do protractor-helper v4](https://medium.com/@walmyrlimaesilv/launch-of-protractor-helper-v4-d038bcc18560) [EN]
-- [_Release_ da versão 4.1.1 do protractor-helper](https://medium.com/p/release-of-protractor-helper-version-4-1-1-f770bbf362ff?source=email-375212fd9a4a--writer.postDistributed&sk=8e49d93b3ab575a9476ef94fecc2984f)   [EN]
+- [_Release_ da versão 4.1.1 do protractor-helper](https://talkingabouttesting.com/2020/04/29/lancamento-do-protractor-helper-versao-4-1-1/)
 
 ## Contribuindo
 
