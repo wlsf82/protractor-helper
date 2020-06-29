@@ -281,7 +281,7 @@ Veja as [orientações de contribuição](docs/CONTRIBUTING.md).
 
 O `protractor-helper` foi criado e é mantido por [Walmyr Filho](https://br.linkedin.com/in/walmyr-lima-e-silva-filho-147a9110a).
 
-Siga Walmyr no Twitter ([@wlsf82](https://twitter.com/walmyrlimaesilv)).
+Siga o Walmyr no Twitter ([@wlsf82](https://twitter.com/walmyrlimaesilv)).
 
 Agradecimentos ao [Paulo Gonçalves](https://www.linkedin.com/in/paulo-goncalves/), [Lucas Amaral](https://www.linkedin.com/in/lopesdoamaral/), e [Michiel Cuijpers](https://github.com/MichielCuijpers) por contribuir com o projeto.
 
