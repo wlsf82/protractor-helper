@@ -67,8 +67,8 @@ describe("Página de cadastro de usuário", () => {
     browser.wait(EC.visibilityOf(campoEmail), TIMEOUT_PADRAO_EM_MS);
     browser.wait(EC.visibilityOf(campoSenha), TIMEOUT_PADRAO_EM_MS);
     browser.wait(EC.elementToBeClickable(botaoCadastrar), TIMEOUT_PADRAO_EM_MS);
-    campoEmail.sendKeys("valid@email.com");
-    campoSenha.sendKeys("validpassword");
+    campoEmail.sendKeys("email@valido.com");
+    campoSenha.sendKeys("senhavalida");
     botaoCadastrar.click();
 
     const avatar = element(by.id("avatar"));
