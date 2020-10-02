@@ -5,7 +5,7 @@ Você pode contribuir das seguintes formas:
 - Encontrando e reportando bugs
 - Corrigindo bugs ou implementando novas funcionalidades
 - Melhorando a documentação
-- Melhorando a estruturas no código
+- Melhorando a estruturas do código
 
 ## Passos para contribuir
 
