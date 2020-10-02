@@ -25,7 +25,7 @@ Após mudanças na *branch master*, todos os testes são executados e o *status*
 
 ## Estilo de código
 
-Usamos a configuração básica do ESLint como nosso guia de estilo de código junto com o *Prettier*.
+Usamos a configuração básica do ESLint como nosso guia de estilo de código junto com o Prettier.
 
 Execute `npm run lint` para verificar o código fonte e arquivos de teste.
 
@@ -37,7 +37,7 @@ Estão disponíveis testes unitários e *end-to-end* para exercitar o código de
 
 Para testes unitários, usamos o Jasmine.
 
-Para os testes *ent-to-end*, usamos o Protractor a própria biblioteca protractor-helper, e uma aplicação de exemplo usando HTML, CSS e Javascript que está inclusa no repositório para que rodemos os testes nela.
+Para os testes *ent-to-end*, usamos o Protractor, a própria biblioteca protractor-helper e uma aplicação de exemplo usando HTML, CSS e Javascript para que rodemos os testes nela. Esta aplicação está inclusa no repositório.
 
 Execute `npm t` para rodar os testes.
 
