@@ -275,7 +275,7 @@ Listamos aqui alguns recursos externos como postagens de blog sobre o `protracto
 
 ## Contribuindo
 
-Veja as [orientações de contribuição](../CONTRIBUTING.md).
+Veja as [orientações de contribuição](CONTRIBUTING.md).
 
 ## Créditos
 
