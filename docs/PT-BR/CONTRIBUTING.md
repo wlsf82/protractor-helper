@@ -15,11 +15,11 @@ Você pode contribuir das seguintes formas:
 4. Envie um [*pull request*](https://docs.github.com/pt/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/about-pull-requests) e eu ficarei feliz em revisar 🙌;
 5. Aguarde *feedback* ou aprovação (não deve demorar muito).
 
-> *Pull requests* que não passarem na análise estática de código e testes automatizados nas [*Github Actions*](https://github.com/wlsf82/protractor-helper/actions) e verificação de qualidade de código no [Better Code Hub](https://bettercodehub.com/) não serão revisados.
+> *Pull requests* que não passarem na análise estática de código e testes automatizados nas [*Github Actions*](https://github.com/wlsf82/protractor-helper/actions) e verificação de qualidade de código no [*Better Code Hub*](https://bettercodehub.com/) não serão revisados.
 
-## Build status
+## Status da Build
 
-After changes to master branch all tests are executed and the build status can be seen below.
+Após mudanças na *branch master*, todos os testes são executados e o *status* da *build* pode ser visto como abaixo.
 
 [![Build Status](https://github.com/wlsf82/protractor-helper/workflows/Continuous%20Integration/badge.svg)](https://github.com/wlsf82/protractor-helper/actions)
 
