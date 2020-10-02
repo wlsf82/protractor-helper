@@ -11,7 +11,7 @@ Você pode contribuir das seguintes formas:
 
 1. Faça um [*fork*](https://docs.github.com/pt/free-pro-team@latest/github/getting-started-with-github/fork-a-repo) deste repositório na sua conta do Github para sua conta e então [clone](https://docs.github.com/pt/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository) para seu computador;
 2. Instale as dependências de desenvolvimento usando NPM: `npm install`;
-3. Faça as alterações necessárias e certifique-se de que os testes estão passando usando o `npm test` (implemente novos testes se necessário);
+3. Faça as alterações necessárias e certifique-se de que os testes estão passando usando o script `npm test` (implemente novos testes se necessário);
 4. Envie um [*pull request*](https://docs.github.com/pt/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/about-pull-requests) e eu ficarei feliz em revisar 🙌;
 5. Aguarde *feedback* ou aprovação (não deve demorar muito).
 
