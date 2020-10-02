@@ -19,7 +19,7 @@ Você pode contribuir das seguintes formas:
 
 ## Status da Build
 
-Após mudanças na *branch master*, todos os testes são executados e o *status* da *build* pode ser visto como abaixo.
+Após mudanças no *branch master*, todos os testes são executados e o *status* do *build* pode ser visto, conforme abaixo.
 
 [![Build Status](https://github.com/wlsf82/protractor-helper/workflows/Continuous%20Integration/badge.svg)](https://github.com/wlsf82/protractor-helper/actions)
 
