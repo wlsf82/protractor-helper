@@ -17,7 +17,7 @@ Você pode contribuir das seguintes formas:
 
 > *Pull requests* que não passarem na análise estática de código e testes automatizados nas [*Github Actions*](https://github.com/wlsf82/protractor-helper/actions) e verificação de qualidade de código no [*Better Code Hub*](https://bettercodehub.com/) não serão revisados.
 
-## Status da Build
+## Status do Build
 
 Após mudanças no *branch master*, todos os testes são executados e o *status* do *build* pode ser visto, conforme abaixo.
 
