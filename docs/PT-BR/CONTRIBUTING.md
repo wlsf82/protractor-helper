@@ -31,17 +31,17 @@ Execute `npm run lint` para verificar o código fonte e arquivos de teste.
 
 Execute `npm run lint:fix` para corrigir automaticamente os problemas listados no código e arquivos de teste.
 
-## Tests
+## Testes
 
-There are unit and end-to-end tests available to exercise the librariy's code.
+Estão disponíveis testes unitários e *end-to-end* para exercitar o código desta biblioteca.
 
-For the unit tests, we use Jasmine.
+Para testes unitários, usamos o Jasmine.
 
-For the end-to-end tests, we use Protractor and the protractor-helper lib itself, and a sample application using HTML, CSS, and JS is included in the repo in order for such tests to run against.
+Para os testes *ent-to-end*, usamos o Protractor a própria biblioteca protractor-helper, e uma aplicação de exemplo usando HTML, CSS e Javascript que está inclusa no repositório para que rodemos os testes nela.
 
-Run `npm t` to run the tests.
+Execute `npm t` para rodar os testes.
 
-If all tests have passed you should see a result like this:
+Se todos os testes passarem, você deve ver um resutado como esse:
 
 ```sh
 $ npm t
@@ -82,4 +82,4 @@ Randomized with seed 09749
 [02:28:45] I/launcher - chrome #01 passed
 ```
 
-[Back to section 'Contributing' on README.md](../README.md#contributing)
+[Voltar para a seção 'Contribuindo' no README.md](README.md#contribuindo)
