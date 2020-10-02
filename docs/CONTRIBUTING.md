@@ -33,7 +33,7 @@ Run `npm run lint:fix` to automatically fix lint issues on source and test files
 
 ## Tests
 
-There are unit and end-to-end tests available to exercise the librariy's code.
+There are unit and end-to-end tests available to exercise the library's code.
 
 For the unit tests, we use Jasmine.
 
