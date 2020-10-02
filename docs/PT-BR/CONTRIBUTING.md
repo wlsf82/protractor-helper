@@ -23,13 +23,13 @@ Após mudanças na *branch master*, todos os testes são executados e o *status*
 
 [![Build Status](https://github.com/wlsf82/protractor-helper/workflows/Continuous%20Integration/badge.svg)](https://github.com/wlsf82/protractor-helper/actions)
 
-## Code style
+## Estilo de código
 
-We use basic ESLint configuration as our coding style guide, together with Prettier.
+Usamos a configuração básica do ESLint como nosso guia de estilo de código junto com o *Prettier*.
 
-Run `npm run lint` to lint source and test files.
+Execute `npm run lint` para verificar o código fonte e arquivos de teste.
 
-Run `npm run lint:fix` to automatically fix lint issues on source and test files.
+Execute `npm run lint:fix` para corrigir automaticamente os problemas listados no código e arquivos de teste.
 
 ## Tests
 
