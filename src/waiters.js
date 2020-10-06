@@ -115,6 +115,27 @@ const waitForUrlNotToContainString = function(
   );
 };
 
+const waitForElementToHaveAttributeWithValue = function(
+  htmlElement = utils.requiredParam(waitForElementToHaveAttributeWithValue),
+  attribute = utils.requiredParam(waitForTextToBePresentInElement, "attribute"),
+  value = utils.requiredParam(waitForTextToBePresentInElement, "value"),
+  timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds
+) {
+  waitForElementPresence(htmlElement, timeoutInMilliseconds);
+  const promise = new Promise((resolve, reject) => {
+    htmlElement.getAttribute(attribute).then(val => {
+      if (!val) {
+        reject(new Error(`Element with locator ${htmlElement.parentElementArrayFinder.locator_} has attribute '${attribute}'.`));
+      } else if (val !== value) {
+        reject(new Error(`Element with locator ${htmlElement.parentElementArrayFinder.locator_} has no value '${value}' for attribue '${attribute}'.`));
+      } else {
+        resolve(val);
+      }
+    });
+  });
+  browser.wait(promise);
+};
+
 module.exports = {
   waitForElementPresence,
   waitForElementNotToBePresent,
@@ -125,5 +146,6 @@ module.exports = {
   waitForUrlToBeEqualToExpectedUrl,
   waitForUrlNotToBeEqualToExpectedUrl,
   waitForUrlToContainString,
-  waitForUrlNotToContainString
+  waitForUrlNotToContainString,
+  waitForElementToHaveAttributeWithValue
 };

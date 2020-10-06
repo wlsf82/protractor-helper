@@ -28,3 +28,4 @@ export function waitForUrlToBeEqualToExpectedUrl(expectedUrl: string, timeoutInM
 export function waitForUrlNotToBeEqualToExpectedUrl(expectedUrl: string, timeoutInMs?: number): Promise<T>
 export function waitForUrlToContainString(expectedString: string, timeoutInMs?: number): Promise<T>
 export function waitForUrlNotToContainString(expectedString: string, timeoutInMs?: number): Promise<T>
+export function waitForElementToHaveAttributeWithValue(elem: ElementFinder, attribute: string, value: string, timeoutInMs?: number): Promise<T>

@@ -19,5 +19,6 @@ module.exports = {
   waitForUrlToBeEqualToExpectedUrl: require("./src/waiters").waitForUrlToBeEqualToExpectedUrl,
   waitForUrlNotToBeEqualToExpectedUrl: require("./src/waiters").waitForUrlNotToBeEqualToExpectedUrl,
   waitForUrlToContainString: require("./src/waiters").waitForUrlToContainString,
-  waitForUrlNotToContainString: require("./src/waiters").waitForUrlNotToContainString
+  waitForUrlNotToContainString: require("./src/waiters").waitForUrlNotToContainString,
+  waitForElementToHaveAttributeWithValue: require("./src/waiters").waitForElementToHaveAttributeWithValue
 };

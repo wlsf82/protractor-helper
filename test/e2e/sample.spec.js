@@ -8,6 +8,8 @@ describe("Protractor helper", () => {
   const inputFile = element(by.className("inputfile"));
   const shortenButton = element(by.id("shorten"));
   const expandButton = element(by.id("expand"));
+  const logo = element(by.css("img"));
+  const mainElement = element(by.id("main"));
 
   const nonExistingElement = element(by.id("foo"));
 
@@ -92,6 +94,14 @@ describe("Protractor helper", () => {
 
     it("waitForTextToBePresentInElement with different timeout", () => {
       helper.waitForTextToBePresentInElement(titleElement, constants.TITLE_TEXT, constants.ONE_SEC_IN_MS);
+    });
+
+    it("waitForElementToHaveAttributeWithValue", () => {
+      helper.waitForElementToHaveAttributeWithValue(logo, "class", "logo");
+    });
+
+    it("waitForElementToHaveAttributeWithValue with different timeout", () => {
+      helper.waitForElementToHaveAttributeWithValue(mainElement, "id", "main", constants.ONE_SEC_IN_MS);
     });
   });
 
