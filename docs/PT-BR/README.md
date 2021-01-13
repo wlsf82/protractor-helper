@@ -127,7 +127,7 @@ const protractorHelper = require("protractor-helper");
 
 Assim que for importado no seu arquivo de testes, você poderá utilizar os métodos do protractor-helper.
 
-[Aqui você encontrará exemplos de uso de cada um dos métodos disponíveis.](../EXAMPLES.md#examples) (Importante: leia as notas no topo)
+[Aqui você encontrará exemplos de uso de cada um dos métodos disponíveis.](./EXAMPLES.md#examples) (Importante: leia as notas no topo)
 
 ## Funções disponíveis
 
@@ -143,13 +143,13 @@ Caso seja invocado sem que um parametro seja passado, o _timeout_ será definido
 
 > Um exemplo de uso desse método é a necessidade de assegurar que a tela seja carregada dentro de XX segundos, devido uma necessidade expressa pelo gerente de produtos. Isso ocorre frequentemente em sistemas de _e-commerce_ em datas especiais como a Black Friday.
 
-[Exemplo](../EXAMPLES.md#settimeout)
+[Exemplo](./EXAMPLES.md#settimeout)
 
 ### `isCurrentUrlDifferentFromBaseUrl`
 
 Este método retorna um valor booleano dependendo se a URL atual é diferente da URL base e não necessita de parâmetros.
 
-[Exemplo](../EXAMPLES.md#iscurrenturldifferentfrombaseurl)
+[Exemplo](./EXAMPLES.md#iscurrenturldifferentfrombaseurl)
 
 ### `waitForElementPresence`
 
@@ -157,115 +157,115 @@ Este método espera até que um elemento esteja presente no DOM.
 
 > Nota: Um elemento pode estar presente mas não visível. Se você deseja esperar até que o elemento esteja visível, use o método `waitForElementVisibility`
 
-[Exemplo](../EXAMPLES.md#waitforelementpresence)
+[Exemplo](./EXAMPLES.md#waitforelementpresence)
 
 ### `waitForElementNotToBePresent`
 
 Este método é o oposto do anterior, de tal forma que espera até que um elemento não esteja presente no DOM.
 
-[Exemplo](../EXAMPLES.md#waitforelementnottobepresent)
+[Exemplo](./EXAMPLES.md#waitforelementnottobepresent)
 
 ### `waitForElementVisibility`
 
 Este método aguarda até que um elemento esteja visível na página. Estar visível significa não apenas estar presente no DOM, mas também ter altura e largura maior que 0.
 
-[Exemplo](../EXAMPLES.md#waitforelementvisibility)
+[Exemplo](./EXAMPLES.md#waitforelementvisibility)
 
 ### `waitForElementNotToBeVisible`
 
 Este método é o oposto do anterior, de tal forma que espera que um elemento não esteja visível na página. Por não visível, entenda-se que o elemento pode estar no DOM mas não estar visível.
 
-[Exemplo](../EXAMPLES.md#waitforelementnottobevisible)
+[Exemplo](./EXAMPLES.md#waitforelementnottobevisible)
 
 ### `click`
 
 Este método é utilizado para efetuar um clique em um elemento assim que estiver em um estado visível e habilitado para o clique.
 
-[Exemplo](../EXAMPLES.md#click)
+[Exemplo](./EXAMPLES.md#click)
 
 ### `hoverAndClick`
 
 Este método é utilizado para mover o mouse sobre o elemento assim que estiver presente no DOM e então efetuar um clique.
 
-[Exemplo](../EXAMPLES.md#hoverAndClick)
+[Exemplo](./EXAMPLES.md#hoverAndClick)
 
 ### `fillFieldWithText`
 
 Este médoto preenche um campo de input com um texto assim que estiver visível.
 
-[Exemplo](../EXAMPLES.md#fillFieldWithText)
+[Exemplo](./EXAMPLES.md#fillFieldWithText)
 
 ### `uploadFileIntoInputField`
 
 Este método efetua o upload de um arquivo em um input de arquivos assim que estiver presente no DOM.
 
-[Exemplo](../EXAMPLES.md#uploadFileIntoInputField)
+[Exemplo](./EXAMPLES.md#uploadFileIntoInputField)
 
 ### `clear`
 
 Este método limpa o conteúdo de um campo de input assim que estiver visível.
 
-[Exemplo](../EXAMPLES.md#clear)
+[Exemplo](./EXAMPLES.md#clear)
 
 ### `clearFieldAndFillItWithText`
 
 Este método limpa o conteúdo de um campo de input assim que estiver visível, então preenche o mesmo com um texto.
 
-[Exemplo](../EXAMPLES.md#clearFieldAndFillItWithText)
+[Exemplo](./EXAMPLES.md#clearFieldAndFillItWithText)
 
 ### `tap`
 
 Este método executa  a ação de toque em um elemento HTML capaz de eventos de toque/clique assim que estiver em um estado possível de toque/clique. Tal método é utilizado quando se está fazendo testes web _mobile_ em emuladores, por exemplo.
 
-[Exemplo](../EXAMPLES.md#tap)
+[Exemplo](./EXAMPLES.md#tap)
 
 ### `waitForTextToBePresentInElement`
 
 Este método espera por um texto específico em um determinado elemento HTML.
 
-[Exemplo](../EXAMPLES.md#waitfortexttobepresentinelement)
+[Exemplo](./EXAMPLES.md#waitfortexttobepresentinelement)
 
 ### `waitForTextNotToBePresentInElement`
 
 Este método é o oposto do anterior, de tal forma que espera que um texto não esteja presente em um determinado elemento HTML.
 
-[Exemplo](../EXAMPLES.md#waitfortextnottobepresentinelement)
+[Exemplo](./EXAMPLES.md#waitfortextnottobepresentinelement)
 
 ### `waitForUrlToBeEqualToExpectedUrl`
 
 Este método aguarda até que a URL seja igual a outra esperada. Este método é útil quando se quer executar ações em elementos apenas se estiver na URL correta.
 
-[Exemplo](../EXAMPLES.md#waitforurltobeequaltoexpectedurl)
+[Exemplo](./EXAMPLES.md#waitforurltobeequaltoexpectedurl)
 
 ### `waitForUrlNotToBeEqualToExpectedUrl`
 
 Este método aguarda até que a URL não seja igual a uma outra determinada URL. Este método é útil quando se quer continuar a executar ações em elementos apenas quando não estiver em uma URL específica.
 
-[Exemplo](../EXAMPLES.md#waitforurlnottobeequaltoexpectedurl)
+[Exemplo](./EXAMPLES.md#waitforurlnottobeequaltoexpectedurl)
 
 ### `waitForUrlToContainString`
 
 Este método aguarda até que a URL contenha um determinado texto. É utilizado quando se deseja fazer verificações baseadas na URL atual.
 
-[Exemplo](../EXAMPLES.md#waitforurltocontainstring)
+[Exemplo](./EXAMPLES.md#waitforurltocontainstring)
 
 ### `waitForUrlNotToContainString`
 
 Este método aguarda até que a URL não contenha um determinado texto. É utilizado quando se deseja fazer verificações baseadas na URL atual.
 
-[Exemplo](../EXAMPLES.md#waitforurlnottocontainstring)
+[Exemplo](./EXAMPLES.md#waitforurlnottocontainstring)
 
 ### `fillFieldWithTextAndPressEnter`
 
 Este método preenche um campo de input com um texto assim que estiver visível e então simula a ação de pressionar a tecla ENTER do teclado. É utilizado em casos como fazer uma busca e pressionar ENTER, em vez de preencher o campo e clicar no botão de busca, por exemplo.
 
-[Exemplo](../EXAMPLES.md#fillFieldWithTextAndPressEnter)
+[Exemplo](./EXAMPLES.md#fillFieldWithTextAndPressEnter)
 
 ### `scrollToElement`
 
 Este método é usado para rolar a página até um elemento até que tal elemento esteja visível no DOM.
 
-[Exemplo](../EXAMPLES.md#scrollToElement)
+[Exemplo](./EXAMPLES.md#scrollToElement)
 
 ## Utilizando métodos que iniciam com 'wait' como verificações de teste
 
