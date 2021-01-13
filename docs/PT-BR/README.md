@@ -269,7 +269,7 @@ Este método é usado para rolar a página até um elemento até que tal element
 
 ## Utilizando métodos que iniciam com 'wait' como verificações de teste
 
-Alguns dos métodos disponívies nesta biblioteca podem ser utilizados como verificações de teste. Isto significa que quando usando eles, você não necessariamente precisa adicionar uma verificação explícita, tal como `expect(avatar.isDisplayed()).toBe(true);`.
+Alguns dos métodos disponíveis nesta biblioteca podem ser utilizados como verificações de teste. Isto significa que quando usando eles, você não necessariamente precisa adicionar uma verificação explícita, tal como `expect(avatar.isDisplayed()).toBe(true);`.
 
 Ao utilizar a biblioteca `protractor-helper`, isso pode acontecer de forma implícita (ex.: `protractorHelper.waitForElementVisibility(avatar);`). Aqui, implícita significa que a se a função `waitForElementVisibility(avatar)` passar, quer dizer que o elemento está visível, ou seja, está sendo exibido.
 
