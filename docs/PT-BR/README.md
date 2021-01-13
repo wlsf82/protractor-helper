@@ -40,6 +40,7 @@ Muitas das funções auxiliares neste módulo usam a classe `protractor.Expected
   - [`scrollToElement`](#scrolltoelement)
 </p></details>
 
+- [Utilizando métodos que iniciam com 'wait' como verificações de teste](#utilizando-métodos-que-iniciam-com-wait-como-verificações-de-teste)
 - [Recursos externos](#recursos-externos)
 - [Contribuindo](#contribuindo)
 - [Créditos](#créditos)
@@ -265,6 +266,51 @@ Este método preenche um campo de input com um texto assim que estiver visível 
 Este método é usado para rolar a página até um elemento até que tal elemento esteja visível no DOM.
 
 [Exemplo](../EXAMPLES.md#scrollToElement)
+
+## Utilizando métodos que iniciam com 'wait' como verificações de teste
+
+Alguns dos métodos disponívies nesta biblioteca podem ser utilizados como verificações de teste. Isto significa que quando usando eles, você não necessariamente precisa adicionar uma verificação explícita, tal como `expect(avatar.isDisplayed()).toBe(true);`.
+
+Ao utilizar a biblioteca `protractor-helper`, isso pode acontecer de forma implícita (ex.: `protractorHelper.waitForElementVisibility(avatar);`). Aqui, implícita significa que a se a função `waitForElementVisibility(avatar)` passar, quer dizer que o elemento está visível, ou seja, está sendo exibido.
+
+Abaixo você vai encontrar a lista de métodos que podem ser utilizados como verificações de teste:
+
+* waitForElementPresence(element)
+* waitForElementNotToBePresent(element)
+* waitForElementVisibility(element)
+* waitForElementNotToBeVisible(element)
+* waitForTextToBePresentInElement(element, text)
+* waitForTextNotToBePresentInElement(element, text)
+* waitForUrlToBeEqualToExpectedUrl(expectedUrl)
+* waitForUrlNotToBeEqualToExpectedUrl(expectedUrl)
+* waitForUrlToContainString(string)
+* waitForUrlNotToContainString(string)
+
+> Obs.: se você utilizar tais métodos como verificações de teste eles não contarão como verificações no relatório de execução dos testes. Porém, em caso de falha, uma mensagem clara será exibida para facilitar o entendimento do porquê o teste falhou. No fim das contas, relatórios de testes são normalmente úteis quando os testes estão falhando e precisamos entender o porquê. Se todos os testes estiverem verdes, não há motivo para se preocupar, ao menos não se eles tiverem sido implementados da maneira correta.
+
+### Exemplos de falhas quando utilizando tais métodos como verificações
+
+Vejamos como uma falha é exibida quando usando alguns desses métodos como verificações de teste.
+
+* Falha ao usar o método `waitForElementPresence`:
+
+```sh
+Failed: element with locator 'By(css selector, *[id="foo"])' is not present.
+```
+
+* Falha ao usar o método `waitForElementVisibility`:
+
+```sh
+Failed: element with locator 'By(css selector, *[id="foo"])' is not visible.
+```
+
+* Falha ao usar o método `waitForTextToBePresentInElement`:
+
+```sh
+Failed: text 'foo' not present on element with locator 'By(css selector, h1)'.
+```
+
+> Como você pode verificar, as mensagens são claras e demonstram exatamente por que o teste falhou, tal como no exemplo anterior, onde um texto específico ('foo') não está presente em um elemento com o seletor CSS 'h1'.
 
 ## Recursos externos
 
