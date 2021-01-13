@@ -275,16 +275,16 @@ Ao utilizar a biblioteca `protractor-helper`, isso pode acontecer de forma impl�
 
 Abaixo você vai encontrar a lista de métodos que podem ser utilizados como verificações de teste:
 
-* waitForElementPresence(element)
-* waitForElementNotToBePresent(element)
-* waitForElementVisibility(element)
-* waitForElementNotToBeVisible(element)
-* waitForTextToBePresentInElement(element, text)
-* waitForTextNotToBePresentInElement(element, text)
-* waitForUrlToBeEqualToExpectedUrl(expectedUrl)
-* waitForUrlNotToBeEqualToExpectedUrl(expectedUrl)
-* waitForUrlToContainString(string)
-* waitForUrlNotToContainString(string)
+* `waitForElementPresence(element)`
+* `waitForElementNotToBePresent(element)`
+* `waitForElementVisibility(element)`
+* `waitForElementNotToBeVisible(element)`
+* `waitForTextToBePresentInElement(element, text)`
+* `waitForTextNotToBePresentInElement(element, text)`
+* `waitForUrlToBeEqualToExpectedUrl(expectedUrl)`
+* `waitForUrlNotToBeEqualToExpectedUrl(expectedUrl)`
+* `waitForUrlToContainString(string)`
+* `waitForUrlNotToContainString(string)`
 
 > Obs.: se você utilizar tais métodos como verificações de teste eles não contarão como verificações no relatório de execução dos testes. Porém, em caso de falha, uma mensagem clara será exibida para facilitar o entendimento do porquê o teste falhou. No fim das contas, relatórios de testes são normalmente úteis quando os testes estão falhando e precisamos entender o porquê. Se todos os testes estiverem verdes, não há motivo para se preocupar, ao menos não se eles tiverem sido implementados da maneira correta.
 
