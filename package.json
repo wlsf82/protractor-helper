@@ -41,6 +41,6 @@
     "eslint": "^6.6.0",
     "jasmine": "^3.4.0",
     "prettier": "1.15.2",
-    "protractor": "^5.4.4"
+    "protractor": "^7.0.0"
   }
 }
