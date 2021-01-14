@@ -310,7 +310,7 @@ Here we list some external resources such as blog posts about the protractor-hel
 
 See [contribution guidelines](docs/CONTRIBUTING.md).
 
-## Code cf conduct
+## Code of conduct
 
 Checkout the [code of conduct](CODE_OF_CONDUCT.md).
 
