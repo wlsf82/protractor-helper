@@ -46,7 +46,7 @@ Many of the helper functions on this library uses `protractor.ExpectedConditions
 
 - [External resources](#external-resources)
 - [Contributing](#contributing)
-- [Code Of Conduct](#code-of-conduct)
+- [Code of conduct](#code-of-conduct)
 - [Credits](#credits)
 - [License](/LICENSE)
 
@@ -310,9 +310,9 @@ Here we list some external resources such as blog posts about the protractor-hel
 
 See [contribution guidelines](docs/CONTRIBUTING.md).
 
-## Code Of Conduct
+## Code cf conduct
 
-Checkout [code of conduct](CODE_OF_CONDUCT.md).
+Checkout the [code of conduct](CODE_OF_CONDUCT.md).
 
 ## Credits
 
