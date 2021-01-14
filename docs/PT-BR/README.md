@@ -326,7 +326,7 @@ Veja as [orientações de contribuição](CONTRIBUTING.md).
 
 ## Código de conduta
 
-Veja o [código de conduta](CODE_OF_CONDUCT.md)
+Veja o [código de conduta](./CODE_OF_CONDUCT.md)
 
 ## Créditos
 
