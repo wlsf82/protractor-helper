@@ -312,7 +312,7 @@ See [contribution guidelines](docs/CONTRIBUTING.md).
 
 ## Code of conduct
 
-Checkout the [code of conduct](CODE_OF_CONDUCT.md).
+Checkout the [code of conduct](./CODE_OF_CONDUCT.md).
 
 ## Credits
 
