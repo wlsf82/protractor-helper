@@ -43,6 +43,7 @@ Muitas das funções auxiliares neste módulo usam a classe `protractor.Expected
 - [Utilizando métodos que iniciam com 'wait' como verificações de teste](#utilizando-métodos-que-iniciam-com-wait-como-verificações-de-teste)
 - [Recursos externos](#recursos-externos)
 - [Contribuindo](#contribuindo)
+- [Código de conduta](#código-de-conduta)
 - [Créditos](#créditos)
 
 ## Exemplo básico
@@ -322,6 +323,10 @@ Listamos aqui alguns recursos externos como postagens de blog sobre o `protracto
 ## Contribuindo
 
 Veja as [orientações de contribuição](CONTRIBUTING.md).
+
+## Código de conduta
+
+Veja o [código de conduta](CODE_OF_CONDUCT.md)
 
 ## Créditos
 
