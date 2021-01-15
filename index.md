@@ -23,10 +23,15 @@ const protractorHelper = require("protractor-helper");
 As soon as you have the library required in your test file you can start using its helper functions.
 
 [Here you'll find examples of usage of each of the available helper functions.](https://www.npmjs.com/package/protractor-helper#available-helpers)
+
 ## Credits
 
-The **protractor-helper** library was created by [Walmyr Filho](https://br.linkedin.com/in/walmyr-lima-e-silva-filho-147a9110a) and is kept together with [Paulo Gonçalves](https://www.linkedin.com/in/paulo-goncalves/).
+The **protractor-helper** library was created and is maintained by [Walmyr Filho](https://br.linkedin.com/in/walmyr-lima-e-silva-filho-147a9110a).
 
----
+Follow Walmyr on Twitter ([@wlsf82](https://twitter.com/walmyrlimaesilv)).
+
+Thanks to [Paulo Gonçalves](https://www.linkedin.com/in/paulo-goncalves/), [Lucas Amaral](https://www.linkedin.com/in/lopesdoamaral/), [Michiel Cuijpers](https://github.com/MichielCuijpers), [Ghazi Khan](https://codewithghazi.com/), and [Pedro Hyvo](https://www.linkedin.com/in/pedrohyvo/) for contributing to the project.
+
+--- 
 
 [MIT License](/LICENSE)
