@@ -4,7 +4,7 @@
 
 </div>
 
-🌏 [Inglês](README.md)
+🌏 [Inglês](../../README.md)
 
 ---
 
