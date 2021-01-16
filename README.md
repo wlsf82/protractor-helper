@@ -309,8 +309,8 @@ Failed: text 'foo' not present on element with locator 'By(css selector, h1)'.
 
 Here we list some external resources such as blog posts about the protractor-helper library.
 
-- [Launch of protractor-helper v4](https://medium.com/@walmyrlimaesilv/launch-of-protractor-helper-v4-d038bcc18560)
-- [Release of protractor-helper version 4.1.1](https://medium.com/p/release-of-protractor-helper-version-4-1-1-f770bbf362ff?source=email-375212fd9a4a--writer.postDistributed&sk=8e49d93b3ab575a9476ef94fecc2984f)
+- [Launch of protractor-helper v4 - Breaking changes](https://medium.com/@walmyrlimaesilv/launch-of-protractor-helper-v4-d038bcc18560)
+- [Release of protractor-helper version 4.1.1 - Types definitions in the functions’ signatures](https://medium.com/p/release-of-protractor-helper-version-4-1-1-f770bbf362ff?source=email-375212fd9a4a--writer.postDistributed&sk=8e49d93b3ab575a9476ef94fecc2984f)
 
 ## Contributing
 
