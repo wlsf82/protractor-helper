@@ -23,7 +23,11 @@
   },
   "author": "Walmyr Filho <wlsf82@gmail.com> (https://walmyrfilho.com)",
   "contributors": [
-    "Paulo Gonçalves <paulorochag@hotmail.com> (https://www.linkedin.com/in/paulo-goncalves)"
+    "Paulo Gonçalves <paulorochag@hotmail.com> (https://www.linkedin.com/in/paulo-goncalves)",
+    "Lucas Amaral (https://github.com/doamaral)",
+    "Michiel Cuijpers (https://github.com/MichielCuijpers)",
+    "Ghazi Khan (https://codewithghazi.com)",
+    "Pedro Hyvo (https://www.linkedin.com/in/pedrohyvo/)"
   ],
   "files": [
     "src",
