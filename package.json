@@ -21,9 +21,13 @@
     "type": "git",
     "url": "https://github.com/wlsf82/protractor-helper"
   },
-  "author": "Walmyr Filho <wlsf82@gmail.com> (http://walmyr-filho.com)",
+  "author": "Walmyr Filho <wlsf82@gmail.com> (https://walmyrfilho.com)",
   "contributors": [
-    "Paulo Gonçalves <paulorochag@hotmail.com> (https://www.linkedin.com/in/paulo-goncalves)"
+    "Paulo Gonçalves <paulorochag@hotmail.com> (https://www.linkedin.com/in/paulo-goncalves)",
+    "Lucas Amaral (https://github.com/doamaral)",
+    "Michiel Cuijpers (https://github.com/MichielCuijpers)",
+    "Ghazi Khan (https://codewithghazi.com)",
+    "Pedro Hyvo (https://www.linkedin.com/in/pedrohyvo/)"
   ],
   "files": [
     "src",
@@ -37,6 +41,6 @@
     "eslint": "^6.6.0",
     "jasmine": "^3.4.0",
     "prettier": "1.15.2",
-    "protractor": "^5.4.4"
+    "protractor": "^7.0.0"
   }
 }
