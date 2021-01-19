@@ -32,6 +32,7 @@ Many of the helper functions on this library uses `protractor.ExpectedConditions
   - [`click`](#click)
   - [`hoverAndClick`](#hoverAndClick)
   - [`fillFieldWithText`](#fillfieldwithtext)
+  - [`fillFieldWithTextAndPressEnter`](#fillfieldwithtextandpressenter)
   - [`uploadFileIntoInputField`](#uploadfileintoinputfield)
   - [`clear`](#clear)
   - [`clearFieldAndFillItWithText`](#clearfieldandfillitwithtext)
@@ -199,6 +200,11 @@ This method is used to hover over an element as soon as it is present in the DOM
 
 This method fills an input field with a text as soon as such field is visible.
 [Example](docs/EXAMPLES.md#fillFieldWithText)
+
+### `fillFieldWithTextAndPressEnter`
+
+This method fills an input field with a text as soon as such field is visible and press enter key.
+[Example](docs/EXAMPLES.md#fillFieldWithTextAndPressEnter)
 
 ### `uploadFileIntoInputField`
 

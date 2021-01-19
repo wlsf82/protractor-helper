@@ -220,6 +220,28 @@ describe("foo", () => {
 });
 ```
 
+## fillFieldWithTextAndPressEnter
+
+|  2 mandatory arguments   |   1 optional argument   |
+| :----------------------: | :---------------------: |
+| `htmlElement` and `text` | `timeoutInMilliseconds` |
+
+```js
+const protractorHelper = require("protractor-helper");
+
+describe("foo", () => {
+  it("bar", () => {
+    browser.get("https://example.com");
+
+    const textField = element(by.css("input.some-text-field"));
+
+    protractorHelper.fillFieldWithTextAndPressEnter(textField, "some text", 3000);
+
+    // ...
+  });
+});
+```
+
 ## uploadFileIntoInputField
 
 |      2 mandatory arguments       |   1 optional argument   |
