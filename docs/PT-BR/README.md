@@ -322,10 +322,11 @@ Failed: text 'foo' not present on element with locator 'By(css selector, h1)'.
 
 ## Recursos externos
 
-Listamos aqui alguns recursos externos como postagens de blog sobre o `protractor-helper`.
+Listamos aqui alguns recursos externos como postagens de blog as quais citam o `protractor-helper`.
 
 - [Lançamento do protractor-helper v4 - _Breaking changes_](https://talkingabouttesting.com/2019/10/17/lancamento-do-protractor-helper-versao-4/)
 - [Lançamento da versão 4.1.1 do protractor-helper - Definições de tipos nas assinaturas das funções](https://talkingabouttesting.com/2020/04/29/lancamento-do-protractor-helper-versao-4-1-1/)
+- [Por que não se deve utilizar sleeps em testes automatizados](https://talkingabouttesting.com/2017/11/20/por-que-nao-se-deve-utilizar-sleeps-em-testes-automatizados/)
 
 ## Contribuindo
 
