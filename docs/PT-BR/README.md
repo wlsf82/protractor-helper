@@ -33,6 +33,7 @@ Muitas das funções auxiliares neste módulo usam a classe `protractor.Expected
   - [`click`](#click)
   - [`hoverAndClick`](#hoverAndClick)
   - [`fillFieldWithText`](#fillfieldwithtext)
+  - [`fillFieldWithTextAndPressEnter`](#fillfieldwithtextandpressenter)
   - [`uploadFileIntoInputField`](#uploadfileintoinputfield)
   - [`clear`](#clear)
   - [`clearFieldAndFillItWithText`](#clearfieldandfillitwithtext)
@@ -199,9 +200,15 @@ Este método é utilizado para mover o mouse sobre o elemento assim que estiver 
 
 ### `fillFieldWithText`
 
-Este médoto preenche um campo de input com um texto assim que estiver visível.
+Este método preenche um campo de input com um texto assim que estiver visível.
 
 [Exemplo](./EXAMPLES.md#fillFieldWithText)
+
+### `fillFieldWithTextAndPressEnter`
+
+Este método preenche um campo de input com um texto assim que estiver visível e pressiona a tecla Enter.
+
+[Exemplo](./EXAMPLES.md#fillFieldWithTextAndPressEnter)
 
 ### `uploadFileIntoInputField`
 
