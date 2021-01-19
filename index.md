@@ -25,7 +25,9 @@ As soon as you have the library required in your test file you can start using i
 [Here you'll find examples of usage of each of the available helper functions.](https://www.npmjs.com/package/protractor-helper#available-helpers)
 ## Credits
 
-The **protractor-helper** library was created by [Walmyr Filho](https://br.linkedin.com/in/walmyr-lima-e-silva-filho-147a9110a) and is kept together with [Paulo Gonçalves](https://www.linkedin.com/in/paulo-goncalves/).
+The **protractor-helper** library was created by [Walmyr Filho](https://walmyr.dev) and is kept together with [Paulo Gonçalves](https://www.linkedin.com/in/paulo-goncalves/).
+
+Thanks also to [Lucas Amaral](https://www.linkedin.com/in/lopesdoamaral/), [Michiel Cuijpers](https://github.com/MichielCuijpers), [Ghazi Khan](https://codewithghazi.com/), and [Pedro Hyvo](https://www.linkedin.com/in/pedrohyvo/) for contributing to the project.
 
 ---
 
