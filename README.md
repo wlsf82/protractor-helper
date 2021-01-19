@@ -58,7 +58,7 @@ Many of the helper functions on this library uses `protractor.ExpectedConditions
 
 ## Basic example
 
-Let's say you want to create a test for the sign up happy path of an example application.
+Let's say you want to create a test for the sign in happy path of an example application.
 
 ### Example without using the protractor-helper module
 
@@ -68,20 +68,20 @@ Without this library the test could be written as something like this:
 const EC = protractor.ExpectedConditions;
 const DEFAULT_TIMEOUT_IN_MS = 5000;
 
-describe("Sign up page", () => {
-  it("successful sign up", () => {
-    browser.get("https://example.com/sign-up");
+describe("Sign in page", () => {
+  it("successful sign in", () => {
+    browser.get("https://example.com/sign-in");
 
     const emailField = element(by.id("email"));
     const passwordField = element(by.id("password"));
-    const signupButton = element(by.id("signup"));
+    const signinButton = element(by.id("signin"));
 
     browser.wait(EC.visibilityOf(emailField), DEFAULT_TIMEOUT_IN_MS);
     browser.wait(EC.visibilityOf(passwordField), DEFAULT_TIMEOUT_IN_MS);
-    browser.wait(EC.elementToBeClickable(signupButton), DEFAULT_TIMEOUT_IN_MS);
+    browser.wait(EC.elementToBeClickable(signinButton), DEFAULT_TIMEOUT_IN_MS);
     emailField.sendKeys("valid@email.com");
     passwordField.sendKeys("validpassword");
-    signupButton.click();
+    signinButton.click();
 
     const avatar = element(by.id("avatar"));
 
@@ -99,17 +99,17 @@ The same test could be written as below, using the protractor-helper library.
 ```js
 const protractorHelper = require("protractor-helper");
 
-describe("Sign up page", () => {
-  it("successful sign up", () => {
-    browser.get("https://example.com/sign-up");
+describe("Sign in page", () => {
+  it("successful sign in", () => {
+    browser.get("https://example.com/sign-in");
 
     const emailField = element(by.id("email"));
     const passwordField = element(by.id("password"));
-    const signupButton = element(by.id("signup"));
+    const signinButton = element(by.id("signin"));
 
     protractorHelper.fillFieldWithText(emailField, "valid@email.com");
     protractorHelper.fillFieldWithText(passwordField, "validpassword");
-    protractorHelper.click(signupButton);
+    protractorHelper.click(signinButton);
 
     const avatar = element(by.id("avatar"));
 
