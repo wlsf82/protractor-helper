@@ -1,5 +1,7 @@
 # Exemplos
 
+🌏 [Inglês](../EXAMPLES.md)
+
 > Observações:
 >
 > 1. Todos os exemplos utilizam sintaxe de ES6;

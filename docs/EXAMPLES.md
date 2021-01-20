@@ -1,5 +1,7 @@
 # Examples
 
+🌏 [Portuguese](./PT-BR/EXAMPLES.md)
+
 > Notes:
 >
 > 1. All the examples are using ES6 syntax;

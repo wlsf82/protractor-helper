@@ -1,5 +1,7 @@
 # Contributing
 
+🌏 [Portuguese](./PT-BR/CONTRIBUTING.md)
+
 You can contribute in the following ways:
 
 - Finding and reporting bugs
