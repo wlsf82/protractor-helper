@@ -203,7 +203,7 @@ This method fills an input field with a text as soon as such field is visible.
 
 ### `fillFieldWithTextAndPressEnter`
 
-This method fills an input field with a text as soon as such field is visible and press enter key.
+This method fills an input field with a text as soon as such field is visible and then it simulates pressing the ENTER key from the keyboard. This method is useful in cases such as when doing a search and pressing the ENTER key, instead of having to fill the input field and clicking the search button, for example.
 [Example](docs/EXAMPLES.md#fillFieldWithTextAndPressEnter)
 
 ### `uploadFileIntoInputField`
@@ -255,11 +255,6 @@ This method waits for the URL to contain an expected string. Such method is usef
 
 This method waits for the URL not to contain an expected string. Such method is useful when you want to perform verifications based on the current URL.
 [Example](docs/EXAMPLES.md#waitforurlnottocontainstring)
-
-### `fillFieldWithTextAndPressEnter`
-
-This method fills an input field with a text as soon as such field is visible and then it simulates pressing the ENTER key from the keyboard. This method is useful in cases such as when doing a search and pressing the ENTER key, instead of having to fill the input field and clicking the search button, for example.
-[Example](docs/EXAMPLES.md#fillFieldWithTextAndPressEnter)
 
 ### `scrollToElement`
 
