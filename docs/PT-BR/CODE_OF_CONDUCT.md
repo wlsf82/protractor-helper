@@ -1,5 +1,7 @@
 # Código de conduta da aliança do colaborador
 
+🌏 [Inglês](../../CODE_OF_CONDUCT.md)
+
 ## Nossa promessa
 
 No interesse de promover um ambiente aberto e acolhedor, nós, como contribuintes e mantenedores, nos comprometemos a tornar a participação em nosso projeto e em nossa comunidade uma experiência livre de assédio para todos, independentemente da idade, tamanho do corpo, deficiência, etnia, características sexuais, identidade de gênero e expressão, nível de experiência, educação, status socioeconômico, nacionalidade, aparência pessoal, raça, religião ou identidade e orientação sexual.

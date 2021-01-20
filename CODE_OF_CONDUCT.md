@@ -1,5 +1,7 @@
 # Contributor Covenant Code of Conduct
 
+🌏 [Portuguese](./docs/PT-BR/CODE_OF_CONDUCT.md)
+
 ## Our Pledge
 
 In the interest of fostering an open and welcoming environment, we as
