@@ -1,3 +1,10 @@
+# 4.1.12
+
+- Docs translation to Portugues (Brazil) PT-BR
+- Other documentation improvements and fixes
+
+Thanks for the contributions of Lucas Amaral, Paulo Gonçalves, Pedro Hyvo, Ghazi Khan, and Urvi Koladiya
+
 # 4.1.9
 
 - Update readme and github page title
