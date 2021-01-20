@@ -326,7 +326,7 @@ The **protractor-helper** library was created and is maintained by [Walmyr Filho
 
 Follow Walmyr on Twitter ([@wlsf82](https://twitter.com/walmyrlimaesilv)).
 
-Thanks to [Paulo Gonçalves](https://www.linkedin.com/in/paulo-goncalves/), [Lucas Amaral](https://www.linkedin.com/in/lopesdoamaral/), [Michiel Cuijpers](https://github.com/MichielCuijpers), [Ghazi Khan](https://codewithghazi.com/), and [Pedro Hyvo](https://www.linkedin.com/in/pedrohyvo/) for contributing to the project.
+Thanks to [Paulo Gonçalves](https://www.linkedin.com/in/paulo-goncalves/), [Lucas Amaral](https://www.linkedin.com/in/lopesdoamaral/), [Michiel Cuijpers](https://github.com/MichielCuijpers), [Ghazi Khan](https://codewithghazi.com/), [Pedro Hyvo](https://www.linkedin.com/in/pedrohyvo/), and [Urvi Koladiya](https://github.com/cp-urvi-k) for contributing to the project.
 
 ---
 
