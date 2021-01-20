@@ -206,7 +206,7 @@ Este método preenche um campo de input com um texto assim que estiver visível.
 
 ### `fillFieldWithTextAndPressEnter`
 
-Este método preenche um campo de input com um texto assim que estiver visível e pressiona a tecla Enter.
+Este método preenche um campo de input com um texto assim que estiver visível e então simula a ação de pressionar a tecla ENTER do teclado. É utilizado em casos como fazer uma busca e pressionar ENTER, em vez de preencher o campo e clicar no botão de busca, por exemplo.
 
 [Exemplo](./EXAMPLES.md#fillFieldWithTextAndPressEnter)
 
@@ -269,12 +269,6 @@ Este método aguarda até que a URL contenha um determinado texto. É utilizado 
 Este método aguarda até que a URL não contenha um determinado texto. É utilizado quando se deseja fazer verificações baseadas na URL atual.
 
 [Exemplo](./EXAMPLES.md#waitforurlnottocontainstring)
-
-### `fillFieldWithTextAndPressEnter`
-
-Este método preenche um campo de input com um texto assim que estiver visível e então simula a ação de pressionar a tecla ENTER do teclado. É utilizado em casos como fazer uma busca e pressionar ENTER, em vez de preencher o campo e clicar no botão de busca, por exemplo.
-
-[Exemplo](./EXAMPLES.md#fillFieldWithTextAndPressEnter)
 
 ### `scrollToElement`
 
