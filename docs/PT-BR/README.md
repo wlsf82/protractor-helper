@@ -54,7 +54,7 @@ Muitas das funções auxiliares neste módulo usam a classe `protractor.Expected
 
 ## Exemplo básico
 
-Digamos que você deseja criar um teste para o fluxo básico de um cadastro em uma aplicação exemplo.
+Digamos que você deseja criar um teste para o fluxo básico de um assinar em uma aplicação exemplo.
 
 ### Exemplo sem utilizar o protractor-helper
 
@@ -64,20 +64,20 @@ Sem o protractor-helper o teste poderia ser escrito da seguinte forma:
 const EC = protractor.ExpectedConditions;
 const TIMEOUT_PADRAO_EM_MS = 5000;
 
-describe("Página de cadastro de usuário", () => {
-  it("cadastro realizado com sucesso", () => {
-    browser.get("https://exemplo.com/cadastro");
+describe("Página de assinar em usuário", () => {
+  it("assinar em realizado com sucesso", () => {
+    browser.get("https://exemplo.com/assinarem");
 
     const campoEmail = element(by.id("email"));
     const campoSenha = element(by.id("senha"));
-    const botaoCadastrar = element(by.id("cadastrar"));
+    const botaoAssinarem = element(by.id("assinarem"));
 
     browser.wait(EC.visibilityOf(campoEmail), TIMEOUT_PADRAO_EM_MS);
     browser.wait(EC.visibilityOf(campoSenha), TIMEOUT_PADRAO_EM_MS);
-    browser.wait(EC.elementToBeClickable(botaoCadastrar), TIMEOUT_PADRAO_EM_MS);
+    browser.wait(EC.elementToBeClickable(botaoAssinarem), TIMEOUT_PADRAO_EM_MS);
     campoEmail.sendKeys("email@valido.com");
     campoSenha.sendKeys("senhavalida");
-    botaoCadastrar.click();
+    botaoAssinarem.click();
 
     const avatar = element(by.id("avatar"));
 
@@ -95,17 +95,17 @@ O mesmo teste poderia ser escrito conforme abaixo, utilizando o módulo protract
 ```js
 const protractorHelper = require("protractor-helper");
 
-describe("Página de cadastro de usuário", () => {
+describe("Página de assinar em usuário", () => {
   it("cadastro realizado com sucesso", () => {
-    browser.get("https://exemplo.com/cadastro");
+    browser.get("https://exemplo.com/assinarem");
 
     const campoEmail = element(by.id("email"));
     const campoSenha = element(by.id("senha"));
-    const botaoCadastrar = element(by.id("cadastrar"));
+    const botaoCadastrar = element(by.id("assinarem"));
 
     protractorHelper.fillFieldWithText(campoEmail, "email@valido.com");
     protractorHelper.fillFieldWithText(campoSenha, "senhavalida");
-    protractorHelper.click(botaoCadastrar);
+    protractorHelper.click(botaoAssinarem);
 
     const avatar = element(by.id("avatar"));
 
