@@ -336,11 +336,11 @@ Veja o [código de conduta](./CODE_OF_CONDUCT.md)
 
 ## Créditos
 
-O `protractor-helper` foi criado e é mantido por [Walmyr Filho](https://br.linkedin.com/in/walmyr-lima-e-silva-filho-147a9110a).
+O **protractor-helper** foi criado por [Walmyr Filho](https://walmyr.dev) e é mantido em conjunto com o [Paulo Gonçalves](https://www.linkedin.com/in/paulo-goncalves/).
 
-Siga o Walmyr no Twitter ([@wlsf82](https://twitter.com/walmyrlimaesilv)).
+Siga eles no Twitter ([@walmyrlimaesilv](https://twitter.com/walmyrlimaesilv) e [@paulorgoncalves](https://twitter.com/paulorgoncalves)).
 
-Agradecimentos ao [Paulo Gonçalves](https://www.linkedin.com/in/paulo-goncalves/), [Lucas Amaral](https://www.linkedin.com/in/lopesdoamaral/), [Michiel Cuijpers](https://github.com/MichielCuijpers), [Ghazi Khan](https://codewithghazi.com/), [Pedro Hyvo](https://www.linkedin.com/in/pedrohyvo/), e [Urvi Koladiya](https://github.com/cp-urvi-k) por contribuírem com o projeto.
+Agradecimentos ao [Lucas Amaral](https://www.linkedin.com/in/lopesdoamaral/), [Michiel Cuijpers](https://github.com/MichielCuijpers), [Ghazi Khan](https://codewithghazi.com/), [Pedro Hyvo](https://www.linkedin.com/in/pedrohyvo/), e [Urvi Koladiya](https://github.com/cp-urvi-k) por contribuírem com o projeto.
 
 ---
 
