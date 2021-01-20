@@ -51,6 +51,7 @@ Muitas das funções auxiliares neste módulo usam a classe `protractor.Expected
 - [Contribuindo](#contribuindo)
 - [Código de conduta](#código-de-conduta)
 - [Créditos](#créditos)
+- [Licença](../../LICENSE)
 
 ## Exemplo básico
 
