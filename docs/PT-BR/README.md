@@ -1,6 +1,6 @@
 # protractor-helper
 
-[![npm version](https://badge.fury.io/js/protractor-helper.svg)](https://www.npmjs.com/package/protractor-helper) [![npm weekly downloads](https://img.shields.io/npm/dw/protractor-helper.svg)](https://www.npmjs.com/package/protractor-helper) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier) [![Build Status](https://github.com/wlsf82/protractor-helper/workflows/Continuous%20Integration/badge.svg)](https://github.com/wlsf82/protractor-helper/actions) [![license](https://img.shields.io/github/license/DAVFoundation/captain-n3m0.svg?style=flat-square)](../../LICENSE) [![BCH compliance](https://bettercodehub.com/edge/badge/wlsf82/protractor-helper?branch=master)](https://bettercodehub.com/)
+[![npm version](https://badge.fury.io/js/protractor-helper.svg)](https://www.npmjs.com/package/protractor-helper) [![npm weekly downloads](https://img.shields.io/npm/dw/protractor-helper.svg)](https://www.npmjs.com/package/protractor-helper) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier) [![Build Status](https://github.com/wlsf82/protractor-helper/workflows/Continuous%20Integration/badge.svg)](https://github.com/wlsf82/protractor-helper/actions) [![license](https://img.shields.io/github/license/DAVFoundation/captain-n3m0.svg?style=flat-square)](../../LICENSE) [![BCH compliance](https://bettercodehub.com/edge/badge/wlsf82/protractor-helper?branch=master)](https://bettercodehub.com/) [![Known Vulnerabilities](https://snyk.io/test/npm/protractor-helper/4.1.12/badge.svg)](https://snyk.io/test/npm/protractor-helper/4.1.12)
 
 </div>
 
@@ -343,7 +343,7 @@ O **protractor-helper** foi criado por [Walmyr Filho](https://walmyr.dev) e é m
 
 Siga eles no Twitter ([@walmyrlimaesilv](https://twitter.com/walmyrlimaesilv) e [@paulorgoncalves](https://twitter.com/paulorgoncalves)).
 
-Agradecimentos ao [Lucas Amaral](https://www.linkedin.com/in/lopesdoamaral/), [Michiel Cuijpers](https://github.com/MichielCuijpers), [Ghazi Khan](https://codewithghazi.com/), [Pedro Hyvo](https://www.linkedin.com/in/pedrohyvo/), e [Urvi Koladiya](https://github.com/cp-urvi-k) por contribuírem com o projeto.
+Agradecimentos ao [Lucas Amaral](https://www.linkedin.com/in/lopesdoamaral/), [Michiel Cuijpers](https://github.com/MichielCuijpers), [Ghazi Khan](https://codewithghazi.com/), [Pedro Hyvo](https://www.linkedin.com/in/pedrohyvo/), [Urvi Koladiya](https://github.com/cp-urvi-k), e [Zidrex Andag](https://www.linkedin.com/in/john-zidrex-andag-3285b31a7/) por contribuírem com o projeto.
 
 ---
 
