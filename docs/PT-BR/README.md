@@ -343,7 +343,7 @@ O **protractor-helper** foi criado por [Walmyr Filho](https://walmyr.dev) e é m
 
 Siga eles no Twitter ([@walmyrlimaesilv](https://twitter.com/walmyrlimaesilv) e [@paulorgoncalves](https://twitter.com/paulorgoncalves)).
 
-Agradecimentos ao [Lucas Amaral](https://www.linkedin.com/in/lopesdoamaral/), [Michiel Cuijpers](https://github.com/MichielCuijpers), [Ghazi Khan](https://codewithghazi.com/), [Pedro Hyvo](https://www.linkedin.com/in/pedrohyvo/), [Urvi Koladiya](https://github.com/cp-urvi-k), e [Zidrex Andag](https://www.linkedin.com/in/john-zidrex-andag-3285b31a7/) por contribuírem com o projeto.
+Agradecimentos ao [Lucas Amaral](https://www.linkedin.com/in/lopesdoamaral/), [Michiel Cuijpers](https://github.com/MichielCuijpers), [Ghazi Khan](https://codewithghazi.com/), [Pedro Hyvo](https://www.linkedin.com/in/pedrohyvo/), [Urvi Koladiya](https://github.com/cp-urvi-k) e [Zidrex Andag](https://www.linkedin.com/in/john-zidrex-andag-3285b31a7/) por contribuírem com o projeto.
 
 ---
 
