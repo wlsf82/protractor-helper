@@ -27,7 +27,7 @@ As soon as you have the library required in your test file you can start using i
 
 The **protractor-helper** library was created by [Walmyr Filho](https://walmyr.dev) and is kept together with [Paulo Gonçalves](https://www.linkedin.com/in/paulo-goncalves/).
 
-Thanks also to [Lucas Amaral](https://www.linkedin.com/in/lopesdoamaral/), [Michiel Cuijpers](https://github.com/MichielCuijpers), [Ghazi Khan](https://codewithghazi.com/), [Pedro Hyvo](https://www.linkedin.com/in/pedrohyvo/), and [Urvi Koladiya](https://github.com/cp-urvi-k) for contributing to the project.
+Thanks also to [Lucas Amaral](https://www.linkedin.com/in/lopesdoamaral/), [Michiel Cuijpers](https://github.com/MichielCuijpers), [Ghazi Khan](https://codewithghazi.com/), [Pedro Hyvo](https://www.linkedin.com/in/pedrohyvo/), [Urvi Koladiya](https://github.com/cp-urvi-k), and [Zidrex Andag](https://www.linkedin.com/in/john-zidrex-andag-3285b31a7/) for contributing to the project.
 
 ---
 
