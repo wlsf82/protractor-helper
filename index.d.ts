@@ -18,6 +18,7 @@ export function scrollToElement(elem: ElementFinder, timeoutInMs?: number): Prom
 export function setTimeout(timeoutInMs?: number): void
 
 // waiters
+export function waitForAlertToBePresent(timeoutInMs?: number): void
 export function waitForElementPresence(elem: ElementFinder, timeoutInMs?: number): Promise<T>
 export function waitForElementNotToBePresent(elem: ElementFinder, timeoutInMs?: number): Promise<T>
 export function waitForElementVisibility(elem: ElementFinder, timeoutInMs?: number): Promise<T>
