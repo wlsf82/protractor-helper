@@ -10,6 +10,7 @@ module.exports = {
   isCurrentUrlDifferentFromBaseUrl: require("./src/misc").isCurrentUrlDifferentFromBaseUrl,
   scrollToElement: require("./src/misc").scrollToElement,
   setTimeout: require("./src/misc").setTimeout,
+  waitForAlertToBePresent: require("./src/waiters").waitForAlertToBePresent, 
   waitForElementPresence: require("./src/waiters").waitForElementPresence,
   waitForElementNotToBePresent: require("./src/waiters").waitForElementNotToBePresent,
   waitForElementVisibility: require("./src/waiters").waitForElementVisibility,

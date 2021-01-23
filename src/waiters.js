@@ -3,6 +3,15 @@ const EC = protractor.ExpectedConditions;
 const messageBuilder = require("./constants_and_utils/messageBuilder");
 const utils = require("./constants_and_utils/utils");
 
+const waitForAlertToBePresent = function(
+  timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds
+) {
+  return browser.wait(
+    EC.alertIsPresent(),
+    timeoutInMilliseconds
+  );
+};
+
 const waitForElementPresence = function(
   htmlElement = utils.requiredParam(waitForElementPresence),
   timeoutInMilliseconds = utils.timeout.timeoutInMilliseconds
@@ -116,6 +125,7 @@ const waitForUrlNotToContainString = function(
 };
 
 module.exports = {
+  waitForAlertToBePresent,
   waitForElementPresence,
   waitForElementNotToBePresent,
   waitForElementVisibility,
