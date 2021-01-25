@@ -8,7 +8,8 @@ const waitForAlertToBePresent = function(
 ) {
   return browser.wait(
     EC.alertIsPresent(),
-    timeoutInMilliseconds
+    timeoutInMilliseconds,
+    messageBuilder.getDefaultAlertIsNotVisible()
   );
 };
 

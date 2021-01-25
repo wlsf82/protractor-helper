@@ -1,5 +1,9 @@
 const constants = require("./constants");
 
+function getDefaultAlertIsNotVisible() {
+  return `alert '${constants.IS_NOT_VISIBLE_MESSAGE}'.`;
+}
+
 function getDefaultCurrentUrlContainsTheString(string) {
   return `current URL contains the string '${string}'.`;
 }
@@ -71,6 +75,7 @@ function getParameterIsMissingForFunctionMessage(param, fn) {
 }
 
 module.exports = {
+  getDefaultAlertIsNotVisible,
   getDefaultCurrentUrlContainsTheString,
   getDefaultCurrentUrlDoesNotContainStringMessage,
   getDefaultCurrentUrlIsDifferentThanExpectedUrlMessage,
