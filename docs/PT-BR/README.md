@@ -160,6 +160,11 @@ Este método retorna um valor booleano dependendo se a URL atual é diferente da
 
 [Exemplo](./EXAMPLES.md#iscurrenturldifferentfrombaseurl)
 
+### `waitForAlertToBePresent`
+
+Este método espera até que um alerta esteja presente no DOM.
+[Exemplo](./EXAMPLES.md#waitforalerttobepresent)
+
 ### `waitForElementPresence`
 
 Este método espera até que um elemento esteja presente no DOM.

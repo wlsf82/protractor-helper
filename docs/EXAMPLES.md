@@ -14,8 +14,8 @@
 
 ## setTimeout
 
-|           1 optional argument           |
-| :-------------------------------------: |
+| 1 optional argument                     |
+|-----------------------------------------|
 | `timeoutInMilliseconds` (default: 5000) |
 
 ```js
@@ -66,11 +66,33 @@ describe("foo", () => {
 });
 ```
 
+## waitForAlertToBePresent
+
+| 1 optional argument                     |
+|-----------------------------------------|
+| `timeoutInMilliseconds` (default: 5000) |
+
+```js
+const protractorHelper = require("protractor-helper");
+
+describe("foo", () => {
+  it("bar", () => {
+    browser.get("https://example.com");
+
+    const alertElement = element(by.className("el-alert"));
+
+    protractorHelper.waitForAlertToBePresent(3000);
+
+    // ...
+  });
+});
+```
+
 ## waitForElementPresence
 
-| 1 mandatory argument |   1 optional argument   |
-| :------------------: | :---------------------: |
-|    `htmlElement`     | `timeoutInMilliseconds` |
+| 1 mandatory argument | 1 optional argument     |
+|----------------------|-------------------------|
+| `htmlElement`        | `timeoutInMilliseconds` |
 
 ```js
 const protractorHelper = require("protractor-helper");
@@ -90,9 +112,9 @@ describe("foo", () => {
 
 ## waitForElementNotToBePresent
 
-| 1 mandatory argument |   1 optional argument   |
-| :------------------: | :---------------------: |
-|    `htmlElement`     | `timeoutInMilliseconds` |
+| 1 mandatory argument | 1 optional argument     |
+|----------------------|-------------------------|
+| `htmlElement`        | `timeoutInMilliseconds` |
 
 ```js
 const protractorHelper = require("protractor-helper");
@@ -112,9 +134,9 @@ describe("foo", () => {
 
 ## waitForElementVisibility
 
-| 1 mandatory argument |   1 optional argument   |
-| :------------------: | :---------------------: |
-|    `htmlElement`     | `timeoutInMilliseconds` |
+| 1 mandatory argument | 1 optional argument     |
+|----------------------|-------------------------|
+| `htmlElement`        | `timeoutInMilliseconds` |
 
 ```js
 const protractorHelper = require("protractor-helper");
@@ -134,9 +156,9 @@ describe("foo", () => {
 
 ## waitForElementNotToBeVisible
 
-| 1 mandatory argument |   1 optional argument   |
-| :------------------: | :---------------------: |
-|    `htmlElement`     | `timeoutInMilliseconds` |
+| 1 mandatory argument | 1 optional argument     |
+|----------------------|-------------------------|
+| `htmlElement`        | `timeoutInMilliseconds` |
 
 ```js
 const protractorHelper = require("protractor-helper");
@@ -156,9 +178,9 @@ describe("foo", () => {
 
 ## click
 
-| 1 mandatory argument |   1 optional argument   |
-| :------------------: | :---------------------: |
-|    `htmlElement`     | `timeoutInMilliseconds` |
+| 1 mandatory argument | 1 optional argument     |
+|----------------------|-------------------------|
+| `htmlElement`        | `timeoutInMilliseconds` |
 
 ```js
 const protractorHelper = require("protractor-helper");
@@ -178,9 +200,9 @@ describe("foo", () => {
 
 ## hoverAndClick
 
-| 1 mandatory argument |   1 optional argument   |
-| :------------------: | :---------------------: |
-|    `htmlElement`     | `timeoutInMilliseconds` |
+| 1 mandatory argument | 1 optional argument     |
+|----------------------|-------------------------|
+| `htmlElement`        | `timeoutInMilliseconds` |
 
 ```js
 const protractorHelper = require("protractor-helper");
@@ -200,8 +222,8 @@ describe("foo", () => {
 
 ## fillFieldWithText
 
-|  2 mandatory arguments   |   1 optional argument   |
-| :----------------------: | :---------------------: |
+| 2 mandatory arguments    | 1 optional argument     |
+|--------------------------|-------------------------|
 | `htmlElement` and `text` | `timeoutInMilliseconds` |
 
 ```js
@@ -222,8 +244,8 @@ describe("foo", () => {
 
 ## fillFieldWithTextAndPressEnter
 
-|  2 mandatory arguments   |   1 optional argument   |
-| :----------------------: | :---------------------: |
+| 2 mandatory arguments    | 1 optional argument     |
+|--------------------------|-------------------------|
 | `htmlElement` and `text` | `timeoutInMilliseconds` |
 
 ```js
@@ -244,8 +266,8 @@ describe("foo", () => {
 
 ## uploadFileIntoInputField
 
-|      2 mandatory arguments       |   1 optional argument   |
-| :------------------------------: | :---------------------: |
+| 2 mandatory arguments            | 1 optional argument     |
+|----------------------------------|-------------------------|
 | `htmlElement` and `absolutePath` | `timeoutInMilliseconds` |
 
 ```js
@@ -270,9 +292,9 @@ describe("foo", () => {
 
 ## clear
 
-| 1 mandatory argument |   1 optional argument   |
-| :------------------: | :---------------------: |
-|    `htmlElement`     | `timeoutInMilliseconds` |
+| 1 mandatory argument | 1 optional argument     |
+|----------------------|-------------------------|
+| `htmlElement`        | `timeoutInMilliseconds` |
 
 ```js
 const protractorHelper = require("protractor-helper");
@@ -293,8 +315,8 @@ describe("foo", () => {
 
 ## clearFieldAndFillItWithText
 
-|  2 mandatory arguments   |   1 optional argument   |
-| :----------------------: | :---------------------: |
+| 2 mandatory arguments    | 1 optional argument     |
+|--------------------------|-------------------------|
 | `htmlElement` and `text` | `timeoutInMilliseconds` |
 
 ```js
@@ -315,9 +337,9 @@ describe("foo", () => {
 
 ## tap
 
-| 1 mandatory argument |   1 optional argument   |
-| :------------------: | :---------------------: |
-|    `htmlElement`     | `timeoutInMilliseconds` |
+| 1 mandatory argument | 1 optional argument     |
+|----------------------|-------------------------|
+| `htmlElement`        | `timeoutInMilliseconds` |
 
 ```js
 // Imagine that in the `protractor.conf.js` file a mobile emulator is being defined.
@@ -339,8 +361,8 @@ describe("foo", () => {
 
 ## waitForTextToBePresentInElement
 
-|  2 mandatory arguments   |   1 optional argument   |
-| :----------------------: | :---------------------: |
+| 2 mandatory arguments    | 1 optional argument     |
+|--------------------------|-------------------------|
 | `htmlElement` and `text` | `timeoutInMilliseconds` |
 
 ```js
@@ -361,8 +383,8 @@ describe("foo", () => {
 
 ## waitForTextNotToBePresentInElement
 
-|  2 mandatory arguments   |   1 optional argument   |
-| :----------------------: | :---------------------: |
+| 2 mandatory arguments    | 1 optional argument     |
+|--------------------------|-------------------------|
 | `htmlElement` and `text` | `timeoutInMilliseconds` |
 
 ```js
@@ -383,9 +405,9 @@ describe("foo", () => {
 
 ## waitForUrlToBeEqualToExpectedUrl
 
-| 1 mandatory argument |   1 optional argument   |
-| :------------------: | :---------------------: |
-|    `expectedUrl`     | `timeoutInMilliseconds` |
+| 1 mandatory argument | 1 optional argument     |
+|----------------------|-------------------------|
+| `expectedUrl`        | `timeoutInMilliseconds` |
 
 ```js
 const protractorHelper = require("protractor-helper");
@@ -407,9 +429,9 @@ describe("foo", () => {
 
 ## waitForUrlNotToBeEqualToExpectedUrl
 
-| 1 mandatory argument |   1 optional argument   |
-| :------------------: | :---------------------: |
-|    `expectedUrl`     | `timeoutInMilliseconds` |
+| 1 mandatory argument | 1 optional argument     |
+|----------------------|-------------------------|
+| `expectedUrl`        | `timeoutInMilliseconds` |
 
 ```js
 const protractorHelper = require("protractor-helper");
@@ -433,9 +455,9 @@ describe("foo", () => {
 
 ## waitForUrlToContainString
 
-| 1 mandatory argument |   1 optional argument   |
-| :------------------: | :---------------------: |
-|       `string`       | `timeoutInMilliseconds` |
+| 1 mandatory argument | 1 optional argument     |
+|----------------------|-------------------------|
+| `string`             | `timeoutInMilliseconds` |
 
 ```js
 const protractorHelper = require("protractor-helper");
@@ -457,9 +479,9 @@ describe("foo", () => {
 
 ## waitForUrlNotToContainString
 
-| 1 mandatory argument |   1 optional argument   |
-| :------------------: | :---------------------: |
-|       `string`       | `timeoutInMilliseconds` |
+| 1 mandatory argument | 1 optional argument     |
+|----------------------|-------------------------|
+| `string`             | `timeoutInMilliseconds` |
 
 ```js
 const protractorHelper = require("protractor-helper");
@@ -477,9 +499,9 @@ describe("foo", () => {
 
 ## scrollToElement
 
-| 1 mandatory argument |   1 optional argument   |
-| :------------------: | :---------------------: |
-|    `htmlElement`     | `timeoutInMilliseconds` |
+| 1 mandatory argument | 1 optional argument     |
+|----------------------|-------------------------|
+| `htmlElement`        | `timeoutInMilliseconds` |
 
 ```js
 const protractorHelper = require("protractor-helper");
