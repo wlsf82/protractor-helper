@@ -77,7 +77,7 @@ const waitForTextNotToBePresentInElement = function(
   return browser.wait(
     EC.not(EC.textToBePresentInElement(htmlElement, text)),
     timeoutInMilliseconds,
-    messageBuilder.getDeafultTextTextIsStillPresentOnElementMessage(htmlElement, text)
+    messageBuilder.getDefaultTextTextIsStillPresentOnElementMessage(htmlElement, text)
   );
 };
 

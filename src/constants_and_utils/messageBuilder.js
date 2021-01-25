@@ -56,7 +56,7 @@ function getDefaultIsStillVisibleMessage(htmlElement) {
   }.`;
 }
 
-function getDeafultTextTextIsStillPresentOnElementMessage(htmlElement, text) {
+function getDefaultTextTextIsStillPresentOnElementMessage(htmlElement, text) {
   return `text '${text}' is still present on ${constants.ELEMENT_WITH_LOCATOR_MESSAGE} '${
     htmlElement.parentElementArrayFinder.locator_
   }'.`;
@@ -86,7 +86,7 @@ module.exports = {
   getDefaultIsStillPresentMessage,
   getDefaultIsNotTappableMessage,
   getDefaultIsStillVisibleMessage,
-  getDeafultTextTextIsStillPresentOnElementMessage,
+  getDefaultTextTextIsStillPresentOnElementMessage,
   getDefaultTextTextNotPresentOnElementMessage,
   getParameterIsMissingForFunctionMessage
 };
