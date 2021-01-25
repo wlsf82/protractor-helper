@@ -166,7 +166,7 @@ This method returns a boolean depending if the current url is different from the
 
 ### `waitForAlertToBePresent`
 
-This method waits for an alert to be present in the DOM.
+This method waits for an alert to be present on the page.
 [Example](docs/EXAMPLES.md#waitforalerttobepresent)
 
 ### `waitForElementPresence`

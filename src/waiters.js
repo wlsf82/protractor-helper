@@ -9,7 +9,7 @@ const waitForAlertToBePresent = function(
   return browser.wait(
     EC.alertIsPresent(),
     timeoutInMilliseconds,
-    messageBuilder.getDefaultAlertIsNotVisible()
+    messageBuilder.getDefaultAlertIsNotPresent()
   );
 };
 
@@ -77,7 +77,7 @@ const waitForTextNotToBePresentInElement = function(
   return browser.wait(
     EC.not(EC.textToBePresentInElement(htmlElement, text)),
     timeoutInMilliseconds,
-    messageBuilder.getDefaultTextTextIsStillPresentOnElementMessage(htmlElement, text)
+    messageBuilder.getDefaultTextIsStillPresentOnElementMessage(htmlElement, text)
   );
 };
 

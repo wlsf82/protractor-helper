@@ -1,7 +1,7 @@
 const constants = require("./constants");
 
-function getDefaultAlertIsNotVisible() {
-  return `alert ${constants.IS_NOT_VISIBLE_MESSAGE}.`;
+function getDefaultAlertIsNotPresent() {
+  return `alert ${constants.IS_NOT_PRESENT_MESSAGE}.`;
 }
 
 function getDefaultCurrentUrlContainsTheString(string) {
@@ -56,7 +56,7 @@ function getDefaultIsStillVisibleMessage(htmlElement) {
   }.`;
 }
 
-function getDefaultTextTextIsStillPresentOnElementMessage(htmlElement, text) {
+function getDefaultTextIsStillPresentOnElementMessage(htmlElement, text) {
   return `text '${text}' is still present on ${constants.ELEMENT_WITH_LOCATOR_MESSAGE} '${
     htmlElement.parentElementArrayFinder.locator_
   }'.`;
@@ -75,7 +75,7 @@ function getParameterIsMissingForFunctionMessage(param, fn) {
 }
 
 module.exports = {
-  getDefaultAlertIsNotVisible,
+  getDefaultAlertIsNotPresent,
   getDefaultCurrentUrlContainsTheString,
   getDefaultCurrentUrlDoesNotContainStringMessage,
   getDefaultCurrentUrlIsDifferentThanExpectedUrlMessage,
@@ -86,7 +86,7 @@ module.exports = {
   getDefaultIsStillPresentMessage,
   getDefaultIsNotTappableMessage,
   getDefaultIsStillVisibleMessage,
-  getDefaultTextTextIsStillPresentOnElementMessage,
+  getDefaultTextIsStillPresentOnElementMessage,
   getDefaultTextTextNotPresentOnElementMessage,
   getParameterIsMissingForFunctionMessage
 };
