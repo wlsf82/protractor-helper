@@ -17,7 +17,16 @@ describe("Protractor helper", () => {
   describe("waits", () => {
     it("waitForAlertToBePresent", () => {
       helper.click(alertButton);
-      helper.waitForAlertToBePresent(5000);
+      helper.waitForAlertToBePresent();
+      const alertDialog = browser.switchTo().alert();
+      alertDialog.accept();
+    });
+
+    it("waitForAlertToBePresent with different timeout", () => {
+      helper.click(alertButton);
+      helper.waitForAlertToBePresent(constants.ONE_SEC_IN_MS);
+      const alertDialog = browser.switchTo().alert();
+      alertDialog.accept();
     });
 
     it("waitForElementNotToBePresent", () => {
