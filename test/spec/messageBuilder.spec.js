@@ -1,6 +1,13 @@
 const messageBuilder = require("../../src/constants_and_utils/messageBuilder");
 
 describe("messageBuilder", () => {
+  it('getDefaultAlertIsNotVisible()', () => {
+    const actualResult = messageBuilder.getDefaultAlertIsNotVisible();
+    const expectedResult = "alert is not visible."
+
+    expect(actualResult).toEqual(expectedResult);
+  });
+
   it("getDefaultCurrentUrlContainsTheString()", () => {
     const sampleUrl = "http://some-url.com/some-string";
 

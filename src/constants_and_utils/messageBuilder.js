@@ -1,7 +1,7 @@
 const constants = require("./constants");
 
 function getDefaultAlertIsNotVisible() {
-  return `alert '${constants.IS_NOT_VISIBLE_MESSAGE}'.`;
+  return `alert ${constants.IS_NOT_VISIBLE_MESSAGE}.`;
 }
 
 function getDefaultCurrentUrlContainsTheString(string) {
