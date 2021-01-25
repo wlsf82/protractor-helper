@@ -133,7 +133,7 @@ describe("messageBuilder", () => {
     expect(actualResult).toEqual(expectedResult);
   });
 
-  it("getDeafultTextTextIsStillPresentOnElementMessage()", () => {
+  it("getDefaultTextTextIsStillPresentOnElementMessage()", () => {
     const sampleElement = {
       parentElementArrayFinder: {
         locator_: "[href='/some-page']"
@@ -143,7 +143,7 @@ describe("messageBuilder", () => {
     const someText = "some text";
 
     const actualResult = messageBuilder
-      .getDeafultTextTextIsStillPresentOnElementMessage(sampleElement, someText);
+      .getDefaultTextTextIsStillPresentOnElementMessage(sampleElement, someText);
     const expectedResult = `text '${
       someText
     }' is still present on element with locator '${
