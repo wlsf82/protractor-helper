@@ -25,6 +25,7 @@ Many of the helper functions on this library uses `protractor.ExpectedConditions
 
   - [`setTimeout`](#settimeout)
   - [`isCurrentUrlDifferentFromBaseUrl`](#iscurrenturldifferentfrombaseurl)
+  - [`waitForAlertToBePresent`](#waitforalerttobepresent)
   - [`waitForElementPresence`](#waitforelementpresence)
   - [`waitForElementNotToBePresent`](#waitforelementnottobepresent)
   - [`waitForElementVisibility`](#waitforelementvisibility)
@@ -162,6 +163,11 @@ If called without passing an argument the timeout will be set to the default one
 
 This method returns a boolean depending if the current url is different from the base url. No argument needed.
 [Example](docs/EXAMPLES.md#iscurrenturldifferentfrombaseurl)
+
+### `waitForAlertToBePresent`
+
+This method waits for an alert to be present in the DOM.
+[Example](docs/EXAMPLES.md#waitforalerttobepresent)
 
 ### `waitForElementPresence`
 
