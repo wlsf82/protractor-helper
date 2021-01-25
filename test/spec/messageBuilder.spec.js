@@ -1,9 +1,9 @@
 const messageBuilder = require("../../src/constants_and_utils/messageBuilder");
 
 describe("messageBuilder", () => {
-  it('getDefaultAlertIsNotVisible()', () => {
+  it("getDefaultAlertIsNotVisible()", () => {
     const actualResult = messageBuilder.getDefaultAlertIsNotVisible();
-    const expectedResult = "alert is not visible."
+    const expectedResult = "alert is not visible.";
 
     expect(actualResult).toEqual(expectedResult);
   });
