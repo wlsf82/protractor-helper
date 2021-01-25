@@ -14,8 +14,8 @@
 
 ## setTimeout
 
-| 1 optional argument                     |
-|-----------------------------------------|
+|           1 optional argument           |
+| :-------------------------------------: |
 | `timeoutInMilliseconds` (default: 5000) |
 
 ```js
@@ -68,8 +68,8 @@ describe("foo", () => {
 
 ## waitForAlertToBePresent
 
-| 1 optional argument                     |
-|-----------------------------------------|
+|           1 optional argument           |
+| :-------------------------------------: |
 | `timeoutInMilliseconds` (default: 5000) |
 
 ```js
@@ -77,9 +77,9 @@ const protractorHelper = require("protractor-helper");
 
 describe("foo", () => {
   it("bar", () => {
-    browser.get("https://example.com");
+    const buttonThatTriggersAnAlert = element(by.css('button.some-button'));
 
-    const alertElement = element(by.className("el-alert"));
+    helper.click(buttonThatTriggersAnAlert);
 
     protractorHelper.waitForAlertToBePresent(3000);
 

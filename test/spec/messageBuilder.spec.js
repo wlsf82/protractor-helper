@@ -1,9 +1,9 @@
 const messageBuilder = require("../../src/constants_and_utils/messageBuilder");
 
 describe("messageBuilder", () => {
-  it("getDefaultAlertIsNotVisible()", () => {
-    const actualResult = messageBuilder.getDefaultAlertIsNotVisible();
-    const expectedResult = "alert is not visible.";
+  it("getDefaultAlertIsNotPresent()", () => {
+    const actualResult = messageBuilder.getDefaultAlertIsNotPresent();
+    const expectedResult = "alert is not present.";
 
     expect(actualResult).toEqual(expectedResult);
   });
@@ -140,7 +140,7 @@ describe("messageBuilder", () => {
     expect(actualResult).toEqual(expectedResult);
   });
 
-  it("getDefaultTextTextIsStillPresentOnElementMessage()", () => {
+  it("getDefaultTextIsStillPresentOnElementMessage()", () => {
     const sampleElement = {
       parentElementArrayFinder: {
         locator_: "[href='/some-page']"
@@ -150,7 +150,7 @@ describe("messageBuilder", () => {
     const someText = "some text";
 
     const actualResult = messageBuilder
-      .getDefaultTextTextIsStillPresentOnElementMessage(sampleElement, someText);
+      .getDefaultTextIsStillPresentOnElementMessage(sampleElement, someText);
     const expectedResult = `text '${
       someText
     }' is still present on element with locator '${

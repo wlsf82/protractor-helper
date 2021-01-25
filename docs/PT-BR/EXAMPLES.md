@@ -79,7 +79,7 @@ describe("foo", () => {
   it("bar", () => {
     browser.get("https://example.com");
 
-    const alertElement = element(by.className("el-alert"));
+    const elementoAlerta = element(by.className("elemento-alerta"));
 
     protractorHelper.waitForAlertToBePresent(3000);
 

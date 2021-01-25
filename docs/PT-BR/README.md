@@ -162,7 +162,7 @@ Este método retorna um valor booleano dependendo se a URL atual é diferente da
 
 ### `waitForAlertToBePresent`
 
-Este método espera até que um alerta esteja presente no DOM.
+Este método espera até que um alerta esteja presente na página.
 [Exemplo](./EXAMPLES.md#waitforalerttobepresent)
 
 ### `waitForElementPresence`

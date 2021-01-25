@@ -8,7 +8,7 @@ describe("Protractor helper", () => {
   const inputFile = element(by.className("inputfile"));
   const shortenButton = element(by.id("shorten"));
   const expandButton = element(by.id("expand"));
-  const alertButton = element(by.id("alertButton"));
+  const buttonThatTriggersAnAlert = element(by.id("alertButton"));
 
   const nonExistingElement = element(by.id("foo"));
 
@@ -16,14 +16,14 @@ describe("Protractor helper", () => {
 
   describe("waits", () => {
     it("waitForAlertToBePresent", () => {
-      helper.click(alertButton);
+      helper.click(buttonThatTriggersAnAlert);
       helper.waitForAlertToBePresent();
       const alertDialog = browser.switchTo().alert();
       alertDialog.accept();
     });
 
     it("waitForAlertToBePresent with different timeout", () => {
-      helper.click(alertButton);
+      helper.click(buttonThatTriggersAnAlert);
       helper.waitForAlertToBePresent(constants.ONE_SEC_IN_MS);
       const alertDialog = browser.switchTo().alert();
       alertDialog.accept();
