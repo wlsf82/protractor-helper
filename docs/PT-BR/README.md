@@ -26,6 +26,7 @@ Muitas das funções auxiliares neste módulo usam a classe `protractor.Expected
 
   - [`setTimeout`](#settimeout)
   - [`isCurrentUrlDifferentFromBaseUrl`](#iscurrenturldifferentfrombaseurl)
+  - [`waitForAlertToBePresent`](#waitforalerttobepresent)
   - [`waitForElementPresence`](#waitforelementpresence)
   - [`waitForElementNotToBePresent`](#waitforelementnottobepresent)
   - [`waitForElementVisibility`](#waitforelementvisibility)
