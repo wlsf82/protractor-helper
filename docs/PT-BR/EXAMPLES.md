@@ -81,7 +81,7 @@ describe("foo", () => {
 
     const buttonThatTriggersAnAlert = element(by.css('button.some-button'));
 
-    helper.click(buttonThatTriggersAnAlert);
+    protractorHelper.click(buttonThatTriggersAnAlert);
 
     protractorHelper.waitForAlertToBePresent(3000);
 
