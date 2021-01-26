@@ -79,7 +79,9 @@ describe("foo", () => {
   it("bar", () => {
     browser.get("https://example.com");
 
-    const elementoAlerta = element(by.className("elemento-alerta"));
+    const buttonThatTriggersAnAlert = element(by.css('button.some-button'));
+
+    helper.click(buttonThatTriggersAnAlert);
 
     protractorHelper.waitForAlertToBePresent(3000);
 
