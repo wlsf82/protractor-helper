@@ -1,3 +1,7 @@
+# 4.2.0
+
+- Add waitForAlertToBePresent method
+
 # 4.1.12
 
 - Docs translation to Portugues (Brazil) PT-BR
