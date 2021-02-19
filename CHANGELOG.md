@@ -1,3 +1,7 @@
+# 4.2.1
+
+- Update resources section on readme.md files
+
 # 4.2.0
 
 - Add waitForAlertToBePresent method

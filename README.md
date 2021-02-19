@@ -314,11 +314,12 @@ Failed: text 'foo' not present on element with locator 'By(css selector, h1)'.
 
 ## External resources
 
-Here we list some external resources such as blog posts that mention the protractor-helper library.
+Here we list some external resources such as blog posts that mention (or use) the protractor-helper library.
 
 - [Launch of protractor-helper v4 - Breaking changes](https://medium.com/@walmyrlimaesilv/launch-of-protractor-helper-v4-d038bcc18560)
 - [Release of protractor-helper version 4.1.1 - Types definitions in the functions’ signatures](https://medium.com/p/release-of-protractor-helper-version-4-1-1-f770bbf362ff?source=email-375212fd9a4a--writer.postDistributed&sk=8e49d93b3ab575a9476ef94fecc2984f)
 - [Why you shouldn't use sleeps in automated tests](https://talkingabouttesting.com/2017/11/20/por-que-nao-se-deve-utilizar-sleeps-em-testes-automatizados/) (PT-BR)
+- [A simplified version of Page Objects for your Protractor tests](https://dev.to/walmyrlimaesilv/a-simplified-version-of-page-objects-for-your-protractor-tests-31ed)
 
 ## Contributing
 
