@@ -8,7 +8,8 @@
     "test:e2e": "npm run webdriver-update && protractor test/e2e/protractor.conf.js",
     "test:unit": "jasmine test/spec/*.spec.js",
     "test": "npm run test:unit && npm run test:e2e",
-    "prettify": "prettier --write **/*.js **/*.md package.json sampleApp/**/* --print-width 120"
+    "prettify": "prettier --write **/*.js **/*.md package.json sampleApp/**/* --print-width 120",
+    "prepare": "is-ci || husky install"
   },
   "description": "Write robust and flakiness-free tests with Protractor",
   "main": "index.js",
@@ -38,7 +39,11 @@
     "protractor": ">= 5.4.2"
   },
   "devDependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
     "eslint": "^6.6.0",
+    "husky": "^6.0.0",
+    "is-ci": "^3.0.0",
     "jasmine": "^3.4.0",
     "prettier": "1.15.2",
     "protractor": "^7.0.0"
