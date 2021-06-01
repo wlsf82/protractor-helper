@@ -11,6 +11,8 @@ jobs:
     steps:
     - name: Project checkout
       uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
     - name: Node.js setup
       uses: actions/setup-node@v1
     - name: Installation of dependencies
@@ -21,3 +23,5 @@ jobs:
       run: npm run test:unit
     - name: E2E tests
       run: npm run test:e2e
+    - name: Commit lint
+      uses: wagoid/commitlint-github-action@v3
