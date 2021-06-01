@@ -25,3 +25,23 @@ jobs:
       run: npm run test:e2e
     - name: Commit lint
       uses: wagoid/commitlint-github-action@v3
+
+  release:
+    if: ${{ github.head_ref == 'master' || github.head_ref == 'beta' }}
+    needs: [build]
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Project checkout
+      uses: actions/checkout@v2
+    - name: Node.js Setup 
+      uses: actions/setup-node@v1
+      with:
+        node-version: 14
+    - name: Installation of Node.js dependencies
+      run: npm ci
+    - name: Generate release
+      env:
+        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      run: npx semantic-release
